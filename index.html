@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>Perfumes with AI and Super Sale</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="css/index.css" id="theme-stylesheet">
+    <!-- fonts -->
+    <link rel="stylesheet" href="fonts/Dmitry Rastvortsev - KyivType Sans Bold2.otf" />
+    <link rel="stylesheet" href="fonts/KyivTypeSans-Bold2.otf" />
+    <link rel="stylesheet" href="fonts/KyivTypeSans-Medium.otf" />
+    <link rel="stylesheet" href="fonts/KyivTypeSans-Regular.otf" />
+    <!-- owl carousel cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- megamenu -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="preloader" style="position: fixed; width: 100%; height: 100%; background: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999;">
+        <div class="progress" style="width: 50%; height: 2px; margin-bottom: 10px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%; background-color: #70b4bd;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="loading-text" style="color: #70b4bd; font-family: 'Poppins', sans-serif;">Loading...</div>
+    </div>
+    <!-- TopBar -->
+    <section class="bg-dark top-bar">
+        <div class="container-fluid">
+            <div class="row text-center pt-2">
+                <div class="col-lg-2 col-sm-2">
+
+                </div>
+                <div class="col-lg-8 col-sm-7">
+                    <div class="d-inline-block">
+                        <div class="d-flex">
+                            <div class="text-center">
+                                <p class="topbar_text">Free shipping order on all orders | Get Extra ₹100 OFF on Spent of ₹999 Use Code: American Fragrance100</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-3 text-end">
+                    <a href="#login" data-bs-target="#login" data-bs-toggle="modal" data-bs-dismiss="modal">LOGIN/</a>
+                    <a href="#signup" data-bs-target="#signup" data-bs-toggle="modal" data-bs-dismiss="modal">SIGN UP</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- signup modal -->
+    <div class="modal fade" id="signup" aria-hidden="true" aria-labelledby="signup" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content overflow-hidden border-0">
+                <div class="modal-body">
+                    <h2 class="modal-heading">Sign Up</h2>
+                    <h3 class="side-title">Welcome to American Fragnance</h3>
+                    <form action="#">
+                        <label class="form-label" for="email">Enter Your Email* </label>
+                        <input class="form-control" type="email" id="email" required>
+
+                        <label class="form-label " for="Name">Enter your Name* </label>
+                        <input class="form-control" type="text" id="Name" required>
+
+                        <label class="form-label " for="phone">Enter Your Mobile No.*</label>
+                        <input class="form-control" type="tel" id="phone" required>
+                        <span class="input-note">OTP will be sent to your number for verification.</span>
+
+                        <label class="form-label " for="password">Enter Your Password* </label>
+                        <input class="form-control" type="password" id="password" required>
+
+                        <label class="form-label " for="code">Invite code (optional)</label>
+                        <input class="form-control" type="text" id="code">
+
+                        <div class="col-lg-6 form-groupr">
+                            <button class="btn" type="submit">CREATE ACCOUNT</button>
+                        </div>
+                        <input type="checkbox" id="agree" name="agree" value="agree" class="agree">
+                        <label for="agree" class="agree">By Signing in, I agree to <a href="">Terms & Conditions</a></label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login modal -->
+    <div class="modal fade" id="login" aria-hidden="true" aria-labelledby="login" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content overflow-hidden border-0">
+                <div class="modal-body">
+                    <h2 class="modal-heading">LOGIN</h2>
+                    <h3 class="side-title">Welcome to American Fragnance</h3>
+                    <form action="#">
+                        <label class="form-label" for="email">Enter Your Email* </label>
+                        <input class="form-control" type="email" id="email" required>
+
+                        <label class="form-label " for="password">Password* </label>
+                        <input class="form-control" type="password" id="password" required>
+                        <div class="forgot">
+                            <a href="" data-bs-target="#forgot" data-bs-toggle="modal" data-bs-dismiss="modal">Forgot your Password?</a> <span class="signup-text" data-bs-target="#signup" data-bs-toggle="modal" data-bs-dismiss="modal">Sign Up</span>
+                        </div>
+                        <div class="col-lg-6 form-group">
+                            <button class="btn" type="submit">LOGIN</button>
+                        </div>
+                        <a href="">Terms & Conditions</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- forgot password -->
+    <div class="modal fade" id="forgot" aria-hidden="true" aria-labelledby="forgot" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content overflow-hidden border-0">
+                <div class="modal-body">
+                    <h2 class="modal-heading">Forgot password</h2>
+                    <h3 class="side-title">Glad you’re on the way</h3>
+                    <form action="#">
+                        <label class="form-label" for="email">Enter Your Registered Email* </label>
+                        <input class="form-control" type="email" id="email" required>
+                        <span class="input-note">OTP will be sent to your Email for verification.</span>
+
+                        <div class="forgot">
+                            <a href="" data-bs-target="#login" data-bs-toggle="modal" data-bs-dismiss="modal">Login!</a> <span class="signup-text" data-bs-target="#signup" data-bs-toggle="modal" data-bs-dismiss="modal">Sign Up</span>
+                        </div>
+                        <div class="col-lg-6 form-group">
+                            <button class="btn" type="submit" data-bs-target="#otp" data-bs-toggle="modal" data-bs-dismiss="modal">SEND OTP</button>
+                        </div>
+                        <div class="text-end">
+                            <a href="" style="text-align: right;">Terms & Conditions</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- OTP | Forgot password -->
+    <div class="modal fade" id="otp" aria-hidden="true" aria-labelledby="otp" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content overflow-hidden border-0">
+                <div class="modal-body">
+                    <h2 class="modal-heading">Forgot password</h2>
+                    <h3 class="side-title">Glad you’re on the way</h3>
+                    <form action="#">
+                        <label class="form-label" for="email">Enter Your OTP* </label>
+                        <input class="form-control" type="email" id="email" required>
+                        <div class="d-flex justify-content-between">
+                            <div><span class="input-note">OTP will be sent to your Email for verification.</span></div>
+                            <div class="text-end"><span class="time">00:56</span></div>
+                        </div>
+                        <div class="col-lg-6 form-group forgot">
+                            <button class="btn btn-light" type="submit">RE-SEND OTP</button>
+                        </div>
+                        <div class="">
+                            <a href="" data-bs-target="#login" data-bs-toggle="modal" data-bs-dismiss="modal">Login!</a> <span class="signup-text" data-bs-target="#signup" data-bs-toggle="modal" data-bs-dismiss="modal">Sign Up</span>
+                        </div>
+                        <div class="col-lg-6 form-group">
+                            <button class="btn" type="submit">SEND OTP</button>
+                        </div>
+                        <div class="text-end">
+                            <a href="" style="text-align: right;">Terms & Conditions</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm sticky-top header">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">American Fragnance</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"><i></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav navbar-light ms-auto">
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link show" href="#" data-bs-toggle="dropdown" aria-expanded="true">MEN </a>
+                        <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+                            <div class="row g-3">
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Top Wear</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Two</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Three</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div>
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Three</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div>
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Four</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <img src="img/header/Rectangle 82.png" class="img-fluid">
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                            </div><!-- end row -->
+                        </div> <!-- dropdown-mega-menu.// -->
+                    </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link show" href="#" data-bs-toggle="dropdown" aria-expanded="true">COMBOS </a>
+                        <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+                            <div class="row g-3">
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Top Wear</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Two</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Three</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div>
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Three</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div>
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Four</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <img src="img/header/Rectangle 82.png" class="img-fluid">
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                            </div><!-- end row -->
+                        </div> <!-- dropdown-mega-menu.// -->
+                    </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link show" href="#" data-bs-toggle="dropdown" aria-expanded="true">ACTIVEWEAR </a>
+                        <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+                            <div class="row g-3">
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Top Wear</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Two</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Three</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div>
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Three</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div>
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Four</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <img src="img/header/Rectangle 82.png" class="img-fluid">
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                            </div><!-- end row -->
+                        </div> <!-- dropdown-mega-menu.// -->
+                    </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link show" href="#" data-bs-toggle="dropdown" aria-expanded="true">WINTERWEAR </a>
+                        <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+                            <div class="row g-3">
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Top Wear</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Two</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Three</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div>
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Three</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div>
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Four</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <img src="img/header/Rectangle 82.png" class="img-fluid">
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                            </div><!-- end row -->
+                        </div> <!-- dropdown-mega-menu.// -->
+                    </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link show" href="#" data-bs-toggle="dropdown" aria-expanded="true">SHOP BY COLLECTION </a>
+                        <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+                            <div class="row g-3">
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Top Wear</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Two</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Three</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div>
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Three</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div>
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">Title Menu Four</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                                <div class="col-lg-2 col-6">
+                                    <div class="col-megamenu">
+                                        <img src="img/header/Rectangle 82.png" class="img-fluid">
+                                    </div>  <!-- col-megamenu.// -->
+                                </div><!-- end col-3 -->
+                            </div><!-- end row -->
+                        </div> <!-- dropdown-mega-menu.// -->
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex form-inputs search-box align-items-center">
+                <input class="form-control" type="text">
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="header-icon" style="background: url(img/header/Ellipse\ 1.png);">
+                <i class="far fa-heart"></i>
+
+            </div>
+            <div class="header-icon cart-bag" style="background: url(img/header/Ellipse\ 1.png);">
+                <img src="img/header/bag.png" class="img-fluid">
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
+    <!-- main content -->
+    <!-- slider -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active banner" style="background-image: url('img/home/Rectangle\ 12.png');">
+                <h2>Welcome to the American Fragnance </h2>
+            </div>
+            <div class="carousel-item active banner" style="background-image: url('img/home/Rectangle\ 12.png');">
+                <h2>Welcome to the American Fragnance </h2>
+            </div>
+            <div class="carousel-item active banner" style="background-image: url('img/home/Rectangle\ 12.png');">
+                <h2>Welcome to the American Fragnance </h2>
+            </div>
+
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- End of slider -->
+    <!-- sub categories section -->
+    <div class="container subcatsection">
+        <div class="row">
+            <div class="col-md-3 subcatcol">
+                <div class="sec-border">
+                    <img src="img/home/shirt.png" class="img-fluid">
+                    <p>Semi- Formal Shirts</p>
+                </div>
+            </div>
+            <div class="col-md-3 subcatcol">
+                <div class="sec-border">
+                    <img src="img/home/shirt.png" class="img-fluid">
+                    <p>Semi- Formal Shirts</p>
+                </div>
+            </div>
+            <div class="col-md-3 subcatcol">
+                <div class="sec-border">
+                    <img src="img/home/shirt.png" class="img-fluid">
+                    <p>Semi- Formal Shirts</p>
+                </div>
+            </div>
+            <div class="col-md-3 subcatcol">
+                <div class="sec-border">
+                    <img src="img/home/shirt.png" class="img-fluid">
+                    <p>Semi- Formal Shirts</p>
+                </div>
+            </div>
+            <div class="col-md-3 subcatcol">
+                <div class="sec-border">
+                    <img src="img/home/shirt.png" class="img-fluid">
+                    <p>Semi- Formal Shirts</p>
+                </div>
+            </div>
+            <div class="col-md-3 subcatcol">
+                <div class="sec-border">
+                    <img src="img/home/shirt.png" class="img-fluid">
+                    <p>Semi- Formal Shirts</p>
+                </div>
+            </div>
+            <div class="col-md-3 subcatcol">
+                <div class="sec-border">
+                    <img src="img/home/shirt.png" class="img-fluid">
+                    <p>Semi- Formal Shirts</p>
+                </div>
+            </div>
+            <div class="col-md-3 subcatcol">
+                <div class="sec-border">
+                    <img src="img/home/shirt.png" class="img-fluid">
+                    <p>Semi- Formal Shirts</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of  sub categories section -->
+    <!-- images sections -->
+    <div class="container catsec">
+        <div class="row">
+            <div class="col-md-6 catcol">
+                <div class="topwear" style="background: url(img/home/Rectangle\ 14.png);">
+                    <div class="opacitysection">
+                        <h4 class="imgsecheading">Top wear</h4>
+                        <p><a href="product-listing-page.html">Shop now</a></p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6 catcol">
+                <div class="topwear" style="background: url(img/home/Rectangle\ 15.png);">
+                    <div class="opacitysection">
+                        <h4 class="imgsecheading">Bottom Wear</h4>
+                        <p><a href="product-listing-page.html">Shop now</a></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- /end of main content -->
+    <!-- Ad section -->
+    <div class="container-fluid adSection">
+        <div class="row">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <hr class="horline">
+                        <p>BE ON TREND WITH</p>
+                        <h4>American Fragnance</h4>
+                        <hr class="horliine">
+                        <div class="yellow-banner" style="background: url(img/home/Rectangle\ 75.png);">
+                            <p>For Amazing Deals & Great Experience</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 my-auto">
+                        <a class="btn" type="button">Shop now</a>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="img/home/adbanner.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="img/home/downlload.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of ad section -->
+    <!-- Featured Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 subcatcol">
+                <img src="img/home/Rectangle 17.png" class="img-fluid product-img">
+                <p class="product-name">Product Name</p>
+                <p class="fit-name">Carrot Fit</p>
+                <div class="d-flex justify-content-evenly">
+                    <div class="sale_price"><p>₹610</p></div>
+                    <div class="org_price"><strike><p>₹1849</p></strike></div>
+                    <div class="discount"><p>(67% Off)</p></div>
+                    <p class="offer_price_text">Offer Price ₹481</p>
+                </div>
+            </div>
+            <div class="col-md-3 subcatcol">
+                <div class="">
+                    <img src="img/home/Rectangle 17.png" class="img-fluid product-img">
+                    <p class="product-name">Product Name</p>
+                    <p class="fit-name">Carrot Fit</p>
+                    <div class="d-flex justify-content-evenly">
+                        <div class="sale_price"><p>₹610</p></div>
+                        <div class="org_price"><strike><p>₹1849</p></strike></div>
+                        <div class="discount"><p>(67% Off)</p></div>
+                    </div>
+                    <p class="offer_price_text">Offer Price ₹481</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 subcatcol">
+                <div class="">
+                    <img src="img/home/Rectangle 17.png" class="img-fluid product-img">
+                    <p class="product-name">Product Name</p>
+                    <p class="fit-name">Carrot Fit</p>
+                    <div class="d-flex justify-content-evenly">
+                        <div class="sale_price"><p>₹610</p></div>
+                        <div class="org_price"><strike><p>₹1849</p></strike></div>
+                        <div class="discount"><p>(67% Off)</p></div>
+                    </div>
+                    <p class="offer_price_text">Offer Price ₹481</p>
+                </div>
+            </div>
+            <div class="col-md-3 subcatcol">
+                <div class="">
+                    <img src="img/home/Rectangle 17.png" class="img-fluid product-img">
+                    <p class="product-name">Product Name</p>
+                    <p class="fit-name">Carrot Fit</p>
+                    <div class="d-flex justify-content-evenly">
+                        <div class="sale_price"><p>₹610</p></div>
+                        <div class="org_price"><strike><p>₹1849</p></strike></div>
+                        <div class="discount"><p>(67% Off)</p></div>
+                    </div>
+                    <p class="offer_price_text">Offer Price ₹481</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Featured Section -->
+    <!-- Scrolling Text -->
+    <div class="container py-3">
+        <div id="scroll-container">
+            <!-- <div id="scroll-text">American Fragnance TELANGANA</div> -->
+            <div id="scroll-text">
+                <img src="img/home/American Fragnance TELANGANA.png">
+            </div>
+        </div>
+    </div>
+
+    <!-- End of Scrolling Text -->
+    <!-- ourstory section -->
+    <div class="container-fluid" id="story">
+        <div class="row">
+            <div class="container">
+                <div class="row flex-start">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="sub-title">
+                                    SKATEBOARDING, DESIGN, PHOTOGRAPHY &
+                                    CINEMATOGRAPHY
+                                </p>
+                                <h2 class="title">
+                                    ALWAYS IMPROVE,
+                                    NEVER CHANGE. BREAK
+                                    FREE AND EXPLORE.
+                                </h2>
+                            </div>
+                            <p>We strive for quality, aesthetic and mixing our shared passions for skateboarding, design, photography & cinematography. We are based in Los Angeles. We come from all over.</p>
+                            <a class="btn story-btn" type="button">Our Story</a>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 imgs">
+                        <img src="img/home/Rectangle 42.png" class="img-fluid small-img">
+                        <img src="img/home/Rectangle 41.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of ourstory section -->
+    <!-- Video Section -->
+    <div class="container-fluid videosec" style="background-image: url(img/home/Rectangle\ 27.png);">
+        <div class="row">
+            <div class="container">
+                <h2 class="title">Kirak Fit </h2>
+                <p>Filmed by Caleb Des Cognets, Michael Izquierdo & Beverly Hills Aerials.</p>
+                <a href="product-listing-page.html">Shop the apparel</a>
+                <a href="#" class="play-btn"><img src="img/home/Vector.png" class="img-fluid"></a>
+            </div>
+        </div>
+    </div>
+    <!-- Video Section -->
+    <!-- Recent Products -->
+    <div class="container recent">
+        <div class="row">
+            <p class="section-title">Latest apparel</p>
+            <div class="col-md-3 subcatcol">
+                <div class="">
+                    <img src="img/home/Rectangle 17.png" class="img-fluid product-img">
+                    <p class="product-name">Product Name</p>
+                    <p class="fit-name">Carrot Fit</p>
+                    <div class="d-flex justify-content-evenly">
+                        <div class="sale_price"><p>₹610</p></div>
+                        <div class="org_price"><strike><p>₹1849</p></strike></div>
+                        <div class="discount"><p>(67% Off)</p></div>
+                    </div>
+                    <p class="offer_price_text">Offer Price ₹481</p>
+                </div>
+            </div>
+            <div class="col-md-3 subcatcol">
+                <div class="">
+                    <img src="img/home/Rectangle 17.png" class="img-fluid product-img">
+                    <p class="product-name">Product Name</p>
+                    <p class="fit-name">Carrot Fit</p>
+                    <div class="d-flex justify-content-evenly">
+                        <div class="sale_price"><p>₹610</p></div>
+                        <div class="org_price"><strike><p>₹1849</p></strike></div>
+                        <div class="discount"><p>(67% Off)</p></div>
+                    </div>
+                    <p class="offer_price_text">Offer Price ₹481</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 subcatcol">
+                <div class="">
+                    <img src="img/home/Rectangle 17.png" class="img-fluid product-img">
+                    <p class="product-name">Product Name</p>
+                    <p class="fit-name">Carrot Fit</p>
+                    <div class="d-flex justify-content-evenly">
+                        <div class="sale_price"><p>₹610</p></div>
+                        <div class="org_price"><strike><p>₹1849</p></strike></div>
+                        <div class="discount"><p>(67% Off)</p></div>
+                    </div>
+                    <p class="offer_price_text">Offer Price ₹481</p>
+                </div>
+            </div>
+            <div class="col-md-3 subcatcol">
+                <div class="">
+                    <img src="img/home/Rectangle 17.png" class="img-fluid product-img">
+                    <p class="product-name">Product Name</p>
+                    <p class="fit-name">Carrot Fit</p>
+                    <div class="d-flex justify-content-evenly">
+                        <div class="sale_price"><p>₹610</p></div>
+                        <div class="org_price"><strike><p>₹1849</p></strike></div>
+                        <div class="discount"><p>(67% Off)</p></div>
+                    </div>
+                    <p class="offer_price_text">Offer Price ₹481</p>
+                </div>
+            </div>
+            <div class="col-md-3 subcatcol">
+                <div class="">
+                    <img src="img/home/Rectangle 17.png" class="img-fluid product-img">
+                    <p class="product-name">Product Name</p>
+                    <p class="fit-name">Carrot Fit</p>
+                    <div class="d-flex justify-content-evenly">
+                        <div class="sale_price"><p>₹610</p></div>
+                        <div class="org_price"><strike><p>₹1849</p></strike></div>
+                        <div class="discount"><p>(67% Off)</p></div>
+                    </div>
+                    <p class="offer_price_text">Offer Price ₹481</p>
+                </div>
+            </div>
+            <div class="col-md-3 subcatcol">
+                <div class="">
+                    <img src="img/home/Rectangle 17.png" class="img-fluid product-img">
+                    <p class="product-name">Product Name</p>
+                    <p class="fit-name">Carrot Fit</p>
+                    <div class="d-flex justify-content-evenly">
+                        <div class="sale_price"><p>₹610</p></div>
+                        <div class="org_price"><strike><p>₹1849</p></strike></div>
+                        <div class="discount"><p>(67% Off)</p></div>
+                    </div>
+                    <p class="offer_price_text">Offer Price ₹481</p>
+                </div>
+            </div>
+            <div class="col-md-3 subcatcol">
+                <div class="">
+                    <img src="img/home/Rectangle 17.png" class="img-fluid product-img">
+                    <p class="product-name">Product Name</p>
+                    <p class="fit-name">Carrot Fit</p>
+                    <div class="d-flex justify-content-evenly">
+                        <div class="sale_price"><p>₹610</p></div>
+                        <div class="org_price"><strike><p>₹1849</p></strike></div>
+                        <div class="discount"><p>(67% Off)</p></div>
+                    </div>
+                    <p class="offer_price_text">Offer Price ₹481</p>
+                </div>
+            </div>
+            <div class="col-md-3 subcatcol">
+                <div class="">
+                    <img src="img/home/Rectangle 17.png" class="img-fluid product-img">
+                    <p class="product-name">Product Name</p>
+                    <p class="fit-name">Carrot Fit</p>
+                    <div class="d-flex justify-content-evenly">
+                        <div class="sale_price"><p>₹610</p></div>
+                        <div class="org_price"><strike><p>₹1849</p></strike></div>
+                        <div class="discount"><p>(67% Off)</p></div>
+                    </div>
+                    <p class="offer_price_text">Offer Price ₹481</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ENd of Recent Products -->
+    <!-- Reviews -->
+    <div class="container reviews">
+
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="content">
+                                <h3 class="title">Customer Review</h3>
+                                <ul class="list-inline mb-2 text-sm rating">
+                                    <li class="list-inline-item m-0"><i class="fas fa-star small text-warning"></i></li>
+                                    <li class="list-inline-item m-0 1"><i class="fas fa-star small text-warning"></i></li>
+                                    <li class="list-inline-item m-0 2"><i class="fas fa-star small text-warning"></i></li>
+                                    <li class="list-inline-item m-0 3"><i class="fas fa-star small text-warning"></i></li>
+                                    <li class="list-inline-item m-0 4"><i class="fas fa-star small text-warning"></i></li>
+                                </ul>
+                                <p class="review-text">THE COTTON IS REALLY HIGH- QUALITY AND CRAZY SOFT. THEY ALSO WASH WELL SO THEY LAST A REALLY LONG TIME. GREAT VALUE!</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 img-col">
+                            <img src="img/home/Rectangle 52.png" class="img-fluid review-img">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="content">
+                                <h3 class="title">Customer Review</h3>
+                                <ul class="list-inline mb-2 text-sm rating">
+                                    <li class="list-inline-item m-0"><i class="fas fa-star small text-warning"></i></li>
+                                    <li class="list-inline-item m-0 1"><i class="fas fa-star small text-warning"></i></li>
+                                    <li class="list-inline-item m-0 2"><i class="fas fa-star small text-warning"></i></li>
+                                    <li class="list-inline-item m-0 3"><i class="fas fa-star small text-warning"></i></li>
+                                    <li class="list-inline-item m-0 4"><i class="fas fa-star small text-warning"></i></li>
+                                </ul>
+                                <p class="review-text">THE COTTON IS REALLY HIGH- QUALITY AND CRAZY SOFT. THEY ALSO WASH WELL SO THEY LAST A REALLY LONG TIME. GREAT VALUE!</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 img-col">
+                            <img src="img/home/Rectangle 52.png" class="img-fluid review-img">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="content">
+                                <h3 class="title">Customer Review</h3>
+                                <ul class="list-inline mb-2 text-sm rating">
+                                    <li class="list-inline-item m-0"><i class="fas fa-star small text-warning"></i></li>
+                                    <li class="list-inline-item m-0 1"><i class="fas fa-star small text-warning"></i></li>
+                                    <li class="list-inline-item m-0 2"><i class="fas fa-star small text-warning"></i></li>
+                                    <li class="list-inline-item m-0 3"><i class="fas fa-star small text-warning"></i></li>
+                                    <li class="list-inline-item m-0 4"><i class="fas fa-star small text-warning"></i></li>
+                                </ul>
+                                <p class="review-text">THE COTTON IS REALLY HIGH- QUALITY AND CRAZY SOFT. THEY ALSO WASH WELL SO THEY LAST A REALLY LONG TIME. GREAT VALUE!</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 img-col">
+                            <img src="img/home/Rectangle 52.png" class="img-fluid review-img">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="mynav">
+            <img class="mynav-prev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEGklEQVRo3uVaX0hTURz+7XgfpoJusDEGthklzlq3h6YNCnT5Ik4YRMKKAhFD6knLQjQwHzILUZ+MUUgglA8hGCq+6BKSlu2hhqYikluCyAabC+d9mN0ersx5vfPPdu7dvfY9bHD/ft/5fef8zj3nJ6NpGlJGdJt2LwV8/s1x9+q8b2PWG9x/jVGvLNLlVpjydOpsU4GKyJABDshSERChogOTy6Mzq07P2nHvtZBaa0nenWtnsuREGgS4Fvwdg54keHMqabGTZoNaIAGuBX+jY4bTJKnAqFf21JckIeMYAgJhqrZ7GkurHxCN/gdXVDly/AIcY4tNb76BIOiqK66vLMQmIEJF7Z1TvDY8ZygGm0uP0r8PERAIU+aG0fXQFggOjSLT1Ws91E7ogHNz3lC62APAemjL3DA65w0lGYE5b8jcOAIigKun6rxecbwIBMKUrX0CxAFb+0QgTB0jAhEqSt4fTpdzEvUHT5+Ns09zRMDeOSUq9kx/sHdOHclCjrFFgUfMI8LpWXOMLR5ioUCYOl3zAUSMX29vsAbWPRGo7Z4GcWM/QxQ/SxOneVhGci34uQU0OmZACmDxRLHmxz5D5gmz3mB8EHYEdAx6QDqIZ4uYzCV+97N6QoSK7goYmFzm9X0ZSNZcfeHP0O0v3VZcz4xxRgAwOrPKH/tzOsXi6+utNy8CgDFfmfS3Lwsxzii6TfPknwwke1lr+tpbpVFmxg6eUmfjclF0mwYAwr0U4KnhP7aVx1PHDvdSwGxQI59/U4CG5wMMczTuXsXu+HtVBgHGIoY5Me/bwNXwz2suCUOdAcOcwJKABXA8Z0oGAEJyDc9CqgI+d1Ua85VpzMoolZt16uz0sk9VgM+/ObsSlLAAALjaNPZqZEHCArb/0o/73ZcbRtaD6VnIQEY9BhP/9IUK7w4JHAqGOSrS5WJ5nPChYJijClMexocKGQqGOdJhmt8KHwqGOTIVqPh4ugChYJgjIkNmIbV8vIAzFL8xzd4tpJbZaUYAYC3J46+dmFA8e/8DAGZXgqxlqaQR4yyjaTpCRTW3BkFSWH9nZ1bbEQBkyQmeXMQTLKQ2tlewk4lb7KSEBMSz3RFgNqixpGRhEnD82szuXKinvkQSAlg8dwWYDWrx9wQLqWUtjZ2sHRpVjryrrli07Lvqivdv3LO/B+orC8VpJAup5awAOYn7xFlywtVr1SgyxcPe1WtNVLnC/UmpypEPt5WLRMBwW/kBNSsJv4nP6xWunqr0xkGjyDy40gNOeL0Q4yVPn034cclCaj19tqMUz/0HNXPxdpJw1WIMEq4bZcmQauUuK2dLtXaahTRWr8ewsTdblCW47NPO/1Pm11aWH2l1OqsBFC+eOJ3VAN8fPnI6q9m3hUr3/ic6zj5/toz7+C7+AV3+JtoAlQh6AAAAAElFTkSuQmCC">
+            <img class="mynav-next" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEFElEQVRo3uVaXUhTYRh+93kupoFusCED24wKtdbpZsqiQJc34qRBlKwoEDHErlS86OeivCgkxJ8bYxQhCOVFCEJKN2ZC0snsoqE5kagtQWSDzUXzXMxOF5+cHY9n/u07Z+fYc7Gxc84+nud93u/vfK+O4zjIGMkNbnYpEgr/eTu7vBBamwtGtz9jtxnLrAU1jiKr+YjjpInK0QEJ6DIRkGCTQ+++j80sT/pX9vtfF21xVxTdvHg8T09lQQATCD8e9h+At6SSe17aWWpWSAATCLf5ZiSTJBPYbcbe5ooDyNiHgEicbeyZJhL1Hdx40X7elK8nL8A3vtjx/DMogu6m8ubaEmICEmzS2zUla+AlrRi+U7mX/r2LgEicdbaOrcbWQXEUGnKZPveu6YR2uDcfjGWLPQCsxtadrWPzwdgBHZgPxpxtb0AFYHrrTtsM+3MgEmc9nROgDng6JyJxdh8OJNgkfXs0W5mTrj/4BzySfVrCAW/XlKrY4/7g7ZraUwr5xhcVHjH3iEn/im98cZcUisTZYw2vQcX4MXhFNLBucaCxZxrUje0MkXCVps7kESUSEwhLC2jzzYAWIOKJ+PATXyHLhLlgVGjCpoDHw37QDoRsEZ651J/9op6QYJMpAUPvvpNq+mOP+/fIjTtXz+QgnawaeM4IAMZmlok06iw124uNAHD/2tnFZ5dPWQ3yCeA5o+QGRyp/jpqPpFYvxtxPfXVPGh0yWTHpX0lucACAZpci8sWppa5UPiswcxQK/5F3ISmbFZg5eju7rMC4IYcVmDlaCK0ptKYnbQVmjhSegAlagZmjLGyviFqRBQG8FR+6azUsAADsxUarYOrQnoC5n9HMB/GsCXj6JnChYzzzdijlqa9G1y91TnwLxYi0huw2o8KBL7k1QoQ9Zk6VWQuUmQrIBh4AyqwFAIBqHEXaCjwPzJzKfCBTOPA8MHPKcdIka+DvDn7Z+MvJ0ThmTlE5OhdtIbKn+SUY1OULPIaLtuCTZgQA7goy3YAJhOd+RgHg0auvxDNeBJ6zjuO4BJssvD4MmsLqSy9+244AIE9PuWiLhti7aAt/VrC5lLjnpTUkQMgWpd6IKDslZzIBCw/0U4u53uYKTQgQ8UwJcJaa1d8TXLRFVE9xuE5oTPn67qZy1bLvbirffnAv3tA015aoM5FctEWyAuQwnhPn6Smmz11oyFUPe6bPna5yRXpPbMrXjz6oVomA0QfVO9SspN3Un7YZmN667PpQaMjdudIDDnm9EM4l/4BH+XHJRVv8A569FM/9BzVzwnTScNWicNul1bpRkQytVu6K5myt1k6LkMXqdR5rW2eLqjSPvd/8fog/PVXF39r6K+sBGlra+yvrAYrP4d9bEavc+p3uuvj+iSrp6yn8A+B+Jfzt4SHzAAAAAElFTkSuQmCC">
+            <!-- <button>&#60;</button>
+                    <button>&#62;</button> -->
+        </div>
+    </div>
+    <!-- End of Reviews -->
+    <!-- Blog Section -->
+    <div class="container-fluid blog">
+        <h2 class="section-title">Blog Post</h2>
+        <div class="row">
+            <div class="col-md-4 ">
+                <div class="blogcol">
+                    <img src="img/home/Rectangle 53.png" class="img-fluid">
+                    <div class="inner-col">
+                        <p class="blog-title">Jogipet : New Store opened</p>
+                        <p>We strive for quality, aesthetic and mixing our shared passions for skateboarding, design, photography & cinematography. We are based in Los Angeles. We come from all over.</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="blogcol">
+                    <img src="img/home/Rectangle 53 (1).png" class="img-fluid">
+                    <div class="inner-col">
+                        <p class="blog-title">Ameerpet : Himaja and co visted</p>
+                        <p>We strive for quality, aesthetic and mixing our shared passions for skateboarding, design, photography & cinematography. We are based in Los Angeles. We come from all over.</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="blogcol">
+                    <img src="img/home/Rectangle 53 (2).png" class="img-fluid">
+                    <div class="inner-col">
+                        <p class="blog-title">Banjara Hill : Women encourage</p>
+                        <p>We strive for quality, aesthetic and mixing our shared passions for skateboarding, design, photography & cinematography. We are based in Los Angeles. We come from all over.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Blog Section -->
+    <!-- follow section -->
+    <div class="container-fluid follow">
+        <div class="row">
+            <div class="col-md-4 follow1" style="background: url(img/home/Rectangle\ 34.png);"></div>
+            <div class="col-md-4 follow2" style="background: url(img/home/Rectangle\ 15.png);">
+                <p class="follow-text">Follow us</p>
+                <p class="title">@American Fragrance</p>
+            </div>
+            <div class="col-md-4 follow3" style="background: url(img/home/Rectangle\ 54.png);"></div>
+        </div>
+    </div>
+    <!-- end of follow section -->
+    <!-- footer -->
+    <!-- top footer -->
+    <div class="container-fluid footer">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 bg-light">
+                <img src="img/footer/delivery.png">
+                <p class="footer-text">FREE DELIVERY</p>
+            </div>
+            <div class="col-md-3 col-sm-6 bg-light">
+                <img src="img/footer/location.png">
+                <p class="footer-text">Nearest store</p>
+            </div>
+            <div class="col-md-3 col-sm-6 bg-light">
+                <img src="img/footer/gift-card.png">
+                <p class="footer-text">Gift Cards</p>
+            </div>
+            <div class="col-md-3 col-sm-6 bg-light">
+                <img src="img/footer/percent.png">
+                <p class="footer-text">Student Discount</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- end of top footer -->
+    <!-- mid footer -->
+    <div class="container-fluid footer-mid">
+        <div class="row">
+            <div class="col-md-4">
+                <p class="section-title">ABOUT THE STORE</p>
+                <p class="m-0">Our skateboards are produced with premium wood and designed, in collaboration, by visual artists from around the world with unique and various backgrounds.</p>
+                <p>We strive for quality, aesthetic and mixing our shared passions for skateboarding, design, photography & cinematography.</p>
+            </div>
+            <div class="col-md-2">
+                <p class="section-title">SHOP</p>
+                <ul>
+                    <li>All Products</li>
+                    <li>All Products</li>
+                    <li>All Products</li>
+                    <li>All Products</li>
+                    <li>All Products</li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <p class="section-title">SHOP</p>
+                <ul>
+                    <li>All Products</li>
+                    <li>All Products</li>
+                    <li>All Products</li>
+                    <li>All Products</li>
+                    <li>All Products</li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <p class="section-title">SHOP</p>
+                <ul>
+                    <li>All Products</li>
+                    <li>All Products</li>
+                    <li>All Products</li>
+                    <li>All Products</li>
+                    <li>All Products</li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <p class="section-title">SHOP</p>
+                <ul>
+                    <li>All Products</li>
+                    <li>All Products</li>
+                    <li>All Products</li>
+                    <li>All Products</li>
+                    <li>All Products</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--giftVocherModal-->
+    <div class="modal fade" id="giftvocherLogin" role="dialog"></div>
+    <!-- end of mid footer -->
+    <!-- copyrightsfooter -->
+    <div class="container-fluid copyrights">
+        <div class="row">
+            <div class="col-md-4">
+                <p class="copy-text m-0">Copywrite reserves | American Fragnance 2020</p>
+            </div>
+            <div class="col-md-5">
+                <img src="img/footer/image 4.png" class="img-fluid">
+            </div>
+            <div class="col-md-2">
+                <a href="#"><img src="img/footer/Vector.png" class="img-fluid"></a>
+                <a href="#" class="vector-border" style="background: url(img/footer/border.png);"><img src="img/footer/twitter.png" class="img-fluid"></a>
+                <a href="#" class="vector-border" style="background: url(img/footer/border.png);"><img src="img/footer/Vector (1).png" class="img-fluid"></a>
+            </div>
+        </div>
+    </div>
+    <!-- end of copyrightsfooter -->
+    <!-- end of footer -->
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="js/index.js"></script>
+    <script src="js/header.js"></script>
+</body>
+</html>

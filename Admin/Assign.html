@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Perfumes with AI and Super Sale</title>
+    <link rel="shortcut icon" type="image/png" href="/Images/favicon.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.1/dist/bootstrap-float-label.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+    <link href="../Css/Admin.css" rel="stylesheet" />
+</head>
+<body>
+    <style>
+        .multiselect-container  {
+            margin-top: 180px!important
+        }
+    </style>
+    <div class="dvnav"></div>
+
+    <!-----------------------------------------------body starts----------------------------------------------------------->
+    <div class="container-fluid main_dv">
+        <div class="row justify-content-end">
+            <!-----------------------------------------------Dashboard starts----------------------------------------------------------->
+            <div class="col-md-2 dashboard_dv">
+                <div id="leftmenu" class="dashboard_Menu">
+
+                </div>
+            </div>
+            <!-----------------------------------------------Body dv starts----------------------------------------------------------->
+            <div class="col-md-10 content-wrapper">
+                <div class="row">
+                    <div class="col-md-12 content-body">
+
+                        <div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <h4 class="Menu_Title">Activities List</h4>
+                                    <div id="validationdiv" class="validation_message"></div>
+                                </div>
+                                <div class="col-md-2">
+                                </div>
+                            </div>
+                            <form id="assignrole" onsubmit="return false">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <select class="form-control" id="ddlrole"></select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <select id="ddlactivity" class="selectpicker form-control" multiple data-live-search="true"></select>
+
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="pull-right">
+                                            <button type="submit" class="btn_sm">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br />
+                            </form>
+                        </div>
+                        <br />
+                        <table id="tblassign" class="table table-responsive-sm table-bordered table-sm" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+
+                                    <th>Name</th>
+                                    <th>Activity</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------Add Category Modal--------------------------------------------------- -->
+    <!---------------------------------------------------Edit Category Modal--------------------------------------------------- -->
+    <div class="modal fade" id="Editactivities" tabindex="-1" activities="dialog" aria-labelledby="Editcategory" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" activities="document">
+            <div class="modal-content modal-lg">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Edit activities</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="activities_edit" onsubmit="return false">
+                    <div class="modal-body">
+                        <input type="hidden" name="hiddenvalue" id="hiddenvalue" />
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="edit_activities_name" id="edit_activities_name" required>
+                                        <label rlt="activities Name" for="edit_activities_name" placeholder="activities Name">activities Name</label>
+                                    </div>
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="edit_activities_url" id="edit_activities_url" required>
+                                        <label alt="activities Name" for="edit_activities_url" placeholder="activities Url">activities Url</label>
+                                    </div>
+                                    <br />
+
+                                    <br />
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn_sm">Update</button>
+                        <button type="button" class="btn_cancel" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <script src="../Js/Imageupload.js"></script>
+    <script src="../Js/Global.js"></script>
+    <script src="../Js/Admin_assign.js"></script>
+    <!--<script src="../Js/adminactivities.js"></script>-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#tblcategory_lst').DataTable();
+            $('.dataTables_length').addClass('bs-select');
+            $('#ddlactivity').multiselect();
+        });
+                                                                                                                                //setTimeout(explode, 2000);
+    </script>
+</body>
+</html>

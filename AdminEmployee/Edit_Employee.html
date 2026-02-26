@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Perfumes with AI and Super Sale</title>
+    <link rel="shortcut icon" type="image/png" href="../Images/favicon.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.1/dist/bootstrap-float-label.min.css" />
+    <link href="../../Css/Admin.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="dvnav"></div>
+    <div id="validationdiv" class="validation_message"></div>
+    <!-----------------------------------------------body starts----------------------------------------------------------->
+    <div class="container-fluid main_dv">
+        <div class="row justify-content-end">
+            <!-----------------------------------------------Dashboard starts----------------------------------------------------------->
+            <div class="col-md-2 dashboard_dv">
+                <div id="leftmenu" class="dashboard_Menu">
+
+                </div>
+            </div>
+            <!-----------------------------------------------Body dv starts----------------------------------------------------------->
+            <div class="col-md-10 content-wrapper">
+                <div class="row">
+                    <div class="col-md-12 content-body">
+                        <div class="container-fluid">
+                            <form onsubmit="return false" id="storemanager_edit" role="form">
+                                <input type="hidden" name="hiddenid" id="hiddenid" />
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h4 class="Menu_Title">EDIT EMPLOYEE</h4>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="formfield" id="floatdv">
+                                                    <input type="text" id="storemanageename" required>
+                                                    <label alt="Distibutor Name" for="storemanageename" placeholder="Employee Name">Employee Name</label>
+                                                </div>
+                                            </div>
+                                            <!--<div class="col-md-4">
+                                                <div class="formfield" id="floatdv">
+                                                    <input type="email" id="Email" required>
+                                                    <label alt="Email" for="Email" placeholder="Email">Email</label>
+                                                </div>
+                                            </div>-->
+                                            <!--<div class="col-md-4">
+                                                <div class="formfield" id="floatdv">
+                                                    <input type="password" id="password" required>
+                                                    <label alt="password" for="password" placeholder="Password">Password</label>
+                                                </div>
+                                            </div>-->
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="formfield" id="floatdv">
+                                                    <input type="text" id="Phone" required>
+                                                    <label alt="Phone" for="Phone" placeholder="Phone No.">Phone No.</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="formfield" id="floatdv">
+                                                    <input type="text" id="address" required>
+                                                    <label alt="address" for="address" placeholder="Address">Address</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <select id="ddlrole" class="form-control"></select>
+
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label class="label_lb">Upload Image</label>
+                                                <div class="wrapper">
+                                                    <div class="box">
+                                                        <div class="js--image-preview" id="imgprew"></div>
+                                                        <div class="upload-options">
+                                                            <label>
+                                                                <input type="file" id="Edit_imgfile" class="image-upload" accept="image/*" />
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="label_lb">Upload Aadhar Front</label>
+                                                <div class="wrapper">
+                                                    <div class="box">
+                                                        <div class="js--image-preview" id="imgprew1"></div>
+                                                        <div class="upload-options">
+                                                            <label>
+                                                                <input type="file" id="Edit_imgfile1" class="image-upload" accept="image/*" />
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="label_lb">Upload Aadhar Back</label>
+                                                <div class="wrapper">
+                                                    <div class="box">
+                                                        <div class="js--image-preview" id="imgprew2"></div>
+                                                        <div class="upload-options">
+                                                            <label>
+                                                                <input type="file" id="Edit_imgfile2" class="image-upload" accept="image/*" />
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br /><br /><br />
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn_sm">Update</button>
+                                            <a href="Employee_list.html"><button type="button" class="btn_cancel" data-dismiss="modal">Cancel</button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <br />
+                                <br /><br />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+    <script src="../../Js/Imageupload.js"></script>
+    <script src="../../Js/Global.js"></script>
+    <script src="../../Js/Edit_Employee.js"></script>
+</body>
+</html>

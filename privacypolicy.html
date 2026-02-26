@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+     <title>Perfumes with AI and Super Sale</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png" />
+    <!-- Google fonts-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="Css/StyleSheet.css" rel="stylesheet" />
+    <link href="Css/dropdown.css" rel="stylesheet" />
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        .txt_sm .cart_count {
+            font-size: 1rem;
+            color: #1fc6c2;
+        }
+        h3 {
+            text-transform: none !important
+        }
+
+        a {
+            color: #70b4bd;
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader" style="position: fixed; width: 100%; height: 100%; background: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999;">
+        <div class="progress" style="width: 50%; height: 2px; margin-bottom: 10px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%; background-color: #70b4bd;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="loading-text" style="color: #70b4bd; font-family: 'Poppins', sans-serif;">Loading...</div>
+    </div>
+    <div id="validationdiv" class="validation_message"></div>
+    <div id="dvtopnav"></div>
+    <div class="dvnavcust"></div>
+    <!--giftVocherModal-->
+    <div class="modal fade" id="giftvocherLogin" role="dialog"></div>
+    <div class="container">
+        <h2>American Fragrances Privacy Policy</h2>
+
+        <p><strong>Last Updated:</strong> 02/14/2025</p>
+
+        <p>American Fragrances (“AmeriFrag,” "we," "our," or "us") is committed to protecting your privacy and ensuring that your personal information is handled securely and responsibly. This Privacy Policy explains how we collect, use, disclose, and protect your information when you visit our website, interact with our services, or engage with our personalized fragrance platform.</p>
+
+        <p>By using our services, you agree to the terms of this Privacy Policy. If you do not agree, please refrain from using our website.</p>
+
+        <h3>Information We Collect</h3>
+
+        <p>We collect information to provide, personalize, and improve our services. The information we collect falls into the following categories:</p>
+
+        <p><strong>a. Information You Provide Directly:</strong></p>
+        <p><strong>Account Registration:</strong> Name, email address, phone number, date of birth, and password.</p>
+        <p><strong>Personalization Data:</strong> Responses to questionnaires about preferences, personality traits, fragrance tastes, mood, style, etc., used for generating your personalized barcode.</p>
+        <p><strong>Payment Information:</strong> Billing address, shipping address, and payment details (credit/debit card information).</p>
+
+        <p><strong>b. Information We Collect Automatically:</strong></p>
+        <p><strong>Device Information:</strong> IP address, browser type, operating system, and device identifiers.</p>
+        <p><strong>Usage Data:</strong> Pages visited, time spent on the website, and interactions with our platform.</p>
+        <p><strong>Cookies and Tracking Technologies:</strong> Data collected through cookies, web beacons, and similar technologies to enhance your browsing experience.</p>
+
+        <p><strong>c. Information from Third Parties:</strong></p>
+        <p>We may receive data from third-party services, such as payment processors, analytics providers, or social media platforms when you interact with us through those channels.</p>
+
+        <h3>How We Use Your Information</h3>
+
+        <p>We use the information we collect for the following purposes:</p>
+
+        <p><strong>a. Providing Our Services:</strong></p>
+        <p>To create and manage your account.</p>
+        <p>To generate personalized barcodes and tailored fragrance recommendations.</p>
+        <p>To process your orders and deliver products to you.</p>
+
+        <p><strong>b. Personalization and Improvement:</strong></p>
+        <p>To enhance your shopping experience by showing relevant products and offers.</p>
+        <p>To refine our AI-driven recommendations based on your preferences and behavior.</p>
+        <p>To improve our website functionality and user experience.</p>
+
+        <p><strong>c. Marketing and Promotions:</strong></p>
+        <p>To send promotional emails, special offers, and updates (with your consent).</p>
+        <p>To tailor advertisements and marketing messages based on your preferences.</p>
+
+        <p><strong>d. Security and Fraud Prevention:</strong></p>
+        <p>To protect against unauthorized access and fraudulent activities.</p>
+        <p>To ensure the safety and security of your data and our services.</p>
+
+        <h3>How We Share Your Information</h3>
+
+        <p>We may share your information under the following circumstances:</p>
+
+        <p><strong>a. Service Providers:</strong></p>
+        <p>We engage third-party service providers to assist with payment processing, shipping, analytics, customer support, and marketing. These providers are contractually obligated to handle your data securely and only for the purposes we specify.</p>
+
+        <p><strong>b. Legal Obligations:</strong></p>
+        <p>We may disclose your information if required to do so by law, in response to legal requests, or to protect our rights, safety, or property.</p>
+
+        <p><strong>c. Business Transfers:</strong></p>
+        <p>In the event of a merger, acquisition, or sale of assets, your information may be transferred to the involved parties as part of the transaction.</p>
+
+        <h3>Cookies and Tracking Technologies</h3>
+
+        <p>We use cookies and similar technologies to enhance your browsing experience and improve our website’s functionality. This includes:</p>
+        <p><strong>Essential Cookies:</strong> Necessary for website operation.</p>
+        <p><strong>Performance Cookies:</strong> Monitor website performance and usage.</p>
+        <p><strong>Advertising Cookies:</strong> Deliver personalized ads.</p>
+
+        <p>You can manage your cookie preferences through your browser settings. For more information, refer to our Cookie Policy.</p>
+
+        <h3>Your Privacy Choices</h3>
+
+        <p>You have control over your personal information. Here are your choices:</p>
+        <p><strong>a. Access and Update:</strong> You can view, update, or correct your personal information by logging into your account.</p>
+        <p><strong>b. Opt-Out of Marketing:</strong> You can opt out of promotional emails by clicking the "unsubscribe" link in the email or contacting us directly.</p>
+        <p><strong>c. Manage Cookies:</strong> Adjust your browser settings to limit or disable cookies.</p>
+        <p><strong>d. Delete Account:</strong> You may request account deletion by contacting us at [privacy email].</p>
+
+        <h3>Security of Your Information</h3>
+
+        <p>We implement industry-standard security measures to protect your personal information, including encryption, secure servers, and access controls. While we strive to safeguard your data, no method of transmission over the internet is 100% secure. Therefore, we cannot guarantee absolute security.</p>
+
+        <h3>Data Retention</h3>
+
+        <p>We retain your personal information only as long as necessary to fulfill the purposes outlined in this policy, comply with legal obligations, or resolve disputes. If you request account deletion, your data will be securely removed from our systems, except for information we are required to retain by law.</p>
+
+        <h3>International Data Transfers</h3>
+
+        <p>If you are accessing our website from outside The United States, your information may be transferred to, stored, and processed in a country where privacy laws may not be as protective as those in your jurisdiction. By using our services, you consent to such data transfers.</p>
+
+        <h3>Children's Privacy</h3>
+
+        <p>Our website is not intended for individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that a child has provided us with their information, we will delete it immediately.</p>
+
+        <h3>Changes to This Privacy Policy</h3>
+
+        <p>We may update this Privacy Policy to reflect changes in our practices, legal requirements, or other circumstances. Any updates will be posted on this page, and the "Last Updated" date will be revised. We encourage you to review this policy regularly.</p>
+
+        <h3>Contact Us</h3>
+
+        <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at [Email].</p>
+
+        <p>By using our Website, you consent to the collection and use of your personal information as described in this Privacy Policy.</p>
+
+    </div>
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <footer id="footer">
+    </footer>
+    <!-----------------------------------------------Footer End----------------------------------------------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Js/Navbar.js"></script>
+    <script src="Js/Global.js"></script>
+    <script src="Js/customer_Login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Perfumes with AI and Super Sale</title>
+    <link rel="shortcut icon" type="image/png" href="../Images/favicon.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.1/dist/bootstrap-float-label.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css' />
+    <link rel='stylesheet' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css' />
+    <link href="../Css/Admin.css" rel="stylesheet" />
+    <link href="../Js/summer/summernote.css" rel="stylesheet" />
+    <link href="../Js/summer/summernote-bs4.css" rel="stylesheet" />
+    <link href="../Js/summer/summernote-lite.min.css" rel="stylesheet" />
+
+    <style>
+        .bs-placeholder {
+            background: white;
+            color: black;
+            border-color: lightgray;
+        }
+
+        .filter-option-inner-inner {
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="dvnav"></div>
+    <div id="validationdiv" class="validation_message"></div>
+    <!-----------------------------------------------body starts----------------------------------------------------------->
+    <div class="container-fluid main_dv">
+        <div class="row justify-content-end">
+            <!-----------------------------------------------Dashboard starts----------------------------------------------------------->
+            <div class="col-md-2 dashboard_dv">
+                <div id="leftmenu" class="dashboard_Menu">
+
+                </div>
+            </div>
+            <!-----------------------------------------------Body dv starts----------------------------------------------------------->
+            <div class="col-md-10 content-wrapper">
+                <div class="row">
+                    <div class="col-md-12 content-body">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h4 class="Menu_Title">DUPLICATE PRODUCTS LIST</h4>
+                            </div>
+                            <div class="col-md-2">
+                                <button href="./Add_DuplicateProduct.html" class="btn_md">Add Product</button>
+                            </div>
+                        </div>
+                        <table id="tblProduct_lst" class="table table-responsive-sm table-bordered table-sm" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Product  Name</th>
+                                    <th>SKU ID</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                    <th>Quantity</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Addcategory" tabindex="-1" role="dialog" aria-labelledby="Addcategory" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content modal-lg">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">DUPLICATE PRODUCT</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="formfield" id="floatdv">
+                                    <input type="text" name="Product ID" id="txtProdutid" required>
+                                    <label alt="Product ID" for="txtProdutid" placeholder="Product Name">Product ID</label>
+                                </div>
+                                <br />
+                                <div class="formfield" id="floatdv">
+                                    <input type="text" name="txtPrice" id="txtPrice" required>
+                                    <label alt="txtPrice" for="txtPrice" placeholder="Price">Price</label>
+                                </div>
+                                <br />
+                                <div class="formfield" id="floatdv">
+                                    <input type="text" name="txtQuantity" id="txtQuantity" required>
+                                    <label alt="txtStock" for="txtQuantity" placeholder="Quantity">Quantity</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="formfield" id="floatdv">
+                                    <input type="text" name="Produtname" id="txtProdutname" required>
+                                    <label alt="Product Name" for="txtProdutname" placeholder="Product Name">Product Name</label>
+                                </div>
+                                <br />
+                                <div class="formfield" id="floatdv">
+                                    <input type="text" name="Produtname" id="txtDiscount" required>
+                                    <label alt="txtDiscount" for="txtDiscount" placeholder="Product Name">Discount</label>
+                                </div>
+                                <br />
+                                <div class="formfield" id="floatdv">
+                                    <input type="text" name="txtStock" id="txtStock" required>
+                                    <label alt="txtStock" for="txtStock" placeholder="Product Name">Stock</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="formfield" id="floatdv">
+                                    <p>Select Type</p>
+                                    <select class="form-control" id="drpdw_moodtype" required>
+                                        <option selected>Select Type</option>
+                                        <option value="Health & Wellness">Health & Wellness</option>
+                                        <option value="Make Up">Make Up</option>
+                                        <option value="Skin Care">Skin Care</option>
+                                        <option value="Bath & Body">Bath & Body</option>
+                                        <option value="Hair Care">Hair Care</option>
+                                        <option value="Aroma">Aroma</option>
+                                        <option value="Travel Spray">Travel Spray</option>
+                                        <option value="Gift Sets">Gift Sets</option>
+                                        <option value="Appliances">Appliances</option>
+                                        <option value="Most popular">Most popular</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="label_lb">Display Picture</label>
+                                <div class="wrapper">
+                                    <div class="box">
+                                        <div class="js--image-preview"></div>
+                                        <div class="upload-options">
+                                            <label>
+                                                <input type="file" class="image-upload" accept="image/*" />
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9 border_box">
+                                <label class="label_lb">Maximum Images 4</label>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="wrapper">
+                                            <div class="box">
+                                                <div class="js--image-preview"></div>
+                                                <div class="upload-options">
+                                                    <label>
+                                                        <input type="file" class="image-upload" accept="image/*" />
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="wrapper">
+                                            <div class="box">
+                                                <div class="js--image-preview"></div>
+                                                <div class="upload-options">
+                                                    <label>
+                                                        <input type="file" class="image-upload" accept="image/*" />
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="wrapper">
+                                            <div class="box">
+                                                <div class="js--image-preview"></div>
+                                                <div class="upload-options">
+                                                    <label>
+                                                        <input type="file" class="image-upload" accept="image/*" />
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="wrapper">
+                                            <div class="box">
+                                                <div class="js--image-preview"></div>
+                                                <div class="upload-options">
+                                                    <label>
+                                                        <input type="file" class="image-upload" accept="image/*" />
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn_sm">Add</button>
+                    <button type="button" class="btn_cancel" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="../Js/summer/summernote.js"></script>
+    <script src="../Js/summer/summernote-bs4.min.js"></script>
+    <script src="../Js/summer/summernote-lite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/0.8.1/cropper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js"></script>
+    <script src="../Js/Imageupload.js"></script>
+    <script src="../Js/Global.js"></script>
+    <script src="../Js/Duplicate.js"></script>
+
+
+</body>
+</html>

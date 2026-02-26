@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+     <title>Perfumes with AI and Super Sale</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png" />
+    <!-- Google fonts-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link href="Css/StyleSheet.css" rel="stylesheet" />
+    <style>
+
+        body {
+            font-family: 'Poppins-Regular';
+            background: #f2f0f0;
+        }
+
+        .table tr th {
+            color: #000 !important;
+            border-top: 0px !important;
+            /*border-bottom: 3px solid #1C2D5B;*/
+            padding: 8px;
+        }
+
+        .table tr td {
+            color: #000000;
+            font-size: 14px !important;
+            padding: 8px;
+        }
+
+        .invoice_box {
+            background: #fff;
+            width: 100% !important;
+        }
+
+        .invoice_clr {
+            background: linear-gradient(173.98deg, #FDF7B7 -21.46%, #F6E376 -14.29%, #E8B143 10.62%, #DC711B 124.75%);
+            padding: 30px 60px;
+        }
+
+        .invoice_clr {
+            color: #fff !important;
+        }
+
+        #myFrame {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+        label{
+            font-size:22px;
+        }
+
+        #totalcount {
+            /*border-top: 3px solid #1C2D5B;*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader" style="position: fixed; width: 100%; height: 100%; background: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999;">
+        <div class="progress" style="width: 50%; height: 2px; margin-bottom: 10px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%; background-color: #70b4bd;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="loading-text" style="color: #70b4bd; font-family: 'Poppins', sans-serif;">Loading...</div>
+    </div>
+    <br />
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 invoice_box">
+                <div class="row invoice_clr">
+                    <h2><b>INVOICE</b></h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="myFrame">
+                            <div class="row" id="custaddress">
+
+                            </div>
+                            <br /> <br />
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table id="orderdetails_list" class="table table-bordered table-responsive-sm table-sm" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Item Description</th>
+                                                <th>Price</th>
+                                                <th>Quantity</th>
+                                                <th>Sub Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                    <div>
+                                        <p ><strong> Amount Used From Giftcard :</strong> <span id="giftCardAm"></span> </p>
+                                        <p > <strong>Amount Used From Coupon : </strong><span id="couponCardAm"></span> </p>
+                                    </div>
+                                    
+                                    <div class="d-flex">
+                                        <h4 id="totalcount" class="text-right" style="color: black">Total Amount $. <label id="totalamnt" class="m-1" style="display:inline"></label></h4>
+
+                                    </div>
+
+
+                                    <br /> <br /> <br />
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h5>American Fragrance</h5>
+                                            <p>
+                                                9052087444
+                                                <br />
+                                                info@Americanfragnance.com
+
+                                                <br />
+                                                Flat Num:301 Amrutha Sai Apartment,<br /> Prashanthi Hills Road No.2 ,<br /> Madhura Nagar. Hyderabad- 500090
+                                            </p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <img src="Images/logo_on.png" />
+                                        </div>
+                                    </div>
+                                    <br /><br />
+                                    <p class="text-center">
+                                        <input type="button" id="bt" onclick="print()" value="Print PDF" />
+                                    </p>
+                                    <br /><br />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<table style="width:740px;margin:auto;padding:10px;background-color:#eeeeee">
+        <tbody>
+            <tr>
+                <td style="background-color:#ffffff;padding:0px 20px 0px 20px">
+                    <table style="background-color:#ffffff;padding:0px 20px 0px 20px">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table style="width:100%">
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-size:40px;padding:20px 0px 20px 0px;line-height:0.8em;font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;text-align:center;color:#026633;font-weight:bold"> <img src="http://orderneeds.com/Images/logo_on.png" alt="American Fragrance" class="CToWUd"> </td>
+
+                                                <td align="right">
+                                                    <a href="http://orderneeds.com/" target="_blank"><img src="Images/Frame.png" class="CToWUd"> </a>
+                                                </td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table style="width:100%;margin-bottom:10px">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:35%">
+                                                    <hr style="color:#026633;border:0;border-top:2px solid #026633">
+                                                </td>
+                                                <td style="width:30%">
+                                                    <table style="width:100%">
+                                                        <colgroup>
+                                                            <col width="230">
+                                                            <col width="230">
+                                                        </colgroup>
+                                                    </table>
+                                                </td>
+                                                <td style="width:35%">
+                                                    <hr style="color:#026633;border:0;border-top:2px solid #026633">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div style="width:100%;margin-bottom:20px">
+                                        <table style="width:100%;padding:15px;background-color:#026633">
+                                            <colgroup>
+                                                <col width="450">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr style="width:100%">
+                                                    <td style="float:left;width:100%;font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;color:white">We Have New order From <span class="il">American Fragrance</span> Order with ID: <strong class="orderid"> ' + Bill Id +' </strong> </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div style="margin-left:15px;margin-right:15px">
+                                        <div style="margin-bottom:8px;font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif">
+                                            <div style="font-family:sans-serif;font-size:14px;font-weight:normal;margin-top:8px">Order Details :</div>
+                                            <span style="margin-right:5px;font-size:14px"><label class="customer_name"> '+ Name +' </label>,</span>
+                                        </div>
+                                        <div style="font-family:sans-serif;font-size:14px;font-weight:normal;margin-top:8px"> Time to celebrate! </div>
+                                        <div style="font-family:sans-serif;font-size:14px;font-weight:normal;margin-top:8px"> You order with ID: <strong class="orderid"> ' + Bill Id +' </strong> has been successfully delivered at the given address. </div>
+                                    </div>
+                                    <div style="font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;text-align:center;font-size:14px;margin-top:10px;margin-bottom:5px">Contents of the package:</div>
+                                    <div style="width:100%;margin-bottom:20px">
+                                        <table style="width:100%;background-color:#f9f9f9;border-collapse:collapse">
+                                            <colgroup style="width:100%">
+                                                <col width="112">
+                                                <col width="112">
+                                                <col width="112">
+                                                <col width="112">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr style="font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;color:#585858;overflow:hidden;height:40px;border-bottom:solid 1px #e8e8e8;background-color:#f9f9f9">
+                                                    <td style="font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;width:50%;font-weight:bold;font-size:14px;text-align:left;padding-left:15px">Item Description</td>
+                                                    <td style="font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;width:20%;font-weight:bold;font-size:14px;text-align:left;padding:0px">Options</td>
+                                                    <td style="font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;width:15%;font-weight:bold;font-size:14px;text-align:left;padding:0px">Price</td>
+                                                    <td style="font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;width:15%;font-weight:bold;font-size:14px;text-align:right;padding:0px;padding-right:15px">Sub Total</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div> <table style="width:100%;border-collapse:collapse;border-bottom:solid 1px #e8e8e8;border-spacing:0px">
+                                        <tbody>
+                                            <tr style="overflow:hidden;border-bottom:solid 1px #e8e8e8">
+                                                <td style="padding-left:14px;width:50%;text-align:left;vertical-align:top;border-collapse:collapse">
+                                                    <table style="border-spacing:0px">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><img src="https://ci4.googleusercontent.com/proxy/fvbm5g9atfmacUHZUBamw3llQeLHYMbu0RywcHYd_MN1wMr2tNKSD6Yo_t6WQVdOfG06FQzO4fEZtta9x6kH0EchozBLxaB3KzN9UAztxvIKobtL6kHiamlz1gK16rJ9N_0pukmUjxwUl4dbwmml_tmsmj137XLN-4F1jQ=s0-d-e1-ft#https://assets.ajio.com/medias/sys_master/root/hae/h28/13639808253982/-60Wx75H-440967711-ltblue-MODEL.jpg" alt="Smiley face" class="CToWUd"></td>
+                                                                <td style="text-align:left;border-collapse:collapse;font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;font-size:14px;vertical-align:top;color:#686868;padding-right:1%;padding-right:10px;padding-left:10px">Mid-Rise Skinny Fit Jeans with Whiskers</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td style="width:20%;text-align:left;padding-bottom:20px;border-collapse:collapse">
+                                                    <table style="border-spacing:0px">
+                                                        <tbody>
+
+                                                            <tr>
+                                                                <td style="font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;font-size:14px;color:#686868;width:30%;padding-top:5px;padding-right:5px">Dimension</td>
+                                                                <td style="width:70%;font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;font-size:14px;color:#686868;vertical-align:top;word-wrap:break-word;padding-top:5px">' + Dimension + '</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;font-size:14px;color:#686868;width:30%;padding-top:5px;padding-right:5px">Qty</td>
+                                                                <td style="width:70%;font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;font-size:14px;color:#686868;vertical-align:top;word-wrap:break-word;padding-top:5px">' + Quantity + '</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td style="border-bottom:solid 1px #e8e8e8;text-align:left;border-collapse:collapse;vertical-align:top;color:#686868;font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;font-size:14px;width:15%;text-align:left">Rs. 624.00</td>
+                                                <td style="border-bottom:solid 1px #e8e8e8;border-collapse:collapse;vertical-align:top;color:#686868;font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;font-size:14px;width:15%;text-align:right;padding-right:15px">Rs. 624.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table style="width:100%;color:#585858;overflow:hidden;border-bottom:solid 1px #e8e8e8">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr style="color:#585858;overflow:hidden">
+                                                <td style="width:50%;float:left"></td>
+                                                <td style="width:50%;float:right">
+                                                    <table style="width:100%">
+                                                        <colgroup>
+                                                            <col width="50%">
+                                                            <col width="50%">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr style="width:100%;overflow:hidden;color:#026633;font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;font-size:14px;margin-bottom:5px;display:block">
+                                                                <td style="width:70%;float:left;padding-top:5px">Sub Total</td>
+                                                                <td style="width:30%;text-align:right;padding-right:10px;padding-top:5px">Rs. 624.00</td>
+
+                                                            </tr>
+                                                            <tr style="width:100%;display:none;overflow:hidden;color:#026633;font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;font-size:14px">                                                 <td style="width:70%;float:left;padding-top:5px">Gift Wrap</td>                                                 <td style="width:30%;text-align:right;padding-right:10px;padding-top:5px">Rs. 0.00</td>                                             </tr>
+                                                            <tr style="width:100%;overflow:hidden;color:#026633;font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;font-size:14px;display:block">                                                 <td style="width:70%;float:left;padding-top:5px;padding-bottom:10px">Delivery</td>                                                 <td style="width:30%;text-align:right;padding-right:10px;padding-top:5px;padding-bottom:10px">FREE</td>                                             </tr>
+                                                            <tr style="width:100%;display:block;overflow:hidden;color:#026633;font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;font-size:14px">                                                 <td style="width:70%;float:left">Discounts</td>                                                 <td style="width:30%;text-align:right;padding-right:10px;color:#b9a07b">- Rs. 187.20</td>                                             </tr>
+                                                            <tr style="width:100%;display:none;overflow:hidden;color:#026633;font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;font-size:14px">                                                 <td style="width:70%;float:left;padding-top:5px">Credits</td>                                                 <td style="width:30%;text-align:right;padding-right:10px;color:#b9a07b;padding-top:5px;padding-bottom:5px">- Rs. 0.00</td>                                             </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table style="width:100%;color:#585858;overflow:hidden;border-bottom:solid 1px #e8e8e8">
+                                        <tbody>
+                                            <tr style="width:100%">
+                                                <td style="width:50%;float:left;box-sizing:border-box"></td>
+                                                <td style="width:50%;float:right">
+                                                    <table style="width:100%">
+                                                        <tbody>
+                                                            <tr style="color:#026633;width:100%;overflow:hidden;font-size:16px;font-family:'Sofia Pro Regular Az' !important;,Arial,sans-serif;padding-top:10px;padding-bottom:10px;display:block">
+                                                                <td style="width:60%;float:left">Order Total</td>
+                                                                <td style="width:40%;text-align:right;font-weight:bold;padding-right:10px">Rs. 436.00</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                  
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="Js/Global.js"></script>
+
+    <script src="Js/customer_bill_generate.js"></script>
+</body>
+</html>
+
+

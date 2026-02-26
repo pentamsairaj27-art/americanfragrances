@@ -1,0 +1,2766 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perfumes with AI and Super Sale</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"><!--For water wheel carousel-->
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="Css/product-listing.css" rel="stylesheet" />
+    <link href="Css/StyleSheet.css" rel="stylesheet" />
+    <link href="Css/index.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- International Telephone Input CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+
+    <!-- AOS JS -->
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png" />
+    <!-- Bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- owl carousel cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+          integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+          integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+          crossorigin="anonymous" />
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="Css/mobile-responsive.css" rel="stylesheet" />
+    <link href="Css/wedjet.css" rel="stylesheet" />
+    <style>
+        /*#brands-carousel .owl-dots {
+            display: none !important;
+        }*/
+
+        .nav-item.myaccount.dropdown:hover .dropdown-menu {
+            display: block !important;
+        }
+
+        .nav-item.myaccount.dropdown .dropdown-menu {
+            display: none;
+        }
+
+        .owl-dots {
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            max-width: 200px; /* adjust as needed */
+            margin: 0 auto;
+            padding: 0 10px;
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+        }
+
+            /* Hide scrollbar for WebKit */
+            .owl-dots::-webkit-scrollbar {
+                display: none;
+            }
+
+        .owl-dot {
+            flex: 0 0 auto;
+            margin: 0 4px;
+        }
+
+        #brands-carousel .item {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            #brands-carousel .item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+        #brands-carousel .owl-dots {
+            margin-top: 0px !important;
+        }
+
+        #brands-carousel .owl-item {
+            height: 284px !important;
+        }
+
+        #brands-carousel .item {
+            height: 100% !important;
+        }
+
+        .tawk-min-container .tawk-button-circle.tawk-button-large {
+            width: 40px !important;
+            height: 40px !important;
+        }
+
+        #topLine .h5 {
+            color: #000000 !important;
+        }
+
+        #promotional_Banner_carousel .owl-prev, #promotional_adds_Banner_carousel .owl-prev {
+            left: 25px !important;
+        }
+
+        #promotional_adds_Banner_carousel .owl-next, #promotional_Banner_carousel .owl-next {
+            right: 11px !important;
+        }
+
+        .amerifrags_sub {
+            border-radius: 25px !important;
+            background-color: #000 !important;
+            padding: 3px 18px !important;
+            color: #fff !important
+        }
+
+
+        .amerifragStudio:hover {
+            /* background-color: #fff !important;
+                            color: #000 !important*/
+        }
+
+        .sign {
+            font-weight: 900;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .change-color {
+            color: red;
+            font-weight: 900;
+            font-size: 20px;
+        }
+        /*  .bttn {
+                            border-radius: 50px;
+                            color: #70b4bd !important;
+                            border: dotted;
+                        }*/
+
+
+        .btnn {
+            color: #70b4bd !important;
+            background-color: black;
+            border-radius: 5px;
+            padding: 5px 9px;
+            font-family: Sofia Pro Regular Az !important;
+            font-weight: bold;
+        }
+
+        .dis {
+            font-weight: 900;
+            font-size: 20px;
+            color: red;
+            font-style: italic;
+        }
+
+        .Ai {
+            color: red;
+            font-weight: 900;
+            font-size: 30px;
+        }
+
+        .bar text-center {
+            border: solid;
+            background-color: aquamarine;
+        }
+
+        .fit-image {
+            /* width: 100%;*/
+            max-height: 520px;
+            object-fit: contain !important;
+        }
+
+        .card {
+            border-radius: 0px !important;
+        }
+
+        .owl-nav {
+            position: relative !important;
+            top: -135px;
+            left: 0px;
+        }
+
+            .owl-nav .owl-prev {
+                position: absolute !important;
+                left: -33px !important;
+                bottom: 0px;
+            }
+
+            .owl-nav .owl-next {
+                position: absolute !important;
+                right: -30px !important;
+                bottom: 0px;
+            }
+
+        #NoteProducts-curosel .owl-nav .owl-next {
+            position: absolute !important;
+            right: -30px !important;
+            bottom: 0px;
+            border: none !important;
+            background: none !important;
+        }
+
+        #NoteProducts-curosel .owl-nav {
+            top: -200px;
+        }
+
+            #NoteProducts-curosel .owl-nav .owl-prev {
+                position: absolute !important;
+                left: -28px !important;
+                bottom: 0px;
+                border: none !important;
+                background: none !important;
+            }
+
+                #NoteProducts-curosel .owl-nav .owl-prev span, #NoteProducts-curosel .owl-nav .owl-next span {
+                    font-size: 50px;
+                }
+
+        @media only screen and (max-width:750px) {
+            .middileImg {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        #NoteProducts-curosel .owl-item {
+            background-color: transparent !important;
+        }
+
+        input[type=range] {
+            width: 90% !important;
+        }
+
+        .percentageSymbol1 {
+            position: absolute;
+            left: 36%;
+            top: 76%;
+        }
+
+        .percentageSymbol2 {
+            position: absolute;
+            right: 29%;
+            top: 76%;
+        }
+
+        .owl-item {
+            background: transparent !important;
+        }
+
+        /*--------------------range slider------------------------*/
+        input[type=range] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%; /* Full width of the container */
+            margin: 0; /* Remove margin to avoid spacing issues */
+            background: transparent !important;
+            color: #70b4bd !important;
+        }
+
+            input[type=range]::-webkit-slider-runnable-track {
+                height: 5px;
+                background: transparent !important; /* Transparent background */
+                border-radius: 3px;
+                background: transparent !important;
+            }
+
+            input[type=range]::-moz-range-track {
+                height: 5px;
+                background: transparent !important; /* Transparent background for Firefox */
+                border-radius: 3px;
+            }
+
+            input[type=range]::-ms-track {
+                height: 5px;
+                background: transparent !important; /* Transparent background for IE/Edge */
+                border-color: transparent;
+                color: transparent;
+            }
+
+            /* Styling the slider thumb */
+            input[type=range]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                /*      width: 24px;
+                        height: 24px;
+                        border-radius: 50%; */
+                width: 35px;
+                height: 35px;
+                background-size: 100%;
+                background: url('images/home/doller2.png') no-repeat center;
+                cursor: pointer;
+                margin-top: -14px; /* Align thumb in the center of the track */
+                position: relative;
+                margin-left: 8px !important;
+                filter: none !important;
+            }
+
+        .range-slider2 input[type=range]::-webkit-slider-thumb {
+            background: url('images/home/percen2.png') no-repeat center !important;
+            filter: none !important;
+        }
+
+
+        input[type=range]::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: black; /* Red color for Firefox */
+            cursor: pointer;
+            background: url('images/home/doller2.png') no-repeat center;
+            filter: none !important;
+        }
+
+        input[type=range]::-ms-thumb {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: black; /* Red color for IE/Edge */
+            cursor: pointer;
+        }
+
+        .fa-hand-point-left, .fa-hand-point-right {
+            color: #70b4bd;
+        }
+
+        #Amerifrag_Studio_carousel .owl-nav {
+            display: none !important;
+        }
+
+
+
+        .freeze-scroll {
+            overflow: hidden !important;
+        }
+
+
+        #homeAnalyticsPopup {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+            #homeAnalyticsPopup .container-fluid {
+                max-width: 100% !important;
+                padding-left: 40px !important;
+                padding-right: 40px !important;
+                margin: 0 !important;
+            }
+
+            #homeAnalyticsPopup .piecharts {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0;
+            }
+
+                #homeAnalyticsPopup .piecharts .p-2 {
+                    flex: 0 0 18%;
+                    text-align: center;
+                }
+
+            #homeAnalyticsPopup canvas {
+                width: 210px !important;
+                height: 210px !important;
+            }
+
+            #homeAnalyticsPopup .btn {
+                background: #000 !important;
+                color: white !important;
+                padding: 12px 30px !important;
+                border-radius: 25px !important;
+                border: none !important;
+                font-size: 16px !important;
+                font-weight: bold !important;
+            }
+
+        .product_name_wrapper {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 3px !important;
+            width: 100%;
+            min-height: 40px;
+            position: relative;
+            margin-top: 0px;
+        }
+
+        .product_name_container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .product_name {
+            flex: 0 1 auto !important;
+            margin: 0 !important;
+            line-height: 1.4 !important;
+            text-align: center !important;
+            cursor: pointer;
+        }
+
+            .product_name::before,
+            .product_name::after {
+                content: none !important;
+                display: none !important;
+            }
+
+        .product_name_tooltip {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            white-space: nowrap;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: opacity 0.2s, visibility 0.2s;
+        }
+
+            .product_name_tooltip::after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                border: 6px solid transparent;
+                border-top-color: rgba(0, 0, 0, 0.9);
+            }
+
+        .product_name_container:hover .product_name_tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .cat_icon {
+            flex-shrink: 0 !important;
+            font-size: 18px !important;
+            padding-left: 0px !important;
+            margin-left: 10px !important;
+        }
+
+        /* Prevent default browser tooltip on product names */
+        .product_name_container .product_name[title] {
+            pointer-events: auto !important;
+        }
+
+            .product_name_container .product_name[title]:hover::after {
+                content: none !important;
+            }
+
+        /* Ensure custom tooltip takes precedence */
+        .product_name_tooltip {
+            pointer-events: none;
+            z-index: 10000 !important;
+        }
+
+        /* Remove Bootstrap/browser tooltip on product names specifically */
+        .product_name_container [data-bs-original-title],
+        .product_name_container [data-original-title] {
+            pointer-events: none !important;
+        }
+
+        /* Style for home page phone input with country code */
+        #fd-user-phone {
+            width: 100% !important;
+            padding-left: 90px !important; /* Increased for flag + dial code */
+            padding-right: 12px !important;
+            height: 38px !important;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .border-input {
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+
+        /* Phone input country selector styling */
+        .iti {
+            display: block;
+            width: 100% !important;
+            position: relative;
+        }
+
+        .iti__flag-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+
+        .iti__selected-flag {
+            padding: 0 8px 0 10px !important;
+            height: 38px !important;
+            display: flex !important;
+            align-items: center !important;
+            background: transparent !important;
+            border: none !important;
+        }
+
+        /* Show the dial code */
+        .iti__selected-dial-code {
+            display: inline-block !important;
+            margin-left: 6px !important;
+            font-size: 14px !important;
+            color: #333 !important;
+        }
+
+        .iti__country-list {
+            max-height: 200px;
+            overflow-y: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            margin-top: 4px;
+            z-index: 1000;
+        }
+
+        .iti__country {
+            padding: 8px 10px;
+        }
+
+            .iti__country:hover {
+                background-color: #f0f0f0;
+            }
+
+        /* Ensure the input spans full width within the column */
+        .col-12.col-md-3 .iti {
+            width: 100% !important;
+        }
+
+        #myAccountDropdownMenu {
+            min-width: 150px;
+            right: 0 !important;
+            left: auto !important;
+        }
+    </style>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P2NR3CD9');</script>
+    <!-- End Google Tag Manager -->
+    <style>
+           
+        /* ===== CONCISE SALE OFFER — only 2-3 LINES ===== */
+        .sale-offer-compact {
+            background: linear-gradient(115deg, #1b2b3f, #1f3a4b);
+            border-radius: 2rem;
+            margin: 1.5rem 2rem 2rem 2rem;
+            padding: 1.4rem 2.2rem;
+            color: white;
+            box-shadow: 0 20px 35px -5px #00000070, inset 0 1px 3px rgba(255,240,210,0.2);
+            border: 1px solid rgba(255,210,150,0.3);
+            position: relative;
+            overflow: hidden;
+            animation: gentleFloat 3s infinite ease-in-out;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem 2rem;
+        }
+
+            .sale-offer-compact::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(circle at 0% 30%, rgba(255,230,170,0.15), transparent 60%);
+                pointer-events: none;
+                animation: shineMove 9s infinite;
+            }
+
+        @keyframes shineMove {
+            0% {
+                opacity: 0.2;
+                transform: translateX(-10%);
+            }
+
+            50% {
+                opacity: 0.6;
+                transform: translateX(5%);
+            }
+
+            100% {
+                opacity: 0.2;
+                transform: translateX(-10%);
+            }
+        }
+
+        @keyframes gentleFloat {
+            0% {
+                transform: translateY(0);
+                box-shadow: 0 20px 30px -8px black;
+            }
+
+            50% {
+                transform: translateY(-4px);
+                box-shadow: 0 28px 38px -6px #000000dd, 0 0 0 2px rgba(255,200,150,0.3);
+            }
+
+            100% {
+                transform: translateY(0);
+                box-shadow: 0 20px 30px -8px black;
+            }
+        }
+
+        /* left side: main two lines (save + coupon) */
+        .offer-lines-compact {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            z-index: 2;
+        }
+
+        .line-big-save {
+            position:absolute;
+            top: 90%;
+            left:23%;
+            display: flex;
+            align-items: baseline;
+            gap: 0.4rem 1rem;
+            flex-wrap: wrap;
+        }
+
+        .save-pill {
+            background: #d6341e;
+            padding: 0.3rem 1.4rem 0.3rem 1.6rem;
+            border-radius: 60px;
+            font-weight: 800;
+            font-size: 26px;
+            letter-spacing: 1.5px;
+            box-shadow: 0 5px 0 #792514, 0 10px 20px -5px black;
+            display: inline-block;
+            border: 1px solid #ffae7a;
+            animation: badgePulse 2.2s infinite;
+            line-height: 1.2;
+        }
+
+        @keyframes badgePulse {
+            0% {
+                box-shadow: 0 5px 0 #792514, 0 10px 18px -5px black;
+            }
+
+            50% {
+                box-shadow: 0 5px 0 #a13b20, 0 0 0 4px rgba(255,170,100,0.5), 0 15px 25px -3px black;
+            }
+
+            100% {
+                box-shadow: 0 5px 0 #792514, 0 10px 18px -5px black;
+            }
+        }
+
+        .off-chip {
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: #ffdcc2;
+        }
+
+        .coupon-text {
+            font-size: 1.7rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffeac5, #ffd6a0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            filter: drop-shadow(0 2px 4px black);
+            margin: 0.2rem 0 0.1rem;
+        }
+
+        /* second line: free shipping + instant 5% together (2 in one) */
+        .shipping-instant {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem 1.2rem;
+            flex-wrap: wrap;
+            background: rgba(0,0,0,0.3);
+            border-radius: 50px;
+            padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+            width: fit-content;
+            border: 1px solid #e6c8a6;
+            margin-top: 0.1rem;
+        }
+
+        .free-ship-badge {
+            background: #3d6a5e;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            border: 1px solid #b5dfd0;
+            box-shadow: inset 0 -2px 0 #1e4036;
+            animation: softBlink 3s infinite;
+        }
+
+        @keyframes softBlink {
+            0% {
+                border-color: #b5dfd0;
+            }
+
+            50% {
+                border-color: #fcd4a8;
+                box-shadow: 0 0 8px #ffd98c;
+            }
+
+            100% {
+                border-color: #b5dfd0;
+            }
+        }
+
+        .instant-chip {
+            background: #eeba2c;
+            color: #1b2a32;
+            font-weight: 800;
+            font-size: 1.2rem;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            box-shadow: 0 0 0 1.5px #1f3f48;
+            animation: flickerChip 2s infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes flickerChip {
+            0% {
+                background: #eeba2c;
+            }
+
+            50% {
+                background: #ffd966;
+                box-shadow: 0 0 0 2px #ffe3a5;
+            }
+
+            100% {
+                background: #eeba2c;
+            }
+        }
+
+        /* right side: third concise element (extra discount + questionnaire) */
+        .extra-line {
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(4px);
+            border-radius: 3rem;
+            padding: 0.6rem 1.4rem;
+            border: 1px dashed #ffcf9a;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1rem;
+            max-width: 310px;
+            box-shadow: 0 5px 12px #00000050;
+            animation: borderGlow 2.8s infinite;
+            z-index: 3;
+        }
+
+        @keyframes borderGlow {
+            0% {
+                border-color: #ffcf9a;
+            }
+
+            50% {
+                border-color: #ffeab3;
+                box-shadow: 0 0 15px #ffcf9a;
+            }
+
+            100% {
+                border-color: #ffcf9a;
+            }
+        }
+
+        .extra-line span:first-child {
+            font-weight: 800;
+            font-size: 1.3rem;
+            background: #1b4b5e;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            color: #ffeac2;
+        }
+
+        .extra-line .question-tag {
+            color: #fde6c0;
+            line-height: 1.3;
+        }
+
+            .extra-line .question-tag strong {
+                color: #ffcd94;
+            }
+
+        /* responsive */
+        @media (max-width: 750px) {
+            .video-caption h2 {
+                font-size: 2.3rem;
+            }
+
+            .sale-offer-compact {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2NR3CD9"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <div id="dvtopnav"></div>
+    <!-----------------------------------------------Top Navigation Start----------------------------------------------------------->
+    <div class="dvnavcust"></div>
+    <!-----------------------------------------------Top Navigation End----------------------------------------------------------->
+    <div class="sticky-container">
+        <div class="button-container">
+            <!--<a href="#" data-bs-target="#choosetype" data-bs-toggle="modal" data-bs-dismiss="modal">-->
+            <img src="Images/help you.png" class="img-fluid" />
+            <!--</a>-->
+        </div>
+    </div>
+    <!--giftVocherModal-->
+    <div class="modal fade" id="giftvocherLogin" role="dialog"></div>
+    <!-------------------------                                                                                                                                    ----------------------Carousel Slider Start ----------------------------------------------------------->
+    <div id="validationdiv" class="validation_message"></div>
+
+
+    <!--<div id="demo" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" id="main_banners"></div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>-->
+    <!-- Modal -->
+    <!-----------------------------------------------Carousel Slider  End----------------------------------------------------------->
+    <!--3d curosel Section -->
+    <!--<div class="container-fluid homeBanTopSection">
+        <div class="row">
+            <div id="unified-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="6000" style="background:transparent;padding:0px !important;">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#unified-carousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#unified-carousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#unified-carousel" data-bs-slide-to="2"></button>
+                </div>
+
+                <div class="carousel-inner d-flex" id="unified_banners">-->
+    <!-- Carousel items will be added dynamically here -->
+    <!--</div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#unified-carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#unified-carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+    </div>-->
+    <!--<div class="container-fluid pb-4" style="background-color:#70b4bd;">-->
+    <!--<p class="banner-text text-center pb-3">Get Personalized <span class="banner-bold-text">AI Recommendations</span> Based on Your<span class="banner-bold-text"> Profile</span> and Unique<span class="banner-bold-text"> Barcode</span></p>-->
+    <!--</div>-->
+    <div class="video-banner">
+        <video autoplay muted loop playsinline>
+            <source src="Images/coverr-woman-sprays-perfume-whilst-dancing-5862-1080p.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-caption">
+            <h2>Shop Perfumes Using <span>AI</span></h2>
+            <p>Indulge in Fragrances Curated Just For You With Your</p>
+            <p>Unique AmeriFrag Barcode</p>
+            <button class="signature-scents-btn" id="revealSignatureScents">
+                Reveal My Signature Scents
+            </button>
+            <p class="highlights">Powered by PatentedAI Technology</p>
+
+        </div>
+        <!-- ===== COMPACT SALE OFFER — now only 2–3 concise lines ===== -->
+        <div class="line-big-save">
+            <span class="save-pill">Flash SALE: Up to 70% OFF ! Limited Time Offer !​</span>
+
+        </div>
+        <!-- end of concise offer -->
+
+        <div style="padding: 0.5rem 2rem 2rem 2rem; color: #5b4f47; font-weight: 300; text-align: right; opacity: 0.8;">
+            ✨ AI‑powered personalization
+        </div>
+    </div>
+
+    <div class="d-none container-fluid pt-4 pb-3" style="background-color: #EBEBEB;">
+        <h3 class="headingColor pb-2 text-center">
+            Experience A Revolutionary Fragrances Platform With The Right Questions & Philosophy
+        </h3>
+
+        <div class="row d-flex flex-row justify-content-center flex-wrap">
+            <div class="image-card">
+                <div>
+                    <img class="img-fluid" src="images/home/digitalsmelling/who-i-am-i.png" />
+                </div>
+                <h6 class="pt-2">
+                    Who Am I?
+                </h6>
+            </div>
+            <div class="image-card">
+                <div>
+                    <img class="img-fluid" src="images/home/digitalsmelling/WHAT-DO-I-WANT.png" />
+                </div>
+                <h6 class="pt-2">
+                    What Do I Want?
+                </h6>
+            </div>
+            <div class="image-card">
+                <div>
+                    <img class="img-fluid" src="images/home/digitalsmelling/HOW-CAN-I-FIND.png" />
+                </div>
+                <h6 class="pt-2">
+                    How Can I Find?
+                </h6>
+            </div>
+            <div class="image-card">
+                <div>
+                    <img class="img-fluid" src="images/home/digitalsmelling/HOW-CAN-I-ANALYZE.png" />
+                </div>
+                <h6 class="pt-2">
+                    How Can I Analyze?
+                </h6>
+            </div>
+            <div class="image-card">
+                <div>
+                    <img class="img-fluid" src="images/home/digitalsmelling/HOW-CA-I-DECIDE.png" />
+                </div>
+                <h6 class="pt-2">
+                    How Can I Decide?
+                </h6>
+            </div>
+            <div class="image-card">
+                <div>
+                    <img class="img-fluid" src="images/home/digitalsmelling/HOW-CAN-I-GET.png" />
+                </div>
+                <h6 class="pt-2">
+                    How Can I Get?
+                </h6>
+            </div>
+            <div class="image-card">
+                <div>
+                    <img class="img-fluid" src="images/home/digitalsmelling/HOW-CAN-I-CONTINUE.png" />
+                </div>
+                <h6 class="pt-2">
+                    How Can I Continue?
+                </h6>
+            </div>
+        </div>
+    </div>
+    <!----------------------------------   New Arrivals------------------------------------->
+    <div id="new-arrivals-section" class="lazy-section">
+        <div class="container px-0 mb-5 pt-4 d-none">
+            <h3 class="mb-4 cat-heading headingColor">New Arrivals </h3>
+            <p class="text-center ">
+                <span class="highlight-text">
+                    EARN REWARD POINTS ON EACH PURCHASE FOR SPECIAL COUPONS
+                </span>
+            </p>
+            <div class="row" id="arrivals_carosel">
+            </div>
+            <div class="popuarBelowCon">
+                <div class="btn registerBtCont">
+                    <p style="margin-bottom:0px;"><a href="/register.html" style="color:white !important">Register now to enjoy an <span style="color:black; font-weight:bold !important;"> EXTRA 5% Discount on Every Product </span> by completing a quick questionnaire at checkout!</a></p>
+                </div>
+            </div>
+            <div class="text-center pt-3">
+                <a type="button" class="btn more_btn" style="border-radius:15px !important;padding:7px !important;" href="show-all.html?cat=Men">Explore More <i class="fa-solid fa-arrow-up-long"></i></a>
+            </div>
+        </div>
+
+
+        <!-- End of Title Section -->
+        <!---------------------------------------------Search Section------------------------------------------>
+        <div class="d-none d-md-block d-lg-block container-fluid pt-4 pb-3">
+            <h3 class="headingColor pb-2 text-center">
+                Experience A Revolutionary Fragrances Platform With The Right Questions & Philosophy
+            </h3>
+
+            <div class="row  d-flex flex-row justify-content-center flex-wrap">
+                <div class="image-card">
+                    <div>
+                        <img class="img-fluid" src="images/home/digitalsmelling/who-i-am-i.png" />
+
+                    </div>
+                    <h6 class="pt-2">
+                        Who Am I?
+                    </h6>
+                </div>
+                <div class="image-card">
+                    <div>
+                        <img class="img-fluid" src="images/home/digitalsmelling/WHAT-DO-I-WANT.png" />
+                    </div>
+                    <h6 class="pt-2">
+                        What Do I Want?
+                    </h6>
+                </div>
+                <div class="image-card">
+                    <div>
+                        <img class="img-fluid" src="images/home/digitalsmelling/HOW-CAN-I-FIND.png" />
+                    </div>
+                    <h6 class="pt-2">
+                        How Can I Find?
+
+                    </h6>
+                </div>
+                <div class="image-card">
+                    <div>
+                        <img class="img-fluid" src="images/home/digitalsmelling/HOW-CAN-I-ANALYZE.png" />
+                    </div>
+                    <h6 class="pt-2">
+                        How Can I Analyze?
+
+                    </h6>
+                </div>
+                <div class="image-card">
+                    <div>
+                        <img class="img-fluid" src="images/home/digitalsmelling/HOW-CA-I-DECIDE.png" />
+                    </div>
+                    <h6 class="pt-2">
+                        How Can I Decide?
+
+                    </h6>
+                </div>
+                <div class="image-card">
+                    <div>
+                        <img class="img-fluid" src="images/home/digitalsmelling/HOW-CAN-I-GET.png" />
+                    </div>
+                    <h6 class="pt-2">
+                        How Can I Get?
+
+                    </h6>
+                </div>
+                <div class="image-card">
+                    <div>
+                        <img class="img-fluid" src="images/home/digitalsmelling/HOW-CAN-I-CONTINUE.png" />
+                    </div>
+                    <h6 class="pt-2">
+                        How Can I Continue?
+
+                    </h6>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div id="search-section" class="lazy-section d-none container-fluid pt-4 mt-2">
+            <div class="text-center ">
+                <img id="searchHeadingImg" src="Images/home/heading1.png" />
+
+
+            </div>
+            <div class="container" id="HomeSearchCon">
+
+                <div class="row">
+                    <div class="col-md-2 text-center ">
+                        <a href="/AmerifragBlog.html" class="d-none"><img class="img-fluid" style="max-width:80%" src="Images/perfumeSelectiontips.png"></a>
+                    </div>
+                    <div class="col-md-8 align-self-center">
+
+                        <div class="row middileSearch position-relative">
+                            <div class="dvcategoryserach2" style="display:none">
+                                <ul class="licategoryserach2"></ul>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <input type="text" class="searchbox2" placeholder="Enter Perfume Name Here…" style="border:3px solid black !important;height:35px;width:80%;font-size:12px;" />
+
+                                <div><ul id="suggestions2"></ul></div>
+                                <div class="search2 d-inline pt-2 pb-2">
+                                    <i class="fa fa-search pe-2"></i>
+                                    <i class="fa fa-search"></i>
+                                    <span class="searchlabel" style="font-size:16px !important;"></span>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2  text-center align-self-center">
+                        <img class="img-fluid" style="max-width:60%" src="Images/home/certificatehome.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="budget-section" class="lazy-section d-none container-fluid pb-3 pt-3">
+            <div class="container">
+                <h3 class="mb-2 cat-heading headingColor">
+                    Shop Perfumes Within Your Budget & Offers
+                </h3>
+                <div class="row ">
+                    <div class="col-md-4 d-flex flex-column justify-content-center priceDiv" style="background-image: url('Images/home/globe4.png'); background-size:contain;background-position:center;background-repeat:no-repeat;height:350px;">
+                        <div class="text-center">
+                            <div class="range-slider text-center py-5" style="height: 4em; width:92%;">
+                                <input value="0" min="0" max="999" class="pp minp1" step="1" type="range" style="padding-left: 20px !important;" />
+                                <input value="1000" min="0" max="1000" class="pp" step="1" type="range" style="color:#c83639" />
+                                <span class="mt-4" style="color: black !important; font-size:22px; text-align:center;">
+                                    &nbsp;  &nbsp;  <span class="doller-sign"> $</span> <input type="number" value="0" min="0" id="minp" readonly max="1000" class="mt-4 m-0 m-auto" style="text-align: left; background: transparent !important; border: none !important; color: #000 !important; font-weight: bold !important; " />
+                                    &nbsp;  to  &nbsp;  <span style="text-align:right;" class="doller-sign highdolVal ml-3 ">$</span> <input type="number" value="1000" min="0" id="maxp" readonly max="1000" class="mt-4 m-0 m-auto" style="background: transparent !important; border: none !important; color: #000 !important; font-weight: bold !important; " />
+                                </span>
+                                <br />
+                                <button class="btn resetPriceValues mt-4">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex flex-column justify-content-center">
+                        <h4 class="text-center" style="font-size:20px;">
+                            <span><i class="fa-solid fa-hand-point-left"></i></span>  Choose Price Range<br /><br /><span style="color: #70b4bd;">and / or </span><br /><span style="color: #70b4bd !important"></span><br />Choose Sale % Range <span><i class="fa-solid fa-hand-point-right"></i></span>
+                        </h4>
+                        <br />
+                        <div class="text-center">
+                            <a id="rangeSliderRedirection" display="d-inline" href="#" target="_blank" class="btn HoShopBrand">
+                                Shop Now
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 d-flex flex-column justify-content-center overlay " style="background-image: url('Images/home/globe4.png'); background-size:contain;background-position:center;background-repeat:no-repeat;height:350px;">
+                        <div class="text-center" style="color: #70b4bd !important">
+                            <div class="range-slider2 text-center py-5" style="color: #70b4bd; height: 3em; width: 92%">
+                                <input value="0" min="0" max="99" class="pp2" step="1" type="range" style="padding-left: 20px !important;" />
+                                <input value="100" min="0" max="100" class="pp2" step="1" type="range" />
+                                <span class="mt-4" style="color: black;font-size:22px;">
+                                    <input type="number" value="0" min="0" id="minpercen" readonly max="100" class="mt-4 m-0" style="background: transparent !important; border: none !important; color: #000 !important; font-weight: bold !important;" /><span class="percentageSymbol1">%</span>
+                                    to  <input type="number" value="100" min="0" id="maxpercen" readonly max="100" class="mt-4 m-0 ml-auto" style="margin-left: 10px !important; background: transparent !important; border: none !important; color: #000 !important; font-weight: bold !important; " /><span class="percentageSymbol2">%</span>
+                                </span>
+                                <br />
+                                <button class="btn resetPersValues mt-4">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--------------------------------Brand Section ----------------------------------->
+        <div data-aos="fade-right" class="mb-4 premium-brands-section" style="background-color: #EBEBEB;">
+            <div class="container py-4">
+                <div class="row">
+                    <h3 class="headingColor" style="text-align:center;">
+                        Shop Premium Brands
+                    </h3>
+                    <p class="headings-below-bold-text text-center">Indulge in Iconic Scents from the World's Most Desired Luxury Brands​</p>
+                </div>
+
+                <div class="perfume-brand-img-grid container">
+                    <div class="perfume-img-item">
+                        <img src="Images/brands/prada-banner-sqr.png" alt="perfume dummy" loading="lazy">
+
+                    </div>
+                    <div class="perfume-img-item">
+                        <img src="Images/brands/EstéeLauder.jpg" alt="perfume dummy" loading="lazy">
+
+                    </div>
+                    <div class="perfume-img-item">
+                        <img src="Images/brands/versace.png" alt="perfume dummy" loading="lazy">
+
+                    </div>
+                    <div class="perfume-img-item">
+                        <img src="Images/brands/creed.jpeg" alt="perfume dummy" loading="lazy">
+
+                    </div>
+                    <div class="perfume-img-item">
+                        <img src="Images/brands/gucci.jpg" alt="perfume dummy" loading="lazy">
+
+                    </div>
+
+                </div>
+                <div class="perfume-brand-img-grid container">
+                    <div class="perfume-img-item">
+                        <img src="Images/brands/jimmychoo.jpg" alt="perfume dummy" loading="lazy">
+
+                    </div>
+                    <div class="perfume-img-item">
+                        <img src="Images/brands/burberry.jpg" alt="perfume dummy" loading="lazy">
+
+                    </div>
+                    <div class="perfume-img-item">
+                        <img src="Images/brands/tomford.jpg" alt="perfume dummy" loading="lazy">
+
+                    </div>
+                    <div class="perfume-img-item">
+                        <img src="Images/brands/lancome.jpg" alt="perfume dummy" loading="lazy">
+
+                    </div>
+                    <div class="perfume-img-item">
+                        <img src="Images/brands/dior.jpg" alt="perfume dummy" loading="lazy">
+
+                    </div>
+
+                </div>
+
+                <div class="d-flex pt-3 justify-content-center">
+                    <div>
+                        <a href="Brands.html" class="btn HoShopBrand">
+                            Explore All Brands <i class="fa-solid fa-arrow-up-long"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Brand Section -->
+        <!----------------------------------------shop by creteria------------------------------------------>
+
+        <div data-aos="fade-right" class="container-fluid pt-3 pb-3 d-none">
+
+            <div class="container">
+                <h3 class="headingColor text-center pb-2">
+                    Shop Perfumes By Criteria
+                </h3>
+                <div class="row">
+                    <div class="col-md-3 text-center ">
+                        <div class="mb-2">
+                            <img class="img-fluid" src="Images/popular/Newarrivals3.png" />
+                        </div>
+                        <a href="show-all.html?keyword=newarrivals"><p class="btn HoShopBrand">New Arrivals</p></a>
+
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="mb-2">
+                            <img class="img-fluid" src="Images/popular/BestSelling3.png" />
+
+                        </div>
+                        <a href="show-all.html?keyword=bestsellers"><p class="btn HoShopBrand">    Best Selling</p></a>
+
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <div class="mb-2">
+                            <img class="img-fluid" src="Images/popular/toprated3.png" />
+
+                        </div>
+                        <a href="show-all.html?keyword=toprated"><p class="btn HoShopBrand"> Top Rated</p></a>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="mb-2">
+                            <img class="img-fluid" src="Images/popular/clearance3.png" />
+                        </div>
+                        <a href="show-all.html?keyword=clearence"><p class="btn HoShopBrand"> Clearance</p></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-----------------------------------------------Top trending products------------------------------------->
+        <div class="container-fluid pt-3 pb-3 d-none">
+            <div class="row">
+                <h3 class="headingColor text-center">
+                    AmeriFrag Choice
+                </h3>
+                <div class="scrolling-container">
+                    <div class="scrolling-content" id="ScrollingProducts">
+                    </div>
+                </div>
+            </div>
+            <!--<div class="text-center">
+            <a class="btn HoShopBrand">
+                AmeriFrag Choice
+            </a>
+        </div>-->
+
+        </div>
+        <!-------------------------------------------promotional Banner container------------------------------------------->
+        <div class="brands pt-4 pb-4">
+            <div class="owl-carousel owl-theme" id="promotional_Banner_carousel">
+            </div>
+        </div>
+
+        <hr />
+        <div class="px-3">
+            <h3>Shop by Gender</h3>
+            <p>shop fragrancses for men an women from top fragrances brands. Find exclusive Fragransces that cater to every personality and style from bold and subtle</p>
+        </div>
+        <div class="perfume-img-grid container">
+            <div class="perfume-img-item d-flex justify-content-center align-items-center">
+                <h5>Women</h5>
+            </div>
+            <div class="perfume-img-item">
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=200&h=250&fit=crop&auto=format" alt="perfume dummy" loading="lazy">
+                <div class="best_sell px-2 py-1"><p class="m-0">Best Sellers</p></div>
+            </div>
+            <div class="perfume-img-item">
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=200&h=250&fit=crop&auto=format" alt="perfume dummy" loading="lazy">
+                <div class="newarr px-2 py-1"><p class="m-0">New Arraival</p></div>
+            </div>
+            <div class="perfume-img-item">
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=200&h=250&fit=crop&auto=format" alt="perfume dummy" loading="lazy">
+                <div class="top_rated px-2 py-1"><p class="m-0">Top Rated</p></div>
+            </div>
+            <div class="perfume-img-item">
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=200&h=250&fit=crop&auto=format" alt="perfume dummy" loading="lazy">
+                <div class="best_off px-2 py-1"><p class="m-0">Best Offers</p></div>
+            </div>
+            <div class="perfume-img-item">
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=200&h=250&fit=crop&auto=format" alt="perfume dummy" loading="lazy">
+                <div class="clearene px-2 py-1"><p class="m-0">Clearance</p></div>
+            </div>
+            <div class="perfume-img-item d-flex justify-content-center align-items-center">
+                <h6>Shop all Women</h6>
+            </div>
+        </div>
+
+        <div class="perfume-img-grid container">
+            <div class="perfume-img-item-men d-flex justify-content-center align-items-center">
+                <h5>Men</h5>
+            </div>
+            <div class="perfume-img-item">
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=200&h=250&fit=crop&auto=format" alt="perfume dummy" loading="lazy">
+                <div class="best_sell px-2 py-1"><p class="m-0">Best Sellers</p></div>
+            </div>
+            <div class="perfume-img-item">
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=200&h=250&fit=crop&auto=format" alt="perfume dummy" loading="lazy">
+                <div class="newarr px-2 py-1"><p class="m-0">New Arraival</p></div>
+            </div>
+            <div class="perfume-img-item">
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=200&h=250&fit=crop&auto=format" alt="perfume dummy" loading="lazy">
+                <div class="top_rated px-2 py-1"><p class="m-0">Top Rated</p></div>
+            </div>
+            <div class="perfume-img-item">
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=200&h=250&fit=crop&auto=format" alt="perfume dummy" loading="lazy">
+                <div class="best_off px-2 py-1"><p class="m-0">Best Offers</p></div>
+            </div>
+            <div class="perfume-img-item">
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=200&h=250&fit=crop&auto=format" alt="perfume dummy" loading="lazy">
+                <div class="clearene px-2 py-1"><p class="m-0">Clearance</p></div>
+            </div>
+            <div class="perfume-img-item-men d-flex justify-content-center align-items-center">
+                <h6>Shop all Men</h6>
+            </div>
+        </div>
+        <!-----------------------------------------------SHOP PERFUMES BY CRITERIA------------------------------------------->
+
+        <div class="text-center mb-3 pt-3 before-login-sentence">
+            <img style="width:55%" src="Images/home/heading2.png" />
+            <button class="btn d-none" style="border-radius: 35px !important; background-color: #70b4bd !important">
+                <p class="text-black fw-bold" style="margin-bottom:0px;font-size:16px;">
+                    Wish To Explore More? Use AmeriFrag Revolutionary AI Tool Below…
+                </p>
+            </button>
+        </div>
+
+        <!------------------------------------Robo welcome--------------------------------------><!--font-family:Chiller !important;-->
+        <div class="container-fluid pb-1 pt-4 roboWelcome">
+            <div class="row">
+                <img class="img-fluid" style="padding:0px !important;" src="Images/roboWelcome.png" />
+                <!-- <div class="text-center py-2" style="background-color: #70b4bd !important"><h3 class="m-0" style=" font-weight:bold !important;"> WELCOME TO AMERIFRAG'S AI WORLD TO SHOP PERFUMES</h3></div> -->
+            </div>
+        </div>
+
+        <!------------------------------------------How it Works--------------------------------------------->
+        <div class="container-fluid px-0 pt-4  pb-3" style="background: #fcfcfc;" id="howItworksDivCon">
+            <div class="container">
+                <h3 class="hero_title headingColor" id="howaboveItWorksheading">
+                    Register for Your Free AmeriFrag User Barcode
+                </h3>
+                <p class="headings-below-bold-text" style="padding-top:3px;"> Your AmeriFrag Barcode is a real-time snapshot of your fragrance journey, capturing your individual preferences  while evolving with global trends. Our cutting-edge AI technology ensures you receive the most relevant and personalized fragrance recommendations, just for you.</p>
+                <!--twenty fifty fifty sixty-->
+                <div class="text-center"><div class="progress mb-4 " style="border-radius:0px"><div class="progress-bar bg-ten" role="progressbar" style="width:10%" title="Unknown">Personality</div><div class="progress-bar bg-fourty" role="progressbar" style="width:10%" title="Unknown">Zodiac</div><div class="progress-bar bg-thirty" role="progressbar" style="width:10%" title="Unknown">Strength</div><div class="progress-bar bg-fifty" role="progressbar" style="width:10%" title="Unknown">Passion</div><div class="progress-bar bg-twenty" role="progressbar" style="width:10%" title="Unknown">Entertainment</div><div class="progress-bar bg-ninety" role="progressbar" style="width:10%" title="Unknown">Style</div><div class="progress-bar bg-sixty" role="progressbar" style="width:10%" title="Unknown">Color</div><div class="progress-bar bg-seventy" role="progressbar" style="width:10%" title="Unknown">Smell</div><div class="progress-bar bg-eighty" role="progressbar" style="width:10%" title="Unknown">Mood</div><div class="progress-bar bg-hundered" role="progressbar" style="width:10%" title="Unknown">Season</div></div></div>
+                <div class="container-fluid  text-center text-lg-end text-md-end"><a class="btn herewhatGo" data-bs-target=#analyizepopup data-bs-toggle=modal type="button">Understanding the AmeriFrag Barcode</a></div>
+                <h3 class="text-center headingColor">How It Works? </h3>
+                <div class="custom-flex-container text-center  pt-3 d-flex justify-content-center">
+                    <div data-aos="fade-right" class="custom-flex-item  pt-3">
+                        <div class="howWorHedDiv">
+                            <img src="Images/howitworks/gif1-unscreen.gif" />
+                            <h5 class="mt-4">
+                                Register for Your<br /> Unique Barcode
+                            </h5>
+                            <div class="howitworkTooltip">
+                                <i class="fa-solid fa-circle-info howItworkEye"></i>
+                                <span class="howtooltiptext">Join and unlock your unique barcode to access your personal aroma world</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-flex-item  pt-3">
+                        <div class="howWorHedDiv">
+                            <img src="Images/howitworks/gif2-unscreen.gif" />
+                            <h5 class="mt-4">
+                                Get AI-Powered <br />  Recommendations
+                            </h5>
+                            <div class="howitworkTooltip">
+                                <i class="fa-solid fa-circle-info howItworkEye"></i>
+                                <span class="howtooltiptext">Discover curated scents tailored to your persona through our Al technology</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-right" class="custom-flex-item  pt-3">
+                        <div class="howWorHedDiv">
+                            <img src="Images/howitworks/gif4-unscreen.gif" />
+                            <h5 class="mt-4">
+                                Choose to Buy  or<br /> Subscribe
+                            </h5>
+                            <div class="howitworkTooltip">
+                                <i class="fa-solid fa-circle-info howItworkEye"></i>
+                                <span class="howtooltiptext">
+                                    Select your favorite fragrances to either buy or try as Testers through our  Subscription Club
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-flex-item pt-3">
+                        <div class="howWorHedDiv">
+                            <img src="Images/howitworks/gif3-unscreen.gif" />
+
+                            <h5 class="mt-4">
+                                Receive  and <br /> Indulge
+                            </h5>
+                            <div class="howitworkTooltip">
+                                <i class="fa-solid fa-circle-info howItworkEye"></i>
+                                <span class="howtooltiptext">
+                                    Receive a Tester / Travel spray to your doorstep and indulge in your newest fragrances
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-flex-item pt-3">
+                        <div class="howWorHedDiv">
+                            <img src="Images/howitworks/rotate-unscreen.gif" />
+                            <h5 class="mt-4">
+                                Rate, Repeat, or <br /> Explore Others
+                            </h5>
+                            <div class="howitworkTooltip">
+                                <i class="fa-solid fa-circle-info howItworkEye"></i>
+                                <span class="howtooltiptext">
+                                    Rate and Repeat your favorites through our Refill Program or Try a new scent at exclusive discounts
+                                </span>
+                            </div>
+                            <!--<p class="p-2" style="text-align:justify !important">
+                            Stick with your favorites or venture into new fragrance territories at exclusive discounted rates. Continuously discover and enjoy new scents and styles on your aromatic journey.
+                        </p>-->
+                        </div>
+                    </div>
+                </div>
+                <div id="LoginOrSubscribe" class="pt-5"></div>
+                <div class="container-fluid text-center" style="margin-top:0px !important;">
+                    <div>
+                        <div class="howitworkTooltip " style="display:inline !important;">
+                            <img src="Images/home/Iicon.png" class="howItworkEye pb-3" style="width:4.7%" />
+
+                            <span class="howtooltiptext">
+                                No Commitment is required. You can Update or Cancel your Products from Queue anytime and manage
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!----------------------------------------Note products---------------------------------------->
+
+        <div class="container-fluid" id="noteProductsContainer">
+            <div class="container">
+                <div class="row">
+                    <h3 class="headingColor text-center"> Products With Your Favorite Note Family: <span id="selectedOptionNote"></span> </h3>
+                    <div class="col-md-3 py-2">
+                        <img class="img-fluid" src="Images/home/NoteProducts.jpg" style="width: 100%; height: 100%; object-fit: cover;" />
+                    </div>
+                    <div class="col-md-9">
+                        <div class="owl-carousel owl-theme" id="NoteProducts-curosel">
+                        </div>
+                        <div id="emptyNoteProducts">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div data-aos="fade-right" class="container-fluid p-5 mb-5 user-section before-login" style="background: #EDEDED;display:none">
+            <div class="row align-items-center">
+                <h3 class="text-center">Please Sign Up to experience your personal aroma world at AmeriFrag </h3>
+                <div class="col-md-4 p-5">
+                    <ul class="left_sec">
+                        <li>Your Personality Type? </li>
+                        <li>Your Zodiac Sign?</li>
+                        <li>Your Core Strength? </li>
+                        <li>Your Main Passion? </li>
+                        <li>Your Favorite Entertainment? </li>
+
+
+                    </ul>
+                </div>
+                <!-- <div class="col-md-4 m-auto text-center">
+                <img class="svg-icon" id="icon1" src="./assets/images/avatar-svgrepo-com.svg" alt="Icon 1" width="100" height="150">
+                <img class="svg-icon" id="icon2" src="./assets/images/avatar-svgrepo-com (1).svg" alt="Icon 2" width="100" height="150">
+            </div> -->
+                <div class="col-md-4 m-auto text-center">
+                    <!-- <video width="150" height="150" autoplay loop style="border-radius: 50%;">
+                  <source src="./assets/images/home gifs/sign up.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video> -->
+                    <img src="./assets/images/home gifs/1.gif" alt="signup" width="150" height="150" style="border-radius: 50%;" />
+                </div>
+                <div class="col-md-4 p-5">
+                    <ul style="padding-right:45px;">
+                        <li>Your Favorite Style?</li>
+                        <li>Your most favorite Color?</li>
+                        <li>Your most favorite Scent Note?</li>
+                        <li>Your most favorite Mood?  </li>
+                        <li>Your Favorite Season? </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="p-5 py-0">
+                <h4 class="text-center mb-4">
+                    <b>AmeriFrag User Analytics Barcode </b>
+                </h4>
+                <div class="progress mb-4 px-5" style="border-radius:0px"><div class="progress-bar bg-ten" role="progressbar" style="width:10%" title="Unknown">Personality</div><div class="progress-bar bg-fourty" role="progressbar" style="width:10%" title="Unknown">Zodiac</div><div class="progress-bar bg-thirty" role="progressbar" style="width:10%" title="Unknown">Strength</div><div class="progress-bar bg-fifty" role="progressbar" style="width:10%" title="Unknown">Passion</div><div class="progress-bar bg-twenty" role="progressbar" style="width:10%" title="Unknown">Entertainment</div><div class="progress-bar bg-ninety" role="progressbar" style="width:10%" title="Unknown">Style</div><div class="progress-bar bg-sixty" role="progressbar" style="width:10%" title="Unknown">Color</div><div class="progress-bar bg-seventy" role="progressbar" style="width:10%" title="Unknown">Smell</div><div class="progress-bar bg-eighty" role="progressbar" style="width:10%" title="Unknown">Mood</div><div class="progress-bar bg-hundered" role="progressbar" style="width:10%" title="Unknown">Season</div></div>
+                <p class="text-center">
+                    Get Your Personlized barcode by registering with us for better suggestions and experience
+                </p>
+                <div class=""><div class=" d-flex justify-content-center align-items-center" style="height: 100%;"><a type="button" class="btn more_btn" href="register.html" style="margin-top:20px;width:150px !important;">Register <i class="fa-solid fa-arrow-up-long"></i></a></div></div>
+            </div>
+        </div>
+
+
+
+        <!------------------------------------------Adds Banners--------------------------------->
+        <div class="brands pt-3">
+            <div class="owl-carousel owl-theme" id="promotional_adds_Banner_carousel">
+            </div>
+        </div>
+
+        <div class="perfume-discover-img-grid container">
+
+            <div class="perfume-img-item">
+                <img src="Images/popular/permimum.png" alt="perfume dummy" loading="lazy">
+                <div class="premimum px-2 py-1"><p class="m-0">Premimum</p></div>
+            </div>
+            <div class="perfume-img-item">
+                <img src="Images/popular/Luxury.png" alt="perfume dummy" loading="lazy">
+                <div class="luxury px-2 py-1"><p class="m-0">Luxury</p></div>
+            </div>
+            <div class="perfume-img-item">
+                <img src="Images/popular/Designer.png" alt="perfume dummy" loading="lazy">
+                <div class="designer px-2 py-1"><p class="m-0">Designer</p></div>
+            </div>
+            <div class="perfume-img-item">
+                <img src="Images/popular/Niche.png" alt="perfume dummy" loading="lazy">
+                <div class="niche px-2 py-1"><p class="m-0">Niche</p></div>
+            </div>
+            <div class="perfume-img-item">
+                <img src="Images/popular/Celebrity.png" alt="perfume dummy" loading="lazy">
+                <div class="celebrity px-2 py-1"><p class="m-0">Celebrity</p></div>
+            </div>
+
+        </div>
+        <div class="perfume-discover-img-grid container">
+
+            <div class="perfume-img-item">
+                <img src="Images/popular/permimum.png" alt="perfume dummy" loading="lazy">
+                <img src="" alt="perfume dummy" loading="lazy">
+                <div class="natural px-2 py-1"><p class="m-0">Natural</p></div>
+            </div>
+            <div class="perfume-img-item">
+                <img src="Images/popular/Luxury.png" alt="perfume dummy" loading="lazy">
+                <div class="indie px-2 py-1"><p class="m-0">Indie</p></div>
+            </div>
+            <div class="perfume-img-item">
+                <img src="Images/popular/Designer.png" alt="perfume dummy" loading="lazy">
+                <div class="specialty px-2 py-1"><p class="m-0">Specialty</p></div>
+            </div>
+            <div class="perfume-img-item">
+                <img src="Images/popular/Niche.png" alt="perfume dummy" loading="lazy">
+                <img src="" alt="perfume dummy" loading="lazy">
+                <div class="mass-market px-2 py-1"><p class="m-0">Mass Market</p></div>
+            </div>
+            <div class="perfume-img-item">
+                <img src="Images/popular/Celebrity.png" alt="perfume dummy" loading="lazy">
+                <div class="economical px-2 py-1"><p class="m-0">Economical</p></div>
+            </div>
+
+        </div>
+
+
+
+        <div class="container user_analytics mt-5 mb-5 d-md-block d-lg-block d-none">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h3 class="headingColor">
+                        Shop Perfumes Using AI-Based User Analytics
+                    </h3>
+
+                    <p class="white-text" style="text-align:justify;">
+                        Step into the exciting world of AmeriFrag, where your fragrance journey is uniquely tailored to your preferences through our innovative user analytics. At AmeriFrag, we’ve meticulously crafted a comprehensive set of categories to gather detailed insights about your tastes and preferences. Each category is designed to capture a specific aspect of the fragrance profile, ensuring that both your personalized and product BARCODES  reflect your exact needs and desires as well as dynamic trends in real-time.
+                    </p>
+                </div>
+                <div class="col-md-4 d-grid justify-content-md-end">
+                    <a type="button " class="btn amgbacbtn" data-bs-toggle="modal" data-bs-target="#analyizepopup">
+                        What is the AmeriFrag Barcode?
+                    </a>
+                </div>
+            </div>
+            <div class="p-md-4 p-lg-4 p-0">
+                <!--<div class="progress"><div class="progress-bar bg-ten" role="progressbar" style="width:10%">Personality</div><div class="progress-bar bg-twenty" role="progressbar" style="width:10%">Occasion</div><div class="progress-bar bg-thirty" role="progressbar" style="width:10%">Mood</div><div class="progress-bar bg-fourty" role="progressbar" style="width:10%">Note</div><div class="progress-bar bg-fifty" role="progressbar" style="width:10%">Season</div><div class="progress-bar bg-sixty" role="progressbar" style="width:10%">Intensity</div><div class="progress-bar bg-seventy" role="progressbar" style="width:10%">Longevity</div><div class="progress-bar bg-eighty" role="progressbar" style="width:10%">Time</div><div class="progress-bar bg-ninety" role="progressbar" style="width:10%">Age</div><div class="progress-bar bg-hundered" role="progressbar" style="width:10%">Presentation</div></div>-->
+                <div class="progress barcodeHeight2" style="border-radius:0px"><div class="progress-bar bg-ten" role="progressbar" style="width:10%">Style</div><div class="progress-bar bg-fourty" role="progressbar" style="width:10%">Note</div><div class="progress-bar bg-thirty" role="progressbar" style="width:10%">Mood</div><div class="progress-bar bg-fifty" role="progressbar" style="width:10%">Season</div><div class="progress-bar bg-twenty" role="progressbar" style="width:10%">Occasion</div><div class="progress-bar bg-ninety" role="progressbar" style="width:10%">Age Group </div> <div class="progress-bar bg-sixty" role="progressbar" style="width:10%">Smell Intensity</div>  <div class="progress-bar bg-seventy" role="progressbar" style="width:10%">Longevity</div><div class="progress-bar bg-eighty" role="progressbar" style="width:10%">Spray Time</div><div class="progress-bar bg-hundered" role="progressbar" style="width:10%">Presentation</div></div>
+
+            </div>
+
+
+
+            <!----------------------------------------AMERIFRAG’S PREMIUM COLLECTION------------------------------------------>
+            <div data-aos="fade-right" class="container pt-5 d-none">
+                <h3 class="cat-heading headingColor">
+                    AmeriFrag Premium Collection
+                </h3>
+                <p class="headings-below-bold-text" style="padding-top:3px;"> Discover Scents That Define Elegance, Sophistication, and Stardom</p>
+                <div class="row d-flex justify-content-center pt-3">
+                    <div class="col-md-4 premiumCollection d-flex flex-column justify-content-end" style="background-image: url('Images/home/DigitalSmelling/perfumeCollection1.png'); background-size: cover; background-position: top;height:450px">
+                        <h2 class="text-center" style="font-size: 24px; color: white; ">Luxury</h2>
+                        <a href="show-all.html?keyword=luxury" type="button" class="btn ShopNowBtn mb-5 d-inline bg-black text-white">Shop Now</a>
+                    </div>
+                    <div class="col-md-4 premiumCollection d-flex flex-column justify-content-center" style="background-image: url('Images/home/timeless.png'); background-size: cover; background-position: center;height:450px">
+                        <h2 class="text-center" style="font-size: 24px; color: #70b4bd;">
+                            Timeless
+                        </h2>
+                        <a href="show-all.html?keyword=timeless" type="button" class="btn ShopNowBtn d-inline bg-black text-white">Shop Now</a>
+                    </div>
+                    <div class="col-md-4 premiumCollection d-flex flex-column justify-content-end" style="background-image: url('Images/home/DigitalSmelling/perfumeCollection3.png'); background-size: cover; background-position: top;height:450px">
+                        <h2 class="text-center" style="font-size: 24px; color: white;">
+                            Celebrity
+                        </h2>
+                        <a href="show-all.html?keyword=celebrity" type="button" class="btn ShopNowBtn mb-5 d-inline bg-black text-white">Shop Now</a>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- end of user analytics -->
+            <!-- Best Sellers -->
+            <!-- <div class="container px-0">
+            <h5 class="mb-4">Best Sellers<span>..................</span> </h5>
+            <div class="row" id="bestseller_carosel">
+            </div>
+
+        </div> -->
+            <!-- End of Best Sellers-->
+            <!-- Women Perfumes -->
+
+            <div class="container mb-5 mt-5">
+                <div class="row" data-aos="fade-right">
+                    <h3 class="cat-heading  headingColor" id="women-heading">
+                        AmeriFrag’s Choice
+                    </h3>
+                    <p class="headings-below-bold-text" style="padding-top:3px;">
+                        The Most Loved, Most Desired, Most Chosen
+                    </p>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-8 col-lg-9">
+                        <input id="catname" value="Women" type="hidden">
+                        <div class="row" id="womendv">
+                        </div>
+                    </div>
+                    <!--<div class="d-none d-md-block d-lg-block col-md-4 col-lg-3 align-items-center ">
+                    <div class="row">
+                        <div class="col-md-12 mt-2">
+                            <img class="womenImg img-fluid " src="Images/home/ameirifragchioceHome.png" style="width:100%;">
+                        </div>
+                    </div>
+                </div>-->
+                    <div class="d-none d-md-block d-lg-block col-md-3 col-lg-3 py-2">
+                        <div style="background-color: #e8e8e8; padding: 30px 20px; min-height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <img src="Images/home/ameirifragchioceHome.jpg" style="max-width: 100%; max-height: 300px; width: auto; height: auto; object-fit: contain;" />
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <a type="button" class="btn more_btn ms-auto" href="show-all.html?choice=featureProducts">Explore More<i class="fa-solid fa-arrow-up-long"></i></a>
+                    </div>
+                </div>
+
+                <!-- End of Women Perfumes-->
+                <!-- Men Perfumes -->
+
+                <div class="container mb-5 mt-4">
+                    <div class="row" data-aos="fade-right">
+                        <div class="col-12 text-center">
+                            <h3 class="cat-heading headingColor" id="men-heading">
+                                AmeriFrag Bundle Sets
+                            </h3>
+                            <p class="headings-below-bold-text" style="padding-top:3px;">
+                                <strong>More Scents, Big Savings—Perfectly Paired Scents and Unbeatable Deals</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="d-none d-md-block d-lg-block col-md-6 py-2">
+                            <img class="img-fluid" src="Images/home/giftsets.jpg" style="height: 100%;" />
+                        </div>
+
+                        <div data-aos="fade-right" class="col-md-6">
+                            <input id="catnames" value="Men" type="hidden">
+                            <div class="row" id="mendv"></div>
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-2">
+                        <a type="button" class="btn more_btn" href="show-all.html?sub_cat=BUNDLE SETS">Explore More <i class="fa-solid fa-arrow-up-long"></i></a>
+                    </div>
+                </div>
+
+                <!-- End of Men Perfumes -->
+                <!-- Subcat section -->
+                <div class="container mb-5 subcat_sec">
+                    <div class="row">
+                        <h3 class="mb-4 cat-heading headingColor">Our other products</h3>
+                    </div>
+                    <div class="row" data-aos="fade-right">
+                        <div class="col-md-4 subcat_box p-0">
+                            <a href="show-all.html?sub_cat=Make Up">
+                                <div class="row p-0">
+                                    <div class="col-6 p-0">
+                                        <img src="Images/home/exclusiveProducts/2.jpg" class="img-fluid" />
+                                    </div>
+
+                                    <div class="col-6 d-flex align-items-center" style="background-color: black;">
+                                        <p class="m-auto  text-white">
+                                            Make Up
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 subcat_box p-0">
+                            <a href="show-all.html?sub_cat=Skin Care">
+                                <div class="row p-0">
+                                    <div class="col-6 p-0">
+                                        <img src="Images/home/exclusiveProducts/6.jpg" class="img-fluid" />
+                                    </div>
+
+                                    <div class="col-6 d-flex align-items-center" style="background-color: #595959;">
+                                        <p class="m-auto">
+                                            Skin Care
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 subcat_box p-0">
+                            <a href="show-all.html?sub_cat=Hair Care">
+                                <div class="row p-0">
+                                    <div class="col-6 p-0">
+                                        <img src="Images/home/exclusiveProducts/1.jpg" class="img-fluid" />
+                                    </div>
+
+                                    <div class="col-6 d-flex align-items-center" style="background-color: black;">
+                                        <p class="m-auto  text-white">
+                                            Hair Care
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 subcat_box p-0">
+                            <a href="show-all.html?sub_cat=Bath & Body">
+                                <div class="row p-0">
+                                    <div class="col-6 p-0">
+                                        <img src="Images/home/exclusiveProducts/8.jpg" class="img-fluid" />
+                                    </div>
+
+                                    <div class="col-6 d-flex align-items-center" style="background-color: #BFBFBF;">
+                                        <p class="m-auto">
+                                            Bath & Body
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 subcat_box p-0">
+                            <a href="show-all.html?sub_cat=BUNDLE SETS">
+                                <div class="row p-0">
+                                    <div class="col-6 p-0">
+                                        <img src="Images/home/exclusiveProducts/BundleSets.jpg" class="img-fluid" />
+
+                                    </div>
+
+                                    <div class="col-6 d-flex align-items-center bluetowhitehover" style="background-color: #70b4bd;">
+                                        <p class="m-auto ">
+                                            Bundle Sets
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+
+
+                        <div class="col-md-4 subcat_box p-0">
+                            <a href="show-all.html?sub_cat=Aroma">
+                                <div class="row p-0">
+                                    <div class="col-6 p-0">
+                                        <img src="Images/home/exclusiveProducts/5.jpg" class="img-fluid" />
+                                    </div>
+
+                                    <div class="col-6 d-flex align-items-center" style="background-color: #BFBFBF;">
+                                        <p class="m-auto">
+                                            Aroma
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-4 subcat_box p-0">
+                            <a href="show-all.html?sub_cat=Gift Sets">
+                                <div class="row p-0">
+                                    <div class="col-6 p-0">
+                                        <img src="Images/home/exclusiveProducts/7.jpg" class="img-fluid" />
+                                    </div>
+
+                                    <div class="col-6 d-flex align-items-center" style="background-color: black ;">
+                                        <p class="m-auto text-white">
+                                            Gift Sets
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 subcat_box p-0">
+                            <a href="show-all.html?sub_cat=Accessories">
+                                <div class="row p-0">
+                                    <div class="col-6 p-0">
+                                        <img src="Images/home/exclusiveProducts/3.jpg" class="img-fluid" />
+                                    </div>
+
+                                    <div class="col-6 d-flex align-items-center" style="background-color: #595959;">
+                                        <p class="m-auto">
+                                            Accessories
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 subcat_box p-0">
+                            <a href="show-all.html?sub_cat=Clearance">
+                                <div class="row p-0">
+                                    <div class="col-6 p-0">
+                                        <img src="Images/home/exclusiveProducts/Clearence.jpg" class="img-fluid" />
+                                    </div>
+
+                                    <div class="col-6 d-flex align-items-center" style="background-color: black;">
+                                        <p class="m-auto  text-white">
+                                            Clearance
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Subcat section -->
+                <!-- Products Grid -->
+                <!--<div class="container px-0 mb-5">
+            <div class="row">
+                <div class="col-md-4 feat_col">
+                    <h5 class="mb-4">New Products <span>..................</span> </h5>-->
+                <!-- product box -->
+                <!--<div class="product_box_3 py-2 mt-5 productsdv">
+
+
+
+                </div>
+
+            </div>
+            <div class="col-md-4 feat_col">
+                <h5 class="mb-4">Featured Products <span>.......</span> </h5>-->
+                <!-- product box -->
+                <!--<div class="product_box_3 py-2 mt-5" id="freproductsdv">
+
+
+                </div>
+
+            </div>
+            <div class="col-md-4 feat_col">
+                <h5 class="mb-4">Most Popular Products <span>....</span> </h5>-->
+                <!-- product box -->
+                <!--<div class="product_box_3 py-2 mt-5 productsdv">
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>-->
+                <!-- End of Products Grid -->
+
+                <div class="container-fluid py-5 mb-5 d-none" style="background: #EBECF2;">
+                    <h3 class="text-center mb-4 headingColor">The most popular & highest sale products for various occasions</h3>
+                    <div class="row  position-relative">
+                        <!-- <div class="popular-slider"></div> -->
+
+                        <div>
+                            <div id="carousel" class="no-padding text-center">
+                                <a href="show-all.html?keyword=bestdeals "><img src="Images/popular/1.png" id="item-1" /></a>
+                                <a href="show-all.html?keyword=bestsellers "><img src="Images/popular/2.png" id="item-2" /></a>
+                                <a href="show-all.html?keyword=toptrending "><img src="Images/popular/3.png" id="item-3" /></a>
+                                <a href="show-all.html?keyword=toprated "><img src="Images/popular/4.png" id="item-4" /></a>
+                                <!--<a href="show-all.html?keyword=luxuryniche "><img src="Images/popular/5.png" id="item-5" /></a>-->
+                                <a href="show-all.html?keyword=newarrivals "><img src="Images/popular/6.png" id="item-6" /></a>
+                                <a href="show-all.html?keyword=clearence"><img src="Images/popular/7.png" id="item-7" /></a>
+                                <a href="show-all.html?keyword=amerifragchoice "><img src="Images/popular/8.png" id="item-8" /></a>
+                                <!--<a href="show-all.html?type=Appliances"><img src="Images/productImage1.PNG" id="item-9" /></a>-->
+
+                            </div>
+                        </div>
+
+
+                        <!-- <div></div> -->
+                    </div>
+
+
+                </div>
+                <!-- Subscribe -->
+                <!--<div class="container-fluid subscribe mb-5 p-0">
+                <div class="row m-0">
+                    <div class="col-md-6 p-0">
+                        <img src="Images/home/subscribe.png" class="img-fluid" width="100%" style="height:445px;"/>
+                    </div>
+                    <div class="col-md-6 p-5" style="background-color: #70b4bd;">
+                        <h3 class="text-center">Subscription Club</h3>
+                        <p>
+                            Building  your  scent  wardrobe  just  got  easier. Discover new, limited-edition scents for just $20 a month. Enjoy exclusive perks as a Scent Club member.
+                        </p>
+                        <div class="ms-4">
+                            <p>Limited-Edition Rollerballs</p>
+                            <p>Exclusive Member Pricing</p>
+                            <p>Early Access to New Launches</p>
+                            <p>Choose your box frequency — monthly, bi-monthly, or quarterly</p>
+                            <p>Discounted shipping of $4.95 on your monthly box (free on boxes over $50)</p>
+                            <a href="#" class="btn">Learn more</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>-->
+                <!--hiding drop shipping-->
+                <div class="container d-none">
+                    <div class="row pb-5">
+                        <div class="col-md-4">
+                            <div class="img-container mb-4">
+                                <p>Try Our</p>
+                                <h5 class="text-center">Dropship Program</h5>
+                                <img src="Images/howitworks/dropship.jpg" class="img-fluid" alt="Subscribe" style="width:100%">
+                                <button class="btn" data-bs-toggle="modal" data-bs-target="#dropshippopup">Start Now</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="img-container mb-4">
+                                <p>Become a</p>
+                                <h5 class="text-center">Wholesaler </h5>
+                                <img src="Images/howitworks/wholesaler.jpg" class="img-fluid" alt="Subscribe" style="width:100%">
+                                <button class="btn" data-bs-toggle="modal" data-bs-target="#wholesalerpopup">Register Now</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="img-container mb-4">
+                                <p>Join Our</p>
+                                <h5 class="text-center"> AMERIFRAG CLUB </h5>
+                                <img src="Images/howitworks/Amerifrag.jpg" class="img-fluid" alt="Subscribe" style="width:100%">
+                                <button class="btn" data-bs-toggle="modal" data-bs-target="#subscribepopup">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of subscribe -->
+                <!--<div id="demo1" class="carousel slide mb-5" data-bs-ride="carousel" data-pause="false" data-interval="3000">
+
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="2"></button>
+                </div>
+
+                <div class="container">
+                    <h3 class="mb-4">Explore Super Sale Products of the Season</h3>
+                    <div class="owl-carousel owl-theme" id="middle_banners">
+                    </div>
+                </div>
+
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>-->
+                <!-- Testimonial Section -->
+                <!--   <div class="container-fluid testimonial" style="background: #ffffff;">
+            <div class="container mb-5">
+                <h3 class="text-center mb-4 headingColor">Customer Testimonials</h3>
+                <div class="owl-carousel owl-theme" id="testimonial-carousel">
+                </div>
+            </div>
+            <div class="container-fluid ">
+                <div class="container text-center background-feedback" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                    <h3 class="headingColor" style="">Submit Feedback</h3>
+                    <div>
+                        <form onsubmit="return false" class="feedbackform">
+                            <div class="p-lg-4">
+                                <div class="row">
+                                    <div class="col-12 col-md-5  border-right-0">
+                                        <span class="icon"> <i class="fa-solid fa-envelope"></i></span>
+                                        <input type="email" id="fd-user-email" class="border-input" placeholder="Email" required>
+                                    </div>
+                                    <div class="col-12 col-md-5 border-right-0 ">
+                                        <span class="icon"> <i class="fa-solid fa-comment-dots"></i></span>
+                                        <input type="text" id="fd-user-message" class="border-input" placeholder="Description" required>
+                                    </div>
+                                    <div class="col-12 col-md-2 ">
+                                        <button type="submit" class="btn sumbitFedBt" id="fedbackSubmit">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> -->
+                <div class="container mb-5" style="padding:0px !important">
+                    <h3 class="text-center  headingColor">
+                        AmeriFrag Studio
+                    </h3>
+                    <p class="text-center headings-below-bold-text">
+                        Beyond Scents – Explore Aromas in Every Aspect of Life
+                    </p>
+                    <div data-aos="fade-right" class="owl-carousel owl-theme" id="Amerifrag_Studio_carousel">
+                        <div class="item">
+                            <div class="card Studio_box">
+                                <div class="Studio_img_container">
+                                    <!--   <img src="images/home/testim/Trending Styles.jpg" /> -->
+                                    <img src="images/home/testim/TrendingStyle.jpg" />
+                                </div>
+
+                                <!--<h5 class="text-center pt-3 pb-2">
+                                Trending Styles
+                            </h5>-->
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card Studio_box">
+                                <div class="Studio_img_container">
+                                    <img src="images/home/testim/digitalSmelling.jpg" />
+                                </div>
+                                <!--<h5 class="text-center pt-3 pb-2">
+                                Digital Smelling
+                            </h5>-->
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card Studio_box">
+                                <div class="Studio_img_container">
+                                    <!--    <img src="images/home/testim/Nature Aroma.jpg" /> -->
+                                    <img src="images/home/testim/Emotionalintelligence.jpg" />
+                                </div>
+                                <!--<h5 class="text-center pt-3 pb-2">
+                                Emotional Intelligence
+                            </h5>-->
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card Studio_box">
+                                <div class="Studio_img_container">
+                                    <img src="images/home/testim/Naturethrougharoma.jpg" />
+                                </div>
+
+                                <!--<h5 class="text-center pt-3 pb-2">
+                                Nature Through Aroma
+                            </h5>-->
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card Studio_box">
+                                <div class="Studio_img_container">
+                                    <img src="images/home/testim/AnalyzingNotes.jpg" />
+                                </div>
+                                <!--<h5 class="text-center pt-3 pb-2">
+                                Analyzing Notes
+                            </h5>-->
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card Studio_box">
+                                <div class="Studio_img_container">
+                                    <img src="images/home/testim/ScentStation.jpg" />
+                                </div>
+                                <!--<h5 class="text-center pt-3 pb-2">
+                                Scent-sations
+                            </h5>-->
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card Studio_box">
+                                <div class="Studio_img_container">
+                                    <img src="images/home/testim/moodmapping.jpg" />
+                                </div>
+                                <!--<h5 class="text-center pt-3 pb-2">
+                                Mood Mapping
+                            </h5>-->
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card Studio_box">
+                                <div class="Studio_img_container">
+                                    <img src="images/home/testim/seasonchoice.jpg" />
+                                </div>
+                                <!--<h5 class="text-center pt-3 pb-2">
+                                Season Choice
+                            </h5>-->
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card Studio_box">
+                                <div class="Studio_img_container">
+                                    <img src="images/home/testim/scentEducation.jpg" />
+                                </div>
+                                <!--<h5 class="text-center pt-3 pb-2">
+                                Scent Seduction
+                            </h5>-->
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card Studio_box">
+                                <div class="Studio_img_container">
+                                    <img src="images/home/testim/occasionguide.jpg" />
+                                </div>
+                                <!--<h5 class="text-center pt-3 pb-2">
+                                Occasions Guide
+                            </h5>-->
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card Studio_box">
+                                <div class="Studio_img_container">
+                                    <img src="images/home/testim/lawofattraction.jpg" />
+                                </div>
+                                <!--<h5 class="text-center pt-3 pb-2">
+                                Law of Attraction
+                            </h5>-->
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card Studio_box">
+                                <div class="Studio_img_container">
+                                    <img src="images/home/testim/zodaicjourney.jpg" />
+                                </div>
+                                <!--<h5 class="text-center pt-3 pb-2">
+                                Zodiac Journey
+                            </h5>-->
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="text-center pt-3">
+                        <a type="button" class="btn more_btn" style="border-radius:25px !important;padding:10px !important;" href="AmerifragBlog.html">Explore More <i class="fa-solid fa-arrow-up-long"></i></a>
+                    </div>
+                </div>
+
+
+                <!--<div class="container-fluid px-0" style="background-color: #EBEBEB; padding: 40px 0;"></div>-->
+                <div class="container text-center background-feedback" style="background-color: #EBEBEB; padding: 60px 0;">
+                    <h3 class="headingColor" style="text-transform: none; color: #70b4bd !important">Join Us For Special Offers and Promotions</h3>
+                    <p>Unsubscribe anytime</p>
+                    <div>
+                        <form onsubmit="return false" class="feedbackform">
+                            <div class="p-lg-4">
+                                <div class="row">
+                                    <div class="col-12 col-md-3 d-flex flex-row align-items-center">
+                                        <span class="icon" style="padding-right: 4px;"><i class="fa-solid fa-user"></i></span>
+                                        <input type="text" id="fd-user-message" class="border-input" placeholder="Enter Name" required>
+                                    </div>
+                                    <div class="col-12 col-md-4 d-flex flex-row align-items-center">
+                                        <span class="icon" style="padding-right: 4px;"><i class="fa-solid fa-envelope"></i></span>
+                                        <input type="email" id="fd-user-email" class="border-input" placeholder="Enter Email" maxlength="1000">
+                                    </div>
+                                    <div class="col-12 col-md-3 d-flex flex-row align-items-center">
+                                        <span class="icon" style="padding-right: 4px;"><i class="fa-solid fa-phone"></i></span>
+                                        <input type="text" id="fd-user-phone" class="border-input" placeholder="Enter Phone">
+                                    </div>
+                                    <div class="col-12 col-md-2">
+                                        <button type="submit" class="btn sumbitFedBt" id="fedbackSubmit">Join</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!------------------Dropship Program modal box-------------------------->
+            <div class="modal" id="dropshippopup">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Dropship Program</h4>
+                            <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="DropshipForm">
+                                <label for="dr-user-name">Name:</label>
+                                <input type="text" id="dr-user-name" name="name" class="form-control" required>
+
+                                <label for="dr-user-email">Email:</label>
+                                <input type="email" id="dr-user-email" name="email" class="form-control" maxlength="1000" required>
+
+                                <label for="dr-phoneNumber">Phone:</label>
+                                <input type="tel" id="dr-phoneNumber" name="phoneNumber" class="form-control" required>
+
+                                <label for="dr-user-message">Description:</label>
+                                <textarea id="dr-user-message" name="dr-user-message" class="form-control" rows="4" required></textarea>
+
+                                <button type="button" class="btn btn-primary" id="drSubmit">Submit</button>
+                                <p>
+                                    Please send the above information to be
+                                    part of this Program. Our Agent will get
+                                    back to you shortly to discuss. Thank You.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!------------------wholesale  modal box-------------------------->
+            <div class="modal" id="wholesalerpopup">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Wholesaler</h4>
+                            <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="Wholesaler">
+                                <label for="wh-user-name">Name:</label>
+                                <input type="text" id="wh-user-name" name="name" class="form-control" required>
+
+                                <label for="wh-user-email">Email:</label>
+                                <input type="email" id="wh-user-email" name="email" class="form-control" maxlength="1000" required>
+
+                                <label for="wh-phoneNumber">Phone:</label>
+                                <input type="tel" id="wh-phoneNumber" name="phoneNumber" class="form-control" required>
+
+                                <label for="wh-user-message">Description:</label>
+                                <textarea id="wh-user-message" name="wh-user-message" class="form-control" rows="4" required></textarea>
+
+                                <button type="button" class="btn btn-primary" id="whSubmit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!------------------subscribepopup  modal box-------------------------->
+            <div class="modal" id="subscribepopup">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">AmeriFrag Club</h4>
+                            <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="SubscribeForm">
+                                <label for="sc-user-name">Name:</label>
+                                <input type="text" id="sc-user-name" name="name" class="form-control" required>
+
+                                <label for="sc-user-email">Email:</label>
+                                <input type="email" id="sc-user-email" name="email" class="form-control" maxlength="1000" required>
+
+                                <label for="sc-phoneNumber">Phone:</label>
+                                <input type="tel" id="sc-phoneNumber" name="phoneNumber" class="form-control" required>
+
+                                <label for="sc-user-message">Description:</label>
+                                <textarea id="sc-user-message" name="sc-user-message" class="form-control" rows="4" required></textarea>
+
+                                <button type="button" class="btn btn-primary" id="scSubmit">Submit</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ------------------------------------------Refill Program popup--------------------------- -->
+            <!--<div class="modal" id="RefilProgramPopup">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-end">
+                    <h4 class="modal-title">Refill Program </h4>
+                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="RefilProgramForm">
+                        <p>Enter after how many days you need this Product</p>
+
+                        <div class="row" id="refilProgramCon">-->
+            <!--<div class="col-6">
+        <input type="hidden" placeholder="Enter " id="productId" name="name" value="" />
+        <p class="product_name"></p>
+        </div>
+        <div class="col-6">
+            <input type="text" placeholder="Enter " id="timePeriod"name="name" value="" />
+        </div>-->
+            <!--</div>
+                            <button type="button" class="btn btn-primary" id="RefilSubmit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+            <!-------------------------------------------->
+            <!-- ENd of Testimonial Section -->
+            <!-----------------------------------------------Products Div end----------------------------------------------------------->
+            <!-----------------------------------------------Banners Div start----------------------------------------------------------->
+            <!--<div class="container-fluid common_dv">
+            <div class="banners-logos" id="middle_banners"></div>
+        </div>-->
+            <!-----------------------------------------------Banners Div End----------------------------------------------------------->
+            <!--<div class="container-fluid common_dv margindv">
+            <h5 class="Headings_txtblack_lg text-center topfert_prduct">Sweet Shops</h5>
+            <hr class="headg_hr" /><br />
+            <div class="row" id="VendorList">
+
+            </div>
+            <br />  <br />
+
+
+        </div>
+        <br /><br />
+
+        <div class="common_dv">
+            <div id="demos" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" id="bottom_banners" style="height:400px"></div>
+                <a class="carousel-control-prev" href="#demos" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demos" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>-->
+            <!-----------------------------------------------Footer Start----------------------------------------------------------->
+            <footer id="footer">
+            </footer>
+            <!--choose type modal-->
+            <div class="modal fade" id="choosetype" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="d-block m-auto">
+                                <h4 class="modal-heading m-0 text-center">Instant Discount</h4>
+                                class="m-0 text-center">Take a small survey - Get 5% Instant Discount </p>
+                            </div>
+                            <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body py-2">
+
+                            <form id="frmchoosetype" action="method">
+                                <ol id="useranalytics"></ol>
+                                <div class="row">
+                                    <div class="col-lg-8 form-group">
+                                        <button class="btn" id="choosetype" type="submit">Get Instant Discount</button>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <!--<a href="Home.html" style="text-align:right;">Skip >></a>-->
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--login popup-->
+            <!-- <div class="modal fade" id="loginpopup" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content" style="border: 10px solid black; padding-bottom: 10px">
+                    <div class="modal-header">
+                        <div class="d-block m-auto">
+                            <h4 class="modal-heading m-0 text-center">
+
+        UNLOCK YOUR PERSONAL AROMA WORLD – SIGN UP OR LOG IN
+        <br />
+        TO BEGIN YOUR FRAGRANCE JOURNEY!
+
+        </h4>
+
+        </div>
+        <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+        </div>
+
+
+        <div class="modal-body py-1">
+            <div class="row p-1">
+                <div class="col-md-5 p-1">
+                    <p class="register-text">
+                        If you are an existing Customer
+                    </p>
+                    <form id="frmlogin" onsubmit="return false">
+                        <div id="logindateerror" class="logindateerror_message"></div>
+                        <div class="text-center">
+                            <div id="validationdiv" class="validation_message"></div>
+                        </div>
+                        <label class="form-label" for="email">Email address </label>
+                        <input class="form-control " type="email" id="username" required>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <label class="form-label mt-10" for="Lpassword">Password </label>
+                            </div>
+                            <div>
+                                <a href="Forgotpassword.html" class="m-0 pswd" type="button">Forgot password?</a>
+                            </div>
+                        </div>
+
+                        <input class="form-control mb-20" type="password" id="Lpassword">
+                        <div class="">
+                            <div class="form-group text-center">
+                                <button class="btn  btn-dark cust_login" style="margin: 0px !important; padding: 7px 25px !important;" id="loginBut" type="submit">LOGIN</button>
+                            </div>
+
+                        </div>
+                    </form>
+
+                    <p class="m-0 p-3 text-center">(Or)</p>
+
+                    <h4 class="customer-head white-text">New Customer?</h4>
+
+                    <p style="font-weight:500;">
+
+                        Sign up now and let our advanced AI match you with the perfect scents, curated just for your unique preferences. Enjoy exclusive discounts and discover the art of tailored aromas today!
+                    </p>
+                    <div style="text-align:center;">
+                        <a href="register.html" class="btn white-text" id="createAccount" style="margin: 0px !important; padding: 7px 25px !important;" type="button">CREATE ACCOUNT</a>
+
+                    </div>
+                </div>
+                <div class="col-md-7 d-flex flex-column justify-content-center">
+
+                    <img class="img-fluid w-100" src="Images/home/supersaleImg.png" />
+
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+        </div>
+        </div> -->
+            <!--Analyize popup-->
+            <div class="modal fade" id="analyizepopup" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="d-block m-auto">
+                                <h4 class="modal-heading m-0 text-center">
+                                    What is The AmeriFrag Barcode?
+                                </h4>
+                            </div>
+                            <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-3">
+                            <div class="row  align-items-baseline">
+                                <p class="" style="font-weight:bold;">
+                                    The AmeriFrag Barcode is a revolutionary, real-time digital fingerprint that captures your unique scent preferences, matching you with the perfect fragrances through advanced user analytics.
+                                </p>
+
+                            </div>
+                            <div class="row">
+                                <h4 class="modal-heading text-center">
+                                    Personal Barcode
+                                </h4>
+                                <div style="width:100%; padding:0px">
+                                    <div class="progress mb-2" style="border-radius:0px"><div class="progress-bar bg-ten" role="progressbar" style="width:10%" title="Personality">Personality</div><div class="progress-bar bg-fourty" role="progressbar" style="width:10%" title="Zodiac">Zodiac</div><div class="progress-bar bg-thirty" role="progressbar" style="width:10%" title="Strength">Strength</div><div class="progress-bar bg-fifty" role="progressbar" style="width:10%" title="Passion">Passion</div><div class="progress-bar bg-twenty" role="progressbar" style="width:10%" title="Entertainment">Entertainment</div><div class="progress-bar bg-ninety" role="progressbar" style="width:10%" title="Style">Style</div><div class="progress-bar bg-sixty" role="progressbar" style="width:10%" title="Color">Color</div><div class="progress-bar bg-seventy" role="progressbar" style="width:10%" title="Smell">Smell</div><div class="progress-bar bg-eighty" role="progressbar" style="width:10%" title="Mood">Mood</div><div class="progress-bar bg-hundered" role="progressbar" style="width:10%" title="Season">Season</div></div>
+                                </div>
+                                <p style="color:black; font-size:14px;text-align:justify">
+                                    <strong> Personal Barcode:</strong> When you complete our registration questionnaire, your scent preferences are instantly transformed into a Personal Barcode—a unique digital scent profile tailored just for you. You’ll be matched with other users who share similar preferences, and their favorite products will appear on your profile, giving you immediate access to new fragrances that perfectly align with your tastes.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <h4 class="modal-heading text-center">
+                                    Product Barcode
+                                </h4>
+                                <div class="progress mb-2 p-0" style="border-radius:0px"><div class="progress-bar bg-ten" role="progressbar" style="width:10%">Style</div><div class="progress-bar bg-fourty" role="progressbar" style="width:10%">Note</div><div class="progress-bar bg-thirty" role="progressbar" style="width:10%">Mood</div><div class="progress-bar bg-fifty" role="progressbar" style="width:10%">Season</div><div class="progress-bar bg-twenty" role="progressbar" style="width:10%">Occasion</div><div class="progress-bar bg-ninety" role="progressbar" style="width:10%">Age Group </div> <div class="progress-bar bg-sixty" role="progressbar" style="width:10%">Smell Intensity</div>  <div class="progress-bar bg-seventy" role="progressbar" style="width:10%">Longevity</div><div class="progress-bar bg-eighty" role="progressbar" style="width:10%">Spray Time</div><div class="progress-bar bg-hundered" role="progressbar" style="width:10%">Presentation</div></div>
+                                <p style="color: black; font-size: 14px;text-align: justify">
+                                    Each fragrance has its own <strong>Product Barcode—</strong>a dynamic digital signature that evolves in real-time based on global user feedback. This barcode reflects the most-loved aspects of each fragrance, from its notes to its mood, offering you an interactive, up-to-date interpretation of the scent. As global preferences shift, so does the barcode, ensuring a fresh and relevant way to explore each fragrance’s personality.
+
+                                </p>
+                                <h4 class="modal-heading text-center" style="margin-bottom:0px;">How They Work Together</h4>
+                                <div class="text-center"><img src="images/showall/decarative1.png" style="width:36%" /></div>
+
+                                <p style="text-align: justify;font-weight:bold"> Your Personal Barcode seamlessly interacts with the Product Barcodes, matching you with fragrances that are tailored to your digital scent profile. This seamless connection creates an <strong>immersive, interactive experience</strong>where you can digitally "smell" and discover scents that match your style and preferences, all within a digital world of aromas.</p>
+                                <!--     <p style="font-weight:bold">With <strong>AmeriFrag’s innovative barcode system,</strong>he art of scent has gone digital—allowing you to explore, discover, and indulge in fragrances like never before. Welcome to a world where your senses meet technology!</p>
+                            -->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="disclaimer" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="d-block m-auto">
+                                <h4 class="modal-heading m-0 text-center">
+                                    Disclaimer
+                                </h4>
+
+                            </div>
+
+                            <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body py-2">
+                            <div class="row p-3 align-items-baseline">
+                                <p style="color:black; font-size:14px;">
+                                    <!--About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.-->
+                                    This concept bridges the gap between the physical and the digital shopping experience. Your unique personal barcode will be generated and used to match you with the highest-used and most-liked options based on each of your preferences. Each product’s barcode is comprised of data from users across the globe and constantly changes in real time along with the tastes and preferences of our users, creating the most authentic digital aroma experience.
+                                    <br />
+                                    <br />
+                                    Before each user purchases a product, we provide a short survey with 10 questions, one for each AmeriFrag category, that will alter the barcode depending on the most chosen options for each category. The color of each part of the barcode is coded according to the color pallets shown below. The length of each part of the barcode for a product changes based on the most popular option for each analytic category among all of the users who surveyed that particular product.
+                                    <br />
+                                    <br />
+                                    It essentially considers both the most popular options overall and the highest percentages of that option amongst the users of each product to create a product-specific division of the barcode, thereby giving it a unique identity within the market.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------------------------------------------Here’s What’s Waiting For You… popup---------------------------------------->
+            <div class="modal fade" id="disclaimer" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="d-block m-auto">
+                                <h4 class="modal-heading m-0 text-center">
+                                    Disclaimer
+                                </h4>
+
+                            </div>
+
+                            <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body py-2">
+                            <div class="row p-3 align-items-baseline">
+                                <p style="color:black; font-size:14px;">
+                                    <!--About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.-->
+                                    This concept bridges the gap between the physical and the digital shopping experience. Your unique personal barcode will be generated and used to match you with the highest-used and most-liked options based on each of your preferences. Each product’s barcode is comprised of data from users across the globe and constantly changes in real time along with the tastes and preferences of our users, creating the most authentic digital aroma experience.
+                                    <br />
+                                    <br />
+                                    Before each user purchases a product, we provide a short survey with 10 questions, one for each AmeriFrag category, that will alter the barcode depending on the most chosen options for each category. The color of each part of the barcode is coded according to the color pallets shown below. The length of each part of the barcode for a product changes based on the most popular option for each analytic category among all of the users who surveyed that particular product.
+                                    <br />
+                                    <br />
+                                    It essentially considers both the most popular options overall and the highest percentages of that option amongst the users of each product to create a product-specific division of the barcode, thereby giving it a unique identity within the market.
+
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--DropShip popup-->
+            <!--<div class="modal fade" id="dropshippopup" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="d-block m-auto">
+                            <h4 class="modal-heading m-0 text-center">
+                                Dropship
+                            </h4>
+                            <p class="m-0 text-center">subtitle</p>
+                        </div>
+                        <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body py-2">
+                        <div class="row p-3 align-items-baseline">
+                            <p>
+                                About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+            <!--wholesaler popup-->
+            <!--<div class="modal fade" id="wholesalerpopup" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="d-block m-auto">
+                            <h4 class="modal-heading m-0 text-center">
+                                Wholesaler
+                            </h4>
+                            <p class="m-0 text-center">subtitle</p>
+                        </div>
+                        <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body py-2">
+                        <div class="row p-3 align-items-baseline">
+                            <p>
+                                About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+            <!--Subscribe popup-->
+            <!--<div class="modal fade" id="subscribepopup" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="d-block m-auto">
+                            <h4 class="modal-heading m-0 text-center">
+                                Subscribe
+                            </h4>
+                            <p class="m-0 text-center">subtitle</p>
+                        </div>
+                        <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body py-2">
+                        <div class="row p-3 align-items-baseline">
+                            <p>
+                                About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+            <input type="hidden" name="prdctid" id="prdctid" />
+            <div class="divdv"></div>
+            <div onclick="topFunction()" id="myBtn" title="Go to top" class="fa fa-chevron-up back-to-top"></div>
+
+            <!-----------------------------------------------Footer End----------------------------------------------------------->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+            <!-- Owl Carousel -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+            <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+            <!-- jQuery Validation Plugin -->
+            <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.5/jquery.validate.min.js"></script>
+
+            <!-- Optional: Additional Methods (for `accept`, `equalTo`, etc.) -->
+            <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.5/additional-methods.min.js"></script>
+
+
+            <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"></script>
+            <script src="Js/chartjs-plugin-labels.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js"></script>
+            <!-- <script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js" type="text/javascript"></script> -->
+
+            <script src="Js/Navbar.js"></script>
+
+            <script src="Js/Global.js"></script>
+            <script src="Js/cart_page.js"></script>
+            <script src="Js/customer_Login.js"></script>
+
+            <!--Jquery -->
+            <!--For water wheel carousel-->
+            <script type="text/javascript" src="js/jquery.waterwheelCarousel.min.js"></script>
+            <script>
+                AOS.init();
+                document.querySelectorAll('.carousel-control-button input').forEach(input => {
+                    input.addEventListener('change', function () {
+                        const wrapper = document.querySelector('.carousel-item-wrapper');
+                        if (this.id === 'reverse') {
+                            wrapper.style.animationDirection = 'reverse';
+                        } else {
+                            wrapper.style.animationDirection = 'normal';
+                        }
+                    });
+                });
+            </script>
+            <!--Start of Tawk.to Script-->
+            <script type="text/javascript">
+                var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+                (function () {
+                    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+                    s1.async = true;
+                    s1.src = 'https://embed.tawk.to/65782cae70c9f2407f7f122d/1hhemt35e';
+                    s1.charset = 'UTF-8';
+                    s1.setAttribute('crossorigin', '*');
+                    s0.parentNode.insertBefore(s1, s0);
+                })();
+            </script>
+
+            <script>
+                document.querySelectorAll('.banner .slider .item').forEach(item => {
+                    item.addEventListener('mouseenter', () => {
+                        document.querySelector('.banner .slider').style.animationPlayState = 'paused';
+                    });
+                    item.addEventListener('mouseleave', () => {
+                        document.querySelector('.banner .slider').style.animationPlayState = 'running';
+                    });
+                });
+            </script>
+
+
+
+            <script src="Js/Home.js"></script>
+
+            <!-- International Telephone Input JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+
+</body>
+</html>

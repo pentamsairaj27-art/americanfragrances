@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+
+<html
+  lang="en"
+  class="light-style layout-navbar-fixed layout-menu-fixed layout-compact"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="/"
+  data-template="vertical-menu-template">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+     <title>Perfumes with AI and Super Sale</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <!--<link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico" />-->
+    <link rel="shortcut icon" type="image/png" href="/Images/favicon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&ampdisplay=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" />
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/Fonts/materialdesignicons.css" /> -->
+    <link rel="stylesheet" href="/Fonts/flag-icons.css" />
+
+    <!-- Menu waves for no-customizer fix -->
+    <link rel="stylesheet" href="/Css/dashboard/node-waves.css" />
+    <link rel="stylesheet" href="/Css/Admin.css" />
+
+    <!-- Core CSS -->
+    <!-- <link rel="stylesheet" href="/Css/dashboard/core.css" class="template-customizer-core-css" /> -->
+    <link rel="stylesheet" href="/Css/dashboard/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="/Css/dashboard/demo.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="/vendor/libs/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="/Css/dashboard/apex-charts.css" />
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="/Css/dashboard/app-ecommerce-dashboard.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
+    <!-- Helpers -->
+    <script src="/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+    <script src="/vendor/js/template-customizer.js"></script>
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="/js/config.js"></script>
+    <style>
+        .hidebeforeresponse {
+            display: none;
+        }
+
+        .bg-dark {
+            background-color: #ccc !important;
+            z-index: 999999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dvnav"></div>
+
+
+    <div class="container-fluid main_dv">
+        <div class="row justify-content-end">
+            <!-----------------------------------------------Dashboard starts----------------------------------------------------------->
+            <div class="col-md-2 dashboard_dv">
+                <div id="leftmenu" class="dashboard_Menu">
+
+                </div>
+            </div>
+            <!-----------------------------------------------Body dv starts----------------------------------------------------------->
+            <div class="col-md-10 content-wrapper">
+
+
+                <!-- Content wrapper -->
+                <div class="">
+                    <!-- Content -->
+                    <div class="container">
+                        <form id="adminanalytics" onsubmit="return false" method="POST" role="form">
+
+                            <div class="row align-items-end">
+                                <div class="col-md-4">
+                                    <p>From</p>
+                                    <div class="input-group date" id="fromdatepicker">
+                                        <input type="text" class="form-control" id="fromdate" placeholder="From Date" />
+                                        <span class="input-group-append">
+                                            <span class="input-group-text bg-light d-block">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <p>To</p>
+                                    <div class="input-group date" id="todatepicker">
+                                        <input type="text" class="form-control" id="todate" placeholder="To Date" />
+                                        <span class="input-group-append">
+                                            <span class="input-group-text bg-light d-block">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn subbtn">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <div class="row gy-4">
+                            <!-- Congratulations card -->
+                            <!-- <div class="col-xl-8 col-lg-7 align-self-end mt-md-5 mt-lg-4 pt-md-2 pt-lg-0">
+                              <div class="card mt-5">
+                                <div class="row">
+                                  <div class="col-12 col-md-6">
+                                    <div class="card-body">
+                                      <h4 class="card-title mb-4 text-truncate">Congratulations <span id="adminname"></span>! 🎉</h4>
+                                      <p class="mb-0">
+                                        You have done 72% 😎 more sales today.<br />
+                                        Check your new raising badge in your profile.
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 col-md-6 position-relative text-center">
+                                    <img
+                                      src="/Images/illustration-john-2.png"
+                                      class="card-img-position bottom-0 w-auto end-0 scaleX-n1-rtl"
+                                      alt="View Profile" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div> -->
+                            <!--/ Congratulations card -->
+                            <!-- Cards with icon profit and loss info -->
+                            <div class="col-xl-4 col-lg-5 hidebeforeresponse">
+                                <div class="row gy-4">
+                                    <div class="col-sm-6">
+                                        <div class="card">
+                                            <div class="card-header d-flex align-items-center justify-content-between">
+                                                <div class="avatar">
+                                                    <div class="avatar-initial bg-info rounded-circle shadow">
+                                                        <i class="mdi mdi-trending-up mdi-24px"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown">
+                                                    <button class="btn p-0"
+                                                            type="button"
+                                                            id="transactionsID"
+                                                            data-bs-toggle="dropdown"
+                                                            aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                        <i class="mdi mdi-dots-vertical mdi-24px"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="transactionsID">
+                                                        <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);">Share</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);">Update</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body pt-0">
+                                                <h6 class="mb-2">Transactions</h6>
+                                                <div class="d-flex flex-wrap mb-2 gap-2 pb-1 align-items-center">
+                                                    <h4 class="mb-0 transactions">M</h4>
+                                                    <!-- <small class="text-success mt-1">+<span id="transactionspercent"></span>%</small> -->
+                                                </div>
+                                                <small>Daily Transactions</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="card">
+                                            <div class="card-header d-flex align-items-center justify-content-between">
+                                                <div class="avatar">
+                                                    <div class="avatar-initial bg-success rounded-circle shadow">
+                                                        <i class="mdi mdi-currency-usd mdi-24px"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown">
+                                                    <button class="btn p-0"
+                                                            type="button"
+                                                            id="revenueID"
+                                                            data-bs-toggle="dropdown"
+                                                            aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                        <i class="mdi mdi-dots-vertical mdi-24px"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="revenueID">
+                                                        <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);">Share</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);">Update</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body pt-0">
+                                                <h6 class="mb-2">Revenue</h6>
+                                                <div class="d-flex flex-wrap mb-2 pb-1 align-items-center gap-2">
+                                                    <h4 class="mb-0" id="revenueAmt">$95.2M</h4>
+                                                    <!-- <small class="text-success mt-1">+12%</small> -->
+                                                </div>
+                                                <small>Revenue Increase</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/ Cards with icon profit and loss info -->
+                            <!-- Total Profit Chart & Last month balance -->
+                            <div class="col-xl-12 hidebeforeresponse">
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-md-12 pe-md-0">
+                                            <div class="card-header">
+                                                <h5 class="mb-0">Sales Report</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div id="chartContainer" style="height: 250px; width: 100%;"></div>
+
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col-md-5 border-start ps-md-0">
+                                          <hr class="d-block d-md-none my-0" />
+                                          <div class="card-header">
+                                            <div class="d-flex justify-content-between">
+                                              <h5 class="mb-1">$482.85k</h5>
+                                              <div class="dropdown">
+                                                <button
+                                                  class="btn p-0"
+                                                  type="button"
+                                                  id="totalProfit"
+                                                  data-bs-toggle="dropdown"
+                                                  aria-haspopup="true"
+                                                  aria-expanded="false">
+                                                  <i class="mdi mdi-dots-vertical mdi-24px"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="totalProfit">
+                                                  <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+                                                  <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                                                  <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <p class="text-body mb-0">Last month balance $234.40k</p>
+                                          </div>
+                                          <div class="card-body pt-3">
+                                            <div class="d-flex align-items-center mb-3 pb-1">
+                                              <div class="avatar">
+                                                <div class="avatar-initial bg-label-success rounded">
+                                                  <i class="mdi mdi-trending-up mdi-24px"></i>
+                                                </div>
+                                              </div>
+                                              <div class="ms-3 d-flex flex-column">
+                                                <h6 class="mb-1">$48,568.20</h6>
+                                                <small>Total Profit</small>
+                                              </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 pb-1">
+                                              <div class="avatar">
+                                                <div class="avatar-initial bg-label-primary rounded">
+                                                  <i class="mdi mdi-account-outline mdi-24px"></i>
+                                                </div>
+                                              </div>
+                                              <div class="ms-3 d-flex flex-column">
+                                                <h6 class="mb-1">$38,453.25</h6>
+                                                <small>Total Income</small>
+                                              </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 pb-1">
+                                              <div class="avatar">
+                                                <div class="avatar-initial bg-label-secondary rounded">
+                                                  <i class="mdi mdi-cellphone-link mdi-24px"></i>
+                                                </div>
+                                              </div>
+                                              <div class="ms-3 d-flex flex-column">
+                                                <h6 class="mb-1">$2,453.45</h6>
+                                                <small>Total Expense</small>
+                                              </div>
+                                            </div>
+                                            <div class="d-grid">
+                                              <button class="btn btn-primary" type="button">View Report</button>
+                                            </div>
+                                          </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/ Total Profit Chart & Last month balance -->
+                            <!-- three chart -->
+                            <!-- <div class="col-xl-4">
+                              <div class="row gy-4">
+                                 Total Sales -->
+                            <!-- <div class="col-xl-12 col-md-6">
+                              <div class="card">
+                                <div
+                                  class="card-body d-flex justify-content-between align-items-center flex-xl-nowrap flex-wrap">
+                                  <div class="me-3">
+                                    <h5 class="mb-4">Total Sales</h5>
+                                    <div class="small mb-1">Calculated in last 7 days</div>
+                                    <div class="d-flex align-items-center gap-2">
+                                      <h4 class="mb-0">$25,980</h4>
+                                      <small class="text-success lh-sm">+15.6%</small>
+                                    </div>
+                                  </div>
+                                  <div id="totalSalesDonutChart" class="mt-3 mt-md-0"></div>
+                                </div>
+                              </div>
+                            </div>
+                             Total Sales -->
+                            <!-- Total Revenue chart -->
+                            <!-- <div class="col-xl-6 col-md-3 col-sm-6">
+                              <div class="card">
+                                <div class="card-header pb-0">
+                                  <h4 class="mb-0">$35.4k</h4>
+                                </div>
+                                <div class="card-body">
+                                  <div id="totalRevenueChart" class="mb-3"></div>
+                                  <h6 class="text-center mb-0">Total Revenue</h6>
+                                </div>
+                              </div>
+                            </div> -->
+                            <!--/ Total Revenue chart -->
+                            <!-- Total Sales chart -->
+                            <!-- <div class="col-xl-6 col-md-3 col-sm-6">
+                              <div class="card">
+                                <div class="card-header pb-0">
+                                  <h4 class="mb-0">135k</h4>
+                                </div>
+                                <div class="card-body">
+                                  <div id="totalSalesSemiDonutChart" class="mb-4"></div>
+                                  <h6 class="text-center mb-0">Total Sales</h6>
+                                </div>
+                              </div>
+                            </div> -->
+                            <!--/ Total Sales chart -->
+                            <!-- </div>
+                            </div>  -->
+                            <!--/ three chart -->
+                            <!-- Transactions -->
+                            <div class="col-xl-4 col-md-6 hidebeforeresponse">
+                                <div class="card ">
+                                    <div class="card-header d-flex align-items-center justify-content-between">
+                                        <h5 class="card-title m-0 me-2">Transactions</h5>
+                                        <div class="dropdown">
+                                            <button class="btn p-0"
+                                                    type="button"
+                                                    id="transactionID"
+                                                    data-bs-toggle="dropdown"
+                                                    aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical mdi-24px"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="transactionID">
+                                                <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="p-0 m-0">
+                                            <li class="d-flex mb-4 pb-2">
+                                                <div class="me-2 pe-1">
+                                                    <div class="avatar flex-shrink-0">
+                                                        <div class="avatar-initial bg-label-danger rounded">
+                                                            <div>
+                                                                <img src="/images/icons/unicons/paypal.svg" alt="paypal" class="img-fluid" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                                    <div class="me-2">
+                                                        <h6 class="mb-0">Paypal</h6>
+                                                        <small>Received Money</small>
+                                                    </div>
+                                                    <div class="user-progress d-flex align-items-center gap-3">
+                                                        <h6 class="mb-0">$<span id="totaltransaction"></span> </h6>
+                                                        <!-- <i class="mdi mdi-chevron-up mdi-24px text-success"></i> -->
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex mb-4 pb-2">
+                                                <div class="me-2 pe-1">
+                                                    <div class="avatar flex-shrink-0">
+                                                        <div class="avatar-initial bg-label-success rounded">
+                                                            <div>
+                                                                <img src="/images/icons/unicons/credit-card.svg"
+                                                                     alt="paypal"
+                                                                     class="img-fluid" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                                    <div class="me-2">
+                                                        <h6 class="mb-0">Gift Card</h6>
+                                                        <small>Transactions</small>
+                                                    </div>
+                                                    <div class="user-progress d-flex align-items-center gap-3">
+                                                        <h6 class="mb-0">$<span id="gifttransaction"></span></h6>
+                                                        <!-- <i class="mdi mdi-chevron-down mdi-24px text-danger"></i> -->
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/ Transactions -->
+                            <!-- New visitors cards -->
+                            <div class="col-xl-4 col-md-6 hidebeforeresponse">
+                                <div class="row gy-4">
+                                    <div class="col-sm-6">
+                                        <div class="card">
+                                            <div class="card-header d-flex align-items-center justify-content-between">
+                                                <div class="avatar">
+                                                    <div class="avatar-initial bg-danger rounded-circle shadow">
+                                                        <i class="mdi mdi-star-outline mdi-24px"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown">
+                                                    <button class="btn p-0"
+                                                            type="button"
+                                                            id="logisticsID"
+                                                            data-bs-toggle="dropdown"
+                                                            aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                        <i class="mdi mdi-dots-vertical mdi-24px"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="logisticsID">
+                                                        <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);">Share</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);">Update</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body pt-0">
+                                                <h6 class="text-body mb-2">Dispatched</h6>
+                                                <div class="d-flex flex-wrap align-items-center mb-2 pb-1">
+                                                    <h4 class="mb-0 me-2" id="dispatched"></h4>
+                                                    <!-- <small class="text-success">+42%</small> -->
+                                                </div>
+                                                <small>Products</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="card">
+                                            <div class="card-header d-flex align-items-center justify-content-between">
+                                                <div class="avatar">
+                                                    <div class="avatar-initial bg-warning rounded-circle shadow">
+                                                        <i class="mdi mdi-check mdi-24px"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown">
+                                                    <button class="btn p-0"
+                                                            type="button"
+                                                            id="reportsID"
+                                                            data-bs-toggle="dropdown"
+                                                            aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                        <i class="mdi mdi-dots-vertical mdi-24px"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="reportsID">
+                                                        <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);">Share</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);">Update</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body pt-0">
+                                                <h6 class="text-body mb-2">Delivered</h6>
+                                                <div class="d-flex flex-wrap align-items-center mb-2 pb-1">
+                                                    <h4 class="mb-0 me-2" id="delivered"></h4>
+                                                    <!-- <small class="text-danger">-28%</small> -->
+                                                </div>
+                                                <small>Products</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-header pb-0">
+                                                <h5 class="card-title m-0 me-2">New Registers</h5>
+                                            </div>
+                                            <div class="card-body pt-0 pb-3">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-6 pe-xxl-5">
+                                                        <p class="small pe-xxl-5">48% new visitors this week.</p>
+                                                        <div class="d-flex flex-wrap">
+                                                            <h4 class="mb-0 me-1" id="NewVisitorsCount"></h4>
+                                                            <h6 class="text-success mb-0">
+                                                                <i class="mdi mdi-chevron-up mdi-24px"></i>
+                                                                <span>28</span>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div id="newVisitorsChart"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/ New visitors cards -->
+                            <!-- Website Statistics -->
+                            <div class="col-xl-4 col-md-6 hidebeforeresponse">
+                                <div class="card">
+                                    <div class="card-header d-flex align-items-center justify-content-between">
+                                        <h5 class="card-title m-0 me-2">Stock Statistics</h5>
+                                        <div class="dropdown">
+                                            <button class="btn p-0"
+                                                    type="button"
+                                                    id="webStatistics"
+                                                    data-bs-toggle="dropdown"
+                                                    aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical mdi-24px"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="webStatistics">
+                                                <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-end mb-3">
+                                            <div class="mb-2">
+                                                <h5 class="display-3 mb-0 outofstock"></h5>
+                                                <small>Total Sold Out</small>
+                                            </div>
+                                            <div id="webVisitors"></div>
+                                        </div>
+                                        <div class="d-flex align-items-center border-top py-3">
+                                            <span class="text-success me-2">
+                                                <i class="mdi mdi-circle"></i>
+                                            </span>
+                                            <h6 class="fw-normal mb-0">Sold Out</h6>
+                                            <div class="flex-grow-1"></div>
+                                            <h6 class="text-end me-4 mb-0 outofstock"></h6>
+                                            <!-- <h6 class="text-end me-2 mb-0">15%</h6>
+                                            <i class="mdi mdi-chevron-down text-danger mdi-24px"></i> -->
+                                        </div>
+                                        <div class="d-flex align-items-center border-top py-3">
+                                            <span class="text-primary me-2">
+                                                <i class="mdi mdi-circle"></i>
+                                            </span>
+                                            <h6 class="fw-normal mb-0">In Stock</h6>
+                                            <div class="flex-grow-1"></div>
+                                            <h6 class="text-end me-4 mb-0" id="instock"></h6>
+                                            <!-- <h6 class="text-end me-2 mb-0">85%</h6>
+                                            <i class="mdi mdi-chevron-up text-success mdi-24px"></i> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/ Website Statistics -->
+                            <!-- Card DataTable -->
+                            <div class="col-xl-12 order-xl-1 order-2">
+                                <div class="card">
+                                    <div class="table-responsive">
+                                        <table class="table" id="orders_list">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th class="text-truncate"># ID</th>
+                                                    <th class="text-truncate"><span class="mdi mdi-arrow-up"></span></th>
+                                                    <th class="text-truncate">Client</th>
+                                                    <th class="text-truncate">Total</th>
+                                                    <th class="text-truncate">Balance</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/ Card DataTable -->
+                            <!-- Meeting Schedule -->
+                            <!-- <div class="col-xl-4 col-md-6 order-xl-2 order-1">
+                              <div class="card ">
+                                <div class="card-header d-flex align-items-center justify-content-between">
+                                  <h5 class="card-title m-0 me-2">Meeting Schedule</h5>
+                                  <div class="dropdown">
+                                    <button
+                                      class="btn p-0"
+                                      type="button"
+                                      id="meetingSchedule"
+                                      data-bs-toggle="dropdown"
+                                      aria-haspopup="true"
+                                      aria-expanded="false">
+                                      <i class="mdi mdi-dots-vertical mdi-24px"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="meetingSchedule">
+                                      <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+                                      <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                                      <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-body">
+                                  <ul class="p-0 m-0">
+                                    <li class="d-flex mb-4 pb-2">
+                                      <div class="avatar flex-shrink-0 me-3">
+                                        <img src="/img/avatars/4.png" alt="avatar" class="rounded-circle" />
+                                      </div>
+                                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                        <div class="me-2">
+                                          <h6 class="mb-0">Call with Woods</h6>
+                                          <small>
+                                            <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
+                                            <span>21 Jul | 08:20-10:30</span>
+                                          </small>
+                                        </div>
+                                        <div class="badge bg-label-primary rounded-pill">Business</div>
+                                      </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-2">
+                                      <div class="avatar flex-shrink-0 me-3">
+                                        <img src="/img/avatars/8.png" alt="avatar" class="rounded-circle" />
+                                      </div>
+                                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                        <div class="me-2">
+                                          <h6 class="mb-0">Call with hilda</h6>
+                                          <small>
+                                            <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
+                                            <span>21 Jul | 08:20-10:30</span>
+                                          </small>
+                                        </div>
+                                        <div class="badge bg-label-success rounded-pill">Meditation</div>
+                                      </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-2">
+                                      <div class="avatar flex-shrink-0 me-3">
+                                        <img src="/img/avatars/5.png" alt="avatar" class="rounded-circle" />
+                                      </div>
+                                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                        <div class="me-2">
+                                          <h6 class="mb-0">Conference call</h6>
+                                          <small>
+                                            <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
+                                            <span>21 Jul | 08:20-10:30</span>
+                                          </small>
+                                        </div>
+                                        <div class="badge bg-label-warning rounded-pill">Dinner</div>
+                                      </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-2">
+                                      <div class="avatar flex-shrink-0 me-3">
+                                        <img src="/img/avatars/3.png" alt="avatar" class="rounded-circle" />
+                                      </div>
+                                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                        <div class="me-2">
+                                          <h6 class="mb-0">Meeting with Mark</h6>
+                                          <small>
+                                            <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
+                                            <span>21 Jul | 08:20-10:30</span>
+                                          </small>
+                                        </div>
+                                        <div class="badge bg-label-secondary rounded-pill">Meetup</div>
+                                      </div>
+                                    </li>
+                                    <li class="d-flex mb-4 pb-2">
+                                      <div class="avatar flex-shrink-0 me-3">
+                                        <img src="/img/avatars/2.png" alt="avatar" class="rounded-circle" />
+                                      </div>
+                                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                        <div class="me-2">
+                                          <h6 class="mb-0">Meeting in Oakland</h6>
+                                          <small>
+                                            <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
+                                            <span>21 Jul | 08:20-10:30</span>
+                                          </small>
+                                        </div>
+                                        <div class="badge bg-label-danger rounded-pill">Dinner</div>
+                                      </div>
+                                    </li>
+                                    <li class="d-flex">
+                                      <div class="avatar flex-shrink-0 me-3">
+                                        <img src="/img/avatars/1.png" alt="avatar" class="rounded-circle" />
+                                      </div>
+                                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                        <div class="me-2">
+                                          <h6 class="mb-0">Meeting with Carl</h6>
+                                          <small>
+                                            <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
+                                            <span>21 Jul | 08:20-10:30</span>
+                                          </small>
+                                        </div>
+                                        <div class="badge bg-label-primary rounded-pill">Business</div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div> -->
+                            <!--/ Meeting Schedule -->
+                        </div>
+                    </div>
+                    <!-- / Content -->
+
+
+                    <div class="content-backdrop fade"></div>
+                </div>
+                <!-- Content wrapper -->
+            </div>
+            <!-- / Layout page -->
+        </div>
+
+        <!-- Overlay -->
+        <div class="layout-overlay layout-menu-toggle"></div>
+
+        <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+        <div class="drag-target"></div>
+    </div>
+    <!-- / Layout wrapper -->
+    <!-- Core JS -->
+    <script>
+        $(function () {
+            $("#fromdatepicker").datepicker();
+            $("#todatepicker").datepicker();
+        });
+        $.fn.datepicker.dates["en"] = {
+            days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+            months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            today: "Today",
+            clear: "Clear",
+            format: "mm/dd/yyyy",
+            titleFormat: "MM yyyy" /* Leverages same syntax as 'format' */,
+            weekStart: 0,
+        };
+    </script>
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="/vendor/libs/jquery/jquery.js"></script>
+    <script src="/vendor/libs/popper/popper.js"></script>
+    <script src="/vendor/js/bootstrap.js"></script>
+    <script src="/Js/Dashboard/node-waves.js"></script>
+    <script src="/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="/vendor/libs/hammer/hammer.js"></script>
+    <script src="/vendor/libs/i18n/i18n.js"></script>
+    <script src="/vendor/libs/typeahead-js/typeahead.js"></script>
+    <script src="/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+    <script src="/Js/AdminDashboard.js"></script>
+    <!-- Vendors JS -->
+    <script src="/Js/Dashboard/apexcharts.js"></script>
+
+    <!-- Main JS -->
+    <script src="/Js/Dashboard/main.js"></script>
+    <script src="/Js/Global.js"></script>
+    <!-- Page JS -->
+    <script src="/js/Dashboard/app-ecommerce-dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+</body>
+</html>

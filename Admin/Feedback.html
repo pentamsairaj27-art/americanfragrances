@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Perfumes with AI and Super Sale</title>
+    <link rel="shortcut icon" type="image/png" href="/Images/favicon.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.1/dist/bootstrap-float-label.min.css" />
+    <link href="../Css/Admin.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="dvnav"></div>
+
+    <!-----------------------------------------------body starts----------------------------------------------------------->
+    <div class="container-fluid main_dv">
+        <div class="row justify-content-end">
+            <!-----------------------------------------------Dashboard starts----------------------------------------------------------->
+            <div class="col-md-2 dashboard_dv">
+                <div id="leftmenu" class="dashboard_Menu">
+
+                </div>
+            </div>
+            <!-----------------------------------------------Body dv starts----------------------------------------------------------->
+            <div class="col-md-10 content-wrapper">
+                <div id="validationdiv" class="validation_message"></div>
+                <div class="row">
+                    <div class="col-md-12 content-body">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div id="validationdiv" class="validation_message"></div>
+                                <h4 class="Menu_Title">FEEDBACK QUESTIONS LIST</h4>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn_md" data-toggle="modal" data-target="#Addcategory">Add Question</button>
+                            </div>
+                        </div>
+                        <table id="tblfeedqun_lst" class="table table-responsive-sm table-bordered table-sm" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Question</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------------------Add Category Modal--------------------------------------------------- -->
+    <div class="modal fade" id="Addcategory" tabindex="-1" role="dialog" aria-labelledby="Addcategory" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form id="feedqun_create" onsubmit="return false">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">ADD QUESTION</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="p-3">
+                            <div class="row">
+                                <div class="col-md-12 mt-3">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="qun" id="qun" required>
+                                        <label for="qun" placeholder="Enter Your Question">Question</label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="formfield" id="floatdv">
+                                                <input type="text" name="opt1" id="opt1" required>
+                                                <label for="opt1" placeholder="Enter Your Option">Option 1</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="formfield" id="floatdv">
+                                                <input type="text" name="opt2" id="opt2" required>
+                                                <label for="opt2" placeholder="Enter Your Option">Option 2</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="formfield" id="floatdv">
+                                                <input type="text" name="opt3" id="opt3" required>
+                                                <label for="opt3" placeholder="Enter Your Option">Option 3</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="formfield" id="floatdv">
+                                                <input type="text" name="opt4" id="opt4" required>
+                                                <label for="opt4" placeholder="Enter Your Option">Option 4</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="formfield" id="floatdv">
+                                                <input type="text" name="opt5" id="opt5" required>
+                                                <label for="opt5" placeholder="Enter Your Option">Option 5</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="formfield" id="floatdv">
+                                                <input type="text" name="opt6" id="opt6" required>
+                                                <label for="opt6" placeholder="Enter Your Option">Option 6</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="formfield" id="floatdv">
+                                                <input type="text" name="opt7" id="opt7" required>
+                                                <label for="opt7" placeholder="Enter Your Option">Option 7</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="formfield" id="floatdv">
+                                                <input type="text" name="opt8" id="opt8" required>
+                                                <label for="opt8" placeholder="Enter Your Option">Option 8</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="formfield" id="floatdv">
+                                                <input type="text" name="opt9" id="opt9" required>
+                                                <label for="opt9" placeholder="Enter Your Option">Option 9</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="formfield" id="floatdv">
+                                                <input type="text" name="opt10" id="opt10" required>
+                                                <label for="opt10" placeholder="Enter Your Option">Option 10</label>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="formfield" id="floatdv">
+                                                <input type="text" name="colorcode" id="colorcode" required>
+                                                <label for="colorcode" placeholder="Enter color code">Color Code</label>
+                                            </div>
+                                        </div>
+                                    </div>           
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn_sm">Add</button>
+                        <button type="button" class="btn_cancel" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------------------Edit Category Modal--------------------------------------------------- -->
+    <div class="modal fade" id="Editcategory" tabindex="-1" role="dialog" aria-labelledby="Editcategory" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">EDIT QUESTION</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="feedqun_edit" onsubmit="return false">
+                    <div class="modal-body">
+                        <input type="hidden" name="hiddenid" id="hiddenid" />
+                        <!--<div class="formfield" id="floatdv">
+                            <label for="edit_qun" placeholder="Enter Your Question">Question</label>
+                            <input type="text" name="qun" id="edit_qun" required>
+                        </div>-->
+                        <div class="formfield" id="floatdv">
+                            <input type="text" name="qun" id="edit_qun" required>
+                            <label for="edit_qun" placeholder="Enter Your Question">Question</label>
+                        </div>
+
+                        <div class="container-fluid">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="opt1" id="edit_opt1" required>
+                                        <label for="opt1" placeholder="Enter Your Option">Option 1</label>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="opt2" id="edit_opt2" required>
+                                        <label for="opt2" placeholder="Enter Your Option">Option 2</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="opt3" id="edit_opt3" required>
+                                        <label for="opt3" placeholder="Enter Your Option">Option 3</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="opt4" id="edit_opt4" required>
+                                        <label for="opt4" placeholder="Enter Your Option">Option 4</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="opt5" id="edit_opt5" required>
+                                        <label for="opt5" placeholder="Enter Your Option">Option 5</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="opt6" id="edit_opt6" required>
+                                        <label for="opt6" placeholder="Enter Your Option">Option 6</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="opt7" id="edit_opt7" required>
+                                        <label for="opt7" placeholder="Enter Your Option">Option 7</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="opt8" id="edit_opt8" required>
+                                        <label for="opt8" placeholder="Enter Your Option">Option 8</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="opt9" id="edit_opt9" required>
+                                        <label for="opt9" placeholder="Enter Your Option">Option 9</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="opt10" id="edit_opt10" required>
+                                        <label for="opt10" placeholder="Enter Your Option">Option 10</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="colorcode" id="edit_colorcode" required>
+                                        <label for="colorcode" placeholder="Enter color code">Color Code</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn_sm">Update</button>
+                        <button type="button" class="btn_cancel" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <!--<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>-->
+    <script src="../Js/Imageupload.js"></script>
+    <script src="../Js/Global.js"></script>
+    <script src="../Js/Feedback.js"></script>
+    <!--<script src="../Js/adminactivities.js"></script>-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#tblcategory_lst').DataTable();
+            $('.dataTables_length').addClass('bs-select');
+        });
+                                                                                                //setTimeout(explode, 2000);
+    </script>
+
+</body>
+</html>

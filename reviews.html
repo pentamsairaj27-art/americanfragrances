@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>Perfumes with AI and Super Sale</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png" />
+
+    <!-- Bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google fonts-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"><!-- theme stylesheet-->
+    <link href="Css/StyleSheet.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/product.css" id="theme-stylesheet">
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- owl carousel cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+          integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+          integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+          crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <style>
+        .pagination {
+            float: right; /* Align pagination links to the right */
+            margin-left: 10px; /* Add some space between pagination links */
+        }
+        .pagination {
+            cursor: pointer; /* Add cursor pointer for better UX */
+            display:none;
+        }
+
+            .pagination.active {
+                color: blue;
+              
+            }
+
+        #star1, #star2, #star3, #star4, #star5 {
+            cursor: pointer !important;
+        }
+        .reviewsContainer{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader" style="position: fixed; width: 100%; height: 100%; background: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999;">
+        <div class="progress" style="width: 50%; height: 2px; margin-bottom: 10px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%; background-color: #70b4bd;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="loading-text" style="color: #70b4bd; font-family: 'Poppins', sans-serif;">Loading...</div>
+    </div>
+    <!--giftVocherModal-->
+    <div class="modal fade" id="giftvocherLogin" role="dialog"></div>
+    <div id="validationdiv" class="validation_message"></div>
+    <div id="dvtopnav"></div>
+    <!-----------------------------------------------Top Navigation Start----------------------------------------------------------->
+    <div class="dvnavcust"></div>
+    <!-----------------------------------------------Top Navigation End----------------------------------------------------------->
+    <!-----------------------------------------------Best Offers Start----------------------------------------------------------->
+    <!--<div class="container-fluid d-none d-md-block" style="width:96%!important;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="Headings_txtblack_lg text-center">Similar Products</h2>
+                        <hr class="hr_md" />
+                    </div>
+
+                </div>
+                <br />
+                <section class="regular slider slick-slider-card" id="product_carosel"></section>
+
+            </div>
+        </div>
+    </div>-->
+    <!-----------------------------------------------Best Offers End----------------------------------------------------------->
+    <!--hero heading -->
+    <!--<div class="container-fluid hero_heading">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="my-4">Fragrances with Analytics & Colors</h3>
+            </div>
+        </div>
+    </div>-->
+    <!--end of hero heading -->
+    <!-- user Analytics -->
+    <!-- end of user analytics -->
+    <div class="container-fluid py-5 mb-5" id="reviews">
+        <div class="container">
+            <h3 class="text-center mb-5" style="text-transform:capitalize">User Reviews</h3>
+            <div class="p-lg-2" id="">
+                <div class="row text-center">
+                    <div class="col-md-2 stars" id="filter">
+                        <p class="pt-2"><b>Filter by Rating: <i  style="color: #70b4bd" class="fa-solid fa-hand-point-right"></i></b> </p>                        
+                    </div>
+                    <div class="col-md-10">
+                        <div class="row">
+
+                            <div class="col-md-2 stars" id="star1">
+                                <img src="Images/stars/1star.PNG" />
+                            </div>
+                            <div class="col-md-2 stars" id="star2">
+                                <img src="Images/stars/2star.PNG" />
+                            </div>
+                            <div class="col-md-2 stars" id="star3">
+                                <img src="Images/stars/3star.PNG" />
+                            </div>
+                            <div class="col-md-2 stars" id="star4">
+                                <img src="Images/stars/4star.PNG" />
+                            </div>
+                            <div class="col-md-2 stars" id="star5">
+                                <img src="Images/stars/5star.PNG" />
+                            </div>
+                            <div class="col-md-2 ">
+                                <a class="btn more_btn" id="allbtn">All</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table id="tblorder_lst" class="table table-responsive-sm table-bordered table-sm" cellspacing="0" width="100%">
+                <thead>
+                    <!--<tr>
+                        <th>
+                            <div class=" stars" id="filter">
+                                <p><b>Filter by rating</b></p>
+                            </div>
+                        </th>
+                        <th>
+                            <div class=" stars" id="star1">
+                                <img src="Images/stars/1star.PNG" />
+                            </div>
+                        </th>
+                        <th>
+                            <div class=" stars" id="star2">
+                                <img src="Images/stars/2star.PNG" />
+                            </div>
+                        </th>
+
+                        <th>
+                            <div class=" stars" id="star3">
+                                <img src="Images/stars/3star.PNG" />
+                            </div>
+                        </th>
+                        <th>
+                            <div class=" stars" id="star4">
+                                <img src="Images/stars/4star.PNG" />
+                            </div>
+                        </th>
+                        <th>
+                            <div class=" stars" id="star5">
+                                <img src="Images/stars/5star.PNG" />
+                            </div>
+                        </th>
+                    </tr>-->
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="reviewsContainer">
+            </div>
+        </div>
+    </div>
+
+
+    <!-----------------------------------------------Footer Start----------------------------------------------------------->
+    <footer id="footer"></footer>
+
+    <div onclick="topFunction()" id="myBtn" title="Go to top" class="fa fa-chevron-up back-to-top"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/cdb.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-doughnutlabel/1.0.2/chartjs-plugin-doughnutlabel.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+    <script src="Js/Navbar.js"></script>
+    <script src="Js/Global.js"></script>
+    <script src="Js/reviews.js"></script>
+    <script src="Js/customer_Login.js"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!--<script src="Js/ReviewAndRatings.js"></script>-->
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+
+</body>
+</html>

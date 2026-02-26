@@ -1,0 +1,305 @@
+.page-title {
+    font-family: 'Sofia Pro Regular Az';
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 84px;
+}
+
+thead p {
+    font-weight: 500;
+    font-family: 'Sofia Pro Regular Az';
+    font-size: 13px;
+    line-height: 15.85px;
+    letter-spacing: 0em;
+    text-align: start;
+}
+
+.discount-btn {
+    background: #70b4bd !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    padding: 9px 20px !important;
+    width: 200px !important;
+    cursor: pointer;
+    /*font-size: 10px;*/
+}
+
+.quantity {
+    border: 1px solid#000;
+    background-color: #fff;
+    width: 104px;
+}
+
+    .quantity i {
+        font-size: 7px !important;
+        padding: 7px 9px;
+    }
+
+    .quantity input {
+        font-size: 12px !important;
+        width: 52px;
+        /* padding: 7px 22px; */
+        text-align: center;
+        border: 0px !important;
+        border-left: 1px solid #000 !important;
+        border-right: 1px solid #000 !important;
+        border-radius: 0px;
+    }
+
+.form-control:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 0 rgba(0,0,0,0) !important;
+}
+
+.dec-btn, .inc-btn {
+    border: 0px !important;
+    background-color: #fff;
+    padding: 0px;
+}
+
+tr {
+    border-bottom: 1px solid #000 !important;
+}
+
+tbody p {
+    margin-bottom: 0px;
+}
+
+tbody a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 0px;
+}
+
+.prduct_categ {
+    font-size: 10px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
+
+.cart-row input {
+    font-size: 11px !important;
+    padding: 8px 18px;
+    height: 32px;
+    width: 100%;
+}
+
+select {
+    font-size: 12px !important;
+    padding: 8px !important;
+    width: 50%;
+}
+/* main buttons */
+.button-cart {
+    /*background-color: #000 !important;
+    color: #fff !important;   
+    border-radius: 0px !important;
+    text-transform: initial !important;
+    line-height:10px !important;
+    margin-bottom:10px !important;*/
+    width: 120px !important;
+    background: #000000 !important;
+    color: #fff !important;
+    /* border: 2px solid #70b4bd !important;*/
+    font-weight: 700 !important;
+    padding: 9px 20px !important;
+    margin-bottom: 3px;
+}
+
+.fa-times-circle:hover, .fa-heart:hover {
+    color: #70b4bd !important;
+}
+
+.m-6 {
+    margin: 6px;
+}
+
+.cart-row {
+    border-bottom: 1px solid #00000066;
+}
+
+.instantdiscount {
+    color: red;
+}
+
+    .instantdiscount:hover {
+        color: #000;
+    }
+
+.brandunderline {
+    text-decoration: underline !important;
+}
+
+.ourpricebold {
+    font-weight: bold
+}
+
+.cart-titles {
+    font-weight: 600;
+    font-size: 13px;
+    color: #000;
+    margin-top: 14px;
+}
+
+.cart-price {
+    text-align: right;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 14px;
+}
+
+
+.grand-price {
+    text-align: right;
+}
+
+a.cart-btn {
+    text-transform: initial !important;
+    border: 0px !important;
+    padding: 0px !important;
+    text-decoration: underline !important;
+    color: #00000099 !important;
+}
+
+.form-labels {
+    font-family: 'Sofia Pro Regular Az';
+    font-size: 13px;
+    font-weight: 400;
+}
+
+#coupon {
+    padding: 10px;
+    /*    border-top: 1px solid #00000066 !important;*/
+}
+/*shipping page styles*/
+#statusbar {
+    width: 100%;
+    height: 3em;
+    border: 0.1em solid #ddd;
+    font-size: .9em;
+    margin-top: 0.3em;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+    #statusbar .status {
+        float: left;
+        height: 100%;
+        width: 20%;
+        margin: 0;
+        background: #fff;
+        color: #666;
+        line-height: 3em;
+        position: relative;
+    }
+
+        #statusbar .status i.bordertri {
+            width: 0;
+            height: 0;
+            border-color: transparent transparent transparent #ddd;
+            border-style: solid;
+            border-width: 21px;
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+
+        #statusbar .status i.tri {
+            border-color: transparent transparent transparent #fff;
+            border-style: solid;
+            border-width: 20px;
+            top: 1px;
+            width: 0;
+            height: 0;
+            position: absolute;
+            left: 0;
+        }
+
+        #statusbar .status p {
+            text-align: center;
+            padding-left: 20px;
+            margin: 0px 0;
+        }
+
+        #statusbar .status.active {
+            background: #000;
+            color: #fff;
+            border-right: 0;
+        }
+
+        #statusbar .status span {
+            display: inline-block;
+            color: #fff;
+            border-radius: 2em;
+            width: 1.5em;
+            height: 1.5em;
+            line-height: 1.5em;
+            vertical-align: middle;
+            background: #757575;
+            margin-right: 0.4em;
+        }
+
+        #statusbar .status.active p {
+            color: #fff;
+        }
+
+@media(max-width:600px) {
+    #statusbar .status i.tri {
+        top: 5px;
+    }
+
+    #statusbar .status i.bordertri {
+        top: 5px;
+    }
+
+    #statusbar {
+        height: 100%;
+    }
+
+        #statusbar .status {
+            width: 100%;
+        }
+
+    #rightcol {
+        width: 100% !important;
+    }
+
+    #statusbar .status p {
+        margin: 5px 0;
+    }
+}
+
+.more_btn {
+    width: 95% !important;
+}
+/*shipping options page*/
+#rightcol .card-header {
+    background-color: #ededed;
+}
+
+.card-header a {
+    font-weight: bold;
+}
+
+#rightcol h6 {
+    font-family: 'Sofia Pro Regular Az';
+}
+
+#rightcol {
+    float: right;
+    width: 16em;
+}
+
+#giftMessageSubmit, giftMessageEdit {
+    margin-top: 10px;
+}
+
+body {
+    font-family: 'Sofia Pro Regular Az' !important;
+    color: #000 !important;
+}

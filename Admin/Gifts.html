@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Perfumes with AI and Super Sale</title>
+    <link rel="shortcut icon" type="image/png" href="/Images/favicon.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.1/dist/bootstrap-float-label.min.css" />
+    <link href="../Css/Admin.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="dvnav"></div>
+
+    <!----------------------------------------------- body starts----------------------------------------------------------->
+    <div class="container-fluid main_dv">
+        <div class="row justify-content-end">
+            <!----------------------------------------------- Dashboard starts----------------------------------------------------------->
+            <div class="col-md-2 dashboard_dv">
+                <div id="leftmenu" class="dashboard_Menu">
+
+                </div>
+            </div>
+            <!----------------------------------------------- Body dv starts----------------------------------------------------------->
+            <div class="col-md-10 content-wrapper">
+                <div class="row">
+                    <div class="col-md-12 content-body">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h4 class="Menu_Title">GIFT VOUCHER LIST</h4>
+                                <div id="validationdiv" class="validation_message"></div>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn_md" data-toggle="modal" data-target="#Addcategory">Add Gift Voucher</button>
+                            </div>
+                        </div>
+                        <table id="tblgift_lst" class="table table-responsive-sm table-bordered table-sm" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Value</th>
+                                    <th>ExpiryDate</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------------------Add Category Modal--------------------------------------------------- -->
+    <div class="modal fade" id="Addcategory" tabindex="-1" role="dialog" aria-labelledby="Addcategory" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content modal-lg">
+                <form id="gift_create" onsubmit="return false">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">ADD GIFT VOUCHER</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="hidden" id="editid" value="" />
+                                        <input type="text" name="giftname" id="giftname" required>
+                                        <label alt="Gift Name" for="giftname" placeholder="Gift Name">Gift Name</label>
+                                    </div>
+                                    <br />
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="giftvalue" id="giftvalue" required>
+                                        <label alt="giftvalue" for="giftvalue" placeholder="Value">Value</label>
+                                    </div>
+                                    <br />
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="date" name="Expriydate" id="Expriydate" required>
+                                        <!--<label alt="Category Name" for="Expriydate" placeholder="Category Name">Valid Upto</label>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn_sm">Add</button>
+                        <button type="button" class="btn_cancel" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------------------Edit Category Modal--------------------------------------------------- -->
+    <div class="modal fade" id="Editcoupon" tabindex="-1" role="dialog" aria-labelledby="Editcategory" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+
+            <div class="modal-content modal-lg">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">EDIT CATEGORY</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="coupon_edit" onsubmit="return false">
+                    <div class="modal-body">
+                        <input type="hidden" name="hiddenid" id="hiddenid" />
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="couponname" id="editcouponname" required>
+                                        <label alt="Category Name" for="editcouponname" placeholder="Category Name">Coupon Name</label>
+                                    </div>
+                                    <br />
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="coupoundiscount" id="editcoupoundiscount" required>
+                                        <label alt="txtDiscount" for="editcoupoundiscount" placeholder="Discount">Discount</label>
+                                    </div>
+                                    <br />
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="mindiscount" id="editmindiscount" required>
+                                        <label alt="txtDiscount" for="editmindiscount" placeholder="Min discount Amount">Min Discount Amount</label>
+                                    </div>
+                                    <br />
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="formfield" id="floatdv">
+                                        <input type="date" name="editExpriydate" id="editExpriydate">
+                                    </div>
+                                    Valid upto <label id="lbldateEdit"></label>
+
+                                    <br />
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="maxdiscount" id="editmaxdiscount" required>
+                                        <label alt="txtDiscount" for="editmaxdiscount" placeholder="Max discount Amount">Max Discount Amount</label>
+                                    </div>
+                                    <br />
+                                    <div class="formfield" id="floatdv">
+                                        <input type="text" name="Notimeuse" id="editNotimeuse" min="1" required>
+                                        <label alt="txtDiscount" for="editNotimeuse" placeholder="No.time use">No.time use</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn_sm">Update</button>
+                        <button type="button" class="btn_cancel" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="../Js/Global.js"></script>
+    <script src="../Js/gift_list.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#tblcoupon_lst').DataTable();
+            $('.dataTables_length').addClass('bs-select');
+        });
+                                                //setTimeout(explode, 2000);
+    </script>
+</body>
+</html>

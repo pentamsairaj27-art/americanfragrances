@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+     <title>Perfumes with AI and Super Sale</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png" />
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="Css/StyleSheet.css" rel="stylesheet" />
+    <link href="Css/dropdown.css" rel="stylesheet" />
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        .txt_sm .cart_count {
+            font-size: 1rem;
+            color: #1fc6c2;
+        }
+
+        ul {
+            margin-left: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader" style="position: fixed; width: 100%; height: 100%; background: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999;">
+        <div class="progress" style="width: 50%; height: 2px; margin-bottom: 10px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%; background-color: #70b4bd;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="loading-text" style="color: #70b4bd; font-family: 'Poppins', sans-serif;">Loading...</div>
+    </div>
+    <div id="validationdiv" class="validation_message"></div>
+    <div id="dvtopnav"></div>
+    <div class="dvnavcust"></div>
+    <!--giftVocherModal-->
+    <div class="modal fade" id="giftvocherLogin" role="dialog"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 py-5">
+
+                <div class="row">
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <h3>
+                            <span style="font-size:15px">
+                                Smell the stars
+                            </span>    <br /><br />
+                            Discover Your Perfect Fragrance with Zodiac Guidance
+                            <br />  <br /> <span style="font-size:15px">
+                                Exploring zodiac aromas: What suits your cosmic scent?
+                            </span>
+                        </h3>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="./Images/inspireme/zodaic10.png" class="img-fluid" style="width: 300px; height: 200px;" />
+                    </div>
+                </div>
+
+                <br />
+                <br />
+                <p class="p-4" style="background-color:gray;color:white;border-radius:5px">
+                    Choosing fragrances according to zodiac signs is a fun and creative way to explore scents that may resonate with an individual's personality traits associated with their astrological sign. While this is not a scientifically proven method, it can be a playful and personal approach to selecting fragrances. Here's a general guide on how to choose fragrances based on zodiac signs:
+                </p>
+                <h5>Aquarius (January 20 - February 18): </h5>
+                <p>
+                    Aquarians are unconventional and visionary. Go for unique and futuristic fragrances with notes of metallic, violet, or citrus.
+                </p>
+
+                <h5>
+                    Pisces (February 19 - March 20):
+                </h5>
+                <p>
+                    Pisces are dreamy and empathetic. Choose ethereal and watery fragrances with notes of sea breeze, lily of the valley, or marine accords.
+                </p>
+
+
+                <h5>
+                    Aries (March 21 - April 19):
+                </h5>
+                <p>
+                    Aries individuals are known for their fiery and adventurous nature. Choose bold, spicy, and energetic fragrances such as cinnamon, ginger, or citrusy scents.
+                </p>
+
+
+                <h5>Taurus (April 20 - May 20):</h5>
+                <p>Taurus individuals appreciate luxury and comfort. Go for rich and sensual fragrances with notes of vanilla, rose, or sandalwood.</p>
+
+
+                <h5>Gemini (May 21 - June 20):</h5>
+                <p> Geminis are curious and versatile. Look for fresh, airy, and dual-scented fragrances like lavender, mint, or citrus blends.</p>
+
+
+
+                <h5>Cancer (June 21 - July 22):</h5>
+                <p>
+                    Cancers are nurturing and sensitive. Choose comforting and soothing scents such as chamomile, jasmine, or aquatic notes.
+                </p>
+                <h5>Leo (July 23 - August 22):</h5>
+                <p>
+                    Leos are confident and vibrant. Go for bold and attention-grabbing fragrances with notes of bergamot, amber, or patchouli.
+                </p>
+                <h5>Virgo (August 23 - September 22):</h5>
+                <p>
+                    Virgos are detail-oriented and practical. Go for clean, fresh, and crisp scents like eucalyptus, lavender, or green tea.
+                </p>
+                <h5>Libra (September 23 - October 22):</h5>
+                <p>
+                    Libras value harmony and balance. Choose elegant and well-balanced fragrances with notes of rose, vanilla, or musk.
+                </p>
+                <h5>Scorpio (October 23 - November 21):</h5>
+                <p> Scorpios are intense and passionate. Look for deep, mysterious, and seductive scents like patchouli, blackcurrant, or leather.</p>
+                <h5>Sagittarius (November 22 - December 21):</h5>
+                <p>Sagittarians are adventurous and free-spirited. Go for exotic and adventurous fragrances with notes of oud, cedarwood, or spices.</p>
+                <h5>Capricorn (December 22 - January 19):</h5>
+                <p>Capricorns are responsible and practical. Choose classic and timeless fragrances with notes of vetiver, bergamot, or lavender.</p>
+               <br />
+                <p>Remember that individual preferences vary widely, and astrology is just one factor to consider when choosing a fragrance. It's essential to test and wear a fragrance on your skin to see how it interacts with your body chemistry and whether it truly resonates with you, regardless of your zodiac sign.</p>
+            </div>
+            <div class="col-md-3  py-5 blooglinks ">
+
+            </div>
+        </div>
+    </div>
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <footer id="footer">
+    </footer>
+    <!-----------------------------------------------Footer End----------------------------------------------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Js/Navbar.js"></script>
+    <script src="Js/Global.js"></script>
+    <script src="Js/customer_Login.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,412 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perfumes with AI and Super Sale</title>
+    <link rel="shortcut icon" type="image/png" href="../Images/favicon.png" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.1/dist/bootstrap-float-label.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css' />
+    <link rel='stylesheet' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css' />
+    <link href="../Js/summer/summernote.css" rel="stylesheet" />
+    <link href="../Js/summer/summernote-bs4.css" rel="stylesheet" />
+    <link href="../Js/summer/summernote-lite.min.css" rel="stylesheet" />
+    <link href="../Css/Admin.css" rel="stylesheet" />
+
+
+    <style>
+        .bs-placeholder {
+            background: white;
+            color: black;
+            border-color: lightgray;
+        }
+
+        .filter-option-inner-inner {
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="dvnav"></div>
+    <div id="validationdiv" class="validation_message"></div>
+    <!-----------------------------------------------body starts----------------------------------------------------------->
+    <div class="container-fluid main_dv">
+        <div class="row justify-content-end">
+            <!-----------------------------------------------Dashboard starts----------------------------------------------------------->
+            <div class="col-md-2 dashboard_dv">
+
+                <br />
+                <div id="leftmenu" class="dashboard_Menu">
+
+                </div>
+                <!--<div>-->
+                <!--<p class="Menu_main">Manage</p>-->
+                <!--<p>
+                    <table>
+                        <tr>
+                            <td><span class="iconify dashboard_icons" data-icon="bi:person-plus" data-inline="false"></span></td>
+                            <td><a href="/Admin/Storemanager_List.html" class="dashboard_btn">Store Manager</a></td>
+                        </tr>
+                    </table>
+                </p>-->
+                <!--<p>
+                    <table class="dashboard">
+                        <tr>
+                            <td><span class="iconify dashboard_icons" data-icon="bi:person-plus" data-inline="false"></span></td>
+                            <td><a href="/Admin/Deliveryboy_list.html" class="dashboard_btn">Delivery boy</a></td>
+                        </tr>
+                    </table>
+                </p>-->
+                <!--<p>
+                    <table>
+                        <tr>
+                            <td><span class="iconify dashboard_icons" data-icon="bi:person-plus" data-inline="false"></span></td>
+                            <td><a href="/Admin/Employee_list.html" class="dashboard_btn">Employee</a></td>
+                        </tr>
+                    </table>
+                </p>-->
+                <!--</div>-->
+            </div>
+            <!-----------------------------------------------Body dv starts----------------------------------------------------------->
+            <div class="col-md-10 content-wrapper">
+
+                <div id="validationdiv" class="validation_message"></div>
+                <div class="row">
+                    <div class="col-md-12 content-body" id="dupl_add">
+                        <form id="duplicateProduct_create" onsubmit="return false" method="POST" role="form">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <h4 class="Menu_Title">ADD DUPLICATE PRODUCT</h4>
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn_md" id="dupli_add_click">Duplicate List</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="formfield" id="floatdv">
+                                                <input type="text" name="Produtname" id="txtProdutname" required="">
+                                                <label alt="Product Name" for="txtProdutname" placeholder="Product Name">Product Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="formfield" id="floatdv">
+                                                <input type="text" name="txtPrice" id="txtPrice" required>
+                                                <label alt="txtPrice" for="txtPrice" placeholder="Price">Price</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="formfield" id="floatdv">
+                                                <input type="text" name="Produtname" id="txtDiscount" required>
+                                                <label alt="txtDiscount" for="txtDiscount" placeholder="Product Name">Discount</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="formfield" id="floatdv">
+                                                <input type="text" name="txtStock" id="txtStock" required>
+                                                <label alt="txtStock" for="txtStock" placeholder="Product Name">Stock</label>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-4">
+                                            <div class="formfield" id="floatdv">
+                                                <p>Quantity</p>
+                                                <input type="number" step="0.01" class="form-control" id="txtweight" placeholder="Select Qty" min="1" />
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-4">
+                                            <div class="formfield" id="floatdv">
+                                                <p>Select Size</p>
+                                                <select class="form-control" id="drpdw_Dimenstions" required>
+                                                    <option selected>Select Dimension</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="formfield" id="floatdv">
+                                                <p>Select Type</p>
+                                                <select class="form-control" id="drpdw_moodtype">
+                                                    <option selected>Select Type</option>
+                                                    <!--<option value="Health & Wellness">Health & Wellness</option>
+                <option value="Make Up">Make Up</option>
+                <option value="Skin Care">Skin Care</option>
+                <option value="Bath & Body">Bath & Body</option>
+                <option value="Hair Care">Hair Care</option>
+                <option value="Aroma">Aroma</option>
+                <option value="Travel Spray">Travel Spray</option>
+                <option value="Gift Sets">Gift Sets</option>
+                <option value="Appliances">Appliances</option>
+                <option value="Most popular">Most popular</option>-->
+
+                                                    <!--<option value="Aroma">Aroma</option>
+                                                    <option value="Appliances">Appliances</option>
+                                                    <option value="Bath & Body">Bath & Body</option>
+                                                    <option value="Body">Body</option>
+                                                    <option value="Brows">Brows</option>
+                                                    <option value="Candle">Candle</option>
+                                                    <option value="Clensing">Clensing</option>
+                                                    <option value="Conditioning">Conditioning</option>
+                                                    <option value="Diffuser">Diffuser</option>
+                                                    <option value="EDC">EDC</option>
+                                                    <option value="EDP">EDP</option>
+                                                    <option value="EDT">EDT</option>
+                                                    <option value="Eyes">Eyes</option>
+                                                    <option value="Face">Face</option>
+                                                    <option value="Gift Sets">Gift Sets</option>
+                                                    <option value="Hair Care">Hair Care</option>
+                                                    <option value="Hair">Hair</option>
+                                                    <option value="Health & Wellness">Health & Wellness</option>
+                                                    <option value="Lips">Lips</option>
+                                                    <option value="Make Up">Make Up</option>
+                                                    <option value="Most popular">Most popular</option>
+                                                    <option value="Skin Care">Skin Care</option>
+                                                    <option value="Styling">Styling</option>
+                                                    <option value="Treatments">Treatments</option>
+                                                    <option value="Travel Spray">Travel Spray</option>-->
+
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+
+                                            <div class="formfield" id="floatdv">
+                                                <p>SKU ID</p>
+                                                <input type="text" name="skuid" id="skuid">
+                                                <!--<label alt="purchasevalueofproduct" for="skuid">SKU ID</label>-->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 shadeDiv">
+                                            <div class="formfield" id="floatdv">
+                                                <p>Select Shade</p>
+                                                <select class="form-control" id="shade">
+
+                                                    <option value="001 Pink">001 Pink</option>
+                                                    <option value="004 Coral">004 Coral</option>
+                                                    <option value="006 Berry">006 Berry</option>
+                                                    <option value="007 Raspberry">007 Raspberry</option>
+                                                    <option value="012 Rosewood">012 Rosewood</option>
+                                                    <option value="015 Cherry">015 Cherry</option>
+                                                    <option value="Ash Brown">Ash Brown</option>
+                                                    <option value="Black">Black</option>
+                                                    <option value="Brown">Brown</option>
+                                                    <option value="Cheeky">Cheeky</option>
+                                                    <option value="Chocolate">Chocolate</option>
+                                                    <option value="Dark Brown">Dark Brown</option>
+                                                    <option value="Ebony">Ebony</option>
+                                                    <option value="Fenty Glow (Original)">Fenty Glow (Original)</option>
+                                                    <option value="Fu$$y">Fu$$y</option>
+                                                    <option value="Glass Slipper">Glass Slipper</option>
+                                                    <option value="Gift Set">Gift Set</option>
+                                                    <option value="Hot Chocolit">Hot Chocolit</option>
+                                                    <option value="Medium Brown">Medium Brown</option>
+                                                    <option value="One Size">One Size</option>
+                                                    <option value="Set">Set</option>
+                                                    <option value="Soft Brown">Soft Brown</option>
+                                                    <option value="Sweet Mouth">Sweet Mouth</option>
+                                                    <option value="Taupe">Taupe</option>
+
+                                                </select>
+                                                <!--<input type="text" name="shade" id="shade" required>
+            <label alt="Product Name" for="shade" placeholder="shade">Shade</label>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <textarea id="mytextarea" name="mytextarea" rows="12">Description.,</textarea>
+                                        </div>
+                                    </div>
+                                    <!--<div class="row">
+                                        <div class="col-md-12">
+                                            <div class="formfield" id="floatdv">
+                                                <input type="text" name="txtDescription" id="mytextarea" required>
+                                                <label alt="txtDescription" for="mytextarea" placeholder="Description">Description</label>
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                </div>
+                                <div class="col-md-4 border_box">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label class="label_lb">Display Picture</label>
+                                            <div class="wrapper">
+                                                <div class="box">
+                                                    <div class="js--image-preview" id="dfl_mainimgview"></div>
+                                                    <div class="upload-options">
+                                                        <label>
+                                                            <input type="file" id="dimgfile" class="image-upload" accept="image/*" />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="label_lb">Maximum Images 4</label>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="wrapper">
+                                                        <div class="box">
+                                                            <div class="js--image-preview" id="dfl_img1view"></div>
+                                                            <div class="upload-options">
+                                                                <label>
+                                                                    <input type="file" id="dimgfile1" class="image-upload" accept="image/*" />
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="wrapper">
+                                                        <div class="box">
+                                                            <div class="js--image-preview" id="dfl_img2view"></div>
+                                                            <div class="upload-options">
+                                                                <label>
+                                                                    <input type="file" id="dimgfile2" class="image-upload" accept="image/*" />
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="wrapper">
+                                                        <div class="box">
+                                                            <div class="js--image-preview" id="dfl_img3view"></div>
+                                                            <div class="upload-options">
+                                                                <label>
+                                                                    <input type="file" id="dimgfile3" class="image-upload" accept="image/*" />
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="wrapper">
+                                                        <div class="box">
+                                                            <div class="js--image-preview" id="dfl_img4view"></div>
+                                                            <div class="upload-options">
+                                                                <label>
+                                                                    <input type="file" id="dimgfile4" class="image-upload" accept="image/*" />
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn_sm">Add</button>
+                                    <button type="submit" class="btn_cancel">Cancel</button>
+                                </div>
+                            </div>
+                            <br /><br />
+
+                        </form>
+                        <br /><br />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 content-body" id="dupl_list">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h4 class="Menu_Title">DUPLICATE PRODUCT LIST</h4>
+                            </div>
+                            <!--<div class="col-md-2">
+                                <button class="btn_md" id="add_dupl_list">Add Duplicate</button>
+                            </div>-->
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table id="tblProduct_lst" class="table table-responsive-sm table-bordered table-sm" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Product  Name</th>
+                                            <th>SKU ID</th>
+                                            <th>Type</th>
+                                            <th>Price</th>
+                                            <th>Stock</th>
+                                            <th>Quantity</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="../Js/summer/summernote.js"></script>
+    <script src="../Js/summer/summernote-bs4.min.js"></script>
+    <script src="../Js/summer/summernote-lite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/0.8.1/cropper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js"></script>
+    <script src="../Js/Imageupload.js"></script>
+    <script src="../Js/Global.js"></script>
+    <script src="../Js/Duplicate.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#tblcategory_lst').DataTable();
+            $('.dataTables_length').addClass('bs-select');
+            $('#drpdw_Color').multiselect();
+            $('textarea#mytextarea').summernote({
+                placeholder: 'Product Description',
+                tabsize: 2,
+                height: 200,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'italic', 'underline', 'clear']],
+                    // ['font', ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'clear']],
+                    //['fontname', ['fontname']],
+                    // ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'hr']],
+                    //['view', ['fullscreen', 'codeview']],
+                    ['help', ['help']]
+                ],
+            });
+        });
+    </script>
+</body>
+</html>

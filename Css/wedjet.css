@@ -1,0 +1,187 @@
+
+
+/* IMAGE GRID — actual <img> dummy placeholders, fully replaceable */
+.perfume-img-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    margin: 1.8rem 0 1.5rem;
+}
+.perfume-brand-img-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin: 1.8rem 0 1.5rem;
+}
+.perfume-discover-img-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin: 1.8rem 0 1.5rem;
+}
+.perfume-img-item{
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4/4;
+    background: #ffa4b47a;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid white;
+}
+.perfume-img-item-men {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4/4;
+    background: #bdbdbd57;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid white;
+}
+
+    .perfume-img-item:hover {
+        transform: scale(1.03) rotate(0.5deg);
+        box-shadow: 0 20px 25px -8px rgba(212,76,76,0.3);
+    }
+    .perfume-img-item-men:hover {
+        transform: scale(1.03) rotate(0.5deg);
+        box-shadow: 0 20px 25px -8px rgba(212,76,76,0.3);
+    }
+
+    .perfume-img-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }.perfume-img-item-men img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+.best_sell p, .newarr p, .top_rated p, .best_off p, .clearene p {
+    font-size:11px;
+    font-weight:900;
+}
+.premimum p, .luxury p, .designer p, .niche p, .celebrity p, .natural p, .indie p, .specialty p, .mass-market p, .economical p {
+    font-size: 11px;
+    color: #ffffff;
+    font-weight: 900;
+}
+.best_sell, .newarr, .top_rated, .best_off, .clearene {
+    background-color: #ffffff;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.premimum, .luxury, .designer, .niche, .celebrity, .natural, .indie, .specialty, .mass-market, .economical {
+    background-color: #000000;
+    position: absolute;
+    top: 5%;
+    text-align: left;
+    color: #ffffff !important;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+/* shop all row */
+.shop-row-modern {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border-top: 2px solid rgba(212,76,76,0.2);
+    padding-top: 1.8rem;
+    margin-top: 0.8rem;
+}
+
+.shop-btn {
+    background: #1f2933;
+    color: white;
+    border: none;
+    padding: 0.8rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid transparent;
+}
+
+    .shop-btn i {
+        font-size: 1.4rem;
+    }
+
+    .shop-btn:hover {
+        background: #d44c4c;
+        transform: scale(1.02);
+        box-shadow: 0 12px 22px -8px #b13e3e;
+        border-color: #fff;
+    }
+
+.off-badge-modern {
+    background: #d44c4c;
+    color: white;
+    font-weight: 800;
+    font-size: 2rem;
+    padding: 0.4rem 2rem;
+    border-radius: 60px;
+    box-shadow: 0 5px 0 #8f2e2e;
+    letter-spacing: 0.5px;
+}
+
+/* bottom extra strip (glass + bold) */
+.footer-strip-modern {
+    background: rgba(31, 41, 51, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 60px;
+    margin-top: 3.5rem;
+    font-size: 1.9rem;
+    font-weight: 800;
+    text-align: center;
+    border: 1px solid rgba(255,215,140,0.5);
+    box-shadow: 0 20px 30px -10px #1021291a;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+    .footer-strip-modern:hover {
+        background: #b13e3e;
+        border-color: white;
+    }
+
+/* responsive */
+@media (max-width: 768px) {
+    .modern-card {
+        padding: 1.5rem;
+        border-radius: 32px;
+    }
+
+    .banner-collection {
+        font-size: 2.5rem;
+    }
+
+    .pill-discount {
+        font-size: 1.8rem;
+    }
+}
+@media (min-width: 1200px) {
+    .perfume-img-grid {
+        max-width: 100%;
+    }
+    .perfume-discover-img-grid {
+        max-width: 100%;
+    }
+    /* entrance animations (using animate.css classes + custom) */
+    .animate-in {
+        animation-duration: 0.8s;
+        animation-fill-mode: both;
+    }

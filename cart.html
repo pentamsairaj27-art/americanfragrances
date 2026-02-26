@@ -1,0 +1,763 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Perfumes with AI and Super Sale</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png" />
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- owl carousel cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+          integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+          integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+          crossorigin="anonymous" />
+    <link href="Css/StyleSheet.css" rel="stylesheet" />
+    <link href="Css/cart.css" rel="stylesheet" />
+    <link href="Css/dropdown.css" rel="stylesheet" />
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Load SweetAlert2 first -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css" />
+   
+
+
+    <style>
+        .decorated-heading {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 16px 0;
+        }
+
+            .decorated-heading::before {
+                content: '';
+                flex: 1;
+                border-bottom: 1px solid #00000066;
+                margin: 0 10px 0 0;
+            }
+            .decorated-heading::after {
+                content: '';
+                flex: 1;
+                border-bottom: 1px solid #00000066;
+                margin: 0 0 0 10px;
+            }
+        div:where(.swal2-icon) .swal2-icon-content {
+            display: flex;
+            align-items: center;
+            font-size: 0.75em!important;
+        }
+        hr {
+            border: 1px solid #d3d3d3;
+        }
+
+        .txt_sm .cart_count {
+            font-size: 1rem;
+            color: #1fc6c2;
+        }
+
+        .product_box {
+            margin: 10px !important;
+        }
+
+        #NoteProducts-curosel2 .owl-nav .owl-prev {
+            position: absolute !important;
+            left: -28px !important;
+            top: 46%;
+            border: none !important;
+            background: none !important;
+        }
+
+            #NoteProducts-curosel2 .owl-nav .owl-prev span, #NoteProducts-curosel2 .owl-nav .owl-next span {
+                font-size: 50px;
+            }
+
+        #NoteProducts-curosel2 .owl-nav .owl-next {
+            position: absolute !important;
+            right: -26px !important;
+            top: 46%;
+            border: none !important;
+            background: none !important;
+        }
+
+        #feedback .btn {
+            background: #fff !important;
+            color: #ffffff !important;
+            border-radius: 25px !important;
+            border-color: #000000 !important;
+            background-color: #000000 !important;
+            padding: 9px !important;
+            width: 235px !important;
+        }
+
+        .highlight-text {
+            background-color: #70b4bd !important;
+            color: white;
+            padding: 8px 10px;
+        }
+
+        .returnShop {
+            /*width: 120px !important;*/
+            background: #70b4bd !important;
+            color: #fff !important;
+            /* border: 2px solid #70b4bd !important; */
+            font-weight: 700 !important;
+            padding: 9px 20px !important;
+            margin-bottom: 3px
+        }
+
+        .cart-btn:hover {
+            background-color: transparent !important;
+            color: black !important;
+        }
+
+
+        .whishlistPro {
+            position: absolute !important;
+            width: 10% !important;
+            height: auto !important;
+            top: 6% !important;
+            right: 4% !important;
+        }
+
+        .whishlistProCart {
+            position: relative !important;
+            font-size: 20px !important;
+            width: 10% !important;
+            height: auto !important;
+            top: 6% !important;
+            left: 25% !important;
+        }
+
+        .owl-carousel .owl-item {
+            margin: 0px !important;
+            padding: 0 !important;
+        }
+
+        .owl-stage {
+            gap: 0 !important;
+        }
+
+        .owl-carousel, .owl-carousel .owl-item {
+            -webkit-tap-highlight-color: transparent;
+            position: relative !important;
+        }
+        .table-responsive {
+            overflow-x:hidden;
+        }
+        @media (max-width: 768px) {
+            .table-responsive{
+                overflow-x:scroll;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader" style="position: fixed; width: 100%; height: 100%; background: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999;">
+        <div class="progress" style="width: 50%; height: 2px; margin-bottom: 10px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%; background-color: #70b4bd;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="loading-text" style="color: #70b4bd; font-family: 'Poppins', sans-serif;">Loading...</div>
+    </div>
+    <div id="validationdiv" class="validation_message"></div>
+    <div id="dvtopnav"></div>
+    <div class="dvnavcust"></div>
+
+    <div class="container-fluid">
+        <!--<hr style="border: 1px solid #d3d3d3 !important;">-->
+        <!--<hr />-->
+        <!--<span style="border-top:1px solid #000"></span>-->
+
+        <div class="row">
+            <hr />
+            <div class="text-center">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a class="text-dark" href="home.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                    </ol>
+                </nav>
+            </div>
+            <hr class="m-0" />
+        </div>
+
+        <!--<hr style="border: 1px solid #d3d3d3 !important; ">-->
+    </div>
+
+    <div class="container p-0">
+        <!--   <div class="row pt-5 mb-30">
+              <div class="text-center">
+                  <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb justify-content-center mb-0 px-0">
+                          <li class="breadcrumb-item"><a class="text-dark" href="home.html">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                      </ol>
+                  </nav>
+              </div>
+          </div> -->
+        <div class="row">
+            <p class="text-center mt-2 mb-4">
+                <span class="highlight-text">
+                    EARN REWARD POINTS ON EACH PURCHASE FOR SPECIAL COUPONS
+                </span>
+            </p>
+            <h2 class="page-title mb-5">Your Cart <span class="items">(<span class="cart_count">0</span> Items)</span></h2>
+
+        </div>
+        <div class="row">
+            <div class="mb-4 p-0 col-lg-12">
+                <!-- CART TABLE-->
+                <div class="table-responsive mx-3 m-md-0 m-lg-0" >
+                    <table class="table text-wrap">
+                        <thead class="">
+                            <tr>
+                                <th class="border-0" scope="col"> <p>Item</p></th>
+                                <th class="border-0 " scope="col"> <p>Quantity</p></th>
+                                <th></th>
+                                <th class="border-0 " scope="col"> <p>Sale Price​</p></th>
+                                <th class="border-0 " scope="col"> <p>Our Price​</p></th>
+                                <!-- <th></th> -->
+                                <!--<th class="border-0 align-end" scope="col"> <p>Total</p></th>-->
+                            </tr>
+                        </thead>
+                        <tbody class="border-0" id="cart_list">
+                        </tbody>
+
+                    </table>
+                    <div class="row" id="noProducts"> <br><center><img src="/Images/empty_order.png"></center><p style="text-align: center"><b>Your Shopping cart is currently empty.</b><br><br><a class="btn returnShop" href="Home.html">Return To Shop</a></p><p><br></p></div>
+                </div>
+            </div>
+            <div class="row" id="noProducts" style="width:100% !important;">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container payment_summary d-flex flex-row justify-content-between" style="width: 100%; column-gap: 24px">
+        <div class="col-md-9 d-none d-md-block d-lg-block ">
+            <h2 class="page-title mt-2 mb-4">
+                Missing Something?
+            </h2>
+            <div class="owl-carousel owl-theme" id="NoteProducts-curosel2">
+            </div>
+            <div id="emptyNoteProducts">
+            </div>
+
+        </div>
+        <!-- ORDER TOTAL-->
+        <div class="col-md-3 col-lg-3 col-12">
+            <div class="d-flex justify-content-between cart-row">
+                <div class="col-md-6 col-sm-6"><p class="cart-titles">Subtotal:</p></div>
+                <div class="col-md-6 col-sm-6"><p class="cart-price">$<span id="amounttotal">0.00</span></p></div>
+            </div>
+            <!--<div class="d-flex justify-content-between cart-row">
+                <div class="col-md-6 col-sm-6"><p class="cart-titles">Tax:</p></div>
+                <div class="col-md-6 col-sm-6"><p class="cart-price">$<span id="tax">0</span></p></div>
+            </div>-->
+            <div class="d-flex justify-content-between cart-row">
+                <div class="col-md-6 col-sm-6"><p class="cart-titles d-flex">Coupon Code: <span id="coupon_success"></span></p></div>
+                <div class="col-md-6 col-sm-6 d-grid text-end">
+                    <span class="cart-price" id="coupon_amount"></span>
+                    <a class="btn cart-price cart-btn" href="javascript:void(0);" type="button" id="coupon-btn" onclick="Coupon()">Add Coupon</a>
+                    <a style="text-decoration:underline !important; cursor:pointer; display:none; color:#808080; font-size:13px; padding-top:10px !important;" class="m-0 clear">Clear Coupon</a>
+                </div>
+
+            </div>
+            <div id="coupon" class="row cart-row" style="display: none;">
+                <!-- coupon fields -->
+                <div class="row">
+                    <div class="col-9">
+                        <input type="text" placeholder="Enter your coupon code" class="coupons">
+
+                    </div>
+                    <div class="col-3">
+                        <button type="button" class="btn button-cart" id="apply_btn">APPLY</button>
+                        <!--<a style="text-decoration:underline !important; cursor:pointer; display:none; color:#808080; font-size:13px;" class="clear">Clear Coupon</a>-->
+                    </div>
+                </div>
+                <!--end of coupon fileds -->
+            </div>
+            <div class="d-flex justify-content-between cart-row">
+                <div class="col-6"><p class="cart-titles">Gift Voucher:<span id="gift_success"></span></p></div>
+                <div class="col-6 d-grid text-end">
+                    <span class="cart-price" id="giftcard_amount"></span>
+                    <a class="btn cart-price cart-btn" href="javascript:void(0);" type="button" id="Gift-btn" onclick="Gift()">Add Gift Certificate</a>
+                    <a style="text-decoration:underline !important; cursor:pointer; display:none; color:#808080; font-size:13px; padding-top:10px !important;" class="GiftCardclear">Clear Gift Certificate</a>
+                </div>
+            </div>
+            <div id="Gift" class="row cart-row" style="display: none;">
+                <!-- Gift fields -->
+                <div class="row p-2">
+                    <div class="col-9"><input type="text" placeholder="Enter your Gift Voucher" class="giftcard"></div>
+                    <div class="col-3">
+                        <button type="button" class="btn button-cart" id="gift_btn">APPLY</button>
+
+                    </div>
+                </div>
+                <!--end of Gift fileds -->
+            </div>
+            <div class="d-flex justify-content-between ">
+                <div class="col-md-9 col-sm-9">
+                    <p class="cart-titles">
+                        Order Total (excl. Taxes) :
+                    </p>
+                </div>
+                <div class="col-md-3 col-sm-3"><p class="cart-titles grand-price  bag_total " id="total_cart_amount">$<span class="cart_tot">0.00</span></p></div>
+                <div class="col-md-3 d-none"><p class="cart-titles grand-price  bag_total " id="total_cart_amount_hidden">$<span class="cart_tot">0.00</span></p></div>
+            </div>
+
+            <div class="row pt-3">
+                <div class="col-2">
+                </div><div class="col-9 nextBtnCon">
+                    <!--<a class="btn button-cart paybutton text-center" type="button" href="#.html">CHECKOUT</a>-->
+                    <a role="button" class="btn button-cart" style="padding:11px;width:100% !important" id="cartNext">Proceed To Checkout</a>
+
+                </div>
+
+            </div>
+            <h6 class="decorated-heading mt-3">
+                Express Checkout
+            </h6>
+            <!--<div id="paypal-button-container"></div>-->
+            <div id="AmazonPayButton" class="d-flex justify-content-center mb-4 m-md-0 m-lg-0"></div>
+
+
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <!--<div class="modal" id="feedbaclmodal">-->
+    <div class="modal " id="feedbaclmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background-color:rgba(0, 0, 0, 0.5);height:100vh !important;">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="offset-11 col-md-1">
+                            <button type="button" class="close d-flex" data-dismiss="modal" data-bs-target="#feedbaclmodal" data-bs-toggle="modal" data-bs-dismiss="modal" style="border:none !important;background-color: transparent;">&times;</button>
+
+                        </div>
+                    </div>
+                    <h2 class="modal-heading text-center">Product Questionnaire </h2>
+
+
+                    <form class="form-horizontal" id="feedback" onsubmit="return false">
+                        <div id="prod_div" class="d-none">
+                            <p id="prod_id"></p>
+                        </div>
+
+                        <div id="qun1"></div>
+                        <div id="qun2"></div>
+                        <div id="qun3"></div>
+                        <div id="qun4"></div>
+                        <div id="qun5"></div>
+                        <div id="qun6"></div>
+                        <div id="qun7"></div>
+                        <div id="qun8"></div>
+                        <div id="qun9"></div>
+                        <div id="qun10"></div>
+                        <input type="submit" name="submit" class="submit btn btn-success" value="Get Instant Discount" style='margin-left:30%' />
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--<div class="container-fluid  p-5">
+        <h2 class="page-title text-start">My Bag (<span class="cart_count">1</span> items)</h2>
+
+        <div class="row">
+            <div class="col-md-9">
+                <div class=" cart-box">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="d-flex ">
+                                <img src="img/product/Rectangle 109.png" class="img-fluid">
+                                <div class="d-block p-3">
+                                    <p class="product-name">Product Name</p>
+                                    <p class="category">Carrot fit</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-block">
+                                <div class="d-flex justify-content-end p-3">
+                                    <div class="size">
+                                        <span class="text-end">Size</span>
+                                        <select>
+                                            <option>M</option>
+                                        </select>
+                                    </div>
+                                    <div class="Qty ms-2">
+                                        <span>Qty</span>
+                                        <select>
+                                            <option>2</option>
+                                        </select>
+                                    </div>
+                                    <div class="savings ms-5">
+                                        <select class="border-0">
+                                            <option>Savings:</option>
+                                        </select>
+                                        <span class="discount-color">Rs. 1162.00</span>
+
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end px-3">
+                                    <div><span class="discount-color">Rs. 1849.00</span></div>
+                                    <div><span class="discount ms-2">(63%)</span></div>
+                                    <div><span class="ms-2" style="background-color: #F2B705;">Rs.687.00</span></div>
+                                </div>
+                                <div class="d-flex justify-content-end bottom-line">
+                                    <span class="delete"><a>Delete</a></span>
+                                    <span><a><i class="fa fa-heart"></i> Move to wishlist</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 details">
+                <h6 class="heading">Order Details</h6>
+                <div class="row mb-2">
+                    <div class="col-md-7"><span>Bag total </span></div>
+                    <div class="col-md-5 text-end"><span>$1849.00 </span></div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-md-7"><span class="discount-color">Bag discount </span></div>
+                    <div class="col-md-5 text-end"><span class="discount-color">-$1162.00 </span></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-7"><span class="delivery-color">Delivery Fee </span></div>
+                    <div class="col-md-5 text-end"><span class="delivery-color"><strike>Free ₹99.00 </strike> </span></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7"><span class="total">Order Total </span></div>
+                    <div class="col-md-5 text-end"><span class="total">$687.00 </span></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-9 col-md-3 p-0">
+                <button class="btn">Proceed to Shipping</button>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-9 col-md-3 coupon">
+                <h6 class="heading">Apply Coupon</h6>
+
+                <div class="d-flex">
+                    <input type="text" id="coupon"><a class="btn" type="button">Apply</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="box_shadow">
+                            <div class="col-md-12">
+                                <br />
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="icon_dv">
+                                                        <div class="lbl_icon_circle">
+                                                            <span class="iconify lbl_icon" data-icon="feather:shopping-bag" data-inline="false"></span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td> <h6 class="txt_sm"><span class="cart_count ">0</span> Items in your  Cart</h6></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-6 text-right">-->
+    <!--<button class="btn totlprc">Total Amount  Rs. <span id="amounttotal"></span> /-</button>-->
+    <!--</div>
+                </div>
+            </div>
+            <hr />
+            <br />
+            <div id="cart_list">
+
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-4">
+
+        <div class="box_shadow">
+            <br />
+            <div id="customer_notloggedin" style="text-align: center">
+                <br />
+                <br />
+                <button class="btn btnproceed">Login to Proceed</button>
+                <br />
+                <br />
+                <br />
+            </div>
+            <div id="customer_loggedin">
+
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="icon_dv">
+                                            <div class="lbl_icon_circle">
+                                                <span class="iconify lbl_icon" data-icon="la:shipping-fast-solid" data-inline="false"></span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td> <h6 class="txt_sm">Delivery Address</h6></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-5 text-right">-->
+    <!-- <span class="add_address" data-toggle="modal" data-target="#Addnewaddress">Add new address</span>-->
+    <!--</div>
+        </div>
+    </div>
+    <hr />
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12 col-12" id="primary_address">
+
+                <br />-->
+    <!--<span class="add_address" data-toggle="modal" data-target="#Editnewaddress">Edit</span>-->
+    <!--</div>
+                                        <div class="col-md-12 col-12">
+                                            <br />
+                                            <button class="btn btnproceed change_address_cart">Select Delivery Address</button>
+                                        </div>
+                                    </div>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="box_shadow payment_summary">
+                            <br />
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="icon_dv">
+                                                        <div class="lbl_icon_circle">
+                                                            <span class="iconify lbl_icon" data-icon="tabler:currency-rupee" data-inline="false"></span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td> <h6 class="txt_sm">Payment Summary</h6></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-9 col-9">
+
+                                        <span class="bag_total">Cart Total</span>   <br />
+                                        <span class="bag_total">Shipping Charges</span>   <br />
+                                        <span class="bag_total">Total Savings</span>
+                                        <br />
+                                        <span class="bag_total">Total Taxes</span>
+                                        <br />
+                                        <span class="Total_mount">Total Amount</span>
+                                    </div>
+                                    <div class="col-md-3 col-3 text-left">
+
+                                        <span>₹ </span><span class="bag_total cart_tot"></span>   <br />
+                                        <span>₹ </span> <span class="aditem_price" id="delcharge">Free</span>   <br />
+                                        <span>₹ </span><span id="totaldiscount" class="bag_total"></span>
+                                        <br />
+                                        <span>₹ </span><span id="totalgst" class="bag_total"></span>
+                                        <br />
+                                        <span>₹ </span><span id="" class="Total_mount cart_pay "></span>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-md-12 col-12">
+                                        <input type="text" placeholder="Enter Pincode" name="search" class="form-control txtpincode">
+                                        <label id="pincheck"></label>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <button type="submit" class="btn apply_btnAmerican Fragrance btn-primary">Check your area pincode for Proceeding further.</button>
+                                        <br />
+                                    </div>
+
+                                </div>
+                                <br />
+                                <div class="text-center">
+                                    <button class="btn paybutton">
+                                        Proceed to Pay ₹ <span></span>
+                                    </button>
+                                    <p><a href="Home.html" class="continue_txt">Continue Shopping <span class="iconify lbl_icon" data-icon="mdi-light:chevron-right" data-inline="false"></span> </a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- --------------------------------proceed to pay ----------------------------------------------->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="pull-right">
+                    <button type="button" class="close clsbtn" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <span>
+                            <b style="letter-spacing:0.02rem!important;">
+                                Continue with
+                            </b>
+                        </span>
+                        <hr />
+                        <span class="btncod">
+                            Cash On Delivery <span></span>
+                        </span>
+                        <hr />
+                        <span class="paybutton btnpay">
+                            Proceed to Pay $ <span></span>
+                        </span>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!--giftVocherModal-->
+    <div class="modal fade" id="giftvocherLogin" role="dialog"></div>
+    <footer id="footer">
+    </footer>
+    <!-----------------------------------------------Footer End----------------------------------------------------------->
+    <input type="hidden" id="total_cart_amount" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script async="async" src="https://static-na.payments-amazon.com/OffAmazonPayments/us/js/Widgets.js"></script>
+    <!-- Load PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script>
+    <script async="async" src="https://static-na.payments-amazon.com/checkout.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+    <!-- Load jQuery (if needed) -->
+    <script src="Js/Navbar.js"></script>
+    <script src="Js/Global.js"></script>
+    <script src="Js/cart.js"></script>
+    <script src="Js/Address.js"></script>
+    <script src="Js/customer_Login.js"></script>
+    <script src="Js/cart_page.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        paypal.Buttons({
+            createOrder: function (data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '49.99' // Replace with your cart total
+                        }
+                    }]
+                });
+            },
+            onApprove: function (data, actions) {
+                return actions.order.capture().then(function (details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name);
+                    // Send details to your server for further processing
+                });
+            }
+        }).render('#paypal-button-container');
+    </script>
+    <script>
+        OffAmazonPayments.Button("AmazonPayButton", "YOUR_SELLER_ID", {
+            type: "PwA",
+            authorization: function () {
+                // Initiate Amazon Pay login or checkout
+            },
+            onError: function (error) {
+                console.error(error);
+            }
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        OffAmazonPayments.Button("AmazonPayButton", "YOUR_MERCHANT_ID", {
+            type: "PwA", // "PwA" is Pay with Amazon
+            color: "Gold",
+            size: "medium",
+            authorization: function () {
+                var loginOptions = { scope: "profile payments:widget payments:shipping_address", popup: true };
+                amazon.Login.authorize(loginOptions, "https://yourwebsite.com/AmazonPay/ProcessAuthorization");
+            },
+            onError: function (error) {
+                console.error("Amazon Pay Error:", error.getErrorMessage());
+            }
+        });
+    </script>
+
+
+    <script>
+        amazon.Pay.renderButton('#AmazonPayButton', {
+            // Replace with your Amazon Pay store ID
+            merchantId: 'YOUR_STORE_ID',
+            // Your checkout session ID (from backend)
+            checkoutSessionId: 'YOUR_CHECKOUT_SESSION_ID',
+            // Your public key ID for signature verification
+            publicKeyId: 'YOUR_PUBLIC_KEY_ID',
+            ledgerCurrency: 'USD',
+            checkoutMode: 'ProcessOrder',
+            productType: 'PayAndShip',
+            placement: 'Cart',
+            buttonColor: 'Gold', // Options: Gold, LightGray, DarkGray
+            createCheckoutSessionConfig: {
+                payloadJSON: JSON.stringify({
+                    webCheckoutDetails: {
+                        checkoutReviewReturnUrl: 'https://yourdomain.com/checkout/confirmation'
+                    },
+                    storeId: 'YOUR_STORE_ID'
+                }),
+                signature: 'GENERATED_SIGNATURE_FROM_BACKEND'
+            }
+        });
+    </script>
+
+</body>
+</html>

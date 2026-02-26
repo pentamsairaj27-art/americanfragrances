@@ -1,0 +1,128 @@
+﻿.formfield {
+    margin-bottom: 15px !important;
+}
+.btn_sm {
+    background: #000;
+    border-radius: 5px;
+    border: 1px solid #000;
+    color: #fff !important;
+    width: 115px;
+    height: 37px;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    transition: 0.7s;
+}
+.btn_cancel {
+    background: #fff;
+    border: 1px solid #000;
+    color: #000 !important;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    transition: 0.7s;
+    width: 115px;
+    height: 37px;
+    border-radius: 5px;
+}
+.formfield > input, .formfield > label, .formfield > textarea {
+    padding: 0.7em;
+    margin: 0.5em;
+    width: 100%;
+}
+
+
+.formfield > input, .formfield > textarea {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    outline: none;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.formfield > label {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    color: #ccc;
+}
+
+.formfield input:focus + label, input:valid + label, .formfield textarea:focus + label, textarea:valid + label {
+    color: #000;
+    font-size: 0.8em;
+    width: auto;
+    height: 1.3em;
+    padding: 0px 0.5em 0px 0.5em;
+    margin: 0px;
+    /*outline: 1px solid red; /*for debugigng purposes only*/
+    background: white;
+    transition: 0.2s ease-in-out;
+    top: 0em;
+    left: 2em;
+}
+
+.formfield input:focus {
+    border: 2px solid #000;
+    background: #fff;
+}
+
+.formfield .form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 1.3rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.formfield p {
+    margin-left: 10px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+    margin-top: 10px;
+    margin-bottom: 0px !important;
+}
+.edit {
+    font-size: 20px !important;
+    border: none !important;
+}
+.content-body {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-left: 20px;
+    padding-top: 15px;
+}
+
+.content-body .table tr th {
+    font-size: 14px !important;
+    color: rgba(0, 0, 0, 0.6) !important;
+    padding: 0.50rem !important;
+    border: 1px solid #dee2e6 !important;
+}
+
+ 
+.Myprofile_bodydv .table tr td {
+    font-weight: 300;
+    font-size: 14px !important;
+    color: rgb(0 0 0) !important;
+}
+
+.cardsContaner {
+  /*  background-color: #70b4bd;*/
+}
+body {
+    font-family: 'Sofia Pro Regular Az' !important;
+    color: #000 !important;
+}
+
+
+

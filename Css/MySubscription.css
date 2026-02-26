@@ -1,0 +1,173 @@
+﻿
+label {
+    font-family: 'Sofia Pro Regular Az';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    margin: 8px 0px;
+    display: block;
+    text-align: left;
+}
+
+.text-size {
+    font-size: 18px;
+}
+.modal .AddressCheck, .modal .proceedToChecout {
+    border-radius: 25px !important;
+}
+
+
+.modal #UpdateamountShowingPopup {
+    right: 0px !important;
+}
+.fw-bold {
+    font-weight: bold;
+}
+
+.Discount {
+    color: #70b4bd;
+}
+
+.Subscriptionfee {
+    /*color: #70b4bd;*/
+}
+
+.Planchoose {
+    background-color: #70b4bd !important;
+    color: white !important;
+    font-weight: bold !important;
+    border: 2px solid #fff !important;
+    padding: 9px 20px !important;
+}
+.brandName, .brandName-edit {
+    text-decoration: underline;
+}
+.card {
+    border-radius: 1.25rem;
+}
+
+#planename {
+    color: black;
+}
+
+.Delivered, .Shipping {
+    display: none !important;
+}
+
+.card2 {
+    border-radius: 1.25rem;
+    background: #70b4bd;
+}
+
+.select2 {
+    background: white !important;
+     /* width: auto;*/
+    border-radius: 15px;
+}
+
+
+
+
+.StatusShowingBt {
+    background: #a1331c;
+    padding: 3px;
+    margin-bottom: 5px;
+    color: white;
+}
+.productImg-edit-container{
+ 
+}
+.createSubscription {
+    background: #70b4bd !important;
+    color: white !important;
+}
+
+.Edit {
+    background: #a1331c !important;
+    padding: 9px 20px !important;
+    color: white !important;
+    width: 118px;
+   
+}
+
+.productView {
+    background: #a1331c !important;
+    padding: 8px 20px !important;
+    color: white !important;
+}
+
+.cancelSubscription {
+    background: #a1331c !important;
+    padding: 8px 20px !important;
+    color: white !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b, .select2-selection__clear {
+    display: none;
+}
+.popup-alert {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.popupcustom-alert-content {
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    position: relative;
+    max-width: 400px;
+    width: 350px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.popupclose-alert {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.popupalert-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 13px;
+}
+
+.popupalert-message {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.popupok-button {
+    padding: 3px 15px;
+    background: #70b4bd !important;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.deliveryDate{
+    width:85%;
+    margin:auto;
+    box-shadow:none !important;
+}
+btn-primary:focus, .btn:focus {
+    box-shadow: none !important;
+}
+form-control {
+    width: 80% !important;
+}
+.chooseProduct {
+    width:130px !important;
+}

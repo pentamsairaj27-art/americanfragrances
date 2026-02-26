@@ -1,0 +1,497 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perfumes with AI and Super Sale</title>
+    <link rel="shortcut icon" type="image/png" href="../Images/favicon.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.1/dist/bootstrap-float-label.min.css" />
+    <link href="../../Js/summer/summernote.css" rel="stylesheet" />
+    <link href="../../Js/summer/summernote-bs4.css" rel="stylesheet" />
+    <link href="../../Js/summer/summernote-lite.min.css" rel="stylesheet" />
+    <link href="../Css/Admin.css" rel="stylesheet" />
+    <style>
+        label[for="Edit_purchasevalueofproduct"] {
+            color: #000;
+            font-size: 0.8em;
+            width: auto;
+            height: 1.3em;
+            padding: 0px 0.5em 0px 0.5em;
+            margin: 0px;
+            background: white;
+            top: 0em;
+            left: 2em;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="dvnav"></div>
+
+    <!-----------------------------------------------body starts----------------------------------------------------------->
+    <div class="container-fluid main_dv">
+        <div class="row justify-content-end">
+            <!-----------------------------------------------Dashboard starts----------------------------------------------------------->
+            <div class="col-md-2 dashboard_dv">
+                <div id="leftmenu" class="dashboard_Menu">
+
+                </div>
+            </div>
+            <!-----------------------------------------------Body dv starts----------------------------------------------------------->
+            <div class="col-md-10 content-wrapper">
+                <div class="row">
+                    <div class="col-md-12 content-body">
+                        <form id="Product_edit" onsubmit="return false">
+                            <input type="hidden" name="hiddenid" id="hiddenid" />
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h4 class="Menu_Title">Edit PRODUCT</h4>
+                                        <div id="validationdiv" class="validation_message"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="formfield" id="floatdv">
+                                            <input type="text" name="Produtname" id="Edit_txtProdutname" required>
+                                            <label alt="Product Name" for="Edit_txtProdutname" placeholder="Product Name">Product Name</label>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <p>Select Category</p>
+                                                    <select class="form-control" id="drpdw_Cat">
+                                                        <option value="category">Select Category</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <p>Select Sub Category</p>
+                                                    <select class="form-control" id="drpdw_subCat">
+                                                        <option selected value="subcategory">Select SubCategory</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <input type="text" name="Edit_txtPrice" id="Edit_txtPrice" required>
+                                                    <label alt="txtPrice" for="Edit_txtPrice" placeholder="Price">Price</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <input type="text" name="Produtname" id="Edit_txtDiscount" required>
+                                                    <label alt="txtDiscount" for="Edit_txtDiscount" placeholder="Product Name">Discount</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <input type="text" name="Edit_purchasevalueofproduct" id="Edit_purchasevalueofproduct" required readonly>
+                                                    <label alt="purchasevalueofproduct" for="Edit_purchasevalueofproduct" placeholder="Purchase Price">Purchase Price</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <input type="text" name="txtStock" id="Edit_Stock" required>
+                                                    <label alt="txtStock" for="Edit_txtStock" placeholder="Product Name">Stock</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="label_lb">Is Luxury</label>
+                                                        </td>
+                                                        <td>&nbsp;</td>
+                                                        <td>
+                                                            <input type="checkbox" id="Luxury">
+                                                            <label for="Luxury">Yes</label>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="label_lb">Is Timeless</label>
+                                                        </td>
+                                                        <td>&nbsp;</td>
+                                                        <td>
+                                                            <input type="checkbox" id="Timeless">
+                                                            <label for="Timeless">Yes</label>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="label_lb">Is Clearance</label>
+                                                        </td>
+                                                        <td>&nbsp;</td>
+                                                        <td>
+                                                            <input type="checkbox" id="Clearance">
+                                                            <label for="Clearance">Yes</label>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="label_lb">Is Celebrity</label>
+                                                        </td>
+                                                        <td>&nbsp;</td>
+                                                        <td>
+                                                            <input type="checkbox" id="Celebrity">
+                                                            <label for="Celebrity">Yes</label>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="label_lb">Amerifrag’s Choice/Primary</label>
+                                                        </td>
+                                                        <td>&nbsp;</td>
+                                                        <td>
+                                                            <input type="checkbox" id="Edit_Featured">
+                                                            <label for="Edit_Featured">Yes</label>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6 shadeDiv">
+                                                <div class="formfield" id="floatdv">
+                                                    <p>Select Shade</p>
+                                                    <select class="form-control" id="shade">
+
+                                                        <option value="001 Pink">001 Pink</option>
+                                                        <option value="004 Coral">004 Coral</option>
+                                                        <option value="006 Berry">006 Berry</option>
+                                                        <option value="007 Raspberry">007 Raspberry</option>
+                                                        <option value="012 Rosewood">012 Rosewood</option>
+                                                        <option value="015 Cherry">015 Cherry</option>
+                                                        <option value="Ash Brown">Ash Brown</option>
+                                                        <option value="Black">Black</option>
+                                                        <option value="Brown">Brown</option>
+                                                        <option value="Cheeky">Cheeky</option>
+                                                        <option value="Chocolate">Chocolate</option>
+                                                        <option value="Dark Brown">Dark Brown</option>
+                                                        <option value="Ebony">Ebony</option>
+                                                        <option value="Fenty Glow (Original)">Fenty Glow (Original)</option>
+                                                        <option value="Fu$$y">Fu$$y</option>
+                                                        <option value="Glass Slipper">Glass Slipper</option>
+                                                        <option value="Gift Set">Gift Set</option>
+                                                        <option value="Hot Chocolit">Hot Chocolit</option>
+                                                        <option value="Medium Brown">Medium Brown</option>
+                                                        <option value="One Size">One Size</option>
+                                                        <option value="Set">Set</option>
+                                                        <option value="Soft Brown">Soft Brown</option>
+                                                        <option value="Sweet Mouth">Sweet Mouth</option>
+                                                        <option value="Taupe">Taupe</option>
+
+
+
+                                                    </select>
+                                                    <!--<input type="text" name="shade" id="shade" required>
+            <label alt="Product Name" for="shade" placeholder="shade">Shade</label>-->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <p>Select Type</p>
+                                                    <select class="form-control" id="drpdw_moodtype">
+                                                        <!--<option selected>Select Type</option>
+                <option value="Health & Wellness">Health & Wellness</option>
+                <option value="Make Up">Make Up</option>
+                <option value="Skin Care">Skin Care</option>
+                <option value="Bath & Body">Bath & Body</option>
+                <option value="Hair Care">Hair Care</option>
+                <option value="Aroma">Aroma</option>
+                <option value="Travel Spray">Travel Spray</option>
+                <option value="Gift Sets">Gift Sets</option>
+                <option value="Appliances">Appliances</option>
+                <option value="Most popular">Most popular</option>-->
+                                                        <!--<option value="Aroma">Aroma</option>
+                <option value="Appliances">Appliances</option>
+                <option value="Bath & Body">Bath & Body</option>
+                <option value="Body">Body</option>
+                <option value="Brows">Brows</option>
+                <option value="Candle">Candle</option>
+                <option value="Clensing">Clensing</option>
+                <option value="Conditioning">Conditioning</option>
+                <option value="Diffuser">Diffuser</option>
+                <option value="EDC">EDC</option>
+                <option value="EDP">EDP</option>
+                <option value="EDT">EDT</option>
+                <option value="Eyes">Eyes</option>
+                <option value="Face">Face</option>
+                <option value="Gift Sets">Gift Sets</option>
+                <option value="Hair Care">Hair Care</option>
+                <option value="Hair">Hair</option>
+                <option value="Health & Wellness">Health & Wellness</option>
+                <option value="Lips">Lips</option>
+                <option value="Make Up">Make Up</option>
+                <option value="Most popular">Most popular</option>
+                <option value="Skin Care">Skin Care</option>
+                <option value="Styling">Styling</option>
+                <option value="Treatments">Treatments</option>
+                <option value="Travel Spray">Travel Spray</option>-->
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <br />
+
+                                        <div class="row">
+
+
+                                            <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <p>Quanity</p>
+                                                    <input type="number" name="Edit_txtweight" class="form-control" id="Edit_txtweight" placeholder="Select Qty" />
+                                                    <!--<select  >
+                                                        <option value="AU" data-icon="flag-icon flag-icon-au">Austraila</option>
+                                                        <option value="CH" data-icon="flag-icon flag-icon-ch">China</option>
+                                                    </select>-->
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <p>Select Brand</p>
+                                                    <select class="form-control" id="drpdw_Brand" required>
+                                                        <option value="Brand" selected>Select Brand</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <p>Select Size</p>
+                                                    <select class="form-control" id="drpdw_Dimenstions" required>
+                                                        <option value="Dimenstions">Select Dimensions</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                               
+                                                <div class="formfield" id="floatdv">
+                                                    <p>SKU ID</p>
+                                                    <input type="text" name="skuid" id="skuid" >
+                                                    <!--<label alt="purchasevalueofproduct" for="skuid">SKU ID</label>-->
+                                                </div>
+                                            </div>
+                                            <!-- <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <p>Select HSN Code</p>
+                                                    <select class="form-control" id="edithsnCodes">
+                                                        <option selected>Select HSN Code</option>
+                                                    </select>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <textarea id="Edit_mytextareaprdct" name="mytextarea" rows="12">Description.,</textarea>
+                                                <!--<div class="formfield" id="floatdv">
+            <input type="text" name="Edit_mytextarea" id="Edit_mytextarea" required>
+            <label alt="txtDescription" for="mytextarea" placeholder="Description">Description</label>
+        </div>-->
+                                            </div>
+                                            <!--<div class="col-md-6">
+        <div class="formfield" id="floatdv">
+            <input type="text" name="topNotes" id="topNotes" required>
+            <label alt="Top Notes" for="topNotes" placeholder="Top Notes">Top Notes</label>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="formfield" id="floatdv">
+            <input type="text" name="heartNotes" id="heartNotes" required>
+            <label alt="Heart Notes" for="heartNotes" placeholder="Heart Notes">Heart Notes</label>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="formfield" id="floatdv">
+            <input type="text" name="baseNotes" id="baseNotes" required>
+            <label alt="Base Notes" for="baseNotes" placeholder="Base Notes">Base Notes</label>
+        </div>
+    </div>-->
+                                            <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <input type="text" name="Additional_Addon_label1" id="Additional_Addon_label1" >
+                                                    <label alt="Top Notes" for="Additional_Addon_label1" placeholder="Top Notes">Additional Addon Label1</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <input type="text" name="topNotes" id="topNotes" >
+                                                    <label alt="Top Notes" for="topNotes" placeholder="Top Notes">Additional Addon Value1</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <input type="text" name="Additional_Addon_label2" id="Additional_Addon_label2" >
+                                                    <label alt="Heart Notes" for="Additional_Addon_label2" placeholder="Heart Notes">Additional Addon Label2</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <input type="text" name="heartNotes" id="heartNotes" >
+                                                    <label alt="Heart Notes" for="heartNotes" placeholder="Heart Notes">Additional Addon Value2</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <input type="text" name="Additional_Addon_label3" id="Additional_Addon_label3" >
+                                                    <label alt="Base Notes" for="Additional_Addon_label3" placeholder="Base Notes">Additional Addon Label3</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="formfield" id="floatdv">
+                                                    <input type="text" name="baseNotes" id="baseNotes" >
+                                                    <label alt="Base Notes" for="baseNotes" placeholder="Base Notes">Additional Addon Value3</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 border_box">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label class="label_lb">Display Picture</label>
+
+                                                <div class="wrapper">
+                                                    <div class="box">
+                                                        <div class="js--image-preview" id="Edt_imgprew"></div>
+                                                        <div class="upload-options">
+                                                            <label>
+                                                                <input type="file" id="Edt_imgfile" class="image-upload" accept="image/*" />
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label class="label_lb">Maximum Images 4</label>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="wrapper">
+                                                            <div class="box">
+                                                                <div class="js--image-preview" id="Edt_imgprew1"></div>
+                                                                <div class="upload-options">
+                                                                    <label>
+                                                                        <input type="file" id="Edt_imgfile1" class="image-upload" accept="image/*" />
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="wrapper">
+                                                            <div class="box">
+                                                                <div class="js--image-preview" id="Edt_imgprew2"></div>
+                                                                <div class="upload-options">
+                                                                    <label>
+                                                                        <input type="file" id="Edt_imgfile2" class="image-upload" accept="image/*" />
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="wrapper">
+                                                            <div class="box">
+                                                                <div class="js--image-preview" id="Edt_imgprew3"></div>
+                                                                <div class="upload-options">
+                                                                    <label>
+                                                                        <input type="file" id="Edt_imgfile3" class="image-upload" accept="image/*" />
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="wrapper">
+                                                            <div class="box">
+                                                                <div class="js--image-preview" id="Edt_imgprew4"></div>
+                                                                <div class="upload-options">
+                                                                    <label>
+                                                                        <input type="file" id="Edt_imgfile4" class="image-upload" accept="image/*" />
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn_sm">Update</button>
+                                        <a href="/Product/Product_list.html"><button type="button" class="btn_cancel">Cancel</button></a>
+                                    </div>
+                                </div>
+                                <br /><br />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src='https://cdn.tiny.cloud/1/5sv4dxqtm0qed6sz089du9gl1q13alqyw61bm96pju4l5izo/tinymce/5/tinymce.min.js' referrerpolicy="origin"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+    <script src="../../Js/summer/summernote.js"></script>
+    <script src="../../Js/summer/summernote-bs4.min.js"></script>
+    <script src="../../Js/summer/summernote-lite.min.js"></script>
+    <script>
+        $("#Edit_mytextareaprdct").summernote({
+            height: 150,                 // set editor height
+            minHeight: null,             // set minimum height of editor
+            maxHeight: null,             // set maximum height of editor
+            focus: false,
+            placeholder: 'Description..'
+        });
+    </script>
+    <script src="../Js/Imageupload.js"></script>
+    <script src="../Js/Global.js"></script>
+    <script src="../Js/Edit_Product.js"></script>
+
+
+</body>
+</html>

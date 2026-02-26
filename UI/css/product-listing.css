@@ -1,0 +1,65 @@
+/* products-archive page */
+.products-archive .product_box_3 .progress{
+    width: 80%; 
+    margin:auto; 
+    margin-top: 20px;
+  }
+  .products-archive .product_box_3 .user_text{
+    margin-top: 10px;
+  }
+  .products-archive .product_box_3 .sale_price, .products-archive .product_box_3 .org_price{
+    font-size: 13px;
+  }
+  
+  .filter-sidebar .sidebar-heading{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 19.5px;
+  }
+  
+  .filter-sidebar a{
+    color: #000;
+    text-decoration: none;
+  }
+  .filter-sidebar hr{
+    border-top: 2px dotted #000 !important;
+    opacity: 1;
+  }
+  .count{
+    opacity: 0.5;
+  }
+  .filter-sidebar p{
+    font-size: 14px;
+    margin-bottom: 5px;
+    line-height: 17.07px;
+  }
+  .sort-text{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 11px;
+  }
+  select.selectpicker {
+    font-size: 11px;
+    padding: 5px;
+    color: #000;
+  }
+  
+  .breadcrumb{
+    opacity: 0.5;
+  }
+  .breadcrumb li{
+    font-size: 11px;
+  }
+  /* end of products-archive */
+  /* product popup */
+    .quantity {
+      display: flex;
+      align-items: center;
+  }
+    /* end of product popup modal */
+  
+  /* form fields */
+  .form-control {
+    font-size: 12px !important;
+  }
+  /* end of form fields */

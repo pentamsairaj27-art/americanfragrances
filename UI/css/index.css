@@ -1,0 +1,204 @@
+/* carousel*/
+.home .carousel{
+    margin-top: -75px; /* for transparent header look */
+}
+.home .carousel-item{
+   min-height: 688px;
+   background: radial-gradient(99.13% 199.57% at 50% 50%, #70b4bd 38.54%, rgba(11, 86, 89, 0.77) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+ }
+.carousel-item div{
+   margin: auto;
+}  
+.home .carousel-item img{
+ height: 300px;
+ display: block;
+ margin: auto;
+}
+.carouselimg{
+ margin-bottom: 40px !important;
+}
+.carousel-control-next, .carousel-control-prev{
+   display: none !important;
+}
+.carousel-item h2, .carousel-item h6{
+   color:#fff;
+}
+.carousel-item p{
+   font-size: 32px;
+   text-align: center;
+   font-weight: 500;
+}
+@media screen and (max-width: 480px) {
+ .carousel-item p{
+   font-size: 12px;
+ }
+}
+.carousel-indicators{
+   justify-content: left !important;
+   margin-left: 3% !important;
+}
+.carousel-indicators [data-bs-target]{
+   width: 10px !important;
+   height: 10px !important;
+}
+/* End of Carousel */
+
+/* hero section */
+.hero{
+   background-color: #70b4bd;
+   margin: 50px 0px;
+   padding: 24px 0 !important;
+}
+.hero_title{
+   /* margin: 24px 0 !important; */
+   text-align: center;
+   font-size: 42px;
+}
+/* end of hero section */
+/* user analytics */
+.user_analytics{
+   background-color: #70b4bd ;
+   padding: 50px 6% !important;
+   border-radius: 5px !important;
+   margin-bottom: 40px !important;
+}
+.user_analytics h3{
+   color: #fff ;
+}
+.user_analytics .btn{
+ border-color: #fff !important;
+ background-color: transparent !important;
+ color: #fff !important;
+ border-radius: 25px !important;
+ border: 2px solid !important;
+ padding: 14px 19px !important;
+}
+.user_analytics .d-flex{
+ margin-top: 40px;
+}
+/* end of user analytics */
+/* women image bg box */
+/* .women_img_bg{
+ border:1px solid #000;
+ margin-top: 10px;
+} */
+/* end of women bg box */
+/* box on image */
+.boxonimagewomen{
+ background: #fff !important;
+ position:absolute;
+ margin-top: -30%;
+ width: 25%;
+ left: 24%;
+ padding: 20px;
+
+}
+@media (max-width: 768px) {
+ .boxonimagewomen{
+   position: relative;
+   margin-top: 0%;
+   width: 100%;
+   left: 0%;
+ }
+ .boxonimage{
+   position: relative !important;
+   margin-top: 0%;
+   width: 100% !important;
+ }
+}
+@media (max-width: 400px) {
+ 
+ .boxonimage p{
+   font-size: 10px;
+ }
+ .boxonimagewomen p{
+   font-size: 10px;
+ }
+
+}
+.boxonimage{
+ background: #fff !important;
+ position:absolute;
+ margin-top: -30%;
+ width: 25%;
+ padding: 20px;
+
+}
+.boxonimage h3{
+ font-size: 22px !important;
+ text-align: center;
+}
+.boxonimage p{
+ font-size: 12px;
+}
+
+/* end of boxonimage */
+
+
+
+/* subscribe section */
+.subscribe{
+ background-color: #f3f3f3;
+}
+.subscribe p{
+ font-size: 24px;
+}
+.subscribe .btn{
+ background: #70b4bd !important;
+ color:#fff !important;
+ border:1px solid #70b4bd !important;
+ font-size: 24px !important;
+ padding: 11px 39px !important;
+ font-weight: 600 !important;
+}
+/* end of subscribe section */
+/* testimonials */
+.testimonial, .owl-item.active{
+ background-color: #f3f3f3;
+}
+.quote{
+ width: 48px !important;
+ height: 40px !important;
+ margin-bottom: 40px !important;
+}
+.testim_box{
+ padding: 9%;
+ box-shadow: 0px 4px 4px 0px #00000040;
+ border: 1px solid #000000;
+ border-radius: 4px;
+}
+.testim_box img:not(.quote){
+ width: 40px !important;
+ height: 40px;
+ margin: auto;
+}
+.testim_box p{
+ font-size: 14px;
+ text-align: left;
+}
+.testim_box .card-footer{
+ border-top: 1px solid #000;
+ background: #fff;
+ margin-top: 16px;
+ padding: 11% 0;
+}
+.user_designation{
+ font-size: 10px !important;
+ font-weight: 400;
+}
+.user_name{
+ font-size: 14px !important;
+ margin-bottom: 10px !important;
+ font-weight: 500;
+}
+/* end of testimonials */
+/* owl carousel styles */
+#testimonial-carousel .item, #brands-carousel .item{
+ margin: 10px;
+ color: #000;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ border-radius: 3px;
+ text-align: center;
+}
+/* end of owl carousel */

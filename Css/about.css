@@ -1,0 +1,13 @@
+﻿.aboutBanner {
+    background-color: #70b4bd !important;
+    height: 400px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*    align-items:center;*/
+    color: white
+}
+.UniqueApproach {
+    background-color: #70b4bd !important;   
+}
+

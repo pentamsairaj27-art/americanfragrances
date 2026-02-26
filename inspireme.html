@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+     <title>Perfumes with AI and Super Sale</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png" />
+    <!-- Google fonts-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="Css/StyleSheet.css" rel="stylesheet" />
+    <link href="Css/dropdown.css" rel="stylesheet" />
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        .txt_sm .cart_count {
+            font-size: 1rem;
+            color: #1fc6c2;
+        }
+
+        ul {
+            margin-left: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader" style="position: fixed; width: 100%; height: 100%; background: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999;">
+        <div class="progress" style="width: 50%; height: 2px; margin-bottom: 10px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%; background-color: #70b4bd;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="loading-text" style="color: #70b4bd; font-family: 'Poppins', sans-serif;">Loading...</div>
+    </div>
+    <div id="validationdiv" class="validation_message"></div>
+    <div id="dvtopnav"></div>
+    <div class="dvnavcust"></div>
+    <!--giftVocherModal-->
+    <div class="modal fade" id="giftvocherLogin" role="dialog"></div>
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-md-12">
+                <h3><span>What exactly is a perfume?</span></h3>
+
+                <p>
+                    <span style="font-size:16px;">
+                        A perfume is a fragrant liquid substance made from a combination of
+                        various aromatic compounds, such as essential oils, aroma chemicals, and solvents, and is
+                        created through a complex process that involves blending specific aromatic ingredients in
+                        precise proportions to achieve a desired fragrance profile.
+                    </span>
+                </p>
+            </div>
+            <div class="row d-flex">
+                <div class="col-md-4 text-center">
+                    <div class="bloginspire">
+                        <!--<img src="./Images/inspireme/inspireme1.png" class="img-fluid" style="width: 300px; height: 200px;" />-->
+                        <img src="./Images/inspireme/spayonperBanner.png" style="width: 300px; height: 200px;" class="img-fluid" />
+
+                        <br /><br /><br />
+                        <h5>
+                            <a href="sprayonperfume.html">
+                                How to spray perfume the right way
+                                <!--Smell good, feel great - Learn more!-->
+                            </a>
+                        </h5>
+                        <br />
+                    </div>
+
+                </div>
+                <div class="col-md-4  text-center">
+                    <div class="bloginspire">
+                        <img src="./Images/inspireme/buyngperfume.png" class="img-fluid" style="width:300px; height:200px;" />
+                        <br /><br /><br />
+                        <h5>
+                            <a href="buyingaPerfume.html">
+                                <!--Important things to know before buying a perfume-->
+                                Essential tips before buying your next perfume
+                            </a>
+                        </h5>
+                        <br />
+                    </div>
+
+                </div>
+                <div class="col-md-4  text-center">
+                    <div class="bloginspire">
+                        <!--<img src="./Images/inspireme/img1-inspire.jpg" class="img-fluid" style="width: 300px; height: 200px;" />-->
+                        <img src="./Images/inspireme/fragranceNotes.png" class="img-fluid" style="width: 300px; height: 200px;" />
+                        <br /><br /><br />
+                        <h5>
+                            <a href="knowaboutFragrance.html">
+                                unveiling fragrance notes
+                                <!--Understanding the Layers of Your Perfume's Scent Profile-->
+                            </a>
+                        </h5>
+                        <br />
+                    </div>
+
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="col-md-4  text-center">
+                    <div class="bloginspire">
+                        <!--<img src="./Images/inspireme/inspiremewheel.png" style="width: 300px; height: 200px;" class="img-fluid" />-->
+                        <img src="./Images/inspireme/fragrancefamilies.png" style="width: 300px; height: 200px;" class="img-fluid" />
+
+                        <br /><br /><br />
+                        <h5>
+                            <a href="FragranceFamilies.html">
+                                Unpacking Fragrance Families
+                                <!--Discover the world of scents-->
+                            </a>
+                        </h5>
+                        <br />
+                    </div>
+
+                </div>
+                <div class="col-md-4  text-center">
+                    <div class="bloginspire">
+                        <!--<img src="./Images/inspireme/faq.jpg" class="img-fluid" style="width: 300px; height: 200px;" />-->
+                        <img src="./Images/inspireme/helpfulqa.png" style="width: 300px; height: 200px;" class="img-fluid" />
+
+                        <br /><br /><br />
+                        <h5>
+                            <a href="HelpfulQAs.html">
+                                Fragrance Q&A: Your Scent Questions Answered Here!
+                                <!--Fragrance Guide-->
+                            </a>
+                        </h5>
+                        <br />
+                    </div>
+
+                </div>
+                <div class="col-md-4  text-center">
+                    <div class="bloginspire">
+                        <!--<img src="./Images/inspireme/famousperfume.jpg" class="img-fluid" style="width: 300px; height: 200px;" />-->
+                        <img src="./Images/inspireme/famousperfumenew.png" style="width: 300px; height: 200px;" class="img-fluid" />
+
+                        <br /><br /><br />
+                        <h5>
+                            <a href="famousperfume.html">
+                                Unmasking Common Perfume Myths
+
+                            </a>
+                        </h5>
+                        <br />
+                    </div>
+
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="col-md-4  text-center">
+                    <div class="bloginspire">
+                        <!--<img src="./Images/inspireme/inspireme4.png" style="width: 300px; height: 200px;" class="img-fluid" />-->
+                        <img src="./Images/inspireme/layeronPernewBanner.png" style="width: 300px; height: 200px;" class="img-fluid" />
+
+                        <br /><br /><br />
+                        <h5>
+                            <a href="layeronperfumes.html">
+                                <!--Master the Art of Layering Perfumes for an Irresistible Fragrance Experience-->
+                                Create Your Signature Scent with Expert Perfume Layering
+                            </a>
+
+                        </h5>
+                        <br />
+                    </div>
+
+                </div>
+                <div class="col-md-4  text-center">
+                    <div class="bloginspire">
+                        <img src="./Images/inspireme/inspire8.png" class="img-fluid" style="width: 300px; height: 200px;" />
+
+                        <br /><br /><br />
+                        <h5>
+                            <a href="uniquesignature.html">
+                                Crafting Your Unique Signature Fragrance: A Personalized Guide
+
+                            </a>
+                        </h5>
+                        <br />
+                    </div>
+
+                </div>
+                <div class="col-md-4  text-center">
+                    <div class="bloginspire">
+                        <!--<img src="Images/inspireme/perticularMood.jpg" class="img-fluid" style="width: 300px; height: 200px;" />-->
+                        <img src="./Images/inspireme/layeronPerBanner.png" class="img-fluid" style="width: 300px; height: 200px;" />
+
+                        <br /><br /><br />
+                        <h5>
+                            <a href="fraganceComplexity.html">
+                                <!--Exploring Fragrance Complexity-->
+                                Beyond Notes: Fragrance Insights
+                            </a>
+                        </h5>
+                        <br />
+                    </div>
+
+                </div>
+                <div class="col-md-4  text-center">
+                    <div class="bloginspire">
+                        <!--<img src="Images/inspireme/perticularMood.jpg" class="img-fluid" style="width: 300px; height: 200px;" />-->
+                        <img src="./Images/inspireme/zodaic10.png" class="img-fluid" style="width: 300px; height: 200px;" />
+
+                        <br /><br /><br />
+                        <h5>
+                            <a href="ZodiacGuidance.html">
+                                Discover Your Perfect Fragrance with Zodiac Guidance
+                            </a>
+                        </h5>
+                        <br />
+                    </div>
+
+                </div>
+                <div class="col-md-4  text-center">
+                    <div class="bloginspire">
+                        <!--<img src="Images/inspireme/perticularMood.jpg" class="img-fluid" style="width: 300px; height: 200px;" />-->
+                        <img src="Images/inspireme/inspire11.png" class="img-fluid" style="width: 300px; height: 200px;" />
+
+                        <br /><br /><br />
+                        <h5>
+                            <a href="ChooseYourFragrance.html">
+                                Selecting Scents: Setting the Perfect Mood
+                            </a>
+                        </h5>
+                        <br />
+                    </div>
+
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <footer id="footer">
+    </footer>
+    <!-----------------------------------------------Footer End----------------------------------------------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Js/Navbar.js"></script>
+    <script src="Js/Global.js"></script>
+    <script src="Js/customer_Login.js"></script>
+
+</body>
+
+</html>

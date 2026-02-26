@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Perfumes with AI and Super Sale</title>
+    <link rel="shortcut icon" type="image/png" href="../Images/favicon.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.1/dist/bootstrap-float-label.min.css" />
+    <link href="../../Css/Admin.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="dvnavemployee"></div>
+    <!-----------------------------------------------body starts----------------------------------------------------------->
+    <div class="container-fluid main_dv">
+        <div class="row justify-content-end">
+            <!-----------------------------------------------Dashboard starts----------------------------------------------------------->
+            <div class="col-md-2 dashboard_dv">
+                <br />
+                <div class="dashboard_Menu">
+                    <p class="Menu_main">Product</p>
+                    <p>
+                        <table>
+                            <tr>
+                                <td><span class="iconify dashboard_icons" data-icon="carbon:collapse-categories" data-inline="false"></span></td>
+                                <td><a href="../../Employee/Category/Category_list.html" class="dashboard_btn">Categories</a></td>
+                            </tr>
+                        </table>
+                    </p>
+                    <p>
+                        <table>
+                            <tr>
+                                <td><span class="iconify dashboard_icons" data-icon="carbon:collapse-categories" data-inline="false"></span></td>
+                                <td><a href="../../Employee/Category/Dimension.html" class="dashboard_btn">Dimension</a></td>
+                            </tr>
+                        </table>
+                    </p>
+                    <p>
+                        <table>
+                            <tr>
+                                <td><span class="iconify dashboard_icons" data-icon="carbon:collapse-categories" data-inline="false"></span></td>
+                                <td><a href="../../Employee/Category/Pincode.html" class="dashboard_btn">Areas</a></td>
+                            </tr>
+                        </table>
+                    </p>
+                    <p>
+                        <table>
+                            <tr>
+                                <td><span class="iconify dashboard_icons_active" data-icon="carbon:collapse-categories" data-inline="false"></span></td>
+                                <td><a href="../Category/Delivery_Pincodes.html" class="dashboard_btn_active">Deliver Pincodes</a></td>
+                            </tr>
+                        </table>
+                    </p>
+                    <p>
+                        <table>
+                            <tr>
+                                <td><span class="iconify dashboard_icons" data-icon="teenyicons:bag-plus-outline" data-inline="false"></span></td>
+                                <td><a href="../../Employee/Product/Add_Product.html" class="dashboard_btn">Add Product</a></td>
+                            </tr>
+                        </table>
+                    </p>
+                    <p>
+                        <table>
+                            <tr>
+                                <td><span class="iconify dashboard_icons" data-icon="la:shopping-bag-solid" data-inline="false"></span></td>
+                                <td><a href="../../Employee/Product/Product_list.html" class="dashboard_btn">Product Lists</a></td>
+                            </tr>
+                        </table>
+                    </p>
+
+                    <p class="Menu_main">Sales</p>
+                    <p>
+                        <table>
+                            <tr>
+                                <td><span class="iconify dashboard_icons" data-icon="clarity:number-list-line" data-inline="false"></span></td>
+                                <td><a href="../../Employee/Order/Customer_list.html" class="dashboard_btn">Customer List</a></td>
+                            </tr>
+                        </table>
+                    </p>
+                    <p>
+                        <table>
+                            <tr>
+                                <td><span class="iconify dashboard_icons" data-icon="clarity:number-list-line" data-inline="false"></span></td>
+                                <td><a href="../../Employee/Order/Order_list.html" class="dashboard_btn">Orders list</a></td>
+                            </tr>
+                        </table>
+                    </p>
+                    <p class="Menu_main">Banners</p>
+                    <p>
+                        <table class="dashboard_active_button">
+                            <tr>
+                                <td><span class="iconify dashboard_icons_active" data-icon="vaadin:picture" data-inline="false"></span></td>
+                                <td><a href="../../Employee/Banners/banners.html" class="dashboard_btn_active">Manage Banner</a></td>
+                            </tr>
+                        </table>
+                    </p>
+                   
+                </div>
+            </div>
+            <!-----------------------------------------------Body dv starts----------------------------------------------------------->
+
+            <div class="col-md-10 content-wrapper">
+
+                <div class="row">
+                    <div class="col-md-12 content-body">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h4 class="Menu_Title">MANAGE BANNERS</h4>
+                                <div id="validationdiv" class="validation_message"></div>
+                            </div>
+                            <div class="col-md-2">
+
+                            </div>
+                        </div>
+
+                        <div class="row ban_img">
+                            <div class="col-md-2">
+                                <a href="../../Employee/Banners/banners.html"><p>Main Banners</p></a>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="../../Employee/Banners/middle_banners.html"><p class="activebanner">Middle Banners</p></a>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="../../Employee/Banners/Bottom_banners.html"><p>Bottom Banners</p></a>
+                            </div>
+                        </div>
+                        <br />
+                        <form id="mainbanner_create" onsubmit="return false" role="form">
+                            <div class="row">
+
+                                <div class="col-md-5">
+                                    <input type="file" id="imgfile" class="image-upload" accept="image/*" required />
+                                    <!--<div class="wrapper">
+                                        <div class="box">
+                                            <div class="js--image-preview"></div>
+                                            <div class="upload-options">
+                                                <label>
+
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="submit" class="btn btn_sm" />
+                                </div>
+
+                            </div>
+                        </form>
+                        <br />
+                        <hr />  <br />
+                        <table id="main_banner" class="table table-responsive-sm table-bordered table-sm" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+    <script src="../Js/Imageupload.js"></script>
+    <script src='bootbox.min.js'></script>
+    <script src="../../Js/Global.js"></script>
+    <script src="../../Js/Employee/middle_banners.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#main_banner').DataTable();
+            $('.dataTables_length').addClass('bs-select');
+        });
+                                                //setTimeout(explode, 2000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+     <title>Perfumes with AI and Super Sale</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png" />
+    <!-- Bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="fonts/KyivTypeSans-Bold2.otf" />
+
+    <link href="Css/dropdown.css" rel="stylesheet" />
+    <link href="Css/StyleSheet.css" rel="stylesheet" />
+    <link href="Css/product-listing.css" rel="stylesheet" />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css' />
+    <link rel='stylesheet' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css' />
+<style>
+    .remove-del {
+        position: absolute !important;
+        /* width: 10% !important; */
+        height: auto !important;
+        top: 1% !important;
+    }
+        .product_box p {
+        font-size: 12px!important;
+    }
+        #recomededImg {   
+        bottom: 8% !important;    
+    }
+
+    .confirm, .cancel,.icon.warning {
+    background-color: #70b4bd !important;
+    }
+
+.icon.warning {
+    color: #70b4bd !important;
+}
+</style>
+
+
+</head>
+
+<body>
+    <!---------------------------- Navbar start------------------------------------>
+    <div id="preloader" style="position: fixed; width: 100%; height: 100%; background: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999;">
+        <div class="progress" style="width: 50%; height: 2px; margin-bottom: 10px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%; background-color: #70b4bd;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="loading-text" style="color: #70b4bd; font-family: 'Poppins', sans-serif;">Loading...</div>
+    </div>
+    <div id="validationdiv" class="validation_message"></div>
+    <div id="dvtopnav"></div>
+    <!-----------------------------------------------Top Navigation Start----------------------------------------------------------->
+    <div class="dvnavcust"></div>
+
+    <!---------------------------- Navbar end------------------------------------>
+    <!--giftVocherModal-->
+    <div class="modal fade" id="giftvocherLogin" role="dialog"></div>
+    <!-- main content -->
+    <!--     <div class="container-fluid">
+            <div class="row py-3">
+                <div class="text-center">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center mb-0 px-0">
+                            <li class="breadcrumb-item"><a class="text-dark" href="home.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><a class="">Wishlist</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div> -->
+    <!--<br /> <br />-->
+    <div class="container-fluid breadCrumbCon" style="background-color: rgb(255, 255, 255);">
+        <!--<hr style="border: 1px solid #d3d3d3 !important;opacity:0.25 !important;" />-->
+        <div class="row">
+            <hr>
+            <div class="text-center">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a class="text-dark" href="home.html">Home</a></li>
+                        <li class="breadcrumb-item active categotyList_breadcrumb" aria-current="page" style="display: none;"><a class="cat_title_breadcrumb"></a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><a class="dv_title">My Wishlist</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <hr class="m-0">
+        </div>
+        <!--<hr style="border: 1px solid #d3d3d3 !important;opacity:0.25 !important;  margin-bottom:0px;" />-->
+    </div>
+    <div class="container-fluid">
+
+        <!--<div class="col-md-3">
+            <div class="Myprofile_Shadowdv">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="icon_dv">
+                                <div class="lbl_icon_circle">
+                                    <span class="iconify lbl_icon" data-icon="bi:person-fill"
+                                          data-inline="false"></span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <h6 class="Hello_txt">Hello<span class="Hello_txt_big"></span> !</h6>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="Myprofile_Dashboard_dv">
+                <p class="Myprofile_P">
+                    <table>
+                        <tr>
+                            <td>
+                                <span class="iconify Myprofile_icon_active" data-icon="bi:person"
+                                      data-inline="false"></span>
+                            </td>
+                            <td><a href="Myprofile.html" class="Myprofile_Btn_active">Personal Info</a></td>
+                        </tr>
+                    </table>
+                </p>
+                <hr />
+                <p class="Myprofile_P">
+                    <table>
+                        <tr>
+                            <td><span class="iconify Myprofile_icon" data-icon="bi:card-list" data-inline="false"></span></td>
+                            <td><a href="MySubscription.html" class="Myprofile_Btn">My Subscriptions</a></td>
+                        </tr>
+                    </table>
+                </p>
+                <hr />
+
+                <p class="Myprofile_P">
+                    <table>
+                        <tr>
+                            <td><span class="iconify Myprofile_icon" data-icon="bi:cart-check" data-inline="false"></span></td>
+                            <td><a href="Order.html" class="Myprofile_Btn">My Orders / Returns</a></td>
+                        </tr>
+                    </table>
+                </p>
+                <hr />
+                <p class="Myprofile_P">
+                    <table>
+                        <tr>
+                            <td><span class="iconify Myprofile_icon" data-icon="bi:heart" data-inline="false"></span></td>
+                            <td><a href="wishlist.html" class="Myprofile_Btn">My Wish List</a></td>
+                        </tr>
+                    </table>
+                </p>
+                <hr />
+                <p class="Myprofile_P">
+                    <table>
+                        <tr>
+                            <td>
+                                <span class="iconify Myprofile_icon" data-icon="bi:lightning"
+                                      data-inline="false"></span>
+                            </td>
+                            <td><a href="refilprogram.html" class="Myprofile_Btn">Refill Program </a></td>
+                        </tr>
+                    </table>
+                </p>
+                <hr />
+                <p class="Myprofile_P">
+                    <table>
+                        <tr>
+                            <td><span class="iconify Myprofile_icon" data-icon="bi:gift" data-inline="false"></span></td>
+                            <td><a href="MyGiftVoucher.html" class="Myprofile_Btn"> My Gift Cards</a></td>
+                        </tr>
+                    </table>
+                </p>
+                <hr />
+                <p class="Myprofile_P">
+                    <table>
+                        <tr>
+                            <td><span class="iconify Myprofile_icon" data-icon="bi:box" data-inline="false"></span></td>
+                            <td><a href="MyProductReviews.html" class="Myprofile_Btn">My Product Reviews</a></td>
+                        </tr>
+                    </table>
+                </p>
+                <hr />
+                <p class="Myprofile_P">
+                    <table>
+                        <tr>
+                            <td>
+                                <span class="iconify Myprofile_icon" data-icon="cil:location-pin"
+                                      data-inline="false"></span>
+                            </td>
+                            <td><a href="Address.html" class="Myprofile_Btn">Address</a></td>
+                        </tr>
+                    </table>
+                </p>
+                <hr />
+                <p class="Myprofile_P">
+                    <table>
+                        <tr>
+                            <td>
+                                <span class="iconify Myprofile_icon" data-icon="codicon:lock"
+                                      data-inline="false"></span>
+                            </td>
+                            <td><a href="Resetpassword.html" class="Myprofile_Btn">Change Password</a></td>
+                        </tr>
+                    </table>
+                </p>
+                <hr />-->
+        <!--<p class="Myprofile_P">
+            <table>
+                <tr>
+                    <td><span class="iconify Myprofile_icon" data-icon="bi:person" data-inline="false"></span></td>
+                    <td><a href="ReturnItems.html" class="Myprofile_Btn">Return Items</a></td>
+                </tr>
+            </table>
+        </p>
+        <hr />-->
+        <!--<p class="Myprofile_P">
+                    <table>
+                        <tr>
+                            <td>
+                                <span class="iconify Myprofile_icon" data-icon="ri:logout-circle-line"
+                                      data-inline="false"></span>
+                            </td>
+                            <td><a class="Myprofile_Btn cust_logout">Logout</a></td>
+                        </tr>
+                    </table>
+                </p>
+                <hr />
+
+            </div>
+        </div>-->
+        <!--<div class="container-fluid">
+            <hr style="border: 1px solid #d3d3d3 !important;">
+            <div class="row">
+                <div class="text-center">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center mb-0 px-0">
+                            <li class="breadcrumb-item"><a class="text-dark" href="home.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"> Wishlist</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <hr style="border: 1px solid #d3d3d3 !important; ">
+        </div>-->
+        <!--<div class="m-5 mt-4" style="border:12px solid #70b4bd;">-->   
+        <div class="m-sm-0 m-md-5 mt-md-4 ">
+            <h2 class="text-center" style="margin:2%">
+                My Wishlist
+            </h2>
+            <p style="text-align:center">
+                <!--<strong>
+                    A curated collection of everything you adore, ready for you when the moment is right.
+                </strong>-->A curated collection of everything you adore, ready for you when the moment is right.
+
+            </p>
+            <div class="row " id="productdvs" style="margin:2%;margin-top:0% !important"></div>
+            <div class="row" id="noproductss"></div>
+        </div>
+        <div id="noproducts" style="width: 100%; text-align: center"></div>
+        <br />
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+    <!-----------------------------------------------Footer Start----------------------------------------------------------->
+    <footer id="footer"></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+    <script src="Js/Global.js"></script>
+    <script src="Js/Navbar.js"></script>
+    <script src="Js/customer_Login.js"></script>
+    <script src="Js/wishlist.js"></script>
+
+    <script src="Js/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js"></script>
+    <!--<script src="../Js/Productview.js"></script>-->
+</body>
+</html>

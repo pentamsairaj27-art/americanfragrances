@@ -1,0 +1,859 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Perfumes with AI and Super Sale</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="Images/favicon.png" />
+
+    <!-- Bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"><!-- theme stylesheet-->
+    <link href="Css/StyleSheet.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/product.css" id="theme-stylesheet">
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- owl carousel cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+          integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+          integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+          crossorigin="anonymous" />
+    <style>
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            filter: brightness(0) saturate(100%) invert(85%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) !important;
+        }
+/*
+        hr {
+            border: 1px solid #d3d3d3;
+        }*/
+
+       hr {
+            border-top: none!important;
+            border: 1px solid #d3d3d3 !important;
+            opacity: 0.25 !important;
+        }
+
+        #recomededImgProduct {
+            width: 55% !important;
+        }
+
+        #recomededImg {
+            position: absolute !important;
+            width: 10% !important;
+            height: auto !important;
+            bottom: 9% !important;
+            right: 14% !important;
+        }
+
+        h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+            font-weight: 500;
+        }
+
+        .barcodeHeight .progress-bar {
+            height: 22px;
+        }
+
+        .selectSize, #highestValueLabel {
+            font-family: 'Sofia Pro Regular Az' !important;
+        }
+
+        @media only screen and (min-width:1500px) {
+            .recomededImgConProduct {
+                text-align: end;
+            }
+        }
+
+        .barcode .progress-bar {
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .zoomedImageDiv {
+            border: 5px solid black;
+            background: white;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the image */
+            display: none; /* Hide initially */
+            z-index: 10; /* Ensure it overlays other content */
+        }
+
+        #zoom-container {
+            text-align: center !important;
+            width: 100%; /* Adjust container width as needed */
+            overflow: hidden; /* Prevent the image from overflowing */
+            position: relative;
+        }
+
+        #zoom-image {
+            width: 100%; /* Make the image responsive */
+            transition: transform 0.5s ease;
+            text-align: center;
+            transform-origin: center; /* Keep zoom within the center of the image */
+        }
+
+            #zoom-image:hover {
+                transform: scale(1.1); /* Zoom level */
+            }
+
+        #zoom-container:hover {
+            width: 100%;
+            text-align: center !important;
+        }
+
+        @media only screen and (min-width: 1000px) and (max-width: 1500px) {
+            #brandsBanner {
+                height: 45vh !important;
+            }
+        }
+
+        @media only screen and (min-width: 1500px) and (max-width: 2000px) {
+            #brandsBanner {
+                height: 40vh !important;
+            }
+        }
+
+        @media only screen and (min-width:2000px)and (max-width: 2500px) {
+            #brandsBanner {
+                height: 35vh !important;
+            }
+        }
+
+        @media only screen and (min-width:2500px) {
+            #brandsBanner {
+                height: 30vh !important;
+            }
+        }
+
+        .productview-heading {
+            display: flex;
+            justify-content: center;
+            background-color: #70b4bd !important;
+            border-radius: 24px !important;
+            padding: 8px 16px !important;
+            font-family: Chiller !important;
+            font-weight: bold;
+            /*font-size:26px;*/
+            width: 100%
+        }
+
+        .btn1:hover {
+            color: #fff !important;
+            background: #70b4bd !important;
+        }
+
+        #reviews_carousel .item {
+            min-height: 200px !important;
+            max-height: 200px !important;
+            overflow-y: scroll !important;
+        }
+        .card-body canvas{
+            height:300px!important
+        }
+       
+        #longlast {
+            height: 155px !important;
+            width: auto !important;
+        }
+        #age {
+            width: auto !important;
+            height: 151px !important;
+        }
+        /*     #reviews_carousel .item {
+            margin-right: 30px !important;
+        }*/
+        @media (max-width: 767px) {
+            .barcode .progress-bar {
+                font-size: 6px;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader" style="position: fixed; width: 100%; height: 100%; background: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999;">
+        <div class="progress" style="width: 50%; height: 2px; margin-bottom: 10px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%; background-color: #70b4bd;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="loading-text" style="color: #70b4bd; font-family: 'Poppins', sans-serif;">Loading...</div>
+    </div>
+    <div id="dvtopnav"></div>
+    <!-----------------------------------------------Top Navigation Start----------------------------------------------------------->
+    <div class="dvnavcust"></div>
+    <!-----------------------------------------------Top Navigation End----------------------------------------------------------->
+
+    <div class="modal fade" id="giftvocherLogin" role="dialog"></div>
+    <!--<div class="container-fluid d-flex flex-column align-items-center justify-content-center" id="brandsBanner" style="background-image: url('Images/showall/productPageBanner.png'); background-size: 100%; background-position: center; background-repeat: no-repeat;">
+         <h2 class="text-center" style="font-family: Chiller !important;font-weight:bold">
+             Great Choice!… Explore The Barcode & Dynamic Charts Below To Find This Product’s Unique Character…
+         </h2>
+     </div>-->
+    <!--<div class="mt-2 container-fluid d-flex flex-column align-items-center justify-content-center">
+        <h2 class="text-center" style="font-family: Chiller !important;font-weight:bold">
+            Great Choice!… Explore The Barcode & Dynamic Charts Below To Find This Product’s Unique Character…
+        </h2>
+    </div>-->
+    <!--<div class="text-center"><img src="images/showall/decarative1.png" style="width:36%"></div>-->
+    <!--<div class="">
+        <hr style="border: 1px solid #d3d3d3 !important; " />
+        <div class="d-flex justify-content-center">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                </ol>
+            </nav>
+        </div>
+        <hr style="border: 1px solid #d3d3d3 !important; " />
+    </div>-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <hr />
+            <div class="d-flex justify-content-center">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                    </ol>
+                </nav>
+            </div>
+            <hr class="m-0" />
+        </div>
+    </div>
+
+    <div class="container p-0">
+        <div class="row py-2" id="ProductBanner">
+            <img src="" id="ProductBannerImg" style="width:100%;height:auto;" />
+        </div>
+
+        <!--         <h4 class="productview-heading">
+                    Great Choice! Explore The Barcode & Dynamic Charts Below To Find This Product’s Unique Character
+                </h4> -->
+    </div>
+
+    <div class="container px-0 pt-5" style="width:96%!important;">
+        <div class="row" id="productview"></div>
+        <div class="row productViewBelowCon"></div>
+    </div>
+    <div class="container user_analytics mt-4 mb-5">
+
+        <div class="row align-items-center">
+            <div class=" col-md-12 mb-20">
+                <h3 class="text-center" style="color: #fff !important;text-transform:capitalize!important">Discover The User Insights Behind This Barcode  </h3>
+                <div class="card card-header d-flex justify-content-center align-items-center">
+                    <h4></h4>
+                </div>
+                <div class="card card-body pt-3 detailtext">
+                </div>
+            </div>
+
+        </div>
+        <div class="row ">
+            <div class="col-md-12 col-lg-6 column column1">
+                <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-center align-items-center">
+                        <h4>Scent Style</h4>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <canvas id="style"></canvas>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6  column column3 ">
+                <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-center align-items-center">
+                        <h4>Key Note</h4>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <canvas id="flavor"></canvas>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-6 ">
+                <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-center align-items-center">
+                        <h4>Conveyed Mood</h4>
+                    </div>
+                    <div class="card-body mb-3" style="height: 312px;">
+                        <div>
+                            <canvas id="mood"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-lg-6 ">
+                <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-center align-items-center">
+                        <h4>Season</h4>
+                    </div>
+                    <div class="card-body mb-3" style="height: 312px;">
+                        <div>
+                            <canvas id="season"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row ">
+            <div class="col-md-12 col-lg-4  column">
+                <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-center align-items-center">
+                        <h4>Occasion</h4>
+
+                    </div>
+                    <div class="card-body " style="height: 355px;">
+                        <!--<p class="mb-10">Mostly</p>
+                        <p class="card-heading" id="StylehighestLabelElement">Vintage</p>
+                        <hr>-->
+                        <div id="Occasion">
+                            <canvas id="occ_chart" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-4  column">
+                <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-center align-items-center">
+                        <h4>Age Group</h4>
+
+                    </div>
+                    <div class="card-body d-flex flex-row align-items-center justify-content-center" style="height: 355px;">
+                        <div>
+                            <div>
+                                <canvas id="age" height="200"></canvas>
+                            </div>
+
+                            <div class="row" id="agedata"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-lg-4  column">
+                <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-center align-items-center">
+                        <!--<h4>Smell Strength</h4>-->
+                        <h4>Fragrance Strength</h4>
+                    </div>
+                    <div class="card-body" style="height: 355px;">
+                        <div>
+                            <canvas id="smell" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-4  column ">
+                <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-center align-items-center">
+                        <!--<h4>Long Lasting</h4>-->
+                        <h4>Scent Life</h4>
+
+                    </div>
+                    <div class="card-body d-flex flex-row align-items-center justify-content-center" style="height: 355px;">
+                        <div>
+                            <div>
+                                <canvas id="longlast" height="200"></canvas>
+                            </div>
+                            <div class="row" id="timedata" height="200">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-4  column column1">
+                <div class="card mb-4">
+
+                    <div class="card-header d-flex justify-content-center align-items-center">
+                        <h4>Best Time to Wear </h4>
+
+                    </div>
+                    <div class="card-body " style="height: 355px;">
+                        <div>
+                            <canvas id="time" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-4 column ">
+                <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-center align-items-center">
+                        <h4>Bottle Design</h4>
+                    </div>
+                    <div class="card-body d-flex d-flex flex-row align-items-center justify-content-center" style="height: 355px;">
+                        <div>
+                            <div class="d-flex justify-content-center">
+                                <canvas id="shape"></canvas>
+                            </div>
+                            <div class="row" id="shapeData">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of user analytics -->
+    <div class="container-fluid pb-5" id="reviews">
+        <div class="container">
+            <h3 class="text-center mb-3" style="text-transform:capitalize">
+                Customer Reviews on this Product
+            </h3>
+            <div id="noReviewsDiv">
+            </div>
+            <div class="owl-carousel owl-theme" id="reviews_carousel">
+            </div>
+        </div>
+    </div>
+    <!-- Related Products -->
+    <div class="container px-0 mb-5">
+        <!--<h3 class="mb-4 text-center">Products With Similar AmeriFrag Barcode</h3>-->
+        <h3 class="mb-2 text-center" id="headingbasedonsubcat" style="text-transform:capitalize"></h3>
+
+        <div class="row">
+            <div id="productCuroselNoProductsDiv">
+            </div>
+            <div class="owl-carousel owl-theme" id="product_carosel">
+            </div>
+
+        </div>
+    </div>
+    <div class="container px-0 mb-5">
+        <h3 class="mb-2 text-center" style="text-transform:capitalize">Products From The Same Brand </h3>
+        <div class="row">
+            <div id="brandProductCuroselNoProductsDiv">
+            </div>
+            <div class="owl-carousel owl-theme" id="brand_product_carosel">
+            </div>
+
+        </div>
+    </div>
+    <!-- End of Related Products -->
+    <div class="modal fade" id="ozmlpopup" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-SM">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-block m-auto">
+                        <h4 class="modal-heading m-0 text-center">
+                            SIZE CONVERTER
+                        </h4>
+                    </div>
+                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body py-2">
+                    <div class="row p-3 align-items-baseline">
+                        <div class="col-md-12">
+                            <div class="d-flex justify-content-between">
+                                <div><p>OZ</p></div>
+                                <div><p>ML</p></div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div><p>1.0 oz</p></div>
+                                <div><p>30 ml</p></div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div><p>1.7 oz</p></div>
+                                <div><p>50 ml</p></div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div><p>2.5 oz</p></div>
+                                <div><p>75 ml</p></div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div><p>3.4 oz</p></div>
+                                <div><p>100 ml</p></div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div><p>4.2 oz</p></div>
+                                <div><p>125 ml</p></div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div><p>6.7 oz</p></div>
+                                <div><p>200 ml</p></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Reviews popup-->
+    <div class="modal" id="reviewpopup" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-SM">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-block m-auto">
+                        <h4 class="modal-heading m-0 text-center">
+                            Submit Your Review
+                        </h4>
+                    </div>
+                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body py-2">
+                    <div class="row p-3 align-items-baseline">
+                        <form id="review" onsubmit="return false">
+                            <div id="logindateerror" class="logindateerror_message"></div>
+                            <div class="text-center">
+                                <div id="validationdiv" class="validation_message"></div>
+                            </div>
+                            <!--<label class="form-label" for="name">Name </label>
+                            <input class="form-control " type="text" id="username" required>-->
+
+                            <label class="form-label mt-10" for="reviewtxt">Review </label>
+
+                            <textarea class="form-control mb-20" type="textarea" id="reviewtxt"></textarea>
+                            <label class="form-label mt-10" for="reviewtxt">Review </label>
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" required="" class="custom-control-input" id="service1" name="experience" value="1">
+                                        <label class="custom-control-label" for="service1">
+                                            <span class="fa fa-star checked"></span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" required="" class="custom-control-input" id="service2" name="experience" value="2">
+                                        <label class="custom-control-label" for="service2">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" required="" class="custom-control-input" id="service3" name="experience" value="3">
+                                        <label class="custom-control-label" for="service3">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" required="" class="custom-control-input" id="service4" name="experience" value="4">
+                                        <label class="custom-control-label" for="service4">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" required="" class="custom-control-input" id="service5" name="experience" value="5">
+                                        <label class="custom-control-label" for="service5">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="form-group">
+                                    <button class="btn btn-dark cust_login" type="submit">Submit</button>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------------Analyize popup---------------------------------------->
+    <div class="modal fade" id="analyizepopup" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-block m-auto">
+                        <h4 class="modal-heading m-0 text-center">
+                            What is The AmeriFrag Barcode?
+                        </h4>
+                    </div>
+                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-3">
+                    <div class="row  align-items-baseline">
+                        <p class="" style="font-weight:bold">
+                            The AmeriFrag Barcode is a revolutionary, real-time digital fingerprint that captures your unique scent preferences, matching you with the perfect fragrances through advanced user analytics.
+                        </p>
+
+                    </div>
+                    <div class="row">
+                        <h4 class="modal-heading text-center">
+                            Personal Barcode
+                        </h4>
+                        <div style="width:100%;">
+                            <div class="progress mb-2 p-0 text-justify" style="padding-left:10px; padding-right:10px;"><div class="progress-bar bg-ten" role="progressbar" style="width:10%" title="Personality">Personality</div><div class="progress-bar bg-fourty" role="progressbar" style="width:10%" title="Zodiac">Zodiac</div><div class="progress-bar bg-thirty" role="progressbar" style="width:10%" title="Strength">Strength</div><div class="progress-bar bg-fifty" role="progressbar" style="width:10%" title="Passion">Passion</div><div class="progress-bar bg-twenty" role="progressbar" style="width:10%" title="Entertainment">Entertainment</div><div class="progress-bar bg-ninety" role="progressbar" style="width:10%" title="Style">Style</div><div class="progress-bar bg-sixty" role="progressbar" style="width:10%" title="Color">Color</div><div class="progress-bar bg-seventy" role="progressbar" style="width:10%" title="Smell">Smell</div><div class="progress-bar bg-eighty" role="progressbar" style="width:10%" title="Mood">Mood</div><div class="progress-bar bg-hundered" role="progressbar" style="width:10%" title="Season">Season</div></div>
+                        </div>
+                        <p style="color:black; font-size:14px;">
+                            <strong> Personal Barcode:</strong> When you complete our registration questionnaire, your scent preferences are instantly transformed into a Personal Barcode—a unique digital scent profile tailored just for you. You’ll be matched with other users who share similar preferences, and their favorite products will appear on your profile, giving you immediate access to new fragrances that perfectly align with your tastes.
+                        </p>
+                    </div>
+                    <div class="row ">
+                        <h4 class="modal-heading text-center">
+                            Product Barcode
+                        </h4>
+                        <div class="progress mb-2 p-0"><div class="progress-bar bg-ten" role="progressbar" style="width:10%">Style</div><div class="progress-bar bg-fourty" role="progressbar" style="width:10%">Note</div><div class="progress-bar bg-thirty" role="progressbar" style="width:10%">Mood</div><div class="progress-bar bg-fifty" role="progressbar" style="width:10%">Season</div><div class="progress-bar bg-twenty" role="progressbar" style="width:10%">Occasion</div><div class="progress-bar bg-ninety" role="progressbar" style="width:10%">Age Group </div> <div class="progress-bar bg-sixty" role="progressbar" style="width:10%">Smell Intensity</div>  <div class="progress-bar bg-seventy" role="progressbar" style="width:10%">Longevity</div><div class="progress-bar bg-eighty" role="progressbar" style="width:10%">Spray Time</div><div class="progress-bar bg-hundered" role="progressbar" style="width:10%">Presentation</div></div>
+                        <p style="color:black; font-size:14px; text-align:justify">
+                            Each fragrance has its own <strong>Product Barcode—</strong>a dynamic digital signature that evolves in real-time based on global user feedback. This barcode reflects the most-loved aspects of each fragrance, from its notes to its mood, offering you an interactive, up-to-date interpretation of the scent. As global preferences shift, so does the barcode, ensuring a fresh and relevant way to explore each fragrance’s personality.
+
+                        </p>
+                        <h4 class="modal-heading text-center" style="margin-bottom:0px;">How They Work Together </h4>
+                        <div class="text-center"><img src="images/showall/decarative1.png" style="width:36% !important" /></div>
+                        <p class="text-justify;" style="font-weight:bold;"> Your Personal Barcode seamlessly interacts with the Product Barcodes, matching you with fragrances that are tailored to your digital scent profile. This seamless connection creates an <strong>immersive, interactive experience</strong>where you can digitally "smell" and discover scents that match your style and preferences, all within a digital world of aromas.</p>
+                        <!--  <p style="font-weight:bold">With <strong>Amerifrag’s innovative barcode system,</strong>he art of scent has gone digital—allowing you to explore, discover, and indulge in fragrances like never before. Welcome to a world where your senses meet technology!</p>
+                        -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="disclaimer" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-block m-auto">
+                        <h4 class="modal-heading m-0 text-center">
+                            AmeriFrag’s AI Technology Disclaimer
+                        </h4>
+                    </div>
+                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-3">
+                    <!--<div class="row  align-items-baseline">
+                        <p class="" style="font-weight:bold">
+                            The pros and cons listed on this page have been generated using the artificial intelligence system, which analyzes product reviews submitted by our members. While we strive to provide accurate and helpful information, we cannot guarantee the complete accuracy or reliability of the AI-generated pros and cons. Please read the full reviews and consider your own needs and preferences before making a purchasing decision. This is just for giving additional information that can be helpful for better online shopping experience and support…
+                        </p>
+
+                    </div>-->
+                    <div class="row">
+                        <!--<h4 class="modal-heading text-center">
+                            Personal Barcode
+                        </h4>-->
+
+                        <p style="color:black; font-size:14px;text-align:justify !important">
+                            <strong> Last Updated: [02/14/2025]</strong>
+                            <br />
+                            <br />
+                            At<strong>  American Fragrances</strong> , we use advanced AI-powered technology to enhance your shopping experience by providing personalized fragrance recommendations, product insights, and user-generated pros and cons. While our AI system analyzes real customer reviews and data to deliver helpful guidance, it is important to understand the following:
+                            <br />
+                            <strong> 1. AI-Generated Information</strong>
+                            The pros, cons, and recommendations displayed on our website are generated by Computer based AI system that analyzes customer reviews, product characteristics, and user preferences from open source and public domains. While we strive for accuracy, these insights should not be considered absolute or definitive. We encourage users to read full product descriptions and reviews and to consider their own preferences and needs before making a purchasing decision.
+                            <br />
+                            <strong>  2. Limitation of Liability</strong>  <br />
+                            AmeriFrag is not responsible for any direct, incidental, consequential, or punitive damages that may arise from the use of AI-generated recommendations. Users acknowledge that all purchasing decisions are made at their own discretion, Knowledge and AmeriFrag shall not be held liable for any dissatisfaction, product performance issues, or other outcomes related to AI-driven suggestions.
+                            <br />
+                            <strong>  3. Use of Third-Party Technology</strong>  <br />
+                            Our website incorporates third-party AI and machine-learning technologies and other data-driven services. While we work with trusted providers, AmeriFrag does not guarantee the performance, accuracy, or reliability of these third-party technologies.
+                            <br />
+                            <strong>  4. User Responsibility</strong>  <br />
+                            Users acknowledge that they interact with AI-generated recommendations, insights, and personalization features at their own risk. While AI is designed to assist in decision-making, it does not replace individual judgment or personal experience. AmeriFrag does not warrant the completeness, accuracy, or usefulness of any AI-generated content.
+                            <br />
+                            <strong> 5. Intellectual Property & Data Protection</strong>  <br />
+                            All content, technology, and proprietary AI algorithms used on this website are protected by intellectual property laws. Users agree not to reproduce, modify, distribute, or exploit any AI-generated content without explicit permission from AmeriFrag.
+                            <br />
+                            <strong> 6. Governing Law & Dispute Resolution</strong>  <br />
+                            This disclaimer shall be governed by and construed in accordance with California state laws. Any disputes arising from AI-related content, recommendations, or its application on the website shall be resolved through Contra Costa County jurisdiction in California state, as determined by AmeriFrag.
+                            <br />
+                            <strong>7. Changes to This Disclaimer</strong>  <br />
+                            AmeriFrag Owns and reserves the right to modify, update, or remove this disclaimer at any time without prior notice. We recommend users periodically review this page for updates regarding AI-generated content and its usage which may vary based on day-to-day statistics and perceptions from the open-source information from the public domains.
+                            <br />
+                            <strong>8. Acceptance of Terms</strong>  <br />
+                            By using AmeriFrag’s AI-powered recommendations and website features, you acknowledge that you have read, understood, and agreed to this disclaimer. If you do not agree, please refrain from relying on AI-generated insights when making purchasing decisions.
+                            For inquiries or concerns, please contact us at Support@Americanfragrances.com.
+
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------stock popup---------------------------------------->
+    <div class="modal" id="stockPopup" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-SM">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-block m-auto">
+                        <h4 class="modal-heading m-0 text-center">
+                            Enter Below Details
+                        </h4>
+                    </div>
+                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body py-2">
+                    <div class="row p-3 align-items-baseline">
+                        <form id="stockForm" onsubmit="return false">
+                            <div id="logindateerror2" class="logindateerror_message"></div>
+                            <div class="text-center">
+                                <div id="validationdiv2" class="validation_message"></div>
+                            </div>
+                            <input type="hidden" id="productNamestock" name="productName" class="form-control" required>
+                            <!--<input type="hidden" id="productIdStock" name="productId" class="form-control" required>-->
+                            <label for="st-user-email">Email:</label>
+                            <input type="email" id="st-user-email" name="email" class="form-control" required>
+
+                            <label for="st-phoneNumber">Phone:</label>
+                            <input type="tel" id="st-phoneNumber" name="phoneNumber" class="form-control" required>
+                            <div class="">
+                                <div class="form-group">
+                                    <button class="btn btn-dark cust_login" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="loginpopup" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" style="border: 10px solid black; padding-bottom: 10px">
+                <div class="modal-header">
+                    <div class="d-block m-auto">
+                        <h4 class="modal-heading m-0 text-center">
+                            <!--Step into a Fragrant Paradise – Log in to Reveal your Unique Aroma!-->
+                            UNLOCK YOUR PERSONAL AROMA WORLD – SIGN UP OR LOG IN <br />
+                            TO BEGIN YOUR FRAGRANCE JOURNEY!
+
+                        </h4>
+                        <!--<p class="m-0 text-center">if you are an existing Customer </p>-->
+                    </div>
+                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                </div>
+
+
+                <div class="modal-body py-1">
+                    <div class="row p-1">
+                        <div class="col-md-5 p-1">
+                            <p class="register-text">
+                                If you are an existing Customer
+                            </p>
+                            <form id="frmlogin1" onsubmit="return false">
+                                <div id="logindateerror" class="logindateerror_message"></div>
+                                <div class="text-center">
+                                    <div id="validationdiv" class="validation_message"></div>
+                                </div>
+                                <label class="form-label" for="email">Email address </label>
+                                <input class="form-control " type="email" id="username1" required>
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <label class="form-label mt-10" for="Lpassword">Password </label>
+                                    </div>
+                                    <div>
+                                        <a href="Forgotpassword.html" class="m-0 pswd" type="button">Forgot password?</a>
+                                    </div>
+                                </div>
+
+                                <input class="form-control mb-20" type="password" id="Lpassword1">
+                                <div class="">
+                                    <div class="form-group text-center">
+                                        <button class="btn  btn-dark cust_login" style="margin: 0px !important; padding: 7px 25px !important;" id="loginBut" type="submit">LOGIN</button>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                            <p class="m-0 p-3 text-center">(Or)</p>
+
+                            <h4 class="customer-head white-text">New Customer?</h4>
+
+                            <p style="font-weight:500;">
+                                <!--Please Sign up and participate in our AI based survey to experience the personalised display to choose the right products that suits your Taste and Persona.-->
+                                Sign up now and let our advanced AI match you with the perfect scents, curated just for your unique preferences. Enjoy exclusive discounts and discover the art of tailored aromas today!
+                            </p>
+                            <div style="text-align:center;">
+                                <a href="register.html" class="btn white-text" id="createAccount" style="margin: 0px !important; padding: 7px 25px !important;" type="button">CREATE ACCOUNT</a>
+
+                            </div>
+                        </div>
+                        <div class="col-md-7 d-flex flex-column justify-content-center">
+
+                            <img class="img-fluid w-100" src="Images/home/supersaleImg.png" />
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------------------------------Footer Start----------------------------------------------------------->
+    <footer id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"></script>
+    <script src="Js/chartjs-plugin-labels.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js"></script>
+    <!-- <script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js" type="text/javascript"></script> -->
+
+    <script src="Js/Navbar.js"></script>
+    <script src="Js/Home.js"></script>
+    <script src="Js/Global.js"></script>
+    <script src="Js/cart_page.js"></script>
+    <script src="Js/customer_Login.js"></script>
+    <script src="Js/Productview.js"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!--<script src="Js/ReviewAndRatings.js"></script>-->
+</body>
+</html>

@@ -659,7 +659,7 @@
                     autoplay: true,
                     autoplayHoverPause: false,
                     responsiveClass: true,
-                    dots: true, // Set globally
+                    dots: false, // Set globally
                     responsive: {
                         0: {
                             items: 1,
@@ -674,7 +674,7 @@
                             items: 1,
                             nav: false,
                             loop: true,
-                            dots: true,
+                            dots: false,
                             margin: 20,
                             autoHeight: true,
                         },

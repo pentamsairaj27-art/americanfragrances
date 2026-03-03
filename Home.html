@@ -14,7 +14,7 @@
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <link href="Css/product-listing.css" rel="stylesheet" />
     <link href="Css/StyleSheet.css" rel="stylesheet" />
-    <link href="Css/index.css" rel="stylesheet" />
+
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <!-- International Telephone Input CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
@@ -22,7 +22,7 @@
     <!-- AOS JS -->
     <link rel="shortcut icon" type="image/png" href="Images/favicon.png" />
     <!-- Bootstrap links -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- owl carousel cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -35,6 +35,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="Css/mobile-responsive.css" rel="stylesheet" />
     <link href="Css/wedjet.css" rel="stylesheet" />
+
+    <!-- Google Fonts: Inter (modern) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /*#brands-carousel .owl-dots {
             display: none !important;
@@ -560,261 +567,6 @@
         })(window, document, 'script', 'dataLayer', 'GTM-P2NR3CD9');</script>
     <!-- End Google Tag Manager -->
     <style>
-           
-        /* ===== CONCISE SALE OFFER — only 2-3 LINES ===== */
-        .sale-offer-compact {
-            background: linear-gradient(115deg, #1b2b3f, #1f3a4b);
-            border-radius: 2rem;
-            margin: 1.5rem 2rem 2rem 2rem;
-            padding: 1.4rem 2.2rem;
-            color: white;
-            box-shadow: 0 20px 35px -5px #00000070, inset 0 1px 3px rgba(255,240,210,0.2);
-            border: 1px solid rgba(255,210,150,0.3);
-            position: relative;
-            overflow: hidden;
-            animation: gentleFloat 3s infinite ease-in-out;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem 2rem;
-        }
-
-            .sale-offer-compact::before {
-                content: '';
-                position: absolute;
-                inset: 0;
-                background: radial-gradient(circle at 0% 30%, rgba(255,230,170,0.15), transparent 60%);
-                pointer-events: none;
-                animation: shineMove 9s infinite;
-            }
-
-        @keyframes shineMove {
-            0% {
-                opacity: 0.2;
-                transform: translateX(-10%);
-            }
-
-            50% {
-                opacity: 0.6;
-                transform: translateX(5%);
-            }
-
-            100% {
-                opacity: 0.2;
-                transform: translateX(-10%);
-            }
-        }
-
-        @keyframes gentleFloat {
-            0% {
-                transform: translateY(0);
-                box-shadow: 0 20px 30px -8px black;
-            }
-
-            50% {
-                transform: translateY(-4px);
-                box-shadow: 0 28px 38px -6px #000000dd, 0 0 0 2px rgba(255,200,150,0.3);
-            }
-
-            100% {
-                transform: translateY(0);
-                box-shadow: 0 20px 30px -8px black;
-            }
-        }
-
-        /* left side: main two lines (save + coupon) */
-        .offer-lines-compact {
-            display: flex;
-            flex-direction: column;
-            gap: 0.3rem;
-            z-index: 2;
-        }
-
-        .line-big-save {
-            position:absolute;
-            top: 90%;
-            left:23%;
-            display: flex;
-            align-items: baseline;
-            gap: 0.4rem 1rem;
-            flex-wrap: wrap;
-        }
-
-        .save-pill {
-            background: #d6341e;
-            padding: 0.3rem 1.4rem 0.3rem 1.6rem;
-            border-radius: 60px;
-            font-weight: 800;
-            font-size: 26px;
-            letter-spacing: 1.5px;
-            box-shadow: 0 5px 0 #792514, 0 10px 20px -5px black;
-            display: inline-block;
-            border: 1px solid #ffae7a;
-            animation: badgePulse 2.2s infinite;
-            line-height: 1.2;
-        }
-
-        @keyframes badgePulse {
-            0% {
-                box-shadow: 0 5px 0 #792514, 0 10px 18px -5px black;
-            }
-
-            50% {
-                box-shadow: 0 5px 0 #a13b20, 0 0 0 4px rgba(255,170,100,0.5), 0 15px 25px -3px black;
-            }
-
-            100% {
-                box-shadow: 0 5px 0 #792514, 0 10px 18px -5px black;
-            }
-        }
-
-        .off-chip {
-            font-size: 1.6rem;
-            font-weight: 300;
-            color: #ffdcc2;
-        }
-
-        .coupon-text {
-            font-size: 1.7rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #ffeac5, #ffd6a0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            display: inline-block;
-            filter: drop-shadow(0 2px 4px black);
-            margin: 0.2rem 0 0.1rem;
-        }
-
-        /* second line: free shipping + instant 5% together (2 in one) */
-        .shipping-instant {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem 1.2rem;
-            flex-wrap: wrap;
-            background: rgba(0,0,0,0.3);
-            border-radius: 50px;
-            padding: 0.5rem 1.2rem 0.5rem 1.2rem;
-            width: fit-content;
-            border: 1px solid #e6c8a6;
-            margin-top: 0.1rem;
-        }
-
-        .free-ship-badge {
-            background: #3d6a5e;
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 1.2rem;
-            border: 1px solid #b5dfd0;
-            box-shadow: inset 0 -2px 0 #1e4036;
-            animation: softBlink 3s infinite;
-        }
-
-        @keyframes softBlink {
-            0% {
-                border-color: #b5dfd0;
-            }
-
-            50% {
-                border-color: #fcd4a8;
-                box-shadow: 0 0 8px #ffd98c;
-            }
-
-            100% {
-                border-color: #b5dfd0;
-            }
-        }
-
-        .instant-chip {
-            background: #eeba2c;
-            color: #1b2a32;
-            font-weight: 800;
-            font-size: 1.2rem;
-            padding: 0.2rem 1rem;
-            border-radius: 40px;
-            box-shadow: 0 0 0 1.5px #1f3f48;
-            animation: flickerChip 2s infinite;
-            white-space: nowrap;
-        }
-
-        @keyframes flickerChip {
-            0% {
-                background: #eeba2c;
-            }
-
-            50% {
-                background: #ffd966;
-                box-shadow: 0 0 0 2px #ffe3a5;
-            }
-
-            100% {
-                background: #eeba2c;
-            }
-        }
-
-        /* right side: third concise element (extra discount + questionnaire) */
-        .extra-line {
-            background: rgba(0, 0, 0, 0.35);
-            backdrop-filter: blur(4px);
-            border-radius: 3rem;
-            padding: 0.6rem 1.4rem;
-            border: 1px dashed #ffcf9a;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            font-size: 1rem;
-            max-width: 310px;
-            box-shadow: 0 5px 12px #00000050;
-            animation: borderGlow 2.8s infinite;
-            z-index: 3;
-        }
-
-        @keyframes borderGlow {
-            0% {
-                border-color: #ffcf9a;
-            }
-
-            50% {
-                border-color: #ffeab3;
-                box-shadow: 0 0 15px #ffcf9a;
-            }
-
-            100% {
-                border-color: #ffcf9a;
-            }
-        }
-
-        .extra-line span:first-child {
-            font-weight: 800;
-            font-size: 1.3rem;
-            background: #1b4b5e;
-            padding: 0.2rem 1rem;
-            border-radius: 30px;
-            color: #ffeac2;
-        }
-
-        .extra-line .question-tag {
-            color: #fde6c0;
-            line-height: 1.3;
-        }
-
-            .extra-line .question-tag strong {
-                color: #ffcd94;
-            }
-
-        /* responsive */
-        @media (max-width: 750px) {
-            .video-caption h2 {
-                font-size: 2.3rem;
-            }
-
-            .sale-offer-compact {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
     </style>
 </head>
 <body>
@@ -830,7 +582,7 @@
     <div class="sticky-container">
         <div class="button-container">
             <!--<a href="#" data-bs-target="#choosetype" data-bs-toggle="modal" data-bs-dismiss="modal">-->
-            <img src="Images/help you.png" class="img-fluid" />
+            <!--<img src="Images/help you.png" class="img-fluid" />-->
             <!--</a>-->
         </div>
     </div>
@@ -838,79 +590,67 @@
     <div class="modal fade" id="giftvocherLogin" role="dialog"></div>
     <!-------------------------                                                                                                                                    ----------------------Carousel Slider Start ----------------------------------------------------------->
     <div id="validationdiv" class="validation_message"></div>
-
-
-    <!--<div id="demo" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" id="main_banners"></div>
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-    </div>-->
-    <!-- Modal -->
-    <!-----------------------------------------------Carousel Slider  End----------------------------------------------------------->
-    <!--3d curosel Section -->
-    <!--<div class="container-fluid homeBanTopSection">
-        <div class="row">
-            <div id="unified-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="6000" style="background:transparent;padding:0px !important;">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#unified-carousel" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#unified-carousel" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#unified-carousel" data-bs-slide-to="2"></button>
-                </div>
-
-                <div class="carousel-inner d-flex" id="unified_banners">-->
-    <!-- Carousel items will be added dynamically here -->
-    <!--</div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#unified-carousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#unified-carousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+    <!-- ===== HERO CAROUSEL (offers as slides) ===== -->
+    <div class="hero-carousel-wrapper">
+        <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-        </div>
-
-    </div>-->
-    <!--<div class="container-fluid pb-4" style="background-color:#70b4bd;">-->
-    <!--<p class="banner-text text-center pb-3">Get Personalized <span class="banner-bold-text">AI Recommendations</span> Based on Your<span class="banner-bold-text"> Profile</span> and Unique<span class="banner-bold-text"> Barcode</span></p>-->
-    <!--</div>-->
-    <div class="video-banner">
-        <video autoplay muted loop playsinline>
-            <source src="Images/coverr-woman-sprays-perfume-whilst-dancing-5862-1080p.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="video-caption">
-            <h2>Shop Perfumes Using <span>AI</span></h2>
-            <p>Indulge in Fragrances Curated Just For You With Your</p>
-            <p>Unique AmeriFrag Barcode</p>
-            <button class="signature-scents-btn" id="revealSignatureScents">
-                Reveal My Signature Scents
+            <div class="carousel-inner">
+                <!-- slide 1: main AI + 70% offer -->
+                <div class="carousel-item active slide-1">
+                    <div class="hero-slide-caption">
+                        <span class="offer-badge"><i class="fa-regular fa-star"></i> UP TO 70% OFF</span>
+                        <h2>Shop Perfumes Using <span>AI</span></h2>
+                        <p>Indulge in Fragrances Curated Just For You With Your Unique AmeriFrag Barcode</p>
+                        <button class="btn-gradient" onclick="alert('✨ AI signature scents demo')"><i class="fa-regular fa-sparkles"></i> Reveal My Signature Scents</button>
+                        <p class="highlights" style="color:#d4ecff; margin-top:1rem;">🔹 PatentedAI Technology 🔹</p>
+                    </div>
+                </div>
+                <!-- slide 2: 2+1 gift offer -->
+                <div class="carousel-item slide-2">
+                    <div class="hero-slide-caption">
+                        <span class="offer-badge" style="background:#20665a; box-shadow:0 6px 0 #15463e;"><i class="fa-regular fa-gift"></i> 2+1 GIFT</span>
+                        <h2>Luxury <span>Minis</span> Deluxe</h2>
+                        <p>Buy any 2 full-size perfumes, get a deluxe miniature free + free shipping</p>
+                        <button class="btn-gradient" onclick="alert('✨ 2+1 offer applied at checkout')">Shop Now</button>
+                    </div>
+                </div>
+                <!-- slide 3: extra 15% AI quiz -->
+                <div class="carousel-item slide-3">
+                    <div class="hero-slide-caption">
+                        <span class="offer-badge" style="background:#b45f3a; box-shadow:0 6px 0 #733e25;"><i class="fa-regular fa-robot"></i> EXTRA 15%</span>
+                        <h2>AI <span>Quiz</span> Reward</h2>
+                        <p>Take the 60‑second fragrance quiz & unlock an exclusive discount</p>
+                        <button class="btn-gradient" onclick="alert('✨ AI quiz would start now')">Start AI Quiz</button>
+                    </div>
+                </div>
+            </div>
+            <!-- controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
-            <p class="highlights">Powered by PatentedAI Technology</p>
-
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <!-- ===== COMPACT SALE OFFER — now only 2–3 concise lines ===== -->
-        <div class="line-big-save">
-            <span class="save-pill">Flash SALE: Up to 70% OFF ! Limited Time Offer !​</span>
-
-        </div>
-        <!-- end of concise offer -->
-
-        <div style="padding: 0.5rem 2rem 2rem 2rem; color: #5b4f47; font-weight: 300; text-align: right; opacity: 0.8;">
-            ✨ AI‑powered personalization
+        <!-- ai watermark -->
+        <div class="ai-watermark">
+            <i class="fa-regular fa-robot"></i> AI personalized
         </div>
     </div>
+
 
     <div class="d-none container-fluid pt-4 pb-3" style="background-color: #EBEBEB;">
         <h3 class="headingColor pb-2 text-center">
             Experience A Revolutionary Fragrances Platform With The Right Questions & Philosophy
         </h3>
 
-        <div class="row d-flex flex-row justify-content-center flex-wrap">
+        <div class="d-flex flex-row justify-content-center flex-wrap">
             <div class="image-card">
                 <div>
                     <img class="img-fluid" src="images/home/digitalsmelling/who-i-am-i.png" />
@@ -998,7 +738,7 @@
                 Experience A Revolutionary Fragrances Platform With The Right Questions & Philosophy
             </h3>
 
-            <div class="row  d-flex flex-row justify-content-center flex-wrap">
+            <div class="d-flex flex-row justify-content-center flex-wrap">
                 <div class="image-card">
                     <div>
                         <img class="img-fluid" src="images/home/digitalsmelling/who-i-am-i.png" />
@@ -1158,16 +898,25 @@
         </div>
 
         <!--------------------------------Brand Section ----------------------------------->
-        <div data-aos="fade-right" class="mb-4 premium-brands-section" style="background-color: #EBEBEB;">
-            <div class="container py-4">
-                <div class="row">
-                    <h3 class="headingColor" style="text-align:center;">
-                        Shop Premium Brands
-                    </h3>
-                    <p class="headings-below-bold-text text-center">Indulge in Iconic Scents from the World's Most Desired Luxury Brands​</p>
+        <div class="">
+            <h3 class="headingColor" style="text-align:center;">
+                Shop Premium Brands
+            </h3>
+            <p class="headings-below-bold-text text-center">Indulge in Iconic Scents from the World's Most Desired Luxury Brands​</p>
+        </div><div class="brands pt-4">
+            <div class="" id="">
+                <div class="item text-center" style="background:transparent !important;">
+                    <img src="Images/brandsbanner/fragrance-advertising.jpg" style="width:100%;height:auto;">
                 </div>
+            </div>
+        </div>
 
-                <div class="perfume-brand-img-grid container">
+
+        <div data-aos="fade-right" class="mb-4 premium-brands-section" style="background-color: #EBEBEB;">
+            <div class=" py-4">
+
+
+                <div class="perfume-brand-img-grid px-3">
                     <div class="perfume-img-item">
                         <img src="Images/brands/prada-banner-sqr.png" alt="perfume dummy" loading="lazy">
 
@@ -1190,7 +939,7 @@
                     </div>
 
                 </div>
-                <div class="perfume-brand-img-grid container">
+                <div class="perfume-brand-img-grid px-3">
                     <div class="perfume-img-item">
                         <img src="Images/brands/jimmychoo.jpg" alt="perfume dummy" loading="lazy">
 
@@ -1280,10 +1029,10 @@
                 </div>
             </div>
             <!--<div class="text-center">
-            <a class="btn HoShopBrand">
-                AmeriFrag Choice
-            </a>
-        </div>-->
+                <a class="btn HoShopBrand">
+                    AmeriFrag Choice
+                </a>
+            </div>-->
 
         </div>
         <!-------------------------------------------promotional Banner container------------------------------------------->
@@ -1302,7 +1051,7 @@
                 <h5>Women</h5>
             </div>
             <div class="perfume-img-item">
-                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=200&h=250&fit=crop&auto=format" alt="perfume dummy" loading="lazy">
+                <img src="Images/brandsbanner/" alt="perfume dummy" loading="lazy">
                 <div class="best_sell px-2 py-1"><p class="m-0">Best Sellers</p></div>
             </div>
             <div class="perfume-img-item">
@@ -1451,8 +1200,8 @@
                                 </span>
                             </div>
                             <!--<p class="p-2" style="text-align:justify !important">
-                            Stick with your favorites or venture into new fragrance territories at exclusive discounted rates. Continuously discover and enjoy new scents and styles on your aromatic journey.
-                        </p>-->
+                                Stick with your favorites or venture into new fragrance territories at exclusive discounted rates. Continuously discover and enjoy new scents and styles on your aromatic journey.
+                            </p>-->
                         </div>
                     </div>
                 </div>
@@ -1511,14 +1260,14 @@
                     </ul>
                 </div>
                 <!-- <div class="col-md-4 m-auto text-center">
-                <img class="svg-icon" id="icon1" src="./assets/images/avatar-svgrepo-com.svg" alt="Icon 1" width="100" height="150">
-                <img class="svg-icon" id="icon2" src="./assets/images/avatar-svgrepo-com (1).svg" alt="Icon 2" width="100" height="150">
-            </div> -->
+                    <img class="svg-icon" id="icon1" src="./assets/images/avatar-svgrepo-com.svg" alt="Icon 1" width="100" height="150">
+                    <img class="svg-icon" id="icon2" src="./assets/images/avatar-svgrepo-com (1).svg" alt="Icon 2" width="100" height="150">
+                </div> -->
                 <div class="col-md-4 m-auto text-center">
                     <!-- <video width="150" height="150" autoplay loop style="border-radius: 50%;">
-                  <source src="./assets/images/home gifs/sign up.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video> -->
+                      <source src="./assets/images/home gifs/sign up.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video> -->
                     <img src="./assets/images/home gifs/1.gif" alt="signup" width="150" height="150" style="border-radius: 50%;" />
                 </div>
                 <div class="col-md-4 p-5">
@@ -1660,11 +1409,11 @@
             <!-- end of user analytics -->
             <!-- Best Sellers -->
             <!-- <div class="container px-0">
-            <h5 class="mb-4">Best Sellers<span>..................</span> </h5>
-            <div class="row" id="bestseller_carosel">
-            </div>
+                <h5 class="mb-4">Best Sellers<span>..................</span> </h5>
+                <div class="row" id="bestseller_carosel">
+                </div>
 
-        </div> -->
+            </div> -->
             <!-- End of Best Sellers-->
             <!-- Women Perfumes -->
 
@@ -1685,12 +1434,12 @@
                         </div>
                     </div>
                     <!--<div class="d-none d-md-block d-lg-block col-md-4 col-lg-3 align-items-center ">
-                    <div class="row">
-                        <div class="col-md-12 mt-2">
-                            <img class="womenImg img-fluid " src="Images/home/ameirifragchioceHome.png" style="width:100%;">
+                        <div class="row">
+                            <div class="col-md-12 mt-2">
+                                <img class="womenImg img-fluid " src="Images/home/ameirifragchioceHome.png" style="width:100%;">
+                            </div>
                         </div>
-                    </div>
-                </div>-->
+                    </div>-->
                     <div class="d-none d-md-block d-lg-block col-md-3 col-lg-3 py-2">
                         <div style="background-color: #e8e8e8; padding: 30px 20px; min-height: 100%; display: flex; align-items: center; justify-content: center;">
                             <img src="Images/home/ameirifragchioceHome.jpg" style="max-width: 100%; max-height: 300px; width: auto; height: auto; object-fit: contain;" />
@@ -1886,39 +1635,39 @@
                 <!-- End of Subcat section -->
                 <!-- Products Grid -->
                 <!--<div class="container px-0 mb-5">
-            <div class="row">
-                <div class="col-md-4 feat_col">
-                    <h5 class="mb-4">New Products <span>..................</span> </h5>-->
+                <div class="row">
+                    <div class="col-md-4 feat_col">
+                        <h5 class="mb-4">New Products <span>..................</span> </h5>-->
                 <!-- product box -->
                 <!--<div class="product_box_3 py-2 mt-5 productsdv">
 
 
-
-                </div>
-
-            </div>
-            <div class="col-md-4 feat_col">
-                <h5 class="mb-4">Featured Products <span>.......</span> </h5>-->
-                <!-- product box -->
-                <!--<div class="product_box_3 py-2 mt-5" id="freproductsdv">
-
-
-                </div>
-
-            </div>
-            <div class="col-md-4 feat_col">
-                <h5 class="mb-4">Most Popular Products <span>....</span> </h5>-->
-                <!-- product box -->
-                <!--<div class="product_box_3 py-2 mt-5 productsdv">
-
-
-
-                        </div>
 
                     </div>
 
                 </div>
-            </div>-->
+                <div class="col-md-4 feat_col">
+                    <h5 class="mb-4">Featured Products <span>.......</span> </h5>-->
+                <!-- product box -->
+                <!--<div class="product_box_3 py-2 mt-5" id="freproductsdv">
+
+
+                    </div>
+
+                </div>
+                <div class="col-md-4 feat_col">
+                    <h5 class="mb-4">Most Popular Products <span>....</span> </h5>-->
+                <!-- product box -->
+                <!--<div class="product_box_3 py-2 mt-5 productsdv">
+
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>-->
                 <!-- End of Products Grid -->
 
                 <div class="container-fluid py-5 mb-5 d-none" style="background: #EBECF2;">
@@ -1949,27 +1698,27 @@
                 </div>
                 <!-- Subscribe -->
                 <!--<div class="container-fluid subscribe mb-5 p-0">
-                <div class="row m-0">
-                    <div class="col-md-6 p-0">
-                        <img src="Images/home/subscribe.png" class="img-fluid" width="100%" style="height:445px;"/>
-                    </div>
-                    <div class="col-md-6 p-5" style="background-color: #70b4bd;">
-                        <h3 class="text-center">Subscription Club</h3>
-                        <p>
-                            Building  your  scent  wardrobe  just  got  easier. Discover new, limited-edition scents for just $20 a month. Enjoy exclusive perks as a Scent Club member.
-                        </p>
-                        <div class="ms-4">
-                            <p>Limited-Edition Rollerballs</p>
-                            <p>Exclusive Member Pricing</p>
-                            <p>Early Access to New Launches</p>
-                            <p>Choose your box frequency — monthly, bi-monthly, or quarterly</p>
-                            <p>Discounted shipping of $4.95 on your monthly box (free on boxes over $50)</p>
-                            <a href="#" class="btn">Learn more</a>
+                    <div class="row m-0">
+                        <div class="col-md-6 p-0">
+                            <img src="Images/home/subscribe.png" class="img-fluid" width="100%" style="height:445px;"/>
                         </div>
+                        <div class="col-md-6 p-5" style="background-color: #70b4bd;">
+                            <h3 class="text-center">Subscription Club</h3>
+                            <p>
+                                Building  your  scent  wardrobe  just  got  easier. Discover new, limited-edition scents for just $20 a month. Enjoy exclusive perks as a Scent Club member.
+                            </p>
+                            <div class="ms-4">
+                                <p>Limited-Edition Rollerballs</p>
+                                <p>Exclusive Member Pricing</p>
+                                <p>Early Access to New Launches</p>
+                                <p>Choose your box frequency — monthly, bi-monthly, or quarterly</p>
+                                <p>Discounted shipping of $4.95 on your monthly box (free on boxes over $50)</p>
+                                <a href="#" class="btn">Learn more</a>
+                            </div>
 
+                        </div>
                     </div>
-                </div>
-            </div>-->
+                </div>-->
                 <!--hiding drop shipping-->
                 <div class="container d-none">
                     <div class="row pb-5">
@@ -2003,57 +1752,57 @@
                 <!--<div id="demo1" class="carousel slide mb-5" data-bs-ride="carousel" data-pause="false" data-interval="3000">
 
 
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="2"></button>
-                </div>
-
-                <div class="container">
-                    <h3 class="mb-4">Explore Super Sale Products of the Season</h3>
-                    <div class="owl-carousel owl-theme" id="middle_banners">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#demo1" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#demo1" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#demo1" data-bs-slide-to="2"></button>
                     </div>
-                </div>
+
+                    <div class="container">
+                        <h3 class="mb-4">Explore Super Sale Products of the Season</h3>
+                        <div class="owl-carousel owl-theme" id="middle_banners">
+                        </div>
+                    </div>
 
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#demo1" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#demo1" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>-->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo1" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo1" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>-->
                 <!-- Testimonial Section -->
                 <!--   <div class="container-fluid testimonial" style="background: #ffffff;">
-            <div class="container mb-5">
-                <h3 class="text-center mb-4 headingColor">Customer Testimonials</h3>
-                <div class="owl-carousel owl-theme" id="testimonial-carousel">
-                </div>
-            </div>
-            <div class="container-fluid ">
-                <div class="container text-center background-feedback" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
-                    <h3 class="headingColor" style="">Submit Feedback</h3>
-                    <div>
-                        <form onsubmit="return false" class="feedbackform">
-                            <div class="p-lg-4">
-                                <div class="row">
-                                    <div class="col-12 col-md-5  border-right-0">
-                                        <span class="icon"> <i class="fa-solid fa-envelope"></i></span>
-                                        <input type="email" id="fd-user-email" class="border-input" placeholder="Email" required>
-                                    </div>
-                                    <div class="col-12 col-md-5 border-right-0 ">
-                                        <span class="icon"> <i class="fa-solid fa-comment-dots"></i></span>
-                                        <input type="text" id="fd-user-message" class="border-input" placeholder="Description" required>
-                                    </div>
-                                    <div class="col-12 col-md-2 ">
-                                        <button type="submit" class="btn sumbitFedBt" id="fedbackSubmit">Submit</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+                <div class="container mb-5">
+                    <h3 class="text-center mb-4 headingColor">Customer Testimonials</h3>
+                    <div class="owl-carousel owl-theme" id="testimonial-carousel">
                     </div>
                 </div>
-            </div> -->
+                <div class="container-fluid ">
+                    <div class="container text-center background-feedback" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                        <h3 class="headingColor" style="">Submit Feedback</h3>
+                        <div>
+                            <form onsubmit="return false" class="feedbackform">
+                                <div class="p-lg-4">
+                                    <div class="row">
+                                        <div class="col-12 col-md-5  border-right-0">
+                                            <span class="icon"> <i class="fa-solid fa-envelope"></i></span>
+                                            <input type="email" id="fd-user-email" class="border-input" placeholder="Email" required>
+                                        </div>
+                                        <div class="col-12 col-md-5 border-right-0 ">
+                                            <span class="icon"> <i class="fa-solid fa-comment-dots"></i></span>
+                                            <input type="text" id="fd-user-message" class="border-input" placeholder="Description" required>
+                                        </div>
+                                        <div class="col-12 col-md-2 ">
+                                            <button type="submit" class="btn sumbitFedBt" id="fedbackSubmit">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> -->
                 <div class="container mb-5" style="padding:0px !important">
                     <h3 class="text-center  headingColor">
                         AmeriFrag Studio
@@ -2070,8 +1819,8 @@
                                 </div>
 
                                 <!--<h5 class="text-center pt-3 pb-2">
-                                Trending Styles
-                            </h5>-->
+                                    Trending Styles
+                                </h5>-->
                             </div>
                         </div>
                         <div class="item">
@@ -2080,8 +1829,8 @@
                                     <img src="images/home/testim/digitalSmelling.jpg" />
                                 </div>
                                 <!--<h5 class="text-center pt-3 pb-2">
-                                Digital Smelling
-                            </h5>-->
+                                    Digital Smelling
+                                </h5>-->
                             </div>
                         </div>
                         <div class="item">
@@ -2091,8 +1840,8 @@
                                     <img src="images/home/testim/Emotionalintelligence.jpg" />
                                 </div>
                                 <!--<h5 class="text-center pt-3 pb-2">
-                                Emotional Intelligence
-                            </h5>-->
+                                    Emotional Intelligence
+                                </h5>-->
                             </div>
                         </div>
                         <div class="item">
@@ -2102,8 +1851,8 @@
                                 </div>
 
                                 <!--<h5 class="text-center pt-3 pb-2">
-                                Nature Through Aroma
-                            </h5>-->
+                                    Nature Through Aroma
+                                </h5>-->
                             </div>
                         </div>
                         <div class="item">
@@ -2112,8 +1861,8 @@
                                     <img src="images/home/testim/AnalyzingNotes.jpg" />
                                 </div>
                                 <!--<h5 class="text-center pt-3 pb-2">
-                                Analyzing Notes
-                            </h5>-->
+                                    Analyzing Notes
+                                </h5>-->
                             </div>
                         </div>
                         <div class="item">
@@ -2122,8 +1871,8 @@
                                     <img src="images/home/testim/ScentStation.jpg" />
                                 </div>
                                 <!--<h5 class="text-center pt-3 pb-2">
-                                Scent-sations
-                            </h5>-->
+                                    Scent-sations
+                                </h5>-->
                             </div>
                         </div>
                         <div class="item">
@@ -2132,8 +1881,8 @@
                                     <img src="images/home/testim/moodmapping.jpg" />
                                 </div>
                                 <!--<h5 class="text-center pt-3 pb-2">
-                                Mood Mapping
-                            </h5>-->
+                                    Mood Mapping
+                                </h5>-->
                             </div>
                         </div>
                         <div class="item">
@@ -2142,8 +1891,8 @@
                                     <img src="images/home/testim/seasonchoice.jpg" />
                                 </div>
                                 <!--<h5 class="text-center pt-3 pb-2">
-                                Season Choice
-                            </h5>-->
+                                    Season Choice
+                                </h5>-->
                             </div>
                         </div>
                         <div class="item">
@@ -2152,8 +1901,8 @@
                                     <img src="images/home/testim/scentEducation.jpg" />
                                 </div>
                                 <!--<h5 class="text-center pt-3 pb-2">
-                                Scent Seduction
-                            </h5>-->
+                                    Scent Seduction
+                                </h5>-->
                             </div>
                         </div>
                         <div class="item">
@@ -2162,8 +1911,8 @@
                                     <img src="images/home/testim/occasionguide.jpg" />
                                 </div>
                                 <!--<h5 class="text-center pt-3 pb-2">
-                                Occasions Guide
-                            </h5>-->
+                                    Occasions Guide
+                                </h5>-->
                             </div>
                         </div>
                         <div class="item">
@@ -2172,8 +1921,8 @@
                                     <img src="images/home/testim/lawofattraction.jpg" />
                                 </div>
                                 <!--<h5 class="text-center pt-3 pb-2">
-                                Law of Attraction
-                            </h5>-->
+                                    Law of Attraction
+                                </h5>-->
                             </div>
                         </div>
                         <div class="item">
@@ -2182,8 +1931,8 @@
                                     <img src="images/home/testim/zodaicjourney.jpg" />
                                 </div>
                                 <!--<h5 class="text-center pt-3 pb-2">
-                                Zodiac Journey
-                            </h5>-->
+                                    Zodiac Journey
+                                </h5>-->
                             </div>
                         </div>
 
@@ -2319,62 +2068,62 @@
             </div>
             <!-- ------------------------------------------Refill Program popup--------------------------- -->
             <!--<div class="modal" id="RefilProgramPopup">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header text-end">
-                    <h4 class="modal-title">Refill Program </h4>
-                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="RefilProgramForm">
-                        <p>Enter after how many days you need this Product</p>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header text-end">
+                        <h4 class="modal-title">Refill Program </h4>
+                        <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="RefilProgramForm">
+                            <p>Enter after how many days you need this Product</p>
 
-                        <div class="row" id="refilProgramCon">-->
+                            <div class="row" id="refilProgramCon">-->
             <!--<div class="col-6">
-        <input type="hidden" placeholder="Enter " id="productId" name="name" value="" />
-        <p class="product_name"></p>
-        </div>
-        <div class="col-6">
-            <input type="text" placeholder="Enter " id="timePeriod"name="name" value="" />
-        </div>-->
+            <input type="hidden" placeholder="Enter " id="productId" name="name" value="" />
+            <p class="product_name"></p>
+            </div>
+            <div class="col-6">
+                <input type="text" placeholder="Enter " id="timePeriod"name="name" value="" />
+            </div>-->
             <!--</div>
-                            <button type="button" class="btn btn-primary" id="RefilSubmit">Submit</button>
-                        </form>
+                                <button type="button" class="btn btn-primary" id="RefilSubmit">Submit</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>-->
+            </div>-->
             <!-------------------------------------------->
             <!-- ENd of Testimonial Section -->
             <!-----------------------------------------------Products Div end----------------------------------------------------------->
             <!-----------------------------------------------Banners Div start----------------------------------------------------------->
             <!--<div class="container-fluid common_dv">
-            <div class="banners-logos" id="middle_banners"></div>
-        </div>-->
+                <div class="banners-logos" id="middle_banners"></div>
+            </div>-->
             <!-----------------------------------------------Banners Div End----------------------------------------------------------->
             <!--<div class="container-fluid common_dv margindv">
-            <h5 class="Headings_txtblack_lg text-center topfert_prduct">Sweet Shops</h5>
-            <hr class="headg_hr" /><br />
-            <div class="row" id="VendorList">
+                <h5 class="Headings_txtblack_lg text-center topfert_prduct">Sweet Shops</h5>
+                <hr class="headg_hr" /><br />
+                <div class="row" id="VendorList">
+
+                </div>
+                <br />  <br />
+
 
             </div>
-            <br />  <br />
+            <br /><br />
 
-
-        </div>
-        <br /><br />
-
-        <div class="common_dv">
-            <div id="demos" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner" id="bottom_banners" style="height:400px"></div>
-                <a class="carousel-control-prev" href="#demos" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#demos" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
-            </div>
-        </div>-->
+            <div class="common_dv">
+                <div id="demos" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" id="bottom_banners" style="height:400px"></div>
+                    <a class="carousel-control-prev" href="#demos" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demos" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>-->
             <!-----------------------------------------------Footer Start----------------------------------------------------------->
             <footer id="footer">
             </footer>
@@ -2411,79 +2160,79 @@
             </div>
             <!--login popup-->
             <!-- <div class="modal fade" id="loginpopup" role="dialog">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content" style="border: 10px solid black; padding-bottom: 10px">
-                    <div class="modal-header">
-                        <div class="d-block m-auto">
-                            <h4 class="modal-heading m-0 text-center">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content" style="border: 10px solid black; padding-bottom: 10px">
+                        <div class="modal-header">
+                            <div class="d-block m-auto">
+                                <h4 class="modal-heading m-0 text-center">
 
-        UNLOCK YOUR PERSONAL AROMA WORLD – SIGN UP OR LOG IN
-        <br />
-        TO BEGIN YOUR FRAGRANCE JOURNEY!
+            UNLOCK YOUR PERSONAL AROMA WORLD – SIGN UP OR LOG IN
+            <br />
+            TO BEGIN YOUR FRAGRANCE JOURNEY!
 
-        </h4>
-
-        </div>
-        <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
-        </div>
-
-
-        <div class="modal-body py-1">
-            <div class="row p-1">
-                <div class="col-md-5 p-1">
-                    <p class="register-text">
-                        If you are an existing Customer
-                    </p>
-                    <form id="frmlogin" onsubmit="return false">
-                        <div id="logindateerror" class="logindateerror_message"></div>
-                        <div class="text-center">
-                            <div id="validationdiv" class="validation_message"></div>
-                        </div>
-                        <label class="form-label" for="email">Email address </label>
-                        <input class="form-control " type="email" id="username" required>
-                        <div class="d-flex justify-content-between">
-                            <div>
-                                <label class="form-label mt-10" for="Lpassword">Password </label>
-                            </div>
-                            <div>
-                                <a href="Forgotpassword.html" class="m-0 pswd" type="button">Forgot password?</a>
-                            </div>
-                        </div>
-
-                        <input class="form-control mb-20" type="password" id="Lpassword">
-                        <div class="">
-                            <div class="form-group text-center">
-                                <button class="btn  btn-dark cust_login" style="margin: 0px !important; padding: 7px 25px !important;" id="loginBut" type="submit">LOGIN</button>
-                            </div>
-
-                        </div>
-                    </form>
-
-                    <p class="m-0 p-3 text-center">(Or)</p>
-
-                    <h4 class="customer-head white-text">New Customer?</h4>
-
-                    <p style="font-weight:500;">
-
-                        Sign up now and let our advanced AI match you with the perfect scents, curated just for your unique preferences. Enjoy exclusive discounts and discover the art of tailored aromas today!
-                    </p>
-                    <div style="text-align:center;">
-                        <a href="register.html" class="btn white-text" id="createAccount" style="margin: 0px !important; padding: 7px 25px !important;" type="button">CREATE ACCOUNT</a>
-
-                    </div>
-                </div>
-                <div class="col-md-7 d-flex flex-column justify-content-center">
-
-                    <img class="img-fluid w-100" src="Images/home/supersaleImg.png" />
-
-                </div>
-
+            </h4>
 
             </div>
-        </div>
-        </div>
-        </div>
-        </div> -->
+            <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+            </div>
+
+
+            <div class="modal-body py-1">
+                <div class="row p-1">
+                    <div class="col-md-5 p-1">
+                        <p class="register-text">
+                            If you are an existing Customer
+                        </p>
+                        <form id="frmlogin" onsubmit="return false">
+                            <div id="logindateerror" class="logindateerror_message"></div>
+                            <div class="text-center">
+                                <div id="validationdiv" class="validation_message"></div>
+                            </div>
+                            <label class="form-label" for="email">Email address </label>
+                            <input class="form-control " type="email" id="username" required>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <label class="form-label mt-10" for="Lpassword">Password </label>
+                                </div>
+                                <div>
+                                    <a href="Forgotpassword.html" class="m-0 pswd" type="button">Forgot password?</a>
+                                </div>
+                            </div>
+
+                            <input class="form-control mb-20" type="password" id="Lpassword">
+                            <div class="">
+                                <div class="form-group text-center">
+                                    <button class="btn  btn-dark cust_login" style="margin: 0px !important; padding: 7px 25px !important;" id="loginBut" type="submit">LOGIN</button>
+                                </div>
+
+                            </div>
+                        </form>
+
+                        <p class="m-0 p-3 text-center">(Or)</p>
+
+                        <h4 class="customer-head white-text">New Customer?</h4>
+
+                        <p style="font-weight:500;">
+
+                            Sign up now and let our advanced AI match you with the perfect scents, curated just for your unique preferences. Enjoy exclusive discounts and discover the art of tailored aromas today!
+                        </p>
+                        <div style="text-align:center;">
+                            <a href="register.html" class="btn white-text" id="createAccount" style="margin: 0px !important; padding: 7px 25px !important;" type="button">CREATE ACCOUNT</a>
+
+                        </div>
+                    </div>
+                    <div class="col-md-7 d-flex flex-column justify-content-center">
+
+                        <img class="img-fluid w-100" src="Images/home/supersaleImg.png" />
+
+                    </div>
+
+
+                </div>
+            </div>
+            </div>
+            </div>
+            </div> -->
             <!--Analyize popup-->
             <div class="modal fade" id="analyizepopup" role="dialog">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -2528,7 +2277,7 @@
 
                                 <p style="text-align: justify;font-weight:bold"> Your Personal Barcode seamlessly interacts with the Product Barcodes, matching you with fragrances that are tailored to your digital scent profile. This seamless connection creates an <strong>immersive, interactive experience</strong>where you can digitally "smell" and discover scents that match your style and preferences, all within a digital world of aromas.</p>
                                 <!--     <p style="font-weight:bold">With <strong>AmeriFrag’s innovative barcode system,</strong>he art of scent has gone digital—allowing you to explore, discover, and indulge in fragrances like never before. Welcome to a world where your senses meet technology!</p>
-                            -->
+                                -->
                             </div>
 
                         </div>
@@ -2604,79 +2353,79 @@
             </div>
             <!--DropShip popup-->
             <!--<div class="modal fade" id="dropshippopup" role="dialog">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="d-block m-auto">
-                            <h4 class="modal-heading m-0 text-center">
-                                Dropship
-                            </h4>
-                            <p class="m-0 text-center">subtitle</p>
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="d-block m-auto">
+                                <h4 class="modal-heading m-0 text-center">
+                                    Dropship
+                                </h4>
+                                <p class="m-0 text-center">subtitle</p>
+                            </div>
+                            <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
                         </div>
-                        <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
-                    </div>
 
-                    <div class="modal-body py-2">
-                        <div class="row p-3 align-items-baseline">
-                            <p>
-                                About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.
-                            </p>
+                        <div class="modal-body py-2">
+                            <div class="row p-3 align-items-baseline">
+                                <p>
+                                    About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.
+                                </p>
 
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>-->
+            </div>-->
             <!--wholesaler popup-->
             <!--<div class="modal fade" id="wholesalerpopup" role="dialog">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="d-block m-auto">
-                            <h4 class="modal-heading m-0 text-center">
-                                Wholesaler
-                            </h4>
-                            <p class="m-0 text-center">subtitle</p>
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="d-block m-auto">
+                                <h4 class="modal-heading m-0 text-center">
+                                    Wholesaler
+                                </h4>
+                                <p class="m-0 text-center">subtitle</p>
+                            </div>
+                            <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
                         </div>
-                        <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
-                    </div>
 
-                    <div class="modal-body py-2">
-                        <div class="row p-3 align-items-baseline">
-                            <p>
-                                About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.
-                            </p>
+                        <div class="modal-body py-2">
+                            <div class="row p-3 align-items-baseline">
+                                <p>
+                                    About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.
+                                </p>
 
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>-->
+            </div>-->
             <!--Subscribe popup-->
             <!--<div class="modal fade" id="subscribepopup" role="dialog">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="d-block m-auto">
-                            <h4 class="modal-heading m-0 text-center">
-                                Subscribe
-                            </h4>
-                            <p class="m-0 text-center">subtitle</p>
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="d-block m-auto">
+                                <h4 class="modal-heading m-0 text-center">
+                                    Subscribe
+                                </h4>
+                                <p class="m-0 text-center">subtitle</p>
+                            </div>
+                            <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
                         </div>
-                        <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
-                    </div>
 
-                    <div class="modal-body py-2">
-                        <div class="row p-3 align-items-baseline">
-                            <p>
-                                About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.
-                            </p>
+                        <div class="modal-body py-2">
+                            <div class="row p-3 align-items-baseline">
+                                <p>
+                                    About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.
+                                </p>
 
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>-->
+            </div>-->
 
             <input type="hidden" name="prdctid" id="prdctid" />
             <div class="divdv"></div>

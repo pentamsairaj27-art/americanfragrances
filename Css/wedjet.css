@@ -156,44 +156,807 @@
     }
 }
 
-.headingColor {
-    /*color: #70b4bd !important;*/
-    color: black !important;
-    font-weight: bold;
-    text-transform: capitalize !important;
-    /* font-weight:600 !important;*/
+/* Section Styling */
+.brands-showcase {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
 }
 
-.premiumCollection:hover {
-    background-size: 110% !important;
+.section-header {
+    margin-bottom: 40px;
 }
 
-.premiumCollection {
-    background-size: 100% !important;
-    transition: background-size 1s ease !important;
+.section-title {
+    color: #1a1a1a !important;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
 }
 
-.middileSearch .licategoryserach2 {
+.section-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+
+.title-underline {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #c4a484, #8b7355);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Banner Styling */
+.brands-banner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+    .brands-banner:hover {
+        transform: scale(1.02);
+    }
+
+    .brands-banner img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.5s ease;
+    }
+
+    .brands-banner:hover img {
+        transform: scale(1.05);
+    }
+
+/* Premium Brands Section */
+.premium-brands-section {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Brand Cards */
+.brand-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: white;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+}
+
+    .brand-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+.brand-image {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-.PerfumeCreteriaCard {
-    height: 200px !important;
-    margin: 5px;
-    /*width:250px;*/
+.brand-card:hover .brand-image {
+    transform: scale(1.1);
+}
+
+/* Brand Overlay */
+.brand-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 20px 10px 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.brand-card:hover .brand-overlay {
+    transform: translateY(0);
+}
+
+.brand-name {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Explore Button */
+.explore-btn {
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    color: white;
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+    .explore-btn:hover {
+        background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .explore-btn i {
+        transition: transform 0.3s ease;
+    }
+
+    .explore-btn:hover i {
+        transform: translateX(5px);
+    }
+
+/* Animation Effects */
+.brand-card {
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+    .brand-card:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .brand-card:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .brand-card:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    .brand-card:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+
+    .brand-card:nth-child(5) {
+        animation-delay: 0.5s;
+    }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .brand-overlay {
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+        padding: 15px 5px 5px;
+    }
+
+    .brand-name {
+        font-size: 0.9rem;
+    }
+
+    .explore-btn {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .brands-showcase {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .premium-brands-section {
+        padding: 20px 15px;
+    }
+}
+
+/* Additional Polish */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Loading Animation for Images */
+.brand-image {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hover Effect for Premium Section */
+.premium-brands-section {
+    position: relative;
+    overflow: hidden;
+}
+
+    .premium-brands-section::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .premium-brands-section:hover::before {
+        opacity: 1;
+    }
+/* ===== GLOBAL STYLES ===== */
+:root {
+    --women-primary: #e8b4b8;
+    --women-dark: #c38e94;
+    --men-primary: #a7c0cd;
+    --men-dark: #7f9eb5;
+    --accent-gold: #d4af37;
+    --accent-rose: #f7d1d1;
+    --accent-navy: #1e2f4d;
+    --transition-slow: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ===== SECTION HEADER ===== */
+.gender-showcase {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #faf7f5 100%);
+    overflow: hidden;
+}
+
+.gender-header {
+    position: relative;
+    animation: fadeInDown 0.8s ease;
+}
+
+.gender-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #2c3e50, #34495e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.gender-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+}
+
+.gender-underline {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--women-primary), var(--men-primary));
+    margin: 0 auto;
+    border-radius: 3px;
+    animation: widthPulse 2s infinite;
+}
+
+/* ===== COLLECTION GRID ===== */
+.collection-wrapper {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 20px;
+    transition: var(--transition-slow);
+}
+
+    .collection-wrapper:hover {
+        transform: translateY(-5px);
+    }
+
+.women-collection {
+    background: linear-gradient(135deg, rgba(232, 180, 184, 0.1), rgba(195, 142, 148, 0.05));
+    border: 1px solid rgba(232, 180, 184, 0.3);
+}
+
+.men-collection {
+    background: linear-gradient(135deg, rgba(167, 192, 205, 0.1), rgba(127, 158, 181, 0.05));
+    border: 1px solid rgba(167, 192, 205, 0.3);
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    align-items: stretch;
+}
+
+/* ===== GENDER LABEL STYLES ===== */
+.collection-header-cell {
+    grid-column: span 1;
     display: flex;
-    flex-direction: row;
     align-items: end;
     justify-content: center;
-    border: 2px solid #70b4bd !important;
+    padding: 20px 10px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    animation: floatIn 0.6s ease;
 }
 
-.creteriaName {
-    background-color: black;
+.women-label {
+    /*background: linear-gradient(145deg, var(--women-primary), var(--women-dark));*/
+    background-image: url("../Images/woman-bottle-perfume.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(195, 142, 148, 0.3);
+    isolation: isolate; /* Creates new stacking context */
+}
+
+.men-label {
+    background-image: url("../Images/men.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(195, 142, 148, 0.3);
+    isolation: isolate; /* Creates new stacking context */
+}
+
+.label-content p {
+    color: #ffffff;
+}
+    .label-content {
+    text-align: center;
     color: white;
-    padding: 5px 10px;
+    transform: translateY(0);
+    transition: var(--transition-bounce);
 }
 
+.collection-header-cell:hover .label-content {
+    transform: scale(1.1);
+}
+
+.label-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 10px;
+    animation: bounce 2s infinite;
+}
+
+.label-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.label-subtext {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    margin: 5px 0 0;
+}
+
+/* ===== FRAGRANCE CARDS ===== */
+.collection-item-cell {
+    grid-column: span 1;
+}
+
+.fragrance-cell {
+    animation: cardAppear 0.5s ease backwards;
+    animation-delay: calc(var(--item-index) * 0.1s);
+}
+
+.fragrance-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+    min-height: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+    .fragrance-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+.card-media {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+    .card-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+    }
+
+.fragrance-card:hover .card-media img {
+    transform: scale(1.1);
+}
+
+/* ===== CARD BADGES ===== */
+.card-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    z-index: 2;
+    animation: badgePop 0.5s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.best-seller-badge {
+    background: linear-gradient(135deg, #d4af37, #b8860b);
+}
+
+.new-arrival-badge {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+}
+
+.top-rated-badge {
+    background: linear-gradient(135deg, #9C27B0, #6A1B9A);
+}
+
+.best-offer-badge {
+    background: linear-gradient(135deg, #f44336, #c62828);
+}
+
+.clearance-badge {
+    background: linear-gradient(135deg, #607D8B, #37474F);
+}
+
+/* ===== CARD OVERLAY ===== */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.fragrance-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 30px;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.fragrance-card:hover .overlay-text {
+    transform: translateY(0);
+}
+
+/* ===== FOOTER CELL ===== */
+.collection-footer-cell {
+    grid-column: span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.women-footer {
+    background: linear-gradient(145deg, rgba(232, 180, 184, 0.2), rgba(195, 142, 148, 0.1));
+}
+
+.men-footer {
+    background: linear-gradient(145deg, rgba(167, 192, 205, 0.2), rgba(127, 158, 181, 0.1));
+}
+
+.shop-all-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+}
+
+.women-footer .shop-all-link {
+    color: var(--women-dark);
+}
+
+.men-footer .shop-all-link {
+    color: var(--men-dark);
+}
+
+.shop-all-link:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+.link-text {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.link-arrow {
+    transition: transform 0.4s ease;
+    font-size: 1.2rem;
+}
+
+.shop-all-link:hover .link-arrow {
+    transform: translateX(5px);
+}
+
+/* ===== UNIQUE ANIMATIONS ===== */
+
+/* Floating Animation for Gender Labels */
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Card Appear Animation with Stagger */
+@keyframes cardAppear {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px) rotate(-5deg);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateX(5px) rotate(2deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0);
+    }
+}
+
+/* Badge Pop Animation */
+@keyframes badgePop {
+    0% {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.1) rotate(10deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0);
+    }
+}
+
+/* Pulse Animation for Underline */
+@keyframes widthPulse {
+    0%, 100% {
+        width: 100px;
+        opacity: 1;
+    }
+
+    50% {
+        width: 150px;
+        opacity: 0.7;
+    }
+}
+
+/* Bounce Animation for Icons */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Fade In Down for Header */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Shimmer Effect on Hover */
+.collection-wrapper::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient( 45deg, transparent, rgba(255, 255, 255, 0.1), transparent );
+    transform: rotate(45deg);
+    animation: shimmer 6s infinite;
+    pointer-events: none;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    20%, 100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+    .collection-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .collection-header-cell {
+        grid-column: span 1;
+    }
+
+    .collection-footer-cell {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .collection-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .gender-title {
+        font-size: 2rem;
+    }
+
+    .gender-subtitle {
+        font-size: 1rem;
+    }
+
+    .label-text {
+        font-size: 1.2rem;
+    }
+
+    .label-icon {
+        font-size: 2rem;
+    }
+
+    .fragrance-card {
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .collection-header-cell {
+        grid-column: span 2;
+    }
+
+    .collection-footer-cell {
+        grid-column: span 2;
+    }
+
+    .gender-showcase {
+        padding: 40px 0;
+    }
+
+    .gender-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* ===== HOVER STATE VARIATIONS ===== */
+
+/* Women Collection Specific Hover */
+.women-collection .fragrance-card:hover {
+    box-shadow: 0 15px 30px rgba(232, 180, 184, 0.4);
+}
+
+/* Men Collection Specific Hover */
+.men-collection .fragrance-card:hover {
+    box-shadow: 0 15px 30px rgba(167, 192, 205, 0.4);
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading State Animation */
+.fragrance-card {
+    position: relative;
+}
+
+    .fragrance-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, 0.2), transparent );
+        transition: left 0.5s ease;
+    }
+
+    .fragrance-card:hover::before {
+        left: 100%;
+    }
 @media only screen and (max-width: 576px) {
     .homeBanTopSection {
         zoom: 0.5;
@@ -690,9 +1453,11 @@
     .perfume-img-grid {
         max-width: 100%;
     }
+
     .perfume-discover-img-grid {
         max-width: 100%;
     }
+
     .perfume-brand-img-grid {
         max-width: 100%;
     }
@@ -700,4 +1465,721 @@
     .animate-in {
         animation-duration: 0.8s;
         animation-fill-mode: both;
+    }
+
+    .user_analytics {
+        background-color: #70b4bd;
+        padding: 50px 6% !important;
+        border-radius: 5px !important;
+    }
+
+        .user_analytics .progress {
+            border: 1px solid #70b4bd;
+        }
+
+        .user_analytics h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .user_analytics h5 {
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .user_analytics .btn {
+            background-color: #fff !important;
+            color: #000 !important;
+            border-radius: 25px !important;
+            /*border: 2px solid #fff !important;*/
+            padding: 10px 19px !important;
+            font-weight: bold;
+        }
+
+        .user_analytics .d-flex {
+            margin-top: 40px;
+        }
+
+
+
+
+    .discover-section::after {
+        content: '';
+        position: absolute;
+        bottom: -30%;
+        left: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(212, 175, 55, 0.03) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+    /* ===== HEADER STYLES ===== */
+    .discover-header {
+        position: relative;
+        z-index: 2;
+        animation: fadeInUp 0.8s ease;
+    }
+
+    .discover-subtitle {
+        display: inline-block;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: #c4a484;
+        font-weight: 500;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .discover-title {
+        font-size: 2.8rem;
+        font-weight: 300;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .title-highlight {
+        font-weight: 700;
+        color: #8b7355;
+        position: relative;
+        display: inline-block;
+    }
+
+        .title-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(196, 164, 132, 0.2);
+            z-index: -1;
+        }
+
+    .discover-description {
+        color: #7f8c8d;
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto 20px;
+        line-height: 1.8;
+    }
+
+    .discover-underline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .underline-dot {
+        width: 6px;
+        height: 6px;
+        background: #c4a484;
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+    }
+
+    .underline-line {
+        width: 60px;
+        height: 2px;
+        background: linear-gradient(90deg, #c4a484, #e8b4b8);
+        border-radius: 2px;
+    }
+
+    /* ===== CATEGORY GRID ===== */
+    .category-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* ===== CATEGORY CARD ===== */
+    .category-card {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        cursor: pointer;
+        animation: cardFadeIn 0.6s ease backwards;
+    }
+
+    /* Animation delays for primary row */
+    .category-grid-primary .category-card:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .category-grid-primary .category-card:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .category-grid-primary .category-card:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    .category-grid-primary .category-card:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+
+    .category-grid-primary .category-card:nth-child(5) {
+        animation-delay: 0.5s;
+    }
+
+    /* Animation delays for secondary row */
+    .category-grid-secondary .category-card:nth-child(1) {
+        animation-delay: 0.2s;
+    }
+
+    .category-grid-secondary .category-card:nth-child(2) {
+        animation-delay: 0.3s;
+    }
+
+    .category-grid-secondary .category-card:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    .category-grid-secondary .category-card:nth-child(4) {
+        animation-delay: 0.5s;
+    }
+
+    .category-grid-secondary .category-card:nth-child(5) {
+        animation-delay: 0.6s;
+    }
+
+    .category-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-inner {
+        background: white;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ===== CARD MEDIA ===== */
+    .card-medias {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+    }
+
+        .card-medias img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+    .category-card:hover .card-medias img {
+        transform: scale(1.1);
+    }
+
+    /* ===== CARD BADGE ===== */
+    .card-badge {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 15px;
+        border-radius: 30px;
+        color: white;
+        font-weight: 600;
+        font-size: 0.9rem;
+        z-index: 2;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        animation: badgeSlideIn 0.5s ease;
+    }
+
+    /* Badge Colors */
+    .premium-badge {
+        background: linear-gradient(135deg, #c4a484, #a6896b);
+    }
+
+    .luxury-badge {
+        background: linear-gradient(135deg, #d4af37, #b8860b);
+    }
+
+    .designer-badge {
+        background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    }
+
+    .niche-badge {
+        background: linear-gradient(135deg, #e67e22, #d35400);
+    }
+
+    .celebrity-badge {
+        background: linear-gradient(135deg, #f1c40f, #f39c12);
+    }
+
+    .natural-badge {
+        background: linear-gradient(135deg, #2ecc71, #27ae60);
+    }
+
+    .indie-badge {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+    }
+
+    .specialty-badge {
+        background: linear-gradient(135deg, #e84342, #c0392b);
+    }
+
+    .mass-market-badge {
+        background: linear-gradient(135deg, #7f8c8d, #6c7a7b);
+    }
+
+    .economical-badge {
+        background: linear-gradient(135deg, #f39c12, #e67e22);
+    }
+
+    .badge-icon {
+        font-size: 1.1rem;
+        filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+    }
+
+    .badge-text {
+        letter-spacing: 0.5px;
+    }
+
+    /* ===== CARD CONTENT ===== */
+    .card-content {
+        padding: 18px 15px 20px;
+        text-align: center;
+        background: white;
+        position: relative;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 8px;
+        transition: color 0.3s ease;
+    }
+
+    .category-card:hover .card-title {
+        color: #c4a484;
+    }
+
+    .card-desc {
+        font-size: 0.9rem;
+        color: #7f8c8d;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+
+    .card-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #c4a484;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 8px 20px;
+        border-radius: 25px;
+        background: rgba(196, 164, 132, 0.1);
+        transition: all 0.3s ease;
+    }
+
+        .card-link i {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .card-link:hover {
+            background: #c4a484;
+            color: white;
+            gap: 12px;
+        }
+
+            .card-link:hover i {
+                transform: translateX(5px);
+            }
+
+    /* ===== VIEW ALL BUTTON ===== */
+    .view-all-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 35px;
+        background: transparent;
+        border: 2px solid #c4a484;
+        color: #c4a484;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 40px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+        .view-all-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: #c4a484;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+            z-index: -1;
+        }
+
+        .view-all-btn:hover {
+            color: white;
+        }
+
+            .view-all-btn:hover::before {
+                width: 300px;
+                height: 300px;
+            }
+
+        .view-all-btn i {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .view-all-btn:hover i {
+            transform: rotate(90deg);
+        }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes cardFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    @keyframes badgeSlideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        50% {
+            transform: scale(1.2);
+            opacity: 0.7;
+        }
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 1200px) {
+        .category-grid {
+            gap: 15px;
+        }
+
+        .card-medias {
+            height: 180px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .category-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .discover-title {
+            font-size: 2.3rem;
+        }
+
+        .card-medias {
+            height: 170px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .discover-section {
+            padding: 50px 0;
+        }
+
+        .discover-title {
+            font-size: 2rem;
+        }
+
+        .discover-subtitle {
+            font-size: 0.9rem;
+        }
+
+        .discover-description {
+            font-size: 1rem;
+        }
+
+        .category-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .card-medias {
+            height: 160px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+        }
+
+        .card-desc {
+            font-size: 0.8rem;
+        }
+
+        .view-all-btn {
+            padding: 12px 28px;
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .discover-title {
+            font-size: 1.8rem;
+        }
+
+        .category-grid {
+            gap: 12px;
+        }
+
+        .card-badge {
+            padding: 5px 10px;
+            font-size: 0.8rem;
+        }
+
+        .badge-icon {
+            font-size: 0.9rem;
+        }
+
+        .card-medias {
+            height: 140px;
+        }
+
+        .card-content {
+            padding: 12px 10px 15px;
+        }
+    }
+
+
+
+
+    .highlights-section {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    /* título principal sección */
+    .section-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        color: #1a1a1a;
+        position: relative;
+        display: inline-block;
+    }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #9f8b7a; /* acento cobre/douglas */
+            margin-top: 8px;
+        }
+
+    /* estilos de tarjeta producto */
+    .product-card {
+        background: white;
+        border: none;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.05);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 28px rgba(0,0,0,0.05), 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+    /* imagen contenedor fijo para mantener proporciones */
+    .card-img-wrapper {
+        position: relative;
+        padding-top: 100%; /* 1:1 aspect ratio (cuadrado) */
+        background-color: #f8f6f4;
+        overflow: hidden;
+    }
+
+        .card-img-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* ajusta la imagen sin deformar */
+            object-position: center;
+        }
+
+    /* etiqueta NUEVO (similar a la imagen) */
+    .badge-nuevo {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        background-color: #c49a6c; /* dorado / terracota Douglas */
+        color: white;
+        font-weight: 700;
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+        border-radius: 30px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        z-index: 5;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* contenido tarjeta */
+    .card-body {
+        padding: 1.5rem 1.2rem 1.2rem;
+        text-align: left;
+        flex: 1;
+        background: white;
+    }
+
+    .brand-collection {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #9f8b7a;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        margin-bottom: 0.4rem;
+    }
+
+    .product-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0.4rem;
+        color: #222;
+        text-transform: uppercase;
+    }
+
+    .product-sub {
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: #5f5f5f;
+        margin-bottom: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .product-desc {
+        font-size: 0.9rem;
+        color: #4b4b4b;
+        font-weight: 300;
+        line-height: 1.4;
+        border-top: 1px solid #eee;
+        padding-top: 0.75rem;
+        margin-top: 0.25rem;
+    }
+
+    /* carousel personalización (bootstrap nativo con controles) */
+    .carousel-control-prev, .carousel-control-next {
+        width: 5%;
+        background: transparent;
+        opacity: 1;
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        background-color: rgba(0,0,0,0.3);
+        background-size: 60%;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        transition: background-color 0.2s;
+    }
+
+    .carousel-control-prev:hover .carousel-control-prev-icon,
+    .carousel-control-next:hover .carousel-control-next-icon {
+        background-color: rgba(0,0,0,0.6);
+    }
+    /* quitamos el gradiente por defecto */
+    .carousel-control-prev, .carousel-control-next {
+        background: none;
+        filter: none;
+    }
+
+    /* indicadores (puntos) estilo Douglas */
+    .carousel-indicators {
+        position: static;
+        margin-top: 2rem;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+        gap: 0.6rem;
+    }
+
+        .carousel-indicators [data-bs-target] {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            border: none;
+            opacity: 1;
+            margin: 0;
+            transition: background-color 0.2s;
+        }
+
+        .carousel-indicators .active {
+            background-color: #9f8b7a;
+            width: 12px;
+            height: 12px;
+        }
+
+    /* para móviles pequeños el carousel muestra 1 item, pero por diseño bootstrap controla con columnas */
+    @media (max-width: 767px) {
+        .section-title {
+            font-size: 1.4rem;
+        }
     }

@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\learn-react\\American Fragrance UI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9018EA4A-2C3C-42E4-9DC3-38EA0373116A}|D:\\learn-react\\American Fragrance UI|d:\\learn-react\\american fragrance ui\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{9018EA4A-2C3C-42E4-9DC3-38EA0373116A}|D:\\learn-react\\American Fragrance UI|d:\\learn-react\\american fragrance ui\\css\\wedjet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{9018EA4A-2C3C-42E4-9DC3-38EA0373116A}|D:\\learn-react\\American Fragrance UI|solutionrelative:css\\wedjet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9018EA4A-2C3C-42E4-9DC3-38EA0373116A}|D:\\learn-react\\American Fragrance UI|D:\\learn-react\\American Fragrance UI\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9018EA4A-2C3C-42E4-9DC3-38EA0373116A}|D:\\learn-react\\American Fragrance UI|solutionrelative:home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9018EA4A-2C3C-42E4-9DC3-38EA0373116A}|D:\\UI_projects\\American Fragrance UI|D:\\learn-react\\American Fragrance UI\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9018EA4A-2C3C-42E4-9DC3-38EA0373116A}|D:\\UI_projects\\American Fragrance UI|solutionrelative:home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9018EA4A-2C3C-42E4-9DC3-38EA0373116A}|D:\\learn-react\\American Fragrance UI|d:\\learn-react\\american fragrance ui\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{9018EA4A-2C3C-42E4-9DC3-38EA0373116A}|D:\\learn-react\\American Fragrance UI|solutionrelative:css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9018EA4A-2C3C-42E4-9DC3-38EA0373116A}|D:\\learn-react\\American Fragrance UI|D:\\learn-react\\American Fragrance UI\\js\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{9018EA4A-2C3C-42E4-9DC3-38EA0373116A}|D:\\learn-react\\American Fragrance UI|solutionrelative:js\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9018EA4A-2C3C-42E4-9DC3-38EA0373116A}|D:\\learn-react\\American Fragrance UI|d:\\learn-react\\american fragrance ui\\css\\wedjet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{9018EA4A-2C3C-42E4-9DC3-38EA0373116A}|D:\\learn-react\\American Fragrance UI|solutionrelative:css\\wedjet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{9018EA4A-2C3C-42E4-9DC3-38EA0373116A}|D:\\learn-react\\American Fragrance UI|D:\\learn-react\\American Fragrance UI\\css\\stylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{9018EA4A-2C3C-42E4-9DC3-38EA0373116A}|D:\\learn-react\\American Fragrance UI|solutionrelative:css\\stylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9018EA4A-2C3C-42E4-9DC3-38EA0373116A}|D:\\learn-react\\American Fragrance UI|D:\\learn-react\\American Fragrance UI\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,33 +90,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "index.css",
+              "DocumentMoniker": "D:\\learn-react\\American Fragrance UI\\Css\\index.css",
+              "RelativeDocumentMoniker": "Css\\index.css",
+              "ToolTip": "D:\\learn-react\\American Fragrance UI\\Css\\index.css",
+              "RelativeToolTip": "Css\\index.css",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAHgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-05T22:03:43.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StyleSheet.css",
+              "DocumentMoniker": "D:\\learn-react\\American Fragrance UI\\Css\\StyleSheet.css",
+              "RelativeDocumentMoniker": "Css\\StyleSheet.css",
+              "ToolTip": "D:\\learn-react\\American Fragrance UI\\Css\\StyleSheet.css",
+              "RelativeToolTip": "Css\\StyleSheet.css",
+              "ViewState": "AgIAAFEYAAAAAAAAAAAswHcYAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-02T21:18:39.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "wedjet.css",
               "DocumentMoniker": "D:\\learn-react\\American Fragrance UI\\Css\\wedjet.css",
               "RelativeDocumentMoniker": "Css\\wedjet.css",
               "ToolTip": "D:\\learn-react\\American Fragrance UI\\Css\\wedjet.css",
               "RelativeToolTip": "Css\\wedjet.css",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAAALYAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAGYIAAAAAAAAAAAwwIkIAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-02-26T06:45:06.471Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Home.js",
               "DocumentMoniker": "D:\\learn-react\\American Fragrance UI\\Js\\Home.js",
               "RelativeDocumentMoniker": "Js\\Home.js",
               "ToolTip": "D:\\learn-react\\American Fragrance UI\\Js\\Home.js",
               "RelativeToolTip": "Js\\Home.js",
-              "ViewState": "AgIAAIcCAAAAAAAAAAAAwKQCAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAM0CAAAAAAAAAAApwN4CAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-02-26T06:05:19.03Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Web.config",
               "DocumentMoniker": "D:\\learn-react\\American Fragrance UI\\Web.config",
               "RelativeDocumentMoniker": "Web.config",
@@ -125,20 +155,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Home.html",
               "DocumentMoniker": "D:\\learn-react\\American Fragrance UI\\Home.html",
               "RelativeDocumentMoniker": "Home.html",
               "ToolTip": "D:\\learn-react\\American Fragrance UI\\Home.html",
               "RelativeToolTip": "Home.html",
-              "ViewState": "AgIAADABAAAAAAAAAAAswFYBAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAHYHAAAAAAAAAAAwwJkHAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-02-26T04:26:41.994Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "customer_Login.js",
               "DocumentMoniker": "D:\\learn-react\\American Fragrance UI\\Js\\customer_Login.js",
               "RelativeDocumentMoniker": "Js\\customer_Login.js",
@@ -147,18 +177,6 @@
               "ViewState": "AgIAAPIGAAAAAAAAAAAwwAcHAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-02-23T22:06:31.312Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Home.html",
-              "DocumentMoniker": "D:\\learn-react\\American Fragrance UI\\Home.html",
-              "RelativeDocumentMoniker": "Home.html",
-              "ToolTip": "D:\\learn-react\\American Fragrance UI\\Home.html",
-              "RelativeToolTip": "Home.html",
-              "ViewState": "AgIAAFoAAAAAAAAAAAD4v2sAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-02-23T22:03:05.72Z"
             }
           ]
         },

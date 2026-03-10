@@ -379,21 +379,21 @@ li.nav-item.dropdown.has-megamenu.open {
     font-size: 40px;
 }
 
-.dropdown:hover .dropdown-menu {
+/*.dropdown:hover .dropdown-menu {
     display: block;
     padding: 10px 15px;
     padding-top: 10px;
     padding-bottom: 0px;
     padding-left: 15px;
     padding-right: 15px;
-    background: #FFFFFF;
+    background: #FFFFFF;*/
     /*box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);*/
-    margin-top: 0px;
+    /*margin-top: 0px;*/
     /*width: 250px;*/
-    width: 150px;
+    /*width: 150px;
     border: 1px solid rgba(0, 0, 0, 0.175);
     border-radius: 0.375rem;
-}
+}*/
 
 .navbar-brand {
     max-width: 60% !important;

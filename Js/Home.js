@@ -112,7 +112,7 @@
         $("#noteProductsContainer").hide();
         $(".recommendProductsCon").hide();
         /*  $(".profileHeading").hide();*/
-        var LoginBut = $('<div class="loginRegisrttonCon" id="loginRegisrttonCon">' +
+        var LoginBut = $('<div class="loginRegisrttonCon text-center" id="loginRegisrttonCon">' +
             '<div class="btn registerBut">' +
             '<a class="logintext" id="loginText" >Login</a>' +
             ' / ' +

@@ -1011,38 +1011,33 @@
     <!-- ===== HERO CAROUSEL (offers as slides) ===== -->
     <div class="hero-carousel-wrapper">
         <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="5000">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
             <div class="carousel-inner">
-                <!-- slide 1: main AI + 70% offer -->
+                <!-- slide 1: main AI + 70% off -->
                 <div class="carousel-item active slide-1">
                     <div class="hero-slide-caption">
-                        <span class="offer-badge"><i class="fa-regular fa-star"></i> UP TO 70% OFF</span>
-                        <h2>Shop Perfumes Using <span>AI</span></h2>
-                        <p>Indulge in Fragrances Curated Just For You With Your Unique AmeriFrag Barcode</p>
-                        <button class="btn-gradient" onclick="alert('✨ AI signature scents demo')"><i class="fa-regular fa-sparkles"></i> Reveal My Signature Scents</button>
-                        <p class="highlights" style="color:#d4ecff; margin-top:1rem;">🔹 PatentedAI Technology 🔹</p>
+                        <span class="offer-badge"><i class="fa-regular fa-star me-2"></i> UP TO 70% OFF</span>
+                        <h2>Find your <span>aura</span> with AI</h2>
+                        <p>Your unique AmeriFrag barcode unlocks perfumes curated by your mood & DNA.</p>
+                        <button class="btn-gradient" onclick="alert('✨ AI signature scents demo')"><i class="fa-regular fa-sparkles me-2"></i>Reveal my signature</button>
+                        <p class="highlights">🔹 PatentedAI · 3M+ profiles 🔹</p>
                     </div>
                 </div>
                 <!-- slide 2: 2+1 gift offer -->
                 <div class="carousel-item slide-2">
                     <div class="hero-slide-caption">
-                        <span class="offer-badge" style="background:#20665a; box-shadow:0 6px 0 #15463e;"><i class="fa-solid fa-gift"></i> 2+1 GIFT</span>
-                        <h2>Luxury <span>Minis</span> Deluxe</h2>
-                        <p>Buy any 2 full-size perfumes, get a deluxe miniature free + free shipping</p>
-                        <button class="btn-gradient" onclick="alert('✨ 2+1 offer applied at checkout')">Shop Now</button>
+                        <span class="offer-badge"><i class="fa-solid fa-gift me-2"></i> 2+1 DELUXE MINI</span>
+                        <h2>Luxury <span>minis</span> set</h2>
+                        <p>Buy 2 full-size, get a deluxe miniature + express shipping — free</p>
+                        <button class="btn-gradient" onclick="alert('✨ 2+1 offer applied')"><i class="fa-regular fa-gem me-2"></i>Claim gift</button>
                     </div>
                 </div>
                 <!-- slide 3: extra 15% AI quiz -->
                 <div class="carousel-item slide-3">
                     <div class="hero-slide-caption">
-                        <span class="offer-badge" style="background:#b45f3a; box-shadow:0 6px 0 #733e25;"><i class="fa-solid fa-robot"></i> EXTRA 15%</span>
-                        <h2>AI <span>Quiz</span> Reward</h2>
-                        <p>Take the 60‑second fragrance quiz & unlock an exclusive discount</p>
-                        <button class="btn-gradient" onclick="alert('✨ AI quiz would start now')">Start AI Quiz</button>
+                        <span class="offer-badge"><i class="fa-solid fa-robot me-2"></i> EXTRA 15% OFF</span>
+                        <h2>AI <span>quiz</span> reward</h2>
+                        <p>60-second fragrance quiz — unlock exclusive discount + sample set</p>
+                        <button class="btn-gradient" onclick="alert('✨ AI quiz would start now')"><i class="fa-regular fa-pen-to-square me-2"></i>Start AI quiz</button>
                     </div>
                 </div>
             </div>
@@ -1061,7 +1056,6 @@
             <i class="fa-solid fa-robot"></i> AI personalized
         </div>
     </div>
-
 
     <div class="d-none container-fluid pt-4 pb-3" style="background-color: #EBEBEB;">
         <h3 class="headingColor pb-2 text-center">
@@ -1151,7 +1145,7 @@
 
         <!-- End of Title Section -->
         <!---------------------------------------------Search Section------------------------------------------>
-        <div class="d-none d-md-block d-lg-block container-fluid pt-4 pb-3">
+        <div class="d-none d-md-block d-lg-block container-fluid py-5">
             <h3 class="headingColor pb-2 text-center">
                 Experience A Revolutionary Fragrances Platform With The Right Questions & Philosophy
             </h3>
@@ -1373,15 +1367,19 @@
                 </div>
             </div>
             <!--<div class="text-center">
-            <a class="btn HoShopBrand">
-                AmeriFrag Choice
-            </a>
-        </div>-->
+                <a class="btn HoShopBrand">
+                    AmeriFrag Choice
+                </a>
+            </div>-->
 
         </div>
         <!-- Promotional Banner Container -->
-        <div class="promo-banner-wrapper pb-4">
-            <div class="owl-carousel owl-theme" id="promotional_Banner_carousel">
+        <div class="promo-banner-wrapper pb-3">
+            <div class="owl-carousel owl-theme d-block">
+                <!--id="promotional_Banner_carousel"-->
+                <div class="item text-center" style="background:transparent !important;">
+                    <img src="Images/new_i/freepik-makeup-artist-leaderboard-banner-20260312072125hlXP (2).png" style="width:100%;height:auto;">
+                </div>
             </div>
         </div>
 
@@ -1391,7 +1389,7 @@
         <div class="gender-showcase">
             <div class="">
                 <!-- Section Header -->
-                <div class="gender-header text-center px-3 mb-4">
+                <div class="gender-header text-center px-3">
                     <h3 class="gender-title">Shop by Gender</h3>
                     <p class="gender-subtitle">Discover your signature scent from our curated collection of masculine, feminine, and universal fragrances. Each tells a unique story of elegance and sophistication.</p>
                     <div class="gender-underline"></div>
@@ -1470,14 +1468,17 @@
                             </div>
                         </div>
 
-                        <!-- Collection Footer -->
-                        <div class="collection-footer-cell women-footer">
-                            <a href="#" class="shop-all-link">
-                                <span class="link-text">Shop All Women</span>
-                                <span class="link-arrow">→</span>
-                            </a>
-                        </div>
+
                     </div>
+                    <!-- Collection Footer -->
+                    <!--<div class="d-flex justify-content-end mt-2">
+                    <div class="collection-footer-cell women-footer">
+                        <a href="#" class="shop-all-link">
+                            <span class="link-text">Shop All Women</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                    </div>-->
                 </div>
 
                 <!-- Men's Collection -->
@@ -1552,15 +1553,16 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Collection Footer -->
+                    </div>
+                    <!-- Collection Footer -->
+                    <!--<div class="d-flex justify-content-end mt-2">
                         <div class="collection-footer-cell men-footer">
                             <a href="#" class="shop-all-link">
                                 <span class="link-text">Shop All Men</span>
                                 <span class="link-arrow">→</span>
                             </a>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -1569,17 +1571,16 @@
         <div class="brands-showcase">
             <div class="">
                 <!-- Section Header -->
-                <div class="section-header text-center mb-5">
-                    <h3 class="section-title">Shop Premium Brands</h3>
-                    <p class="section-subtitle">Indulge in Iconic Scents from the World's Most Desired Luxury Brands</p>
+                <div class="section-header text-center mb-3 mt-4">
+                    <h3 class="section-title m-0 pb-3">Shop Premium Brands</h3>
+                    <p class="section-subtitle m-0">Indulge in Iconic Scents from the World's Most Desired Luxury Brands</p>
                     <div class="title-underline"></div>
                 </div>
 
                 <!-- Banner Image -->
                 <div class="brands-banner">
-                    <img src="Images/brandsbanner/fragrance-advertising.jpg"
-                         alt="Luxury Perfume Brands Collection"
-                         class="img-fluid rounded-3 shadow">
+                    <img src="Images/new_i/freepik-cosmetic-leaderboard-banner-4114292-20260312075815I8FU (2).png"
+                         alt="Luxury Perfume Brands Collection">
                 </div>
 
                 <!-- Brands Grid -->
@@ -1817,8 +1818,8 @@
                                 </span>
                             </div>
                             <!--<p class="p-2" style="text-align:justify !important">
-                            Stick with your favorites or venture into new fragrance territories at exclusive discounted rates. Continuously discover and enjoy new scents and styles on your aromatic journey.
-                        </p>-->
+                                Stick with your favorites or venture into new fragrance territories at exclusive discounted rates. Continuously discover and enjoy new scents and styles on your aromatic journey.
+                            </p>-->
                         </div>
                     </div>
                 </div>
@@ -1877,14 +1878,14 @@
                     </ul>
                 </div>
                 <!-- <div class="col-md-4 m-auto text-center">
-                <img class="svg-icon" id="icon1" src="./assets/images/avatar-svgrepo-com.svg" alt="Icon 1" width="100" height="150">
-                <img class="svg-icon" id="icon2" src="./assets/images/avatar-svgrepo-com (1).svg" alt="Icon 2" width="100" height="150">
-            </div> -->
+                    <img class="svg-icon" id="icon1" src="./assets/images/avatar-svgrepo-com.svg" alt="Icon 1" width="100" height="150">
+                    <img class="svg-icon" id="icon2" src="./assets/images/avatar-svgrepo-com (1).svg" alt="Icon 2" width="100" height="150">
+                </div> -->
                 <div class="col-md-4 m-auto text-center">
                     <!-- <video width="150" height="150" autoplay loop style="border-radius: 50%;">
-                  <source src="./assets/images/home gifs/sign up.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video> -->
+                      <source src="./assets/images/home gifs/sign up.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video> -->
                     <img src="./assets/images/home gifs/1.gif" alt="signup" width="150" height="150" style="border-radius: 50%;" />
                 </div>
                 <div class="col-md-4 p-5">
@@ -2149,18 +2150,18 @@
             </div>
             <div class="p-0">
                 <!--<div class="progress"><div class="progress-bar bg-ten" role="progressbar" style="width:10%">Personality</div><div class="progress-bar bg-twenty" role="progressbar" style="width:10%">Occasion</div><div class="progress-bar bg-thirty" role="progressbar" style="width:10%">Mood</div><div class="progress-bar bg-fourty" role="progressbar" style="width:10%">Note</div><div class="progress-bar bg-fifty" role="progressbar" style="width:10%">Season</div><div class="progress-bar bg-sixty" role="progressbar" style="width:10%">Intensity</div><div class="progress-bar bg-seventy" role="progressbar" style="width:10%">Longevity</div><div class="progress-bar bg-eighty" role="progressbar" style="width:10%">Time</div><div class="progress-bar bg-ninety" role="progressbar" style="width:10%">Age</div><div class="progress-bar bg-hundered" role="progressbar" style="width:10%">Presentation</div></div>
-            <div class="progress barcodeHeight2" style="border-radius:0px"><div class="progress-bar bg-ten" role="progressbar" style="width:10%">Style</div><div class="progress-bar bg-fourty" role="progressbar" style="width:10%">Note</div><div class="progress-bar bg-thirty" role="progressbar" style="width:10%">Mood</div><div class="progress-bar bg-fifty" role="progressbar" style="width:10%">Season</div><div class="progress-bar bg-twenty" role="progressbar" style="width:10%">Occasion</div><div class="progress-bar bg-ninety" role="progressbar" style="width:10%">Age Group </div> <div class="progress-bar bg-sixty" role="progressbar" style="width:10%">Smell Intensity</div>  <div class="progress-bar bg-seventy" role="progressbar" style="width:10%">Longevity</div><div class="progress-bar bg-eighty" role="progressbar" style="width:10%">Spray Time</div><div class="progress-bar bg-hundered" role="progressbar" style="width:10%">Presentation</div></div>-->
+                <div class="progress barcodeHeight2" style="border-radius:0px"><div class="progress-bar bg-ten" role="progressbar" style="width:10%">Style</div><div class="progress-bar bg-fourty" role="progressbar" style="width:10%">Note</div><div class="progress-bar bg-thirty" role="progressbar" style="width:10%">Mood</div><div class="progress-bar bg-fifty" role="progressbar" style="width:10%">Season</div><div class="progress-bar bg-twenty" role="progressbar" style="width:10%">Occasion</div><div class="progress-bar bg-ninety" role="progressbar" style="width:10%">Age Group </div> <div class="progress-bar bg-sixty" role="progressbar" style="width:10%">Smell Intensity</div>  <div class="progress-bar bg-seventy" role="progressbar" style="width:10%">Longevity</div><div class="progress-bar bg-eighty" role="progressbar" style="width:10%">Spray Time</div><div class="progress-bar bg-hundered" role="progressbar" style="width:10%">Presentation</div></div>-->
                 <div class="highlights-section w-100">
                     <!-- mismo título que en la imagen: HIGHLIGHTS DE MARCA + DOUGLAS COLLECTION sutíl -->
                     <!-- CARRUSEL BOOTSTRAP (muestra 3 items en lg, 2 en md, 1 en sm) -->
                     <div id="carouselHighlights" class="carousel slide" data-bs-ride="carousel">
                         <!-- indicadores (puntos) se generan dinámicamente para 4 grupos (porque 10 items / 3 = 4 páginas aprox) -->
                         <!--<div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselHighlights" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselHighlights" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselHighlights" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselHighlights" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    </div>-->
+                            <button type="button" data-bs-target="#carouselHighlights" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselHighlights" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselHighlights" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselHighlights" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>-->
                         <!-- contenedor slides -->
                         <div class="carousel-inner">
                             <!-- SLIDE 1: items 1,2,3 -->
@@ -2380,11 +2381,11 @@
         <!-- end of user analytics -->
         <!-- Best Sellers -->
         <!-- <div class="container px-0">
-        <h5 class="mb-4">Best Sellers<span>..................</span> </h5>
-        <div class="row" id="bestseller_carosel">
-        </div>
+            <h5 class="mb-4">Best Sellers<span>..................</span> </h5>
+            <div class="row" id="bestseller_carosel">
+            </div>
 
-    </div> -->
+        </div> -->
         <!-- End of Best Sellers-->
         <!-- Women Perfumes -->
 
@@ -2884,7 +2885,7 @@
 
                             <p style="text-align: justify;font-weight:bold"> Your Personal Barcode seamlessly interacts with the Product Barcodes, matching you with fragrances that are tailored to your digital scent profile. This seamless connection creates an <strong>immersive, interactive experience</strong>where you can digitally "smell" and discover scents that match your style and preferences, all within a digital world of aromas.</p>
                             <!--     <p style="font-weight:bold">With <strong>AmeriFrag’s innovative barcode system,</strong>he art of scent has gone digital—allowing you to explore, discover, and indulge in fragrances like never before. Welcome to a world where your senses meet technology!</p>
-                        -->
+                            -->
                         </div>
 
                     </div>
@@ -2960,79 +2961,79 @@
         </div>
         <!--DropShip popup-->
         <!--<div class="modal fade" id="dropshippopup" role="dialog">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="d-block m-auto">
-                        <h4 class="modal-heading m-0 text-center">
-                            Dropship
-                        </h4>
-                        <p class="m-0 text-center">subtitle</p>
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="d-block m-auto">
+                            <h4 class="modal-heading m-0 text-center">
+                                Dropship
+                            </h4>
+                            <p class="m-0 text-center">subtitle</p>
+                        </div>
+                        <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
                     </div>
-                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
-                </div>
 
-                <div class="modal-body py-2">
-                    <div class="row p-3 align-items-baseline">
-                        <p>
-                            About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.
-                        </p>
+                    <div class="modal-body py-2">
+                        <div class="row p-3 align-items-baseline">
+                            <p>
+                                About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.
+                            </p>
 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>-->
+        </div>-->
         <!--wholesaler popup-->
         <!--<div class="modal fade" id="wholesalerpopup" role="dialog">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="d-block m-auto">
-                        <h4 class="modal-heading m-0 text-center">
-                            Wholesaler
-                        </h4>
-                        <p class="m-0 text-center">subtitle</p>
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="d-block m-auto">
+                            <h4 class="modal-heading m-0 text-center">
+                                Wholesaler
+                            </h4>
+                            <p class="m-0 text-center">subtitle</p>
+                        </div>
+                        <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
                     </div>
-                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
-                </div>
 
-                <div class="modal-body py-2">
-                    <div class="row p-3 align-items-baseline">
-                        <p>
-                            About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.
-                        </p>
+                    <div class="modal-body py-2">
+                        <div class="row p-3 align-items-baseline">
+                            <p>
+                                About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.
+                            </p>
 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>-->
+        </div>-->
         <!--Subscribe popup-->
         <!--<div class="modal fade" id="subscribepopup" role="dialog">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="d-block m-auto">
-                        <h4 class="modal-heading m-0 text-center">
-                            Subscribe
-                        </h4>
-                        <p class="m-0 text-center">subtitle</p>
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="d-block m-auto">
+                            <h4 class="modal-heading m-0 text-center">
+                                Subscribe
+                            </h4>
+                            <p class="m-0 text-center">subtitle</p>
+                        </div>
+                        <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
                     </div>
-                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
-                </div>
 
-                <div class="modal-body py-2">
-                    <div class="row p-3 align-items-baseline">
-                        <p>
-                            About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.
-                        </p>
+                    <div class="modal-body py-2">
+                        <div class="row p-3 align-items-baseline">
+                            <p>
+                                About me: James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies. James Francis Cameron CC is a Canadian film director, screenwriter, and producer. A major figure in the post-New Hollywood era, Cameron is considered one of the industry's most innovative filmmakers, regularly making use of novel technologies.
+                            </p>
 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>-->
+        </div>-->
 
         <input type="hidden" name="prdctid" id="prdctid" />
         <div class="divdv"></div>

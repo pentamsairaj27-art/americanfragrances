@@ -1,221 +1,299 @@
-﻿
-/* ===== fixed navigation — clean, glass (inspired by references) ===== */
-.elegant-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0.8rem 2.5rem;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-    z-index: 1100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border-bottom: 1px solid rgba(210, 180, 150, 0.3);
-}
-
-.nav-logo {
-    font-weight: 800;
-    font-size: 1.9rem;
-    letter-spacing: -0.5px;
-    background: linear-gradient(145deg, #3d2f29, #8b5e4b);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    font-weight: 500;
-    color: #2f2a27;
-}
-
-    .nav-links a {
-        text-decoration: none;
-        color: #2f2a27;
-        font-size: 1rem;
-        transition: 0.2s;
-        border-bottom: 2px solid transparent;
-        padding-bottom: 4px;
-    }
-
-        .nav-links a:hover {
-            border-bottom-color: #b1856e;
-            color: #4d3429;
-        }
-
-.nav-icons {
-    display: flex;
-    gap: 1.6rem;
-    color: #4d3e36;
-    font-size: 1.2rem;
-}
-
-    .nav-icons i {
-        cursor: pointer;
-        transition: transform 0.15s;
-    }
-
-        .nav-icons i:hover {
-            transform: scale(1.1);
-            color: #b45f3a;
-        }
-
-/* ===== HERO CAROUSEL (full-width, with offers as slides) ===== */
+﻿/* === HERO WRAPPER – compact, myntra-like height === */
 .hero-carousel-wrapper {
-   /* margin-top: 70px;*/ /* fixed nav */
     position: relative;
+    width: 100%;
+    border-radius: 0 0 2rem 2rem;
+    overflow: hidden;
+    box-shadow: 0 15px 30px -8px rgba(0,0,0,0.1);
 }
 
+/* carousel items – height 50vh */
 .hero-carousel .carousel-item {
-    height: 85vh;
-    min-height: 600px;
+    height: 50vh;
+    min-height: 380px;
+    max-height: 500px;
     background-size: cover;
     background-position: center 30%;
     position: relative;
 }
 
-    /* overlay for readability */
-    .hero-carousel .carousel-item::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at 30% 50%, rgba(20,15,10,0.3) 0%, rgba(0,0,0,0.6) 95%);
-        z-index: 1;
-    }
-
-
-.image-card .img-fluid {
-    max-width: 60% !important;
+/* ===== ALL SLIDE BACKGROUNDS – PURE PERFUME / FRAGRANCE IMAGES ===== */
+.slide-1 {
+    background-image: url('/Images/new_i/27963.jpg');
+    /* luxury perfume bottle macro */
 }
 
-.Studio_img_container {
-    width: 100%; /* Full width of its parent */
-    height: auto; /* Set a height (adjust as needed) */
-    overflow: hidden;
-    position: relative;
+.slide-2 {
+    background-image: url('/Images/new_i/279634.jpg');
+    /* elegant perfume with flowers */
 }
 
-    .Studio_img_container img {
-        width: 100%; /* Full width of its parent */
-        height: auto; /* Set a height (adjust as needed) */
-    }
-
-
-
-@media (max-width: 767px) {
-    .bannertitle {
-        font-size: 21px !important;
-    }
-
-    .bannercontent span {
-        font-size: 24px !important;
-    }
-
-    .bannercontent p {
-        font-size: 22px !important;
-    }
-
-    .happymot_day {
-        font-size: 22px !important;
-    }
-
-    .quotetest {
-        /*    font-family: 'harlow-solid-italic' !important;*/
-        font-weight: bold !important;
-        font-family: Chiller;
-        font-size: 25px !important;
-    }
-
-    .image-card, .PerfumeCreteriaCard {
-        max-width: 100% !important; /* Full width on mobile */
-    }
-
-    .perfumeCardContainer {
-        display: block !important;
-    }
+.slide-3 {
+    background-image: url('/Images/new_i/279635.jpg');
+    /* abstract perfume essence */
 }
 
-@media (min-width: 767px) {
-    .perfumeCardContainer {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: center !important;
+/* soft gradient overlay – very subtle */
+.hero-carousel .carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(92deg, rgba(0,0,0,0.2) 0%, rgba(20,10,5,0.2) 60%, rgba(0,0,0,0.15) 100%);
+    z-index: 1;
+}
+
+/* === MAIN CAPTION – GLASS CARD (CENTERED, BOLD, READABLE) === */
+.hero-slide-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(92%, 800px);
+    z-index: 20;
+    color: white;
+    text-align: center;
+    padding: 2rem 2rem 2.2rem;
+    background: rgba(8, 8, 12, 0.55); /* dark glass for max contrast */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 220, 170, 0.4);
+    border-radius: 70px;
+    box-shadow: 0 30px 60px -10px #000000cc, inset 0 1px 2px rgba(255,255,240,0.3);
+}
+
+    /* offer badge – big, solid, with depth */
+    .hero-slide-caption .offer-badge {
+        display: inline-block;
+        background: #cb4e2b; /* solid burnt orange */
+        padding: 0.35rem 2rem;
+        border-radius: 50px;
+        font-weight: 800;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        box-shadow: 0 8px 0 #732f1a, 0 12px 25px #00000080;
+        border: 1px solid #ffc28c;
+        letter-spacing: 1px;
     }
 
-    .PerfumeCreteriaCard {
-        flex-grow: 1 !important;
+/* variation for slide 2+3 badges (distinct but solid perfume-themed) */
+.slide-2 .hero-slide-caption .offer-badge {
+    background: #1d5b4b;
+    box-shadow: 0 8px 0 #12423a;
+    border-color: #bbd6b0;
+}
+
+.slide-3 .hero-slide-caption .offer-badge {
+    background: #b45f3a;
+    box-shadow: 0 8px 0 #733e25;
+    border-color: #f0ba90;
+}
+
+.hero-slide-caption h2 {
+    font-size: clamp(2.3rem, 7vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    text-shadow: 0 4px 20px black;
+    margin-bottom: 0.2rem;
+}
+
+    .hero-slide-caption h2 span {
+        background: linear-gradient(145deg, #ffdfb8, #ffba7a);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        filter: drop-shadow(0 0 20px #ffb45e);
+        border-bottom: 2px solid rgba(255,220,150,0.8);
+        padding-bottom: 0.1rem;
     }
+
+.hero-slide-caption p {
+    font-size: 1.25rem;
+    font-weight: 350;
+    margin: 0.5rem 0 0.8rem;
+    color: #fff8ed;
+    text-shadow: 0 2px 8px black;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Section Styling */
-.brands-showcase {
-    padding: 60px 0;
-   /* background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);*/
+.hero-slide-caption .btn-gradient {
+    background: linear-gradient(145deg, #ebc9a4, #d1a27e);
+    border: none;
+    color: #1f1915;
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 0.9rem 2.5rem;
+    border-radius: 60px;
+    margin-top: 0.6rem;
+    box-shadow: 0 18px 30px -5px #1f130b, inset 0 1px 4px #fff1d6;
+    transition: 0.2s;
+    border: 1px solid #fadbb9;
 }
 
-.section-header {
-    margin-bottom: 40px;
+    .hero-slide-caption .btn-gradient:hover {
+        background: linear-gradient(145deg, #f5dcbb, #e2b692);
+        transform: scale(1.02);
+        box-shadow: 0 22px 35px -8px black;
+    }
+
+.hero-slide-caption .highlights {
+    font-size: 0.9rem;
+    margin-top: 0.6rem;
+    color: #ffeac7;
+    text-shadow: 0 1px 6px black;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
+
+/* carousel controls — subtle but visible */
+.carousel-control-prev, .carousel-control-next {
+    width: 4%;
+    opacity: 0.9;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #1e1e1e80;
+    border-radius: 50%;
+    padding: 1.2rem;
+    background-size: 55%;
+    border: 1px solid rgba(255,220,150,0.7);
+    backdrop-filter: blur(4px);
+}
+
+/* ai watermark – crisp */
+.ai-watermark {
+    position: absolute;
+    bottom: 1rem;
+    right: 1.2rem;
+    background: #0b1a1ee0;
+    color: #ffefda;
+    padding: 0.3rem 1.3rem;
+    border-radius: 60px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #cfa776;
+    z-index: 30;
+    box-shadow: 0 8px 18px black;
+    backdrop-filter: blur(4px);
+}
+
+    .ai-watermark i {
+        color: #ffd78a;
+        margin-right: 6px;
+    }
 
 .section-title {
-    color: #1a1a1a !important;
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-    position: relative;
-    display: inline-block;
-}
-
-.section-subtitle {
-    color: #666;
-    font-size: 1.1rem;
-    font-weight: 400;
-    max-width: 600px;
-    margin: 0 auto 20px;
-    line-height: 1.6;
+    font-size: 2rem;
+    font-weight: 650;
+    color: #1c1c1c;
 }
 
 .title-underline {
     width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, #70B4BD, #8b7355);
-    margin: 0 auto;
-    border-radius: 2px;
+    height: 4px;
+    background: linear-gradient(90deg, #b6a38e, #c6ad9a);
+    margin: 0.2rem auto 0;
+    border-radius: 4px;
 }
 
-/* Banner Styling */
+/* responsive */
+@media (max-width: 767px) {
+    .hero-carousel .carousel-item {
+        height: 42vh;
+        min-height: 300px;
+        max-height: 380px;
+    }
+
+    .hero-slide-caption {
+        padding: 1.5rem 1.2rem;
+        border-radius: 40px;
+        width: 95%;
+    }
+
+        .hero-slide-caption .offer-badge {
+            font-size: 1.2rem;
+            padding: 0.2rem 1.2rem;
+        }
+
+        .hero-slide-caption h2 {
+            font-size: 1.8rem;
+        }
+
+        .hero-slide-caption p {
+            font-size: 1rem;
+        }
+
+    .btn-gradient {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-slide-caption .offer-badge {
+        font-size: 1rem;
+    }
+
+    .hero-slide-caption h2 {
+        font-size: 1.6rem;
+    }
+
+    .hero-slide-caption p {
+        font-size: 0.85rem;
+    }
+}
+
+
+
+
+
+
+
+
+.image-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    max-width: 12% !important;
+    margin: 2px;
+    text-align: center !important;
+}
+
+    .image-card .img-fluid {
+        max-width: 60% !important;
+    }
+.headingColor {
+    color: #70b4bd !important;
+    color: black !important;
+    font-weight: bold;
+    text-transform: capitalize !important;
+    font-weight: 600 !important;
+}
+
 .brands-banner {
     position: relative;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
 }
 
-    .brands-banner:hover {
-        transform: scale(1.02);
-    }
+.brands-banner img {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes extra space below image */
+    /* Remove the transition if not needed for hover effects */
+}
 
-    .brands-banner img {
-        width: 100%;
-        height: auto;
-        transition: transform 0.5s ease;
-    }
-
-    .brands-banner:hover img {
-        transform: scale(1.05);
-    }
+/* Add this if you want hover effect */
+.brands-banner:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
 
 /* Premium Brands Section */
 /*.premium-brands-section {
@@ -459,7 +537,7 @@
     background: linear-gradient(45deg, #2c3e50, #34495e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 15px;
+    margin-bottom: 6px;
     letter-spacing: 2px;
 }
 
@@ -467,7 +545,7 @@
     color: #666;
     font-size: 1.1rem;
     max-width: 700px;
-    margin: 0 auto 20px;
+    margin: 0 auto 6px;
     line-height: 1.8;
 }
 
@@ -483,7 +561,7 @@
 /* ===== COLLECTION GRID ===== */
 .collection-wrapper {
     position: relative;
-    padding: 20px;
+    padding-top: 20px;
     border-radius: 20px;
     transition: var(--transition-slow);
 }
@@ -511,7 +589,7 @@
 
 /* ===== GENDER LABEL STYLES ===== */
 .collection-header-cell {
-    grid-column: span 1;
+    grid-column: span 2;
     display: flex;
     align-items: end;
     justify-content: center;
@@ -554,7 +632,7 @@
 }
 
 .collection-header-cell:hover .label-content {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .label-icon {
@@ -863,7 +941,7 @@
     }
 
     .collection-header-cell {
-        grid-column: span 1;
+        grid-column: span 2;
     }
 
     .collection-footer-cell {
@@ -982,288 +1060,6 @@ html {
 
 #selectedOptionNote {
     color: #70b4bd !important
-}
-
-/* individual slide backgrounds (dummy high-end perfume images) */
-.slide-1 {
-    background-image: url('https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1887&auto=format&fit=crop');
-}
-
-.slide-2 {
-    background-image: url('https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80&w=1932&auto=format&fit=crop');
-}
-
-.slide-3 {
-    background-image: url('https://images.unsplash.com/photo-1641314693913-087dc3dc9a61?q=80&w=1932&auto=format&fit=crop');
-}
-
-/* caption for each hero slide (glass card) */
-.hero-slide-caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: min(90%, 750px);
-    z-index: 20;
-    color: white;
-    text-align: center;
-    padding: 2.5rem 1.8rem;
-    background: rgba(10, 10, 15, 0.3);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 215, 170, 0.3);
-    border-radius: 60px;
-    box-shadow: 0 40px 70px -10px #00000080;
-}
-
-    .hero-slide-caption h2 {
-        font-size: clamp(2.5rem, 8vw, 5rem);
-        font-weight: 800;
-        letter-spacing: -1px;
-        line-height: 1.1;
-        text-shadow: 0 2px 15px #00000070;
-    }
-
-        .hero-slide-caption h2 span {
-            background: linear-gradient(145deg, #fadcb0, #ffcba4);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            filter: drop-shadow(0 0 18px #ffad6a);
-        }
-
-    .hero-slide-caption .offer-badge {
-        display: inline-block;
-        background: #cb4e2b;
-        padding: 0.3rem 1.8rem;
-        border-radius: 40px;
-        font-weight: 800;
-        font-size: 1.8rem;
-        margin-bottom: 0.8rem;
-        box-shadow: 0 6px 0 #732f1a, 0 10px 20px #00000060;
-        border: 1px solid #ffb081;
-    }
-
-    .hero-slide-caption p {
-        font-size: 1.2rem;
-        font-weight: 300;
-        margin: 0.8rem 0;
-        color: #ffffff;
-    }
-
-    .hero-slide-caption .btn-gradient {
-        background: linear-gradient(145deg, #ebc9a4, #d1a27e);
-        border: none;
-        color: #1f1915;
-        font-weight: 700;
-        font-size: 1.2rem;
-        padding: 0.9rem 2.5rem;
-        border-radius: 60px;
-        margin-top: 0.5rem;
-        box-shadow: 0 18px 30px -8px #2b1d13, inset 0 1px 3px #fff0d0;
-        transition: 0.2s;
-    }
-
-        .hero-slide-caption .btn-gradient:hover {
-            background: linear-gradient(145deg, #f5dcbb, #e2b692);
-            transform: scale(1.02);
-        }
-
-/* carousel controls — subtle */
-.hero-carousel .carousel-control-prev, .hero-carousel .carousel-control-next {
-    width: 6%;
-    opacity: 0.5;
-    filter: drop-shadow(0 0 5px black);
-}
-
-.hero-carousel .carousel-indicators button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255,255,240,0.7);
-}
-
-/* ===== SECONDARY CAROUSEL (two extra offer cards in a carousel) ===== */
-.secondary-carousel-section {
-    background: #faf3ec;
-    padding: 3rem 1.5rem 4rem 1.5rem;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.2rem;
-    font-weight: 300;
-    color: #3d322b;
-    margin-bottom: 2rem;
-}
-
-    .section-title strong {
-        font-weight: 700;
-        background: linear-gradient(145deg, #9b6f57, #6f4e3c);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-    }
-
-.offer-carousel {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-    .offer-carousel .carousel-item {
-        padding: 0.5rem 1rem;
-    }
-
-.offer-card {
-    display: flex;
-    flex-direction: row;
-    background: white;
-    border-radius: 40px;
-    overflow: hidden;
-    box-shadow: 0 30px 40px -20px #4d3629;
-    border: 1px solid rgba(180, 140, 110, 0.3);
-    transition: transform 0.2s;
-    margin: 0.5rem;
-}
-
-    .offer-card:hover {
-        transform: scale(1.01);
-    }
-
-.offer-img {
-    width: 40%;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    min-height: 220px;
-}
-
-.offer-tag {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    background: #cb4e2b;
-    color: white;
-    font-weight: 800;
-    padding: 0.3rem 1.4rem;
-    border-radius: 40px;
-    font-size: 1.2rem;
-    box-shadow: 0 6px 0 #752e1d;
-    border: 1px solid #ffb68b;
-}
-
-.offer-content {
-    width: 60%;
-    padding: 1.8rem 1.8rem 1.8rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-    .offer-content h3 {
-        font-size: 1.9rem;
-        font-weight: 800;
-        margin-bottom: 0.4rem;
-        color: #2b241f;
-    }
-
-    .offer-content p {
-        color: #5e5349;
-        margin-bottom: 1.2rem;
-    }
-
-.offer-cta-small {
-    background: none;
-    border: 2px solid #ac8b73;
-    color: #4f3a2c;
-    font-weight: 700;
-    padding: 0.6rem 1.8rem;
-    border-radius: 60px;
-    width: fit-content;
-    transition: 0.2s;
-    font-size: 0.95rem;
-}
-
-    .offer-cta-small i {
-        margin-left: 6px;
-        transition: transform 0.2s;
-    }
-
-    .offer-cta-small:hover {
-        background: #ac8b73;
-        color: white;
-    }
-
-        .offer-cta-small:hover i {
-            transform: translateX(5px);
-        }
-
-/* specific images for secondary cards */
-.card-img-1 {
-    background-image: url('https://images.unsplash.com/photo-1615633812098-5f4e3b3bc1c6?q=80&w=1887&auto=format&fit=crop');
-}
-
-.card-img-2 {
-    background-image: url('https://images.unsplash.com/photo-1592945403407-9c8d9306a64d?q=80&w=1887&auto=format&fit=crop');
-}
-
-.card-img-3 {
-    background-image: url('https://images.unsplash.com/photo-1620912189866-3225f922fbaa?q=80&w=1887&auto=format&fit=crop');
-}
-
-/* carousel controls for secondary */
-.offer-carousel .carousel-control-prev,
-.offer-carousel .carousel-control-next {
-    background: rgba(150, 120, 100, 0.3);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0.8;
-    border: 1px solid #ccb699;
-}
-
-.offer-carousel .carousel-control-prev {
-    left: -50px;
-}
-
-.offer-carousel .carousel-control-next {
-    right: -50px;
-}
-
-@media (max-width: 768px) {
-    .offer-carousel .carousel-control-prev,
-    .offer-carousel .carousel-control-next {
-        display: none;
-    }
-    /* touch swipe enough */
-    .offer-card {
-        flex-direction: column;
-    }
-
-    .offer-img, .offer-content {
-        width: 100%;
-    }
-
-    .offer-img {
-        min-height: 200px;
-    }
-}
-
-/* tiny ai watermark */
-.ai-watermark {
-    position: absolute;
-    bottom: 20px;
-    right: 25px;
-    color: rgba(255,240,220,0.8);
-    background: rgba(0,0,0,0.3);
-    backdrop-filter: blur(6px);
-    padding: 0.3rem 1.2rem;
-    border-radius: 50px;
-    z-index: 100;
-    font-size: 0.9rem;
-    border: 1px solid rgba(255,210,150,0.4);
 }
 
 /* dummy footer */

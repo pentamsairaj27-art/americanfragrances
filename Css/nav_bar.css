@@ -350,8 +350,8 @@
         }
 
     .perfume-nav-analytics {
-        font-weight: 700;
-        color: #70B4BD;
+        font-weight: 500;
+       /* color: #70B4BD;*/
     }
 
         .perfume-nav-analytics:hover {

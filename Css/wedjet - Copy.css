@@ -9,9 +9,9 @@
 
 /* carousel items – height 50vh */
 .hero-carousel .carousel-item {
-    height: 50vh;
+    height: 200vh;
     min-height: 380px;
-    max-height: 500px;
+    max-height: 520px;
     background-size: cover;
     background-position: center 30%;
     position: relative;

@@ -468,7 +468,7 @@
 
 /* Additional Polish */
 .container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 15px;
 }
@@ -582,7 +582,7 @@
 
 .collection-grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 15px;
     align-items: stretch;
 }

@@ -1,419 +1,1386 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>American Fragrances · Bootstrap</title>
-    <!-- Bootstrap 5 + icons (optional, but clean) -->
+    <title>American Fragrances · Discover Your Signature Scent</title>
+
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Inter font (matches React code) -->
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Poppins Font (Perfect for luxury perfume site) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-            background: white;
-        }
-        /* subtle helper to keep placeholder visuals consistent */
-        .placeholder-box, .barcode-placeholder, [class*="bg-gray"] {
-            background-color: #f0f2f4; /* soft gray */
-            border-radius: 0;
-        }
-        /* ensure cards and borders mimic React design */
-        .border-light-gray {
-            border-color: #e9ecef;
-        }
-
-        .text-small-meta {
-            font-size: 0.75rem;
-            letter-spacing: 0.03em;
-            color: #6c757d;
-        }
-
-        .hover-underline {
-            text-decoration: underline;
-        }
-
-        .btn-dark-custom {
-            background-color: #000;
-            color: #fff;
-            border-radius: 50rem;
-            font-size: 0.9rem;
-            padding: 0.7rem 2rem;
-            border: none;
-        }
-
-            .btn-dark-custom:hover {
-                background-color: #212529;
-            }
-
-        .bg-soft-gray {
-            background-color: #f8f9fa;
-        }
-        /* equivalent to gray-50/100 */
-        .bg-soft-darker {
-            background-color: #e9ecef;
-        }
-        /* for cards */
-        .grid-gap-10 {
-            gap: 2.5rem;
-        }
-        /* mimics 10 (2.5rem) */
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="Css/styles.css" rel="stylesheet" />
 </head>
 <body>
 
-    <div class="container-fluid px-0 bg-white">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container-fluid px-lg-5">
+            <a class="navbar-brand" href="#" data-aos="fade-right">
+                <span class="brand-text"> <img src="images/logo.png" class="perfume-nav-logo-mobile" alt="AmeriFrag"></span>
+            </a>
 
-        <!-- HEADER (global navigation) -->
-        <header class="d-flex flex-wrap align-items-center justify-content-between px-4 px-lg-5 py-4 border-bottom">
-            <div class="fw-semibold fs-5 tracking-wide">AMERICAN FRAGRANCES</div>
-            <nav class="d-none d-md-flex gap-4 fw-medium text-secondary">
-                <span class="text-dark">Men</span>
-                <span class="text-dark">Women</span>
-                <span class="text-dark">Brands</span>
-                <span class="text-dark">Discover</span>
-                <span class="text-dark">AI Finder</span>
-            </nav>
-            <div class="d-flex gap-4 text-secondary small">
-                <span>Search</span>
-                <span>Wishlist</span>
-                <span>Cart</span>
-                <span>Login</span>
+            <!-- Mobile Icons -->
+            <div class="mobile-icons d-lg-none">
+                <button class="icon-btn" id="mobileSearch">
+                    <i class="bi bi-search"></i>
+                </button>
+                <button class="icon-btn position-relative" id="mobileWishlist">
+                    <i class="bi bi-heart"></i>
+                    <span class="badge-count">3</span>
+                </button>
+                <button class="icon-btn position-relative" id="mobileCart">
+                    <i class="bi bi-bag"></i>
+                    <span class="badge-count">2</span>
+                </button>
+                <button class="navbar-toggler" type="button" id="menuToggle">
+                    <span class="toggler-icon"></span>
+                    <span class="toggler-icon"></span>
+                    <span class="toggler-icon"></span>
+                </button>
             </div>
-            <!-- mobile nav toggle (simple) -->
-            <button class="d-md-none btn btn-outline-dark btn-sm">Menu</button>
-        </header>
 
-        <!-- HERO -->
-        <section class="bg-light text-center px-3 py-5 py-md-6" style="padding: 6rem 1rem;">
-            <h1 class="display-5 fw-semibold mb-4">Discover Fragrances That Truly Fit You</h1>
-            <p class="text-secondary mx-auto mb-5" style="max-width: 650px;">AI-powered fragrance discovery and the AmeriFrag Barcode help you find scents that match your personality, mood, and lifestyle.</p>
-            <div>
-                <button class="btn btn-dark rounded-pill px-5 py-3">Reveal My Signature Scents</button>
-            </div>
-        </section>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <!-- Men Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Men
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-droplet me-2"></i>Fragrances</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-palette me-2"></i>Make Up</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-moisture me-2"></i>Skin Care</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-scissors me-2"></i>Hair Care</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-water me-2"></i>Bath & Body</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-flower1 me-2"></i>Aroma</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-gift me-2"></i>Gift Sets</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-boxes me-2"></i>Bundle Sets</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-bag-check me-2"></i>Accessories</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-tag me-2"></i>Clearance</a></li>
+                        </ul>
+                    </li>
 
-        <!-- AI MATCH EXAMPLES -->
-        <section class="py-5 px-3 px-lg-5" style="padding: 5rem 0;">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="fw-semibold fs-2">See How AI Matches Fragrances</h2>
-                    <p class="text-secondary mx-auto" style="max-width: 600px;">Your preferences become a fragrance profile. Our AI reveals scents that fit your mood, style, and moment.</p>
-                </div>
-                <div class="row g-4">
-                    <!-- three cards -->
-                    <div class="col-md-4">
-                        <div class="border p-4 h-100 bg-white">
-                            <div class="d-flex flex-wrap gap-2 mb-4">
-                                <span class="badge border bg-transparent text-dark rounded-pill px-3 py-1 fw-normal">Elegant Evening</span>
-                                <span class="badge border bg-transparent text-dark rounded-pill px-3 py-1 fw-normal">Sophisticated</span>
-                                <span class="badge border bg-transparent text-dark rounded-pill px-3 py-1 fw-normal">Winter</span>
+                    <!-- Women Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Women
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-droplet me-2"></i>Fragrances</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-palette me-2"></i>Make Up</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-moisture me-2"></i>Skin Care</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-scissors me-2"></i>Hair Care</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-water me-2"></i>Bath & Body</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-flower1 me-2"></i>Aroma</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-gift me-2"></i>Gift Sets</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-boxes me-2"></i>Bundle Sets</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-bag-check me-2"></i>Accessories</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-tag me-2"></i>Clearance</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Brands Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Brands
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Chanel</a></li>
+                            <li><a class="dropdown-item" href="#">Christian Dior</a></li>
+                            <li><a class="dropdown-item" href="#">Tom Ford</a></li>
+                            <li><a class="dropdown-item" href="#">Creed</a></li>
+                            <li><a class="dropdown-item" href="#">Gucci</a></li>
+                            <li><a class="dropdown-item" href="#">Hermes</a></li>
+                            <li><a class="dropdown-item" href="#">Maison Francis Kurkdjian</a></li>
+                            <li><a class="dropdown-item" href="#">Yves Saint Laurent</a></li>
+                            <li><a class="dropdown-item" href="#">Roja Parfums</a></li>
+                            <li><a class="dropdown-item" href="#">Louis Vuitton</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item view-all" href="brands.html"><strong>More Brands +</strong></a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Discover Mega Menu -->
+                    <li class="nav-item dropdown mega-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Discover
+                        </a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6 class="mega-title">Discover</h6>
+                                        <ul class="mega-links">
+                                            <li><a href="#">Premium</a></li>
+                                            <li><a href="#">Luxury</a></li>
+                                            <li><a href="#">Designer</a></li>
+                                            <li><a href="#">Niche</a></li>
+                                            <li><a href="#">Celebrity</a></li>
+                                            <li><a href="#">Natural</a></li>
+                                            <li><a href="#">Indie</a></li>
+                                            <li><a href="#">Specialty</a></li>
+                                            <li><a href="#">Mass Market</a></li>
+                                            <li><a href="#">Economical</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="mega-title">Curate</h6>
+                                        <ul class="mega-links">
+                                            <li><a href="#">New Arrivals</a></li>
+                                            <li><a href="#">Best Sellers</a></li>
+                                            <li><a href="#">Top Rated</a></li>
+                                            <li><a href="#">AmeriFrag's Choice</a></li>
+                                            <li><a href="#">Bundle Sets</a></li>
+                                            <li><a href="#">Gift Sets</a></li>
+                                            <li><a href="#">Clearance</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="text-uppercase small text-secondary mb-3 tracking-wide">AI RECOMMENDATIONS</p>
-                            <div class="row g-2">
-                                <div class="col-4">
-                                    <div class="bg-light" style="height: 100px;"></div>
-                                    <p class="small fw-medium mt-2 mb-0">Delina</p>
-                                    <p class="text-secondary small">Parfums de Marly</p>
+                        </div>
+                    </li>
+
+                    <!-- AI Finder Mega Menu -->
+                    <li class="nav-item dropdown mega-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            AI Finder
+                        </a>
+                        <div class="dropdown-menu mega-menu ai-mega-menu">
+                            <div class="container">
+                                <div class="row g-3">
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <h6 class="mega-title">Style</h6>
+                                        <ul class="mega-links">
+                                            <li><a href="#">Casual</a></li>
+                                            <li><a href="#">Formal</a></li>
+                                            <li><a href="#">Sporty</a></li>
+                                            <li><a href="#">Elegant</a></li>
+                                            <li><a href="#">Bohemian</a></li>
+                                            <li><a href="#">Classic</a></li>
+                                            <li><a href="#">Modern</a></li>
+                                            <li><a href="#">Vintage</a></li>
+                                            <li><a href="#">Minimalist</a></li>
+                                            <li><a href="#">Bold</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <h6 class="mega-title">Note</h6>
+                                        <ul class="mega-links">
+                                            <li><a href="#">Floral</a></li>
+                                            <li><a href="#">Woody</a></li>
+                                            <li><a href="#">Citrus</a></li>
+                                            <li><a href="#">Oriental</a></li>
+                                            <li><a href="#">Fresh</a></li>
+                                            <li><a href="#">Spicy</a></li>
+                                            <li><a href="#">Aquatic</a></li>
+                                            <li><a href="#">Fruity</a></li>
+                                            <li><a href="#">Gourmand</a></li>
+                                            <li><a href="#">Green</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <h6 class="mega-title">Mood</h6>
+                                        <ul class="mega-links">
+                                            <li><a href="#">Romantic</a></li>
+                                            <li><a href="#">Confident</a></li>
+                                            <li><a href="#">Relaxed</a></li>
+                                            <li><a href="#">Energetic</a></li>
+                                            <li><a href="#">Mysterious</a></li>
+                                            <li><a href="#">Playful</a></li>
+                                            <li><a href="#">Sophisticated</a></li>
+                                            <li><a href="#">Adventurous</a></li>
+                                            <li><a href="#">Calm</a></li>
+                                            <li><a href="#">Powerful</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <h6 class="mega-title">Season</h6>
+                                        <ul class="mega-links">
+                                            <li><a href="#">Spring</a></li>
+                                            <li><a href="#">Summer</a></li>
+                                            <li><a href="#">Autumn</a></li>
+                                            <li><a href="#">Winter</a></li>
+                                            <li><a href="#">All-Season</a></li>
+                                            <li><a href="#">Warm Weather</a></li>
+                                            <li><a href="#">Cold Weather</a></li>
+                                            <li><a href="#">Rainy</a></li>
+                                            <li><a href="#">Tropical</a></li>
+                                            <li><a href="#">Humid</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <h6 class="mega-title">Occasion</h6>
+                                        <ul class="mega-links">
+                                            <li><a href="#">Office</a></li>
+                                            <li><a href="#">Date Night</a></li>
+                                            <li><a href="#">Wedding</a></li>
+                                            <li><a href="#">Party</a></li>
+                                            <li><a href="#">Casual</a></li>
+                                            <li><a href="#">Gym</a></li>
+                                            <li><a href="#">Travel</a></li>
+                                            <li><a href="#">Beach</a></li>
+                                            <li><a href="#">Formal Event</a></li>
+                                            <li><a href="#">Everyday</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <h6 class="mega-title">Age Group</h6>
+                                        <ul class="mega-links">
+                                            <li><a href="#">Teen</a></li>
+                                            <li><a href="#">Young Adult</a></li>
+                                            <li><a href="#">25-35</a></li>
+                                            <li><a href="#">35-45</a></li>
+                                            <li><a href="#">45-55</a></li>
+                                            <li><a href="#">55+</a></li>
+                                            <li><a href="#">Mature</a></li>
+                                            <li><a href="#">Youthful</a></li>
+                                            <li><a href="#">Timeless</a></li>
+                                            <li><a href="#">Ageless</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <h6 class="mega-title">Smell Intensity</h6>
+                                        <ul class="mega-links">
+                                            <li><a href="#">Subtle</a></li>
+                                            <li><a href="#">Light</a></li>
+                                            <li><a href="#">Moderate</a></li>
+                                            <li><a href="#">Strong</a></li>
+                                            <li><a href="#">Intense</a></li>
+                                            <li><a href="#">Powerful</a></li>
+                                            <li><a href="#">Soft</a></li>
+                                            <li><a href="#">Medium</a></li>
+                                            <li><a href="#">Bold</a></li>
+                                            <li><a href="#">Overwhelming</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <h6 class="mega-title">Longevity</h6>
+                                        <ul class="mega-links">
+                                            <li><a href="#">1-2 Hours</a></li>
+                                            <li><a href="#">2-4 Hours</a></li>
+                                            <li><a href="#">4-6 Hours</a></li>
+                                            <li><a href="#">6-8 Hours</a></li>
+                                            <li><a href="#">8-12 Hours</a></li>
+                                            <li><a href="#">12+ Hours</a></li>
+                                            <li><a href="#">Short</a></li>
+                                            <li><a href="#">Medium</a></li>
+                                            <li><a href="#">Long</a></li>
+                                            <li><a href="#">All-Day</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <h6 class="mega-title">Spray Time</h6>
+                                        <ul class="mega-links">
+                                            <li><a href="#">Morning</a></li>
+                                            <li><a href="#">Afternoon</a></li>
+                                            <li><a href="#">Evening</a></li>
+                                            <li><a href="#">Night</a></li>
+                                            <li><a href="#">Dawn</a></li>
+                                            <li><a href="#">Dusk</a></li>
+                                            <li><a href="#">Midnight</a></li>
+                                            <li><a href="#">Anytime</a></li>
+                                            <li><a href="#">Pre-Event</a></li>
+                                            <li><a href="#">Post-Shower</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2">
+                                        <h6 class="mega-title">Presentation</h6>
+                                        <ul class="mega-links">
+                                            <li><a href="#">Minimalist</a></li>
+                                            <li><a href="#">Luxurious</a></li>
+                                            <li><a href="#">Artistic</a></li>
+                                            <li><a href="#">Classic</a></li>
+                                            <li><a href="#">Modern</a></li>
+                                            <li><a href="#">Vintage</a></li>
+                                            <li><a href="#">Elegant</a></li>
+                                            <li><a href="#">Bold</a></li>
+                                            <li><a href="#">Sleek</a></li>
+                                            <li><a href="#">Ornate</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="col-4">
-                                    <div class="bg-light" style="height: 100px;"></div>
-                                    <p class="small fw-medium mt-2 mb-0">Baccarat Rouge 540</p>
-                                    <p class="text-secondary small">Maison Francis Kurkdjian</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Desktop Icons -->
+                <div class="nav-icons d-none d-lg-flex">
+                    <button class="icon-btn" id="searchBtn">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <button class="icon-btn position-relative">
+                        <i class="bi bi-heart"></i>
+                        <span class="badge-count">3</span>
+                    </button>
+                    <button class="icon-btn position-relative">
+                        <i class="bi bi-bag"></i>
+                        <span class="badge-count">2</span>
+                    </button>
+                    <button class="icon-btn">
+                        <i class="bi bi-person"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar" id="searchBar">
+            <div class="container">
+                <div class="search-input-wrapper">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search fragrances, brands, categories...">
+                    <button class="close-search" id="closeSearch">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Sidebar -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="brand-text">MENU</span>
+            <button class="close-menu" id="closeMenu">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-content">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">
+                        <span>Men</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">
+                        <span>Women</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">
+                        <span>Brands</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">
+                        <span>Discover</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">
+                        <span>AI Finder</span>
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="mobile-menu-footer">
+                <a href="#" class="btn btn-dark w-100 mb-2">Login / Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                        <h1 class="hero-title">Discover Fragrances That Truly Fit You</h1>
+                        <p class="hero-subtitle">AI-powered fragrance discovery and the AmeriFrag Barcode help you find scents that match your personality, mood, and lifestyle.</p>
+                        <button class="btn btn-primary btn-lg hero-btn">
+                            Reveal My Signature Scents
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="hero-images">
+                            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=500" alt="Perfume 1" class="hero-perfume perfume-1">
+                            <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59d75?w=500" alt="Perfume 2" class="hero-perfume perfume-2">
+                            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500" alt="Perfume 3" class="hero-perfume perfume-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Matches Section -->
+    <section class="section ai-matches-section" id="aiMatches">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">See How AI Matches Fragrances</h2>
+                <p class="section-subtitle">Your preferences become a fragrance profile. Our AI reveals scents that fit your mood, style, and moment.</p>
+            </div>
+
+            <div class="row g-4 mt-4">
+                <!-- AI Match Card 1 -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="ai-match-card">
+                        <div class="ai-match-header">
+                            <span class="badge badge-mood">Elegant Evening</span>
+                            <span class="badge badge-style">Sophisticated</span>
+                            <span class="badge badge-season">Winter</span>
+                        </div>
+                        <h5 class="ai-match-title">AI RECOMMENDATIONS</h5>
+                        <div class="ai-recommendations">
+                            <div class="recommendation-item">
+                                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=300" alt="Delina">
+                                <div class="recommendation-info">
+                                    <h6>Delina</h6>
+                                    <p>Parfums de Marly</p>
                                 </div>
-                                <div class="col-4">
-                                    <div class="bg-light" style="height: 100px;"></div>
-                                    <p class="small fw-medium mt-2 mb-0">Libre EDP</p>
-                                    <p class="text-secondary small">Yves Saint Laurent</p>
+                            </div>
+                            <div class="recommendation-item">
+                                <img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=300" alt="Baccarat Rouge 540">
+                                <div class="recommendation-info">
+                                    <h6>Baccarat Rouge 540</h6>
+                                    <p>Maison Francis Kurkdjian</p>
+                                </div>
+                            </div>
+                            <div class="recommendation-item">
+                                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=300" alt="Libre EDP">
+                                <div class="recommendation-info">
+                                    <h6>Libre EDP</h6>
+                                    <p>Yves Saint Laurent</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="border p-4 h-100 bg-white">
-                            <div class="d-flex flex-wrap gap-2 mb-4">
-                                <span class="badge border bg-transparent text-dark rounded-pill px-3 py-1 fw-normal">Fresh & Clean</span>
-                                <span class="badge border bg-transparent text-dark rounded-pill px-3 py-1 fw-normal">Minimal</span>
-                                <span class="badge border bg-transparent text-dark rounded-pill px-3 py-1 fw-normal">Daytime</span>
-                            </div>
-                            <p class="text-uppercase small text-secondary mb-3">AI RECOMMENDATIONS</p>
-                            <div class="row g-2">
-                                <div class="col-4">
-                                    <div class="bg-light" style="height: 100px;"></div>
-                                    <p class="small fw-medium mt-2 mb-0">Bleu de Chanel</p>
-                                    <p class="text-secondary small">Chanel</p>
-                                </div>
-                                <div class="col-4">
-                                    <div class="bg-light" style="height: 100px;"></div>
-                                    <p class="small fw-medium mt-2 mb-0">Prada L'Homme</p>
-                                    <p class="text-secondary small">Prada</p>
-                                </div>
-                                <div class="col-4">
-                                    <div class="bg-light" style="height: 100px;"></div>
-                                    <p class="small fw-medium mt-2 mb-0">Dior Homme Cologne</p>
-                                    <p class="text-secondary small">Dior</p>
-                                </div>
-                            </div>
+                </div>
+
+                <!-- AI Match Card 2 -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="ai-match-card">
+                        <div class="ai-match-header">
+                            <span class="badge badge-mood">Fresh & Clean</span>
+                            <span class="badge badge-style">Minimal</span>
+                            <span class="badge badge-season">Daytime</span>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="border p-4 h-100 bg-white">
-                            <div class="d-flex flex-wrap gap-2 mb-4">
-                                <span class="badge border bg-transparent text-dark rounded-pill px-3 py-1 fw-normal">Bold</span>
-                                <span class="badge border bg-transparent text-dark rounded-pill px-3 py-1 fw-normal">Intense</span>
-                                <span class="badge border bg-transparent text-dark rounded-pill px-3 py-1 fw-normal">Night Out</span>
+                        <h5 class="ai-match-title">AI RECOMMENDATIONS</h5>
+                        <div class="ai-recommendations">
+                            <div class="recommendation-item">
+                                <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=300" alt="Bleu de Chanel">
+                                <div class="recommendation-info">
+                                    <h6>Bleu de Chanel</h6>
+                                    <p>Chanel</p>
+                                </div>
                             </div>
-                            <p class="text-uppercase small text-secondary mb-3">AI RECOMMENDATIONS</p>
-                            <div class="row g-2">
-                                <div class="col-4">
-                                    <div class="bg-light" style="height: 100px;"></div>
-                                    <p class="small fw-medium mt-2 mb-0">Oud for Greatness</p>
-                                    <p class="text-secondary small">Initio</p>
+                            <div class="recommendation-item">
+                                <img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=300" alt="Prada L'Homme">
+                                <div class="recommendation-info">
+                                    <h6>Prada L'Homme</h6>
+                                    <p>Prada</p>
                                 </div>
-                                <div class="col-4">
-                                    <div class="bg-light" style="height: 100px;"></div>
-                                    <p class="small fw-medium mt-2 mb-0">Layton</p>
-                                    <p class="text-secondary small">Parfums de Marly</p>
-                                </div>
-                                <div class="col-4">
-                                    <div class="bg-light" style="height: 100px;"></div>
-                                    <p class="small fw-medium mt-2 mb-0">Black Orchid</p>
-                                    <p class="text-secondary small">Tom Ford</p>
+                            </div>
+                            <div class="recommendation-item">
+                                <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=300" alt="Dior Homme Cologne">
+                                <div class="recommendation-info">
+                                    <h6>Dior Homme Cologne</h6>
+                                    <p>Dior</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- SHOP BY MOOD (bg soft) -->
-        <section class="bg-light py-5 px-3 px-lg-5" style="padding: 5rem 0;">
-            <div class="container">
-                <h2 class="fw-semibold fs-2 mb-5">Shop by Mood</h2>
-                <div class="row g-4">
-                    <div class="col-md-4 col-6 mb-3"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 140px;">Fresh & Clean</div></div>
-                    <div class="col-md-4 col-6 mb-3"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 140px;">Warm & Sensual</div></div>
-                    <div class="col-md-4 col-6 mb-3"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 140px;">Elegant & Sophisticated</div></div>
-                    <div class="col-md-4 col-6 mb-3"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 140px;">Bold & Intense</div></div>
-                    <div class="col-md-4 col-6 mb-3"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 140px;">Soft & Romantic</div></div>
-                    <div class="col-md-4 col-6 mb-3"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 140px;">Dark & Mysterious</div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- AMERIFRAG BARCODE -->
-        <section class="py-5 px-3 px-lg-5" style="padding: 6rem 0;">
-            <div class="container text-center">
-                <h2 class="fw-semibold fs-1 mb-3">AmeriFrag Barcode</h2>
-                <p class="text-secondary mx-auto mb-5" style="max-width: 650px;">The AmeriFrag Barcode analyzes your scent preferences, lifestyle, mood, and occasions to create a personalized fragrance identity.</p>
-                <div class="bg-secondary bg-opacity-25 mx-auto" style="height: 120px; max-width: 800px;"></div>
-                <div class="row mt-5 g-4">
-                    <div class="col-md-4"><h5 class="fw-semibold">Create Your Profile</h5><p class="text-secondary small">Tell us about your scent preferences, moods, and lifestyle.</p></div>
-                    <div class="col-md-4"><h5 class="fw-semibold">AI Scent Matches</h5><p class="text-secondary small">Our AI analyzes thousands of fragrances to find your perfect matches.</p></div>
-                    <div class="col-md-4"><h5 class="fw-semibold">Discover Your Signature</h5><p class="text-secondary small">Shop fragrances that truly align with your scent identity.</p></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FOR HIM / FOR HER -->
-        <section class="bg-light py-5 px-3 px-lg-5" style="padding: 5rem 0;">
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-md-6"><div class="bg-secondary bg-opacity-25 d-flex align-items-center justify-content-center" style="height: 280px;"><span class="fw-semibold fs-3">For Him</span></div></div>
-                    <div class="col-md-6"><div class="bg-secondary bg-opacity-25 d-flex align-items-center justify-content-center" style="height: 280px;"><span class="fw-semibold fs-3">For Her</span></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- BEST SELLERS -->
-        <section class="py-5 px-3 px-lg-5" style="padding: 5rem 0;">
-            <div class="container">
-                <h2 class="fw-semibold fs-2 mb-5">Best Sellers</h2>
-                <div class="row g-4">
-                    <div class="col-md-4 col-6">
-                        <div class="bg-secondary bg-opacity-25" style="height: 180px;"></div>
-                        <p class="fw-medium mt-2 mb-0">Bleu de Chanel</p>
-                        <p class="text-secondary">$165</p>
-                        <button class="btn btn-link text-dark p-0 text-decoration-underline small">Add to Cart</button>
-                    </div>
-                    <div class="col-md-4 col-6">
-                        <div class="bg-secondary bg-opacity-25" style="height: 180px;"></div>
-                        <p class="fw-medium mt-2 mb-0">Baccarat Rouge 540</p>
-                        <p class="text-secondary">$165</p>
-                        <button class="btn btn-link text-dark p-0 text-decoration-underline small">Add to Cart</button>
-                    </div>
-                    <div class="col-md-4 col-6">
-                        <div class="bg-secondary bg-opacity-25" style="height: 180px;"></div>
-                        <p class="fw-medium mt-2 mb-0">Creed Aventus</p>
-                        <p class="text-secondary">$165</p>
-                        <button class="btn btn-link text-dark p-0 text-decoration-underline small">Add to Cart</button>
-                    </div>
-                    <div class="col-md-4 col-6">
-                        <div class="bg-secondary bg-opacity-25" style="height: 180px;"></div>
-                        <p class="fw-medium mt-2 mb-0">Libre</p>
-                        <p class="text-secondary">$165</p>
-                        <button class="btn btn-link text-dark p-0 text-decoration-underline small">Add to Cart</button>
-                    </div>
-                    <div class="col-md-4 col-6">
-                        <div class="bg-secondary bg-opacity-25" style="height: 180px;"></div>
-                        <p class="fw-medium mt-2 mb-0">YSL Y</p>
-                        <p class="text-secondary">$165</p>
-                        <button class="btn btn-link text-dark p-0 text-decoration-underline small">Add to Cart</button>
-                    </div>
-                    <div class="col-md-4 col-6">
-                        <div class="bg-secondary bg-opacity-25" style="height: 180px;"></div>
-                        <p class="fw-medium mt-2 mb-0">Delina</p>
-                        <p class="text-secondary">$165</p>
-                        <button class="btn btn-link text-dark p-0 text-decoration-underline small">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- THE ART OF FRAGRANCE -->
-        <section class="bg-light text-center py-5 px-3" style="padding: 6rem 1rem;">
-            <h2 class="fw-semibold fs-1 mb-4">The Art of Fragrance</h2>
-            <p class="text-secondary mx-auto" style="max-width: 600px;">Fragrance is more than scent — it is identity. Discover fragrances crafted to evoke mood, memory, and individuality.</p>
-        </section>
-
-        <!-- DISCOVER COLLECTIONS -->
-        <section class="py-5 px-3 px-lg-5" style="padding: 6rem 0;">
-            <div class="container">
-                <h2 class="fw-semibold fs-2 mb-5">Discover Collections</h2>
-                <div class="row g-3">
-                    <div class="col-6 col-md-3 col-lg"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center p-3" style="height: 100px;">Premium</div></div>
-                    <div class="col-6 col-md-3 col-lg"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center p-3" style="height: 100px;">Luxury</div></div>
-                    <div class="col-6 col-md-3 col-lg"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center p-3" style="height: 100px;">Designer</div></div>
-                    <div class="col-6 col-md-3 col-lg"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center p-3" style="height: 100px;">Niche</div></div>
-                    <div class="col-6 col-md-3 col-lg"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center p-3" style="height: 100px;">Celebrity</div></div>
-                    <div class="col-6 col-md-3 col-lg"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center p-3" style="height: 100px;">Natural</div></div>
-                    <div class="col-6 col-md-3 col-lg"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center p-3" style="height: 100px;">Indie</div></div>
-                    <div class="col-6 col-md-3 col-lg"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center p-3" style="height: 100px;">Specialty</div></div>
-                    <div class="col-6 col-md-3 col-lg"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center p-3" style="height: 100px;">Mass Market</div></div>
-                    <div class="col-6 col-md-3 col-lg"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center p-3" style="height: 100px;">Economical</div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PREMIUM BRANDS -->
-        <section class="bg-light py-5 px-3 px-lg-5">
-            <div class="container">
-                <h2 class="fw-semibold fs-2 mb-5">Premium Brands</h2>
-                <div class="row g-4 text-center">
-                    <div class="col-md-4 col-6"><div class="border p-3">Chanel</div></div>
-                    <div class="col-md-4 col-6"><div class="border p-3">Dior</div></div>
-                    <div class="col-md-4 col-6"><div class="border p-3">Tom Ford</div></div>
-                    <div class="col-md-4 col-6"><div class="border p-3">Creed</div></div>
-                    <div class="col-md-4 col-6"><div class="border p-3">Maison Francis Kurkdjian</div></div>
-                    <div class="col-md-4 col-6"><div class="border p-3">Parfums de Marly</div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- EDITOR'S PICKS -->
-        <section class="py-5 px-3 px-lg-5">
-            <div class="container">
-                <h2 class="fw-semibold fs-2 mb-5">Editor's Picks</h2>
-                <div class="row g-4">
-                    <div class="col-md-3 col-6"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 150px;">Date Night Fragrances</div></div>
-                    <div class="col-md-3 col-6"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 150px;">Office Essentials</div></div>
-                    <div class="col-md-3 col-6"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 150px;">Summer Favorites</div></div>
-                    <div class="col-md-3 col-6"><div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 150px;">Signature Scents</div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SOCIAL PROOF -->
-        <section class="py-4 text-center">
-            <p class="fs-4 fst-italic mx-auto px-3" style="max-width: 700px;">“I found my signature scent through the AI Finder.”</p>
-        </section>
-
-        <!-- STUDIO ARTICLES -->
-        <section class="bg-light py-5 px-3 px-lg-5">
-            <div class="container">
-                <h2 class="fw-semibold fs-2 mb-5">From the Studio</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="border p-4 bg-white">
-                            <div class="bg-secondary bg-opacity-25" style="height: 140px;"></div>
-                            <h5 class="fw-semibold mt-3">How to Find Your Signature Scent</h5>
-                            <p class="text-secondary small">A guide to discovering fragrances that align with your personality and lifestyle.</p>
-                            <span class="text-decoration-underline small">Read in Studio</span>
+                <!-- AI Match Card 3 -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="ai-match-card">
+                        <div class="ai-match-header">
+                            <span class="badge badge-mood">Bold</span>
+                            <span class="badge badge-style">Intense</span>
+                            <span class="badge badge-season">Night Out</span>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="border p-4 bg-white">
-                            <div class="bg-secondary bg-opacity-25" style="height: 140px;"></div>
-                            <h5 class="fw-semibold mt-3">Understanding Fragrance Notes</h5>
-                            <p class="text-secondary small">Learn how top, heart, and base notes shape the experience of a fragrance.</p>
-                            <span class="text-decoration-underline small">Read in Studio</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="border p-4 bg-white">
-                            <div class="bg-secondary bg-opacity-25" style="height: 140px;"></div>
-                            <h5 class="fw-semibold mt-3">Best Fragrances for Every Occasion</h5>
-                            <p class="text-secondary small">Explore scents suited for work, evenings, travel, and special moments.</p>
-                            <span class="text-decoration-underline small">Read in Studio</span>
+                        <h5 class="ai-match-title">AI RECOMMENDATIONS</h5>
+                        <div class="ai-recommendations">
+                            <div class="recommendation-item">
+                                <img src="https://labelleperfumes.com/cdn/shop/files/INITIO-OUD-FOR-GREATNESS-NEO-A2_800x.webp?v=1745437583" alt="Oud for Greatness">
+                                <div class="recommendation-info">
+                                    <h6>Oud for Greatness</h6>
+                                    <p>Initio</p>
+                                </div>
+                            </div>
+                            <div class="recommendation-item">
+                                <img src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?w=300" alt="Layton">
+                                <div class="recommendation-info">
+                                    <h6>Layton</h6>
+                                    <p>Parfums de Marly</p>
+                                </div>
+                            </div>
+                            <div class="recommendation-item">
+                                <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=300" alt="Black Orchid">
+                                <div class="recommendation-info">
+                                    <h6>Black Orchid</h6>
+                                    <p>Tom Ford</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- EMAIL SIGNUP -->
-        <section class="bg-dark text-white text-center py-5 px-3">
-            <h2 class="fw-semibold fs-3 mb-3">Get 10% Off Your First Order</h2>
-            <p class="mb-4">Sign up for fragrance launches and exclusive offers.</p>
-            <div class="d-flex flex-wrap justify-content-center gap-2">
-                <input type="email" class="form-control w-auto" placeholder="Email address" style="max-width: 280px;">
-                <button class="btn btn-light rounded-0 px-4">Subscribe</button>
+    <!-- Shop by Mood Section -->
+    <section class="section shop-mood-section" id="shopMood">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Shop by Mood</h2>
             </div>
-        </section>
 
-        <!-- FOOTER -->
-        <footer class="bg-white py-5 px-3 px-lg-5">
+            <div class="row g-4 mt-4">
+                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="mood-card">
+                        <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=400" alt="Fresh & Clean">
+                        <div class="mood-overlay">
+                            <h5>Fresh & Clean</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="mood-card">
+                        <img src="https://india.zendiamond.com/cdn/shop/files/Picture_W_7.jpg?v=1757069926&width=600" alt="Warm & Sensual">
+                        <div class="mood-overlay">
+                            <h5>Warm & Sensual</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="mood-card">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400" alt="Elegant & Sophisticated">
+                        <div class="mood-overlay">
+                            <h5>Elegant & Sophisticated</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="250">
+                    <div class="mood-card">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400" alt="Bold & Intense">
+                        <div class="mood-overlay">
+                            <h5>Bold & Intense</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="mood-card">
+                        <img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400" alt="Soft & Romantic">
+                        <div class="mood-overlay">
+                            <h5>Soft & Romantic</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="350">
+                    <div class="mood-card">
+                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400" alt="Dark & Mysterious">
+                        <div class="mood-overlay">
+                            <h5>Dark & Mysterious</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AmeriFrag Barcode Section -->
+    <section class="section barcode-section" id="barcode">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">AmeriFrag Barcode</h2>
+                <p class="section-subtitle">The AmeriFrag Barcode analyzes your scent preferences, lifestyle, mood, and occasions to create a personalized fragrance identity.</p>
+            </div>
+            <div class="steps-grid">
+                <!-- card 01 -->
+                <div class="step-card">
+                    <span class="step-number">01</span>
+                    <h3 class="step-title">Create Your Profile</h3>
+                    <p class="step-description">Tell us about your scent preferences, moods, and lifestyle.</p>
+                </div>
+                <!-- card 02 -->
+                <div class="step-card">
+                    <span class="step-number">02</span>
+                    <h3 class="step-title">AI Scent Matches</h3>
+                    <p class="step-description">Our AI analyzes thousands of fragrances to find your perfect matches.</p>
+                </div>
+                <!-- card 03 -->
+                <div class="step-card">
+                    <span class="step-number">03</span>
+                    <h3 class="step-title">Discover Your Signature</h3>
+                    <p class="step-description">Shop fragrances that truly align with your scent identity.</p>
+                </div>
+            </div>
+            <div class="barcode-carousel-wrapper mt-5">
+                <button class="carousel-btn prev-btn" id="prevBtn">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+
+                <div class="barcode-carousel" id="barcodeCarousel">
+                    <!-- Card 1: Style -->
+                    <div class="barcode-card">
+                        <img src="https://india.zendiamond.com/cdn/shop/files/Picture_M_6.jpg?v=1757069928&width=500" alt="Style">
+                        <div class="barcode-card-content">
+                            <h4>Style</h4>
+                            <div class="barcode-options">
+                                <button class="option-btn">Casual</button>
+                                <button class="option-btn">Formal</button>
+                                <button class="option-btn">Sporty</button>
+                                <button class="option-btn">Elegant</button>
+                                <button class="option-btn">Bohemian</button>
+                                <button class="option-btn">Classic</button>
+                                <button class="option-btn">Modern</button>
+                                <button class="option-btn">Vintage</button>
+                                <button class="option-btn">Minimalist</button>
+                                <button class="option-btn">Bold</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Note -->
+                    <div class="barcode-card">
+                        <img src="https://images.unsplash.com/photo-1547887538-047f814bfb64?w=500" alt="Note">
+                        <div class="barcode-card-content">
+                            <h4>Note</h4>
+                            <div class="barcode-options">
+                                <button class="option-btn">Floral</button>
+                                <button class="option-btn">Woody</button>
+                                <button class="option-btn">Citrus</button>
+                                <button class="option-btn">Oriental</button>
+                                <button class="option-btn">Fresh</button>
+                                <button class="option-btn">Spicy</button>
+                                <button class="option-btn">Aquatic</button>
+                                <button class="option-btn">Fruity</button>
+                                <button class="option-btn">Gourmand</button>
+                                <button class="option-btn">Green</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Mood -->
+                    <div class="barcode-card">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=500" alt="Mood">
+                        <div class="barcode-card-content">
+                            <h4>Mood</h4>
+                            <div class="barcode-options">
+                                <button class="option-btn">Romantic</button>
+                                <button class="option-btn">Confident</button>
+                                <button class="option-btn">Relaxed</button>
+                                <button class="option-btn">Energetic</button>
+                                <button class="option-btn">Mysterious</button>
+                                <button class="option-btn">Playful</button>
+                                <button class="option-btn">Sophisticated</button>
+                                <button class="option-btn">Adventurous</button>
+                                <button class="option-btn">Calm</button>
+                                <button class="option-btn">Powerful</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Season -->
+                    <div class="barcode-card">
+                        <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=500" alt="Season">
+                        <div class="barcode-card-content">
+                            <h4>Season</h4>
+                            <div class="barcode-options">
+                                <button class="option-btn">Spring</button>
+                                <button class="option-btn">Summer</button>
+                                <button class="option-btn">Autumn</button>
+                                <button class="option-btn">Winter</button>
+                                <button class="option-btn">All-Season</button>
+                                <button class="option-btn">Warm Weather</button>
+                                <button class="option-btn">Cold Weather</button>
+                                <button class="option-btn">Rainy</button>
+                                <button class="option-btn">Tropical</button>
+                                <button class="option-btn">Humid</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Occasion -->
+                    <div class="barcode-card">
+                        <img src="https://flowerorganics.in/cdn/shop/files/pink_soul-2.jpg?v=1756466550&width=500" alt="Occasion">
+                        <div class="barcode-card-content">
+                            <h4>Occasion</h4>
+                            <div class="barcode-options">
+                                <button class="option-btn">Office</button>
+                                <button class="option-btn">Date Night</button>
+                                <button class="option-btn">Wedding</button>
+                                <button class="option-btn">Party</button>
+                                <button class="option-btn">Casual</button>
+                                <button class="option-btn">Gym</button>
+                                <button class="option-btn">Travel</button>
+                                <button class="option-btn">Beach</button>
+                                <button class="option-btn">Formal Event</button>
+                                <button class="option-btn">Everyday</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Age Group -->
+                    <div class="barcode-card">
+                        <img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=500" alt="Age Group">
+                        <div class="barcode-card-content">
+                            <h4>Age Group</h4>
+                            <div class="barcode-options">
+                                <button class="option-btn">Teen</button>
+                                <button class="option-btn">Young Adult</button>
+                                <button class="option-btn">25-35</button>
+                                <button class="option-btn">35-45</button>
+                                <button class="option-btn">45-55</button>
+                                <button class="option-btn">55+</button>
+                                <button class="option-btn">Mature</button>
+                                <button class="option-btn">Youthful</button>
+                                <button class="option-btn">Timeless</button>
+                                <button class="option-btn">Ageless</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7: Smell Intensity -->
+                    <div class="barcode-card">
+                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500" alt="Smell Intensity">
+                        <div class="barcode-card-content">
+                            <h4>Smell Intensity</h4>
+                            <div class="barcode-options">
+                                <button class="option-btn">Subtle</button>
+                                <button class="option-btn">Light</button>
+                                <button class="option-btn">Moderate</button>
+                                <button class="option-btn">Strong</button>
+                                <button class="option-btn">Intense</button>
+                                <button class="option-btn">Powerful</button>
+                                <button class="option-btn">Soft</button>
+                                <button class="option-btn">Medium</button>
+                                <button class="option-btn">Bold</button>
+                                <button class="option-btn">Overwhelming</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 8: Longevity -->
+                    <div class="barcode-card">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=500" alt="Longevity">
+                        <div class="barcode-card-content">
+                            <h4>Longevity</h4>
+                            <div class="barcode-options">
+                                <button class="option-btn">1-2 Hours</button>
+                                <button class="option-btn">2-4 Hours</button>
+                                <button class="option-btn">4-6 Hours</button>
+                                <button class="option-btn">6-8 Hours</button>
+                                <button class="option-btn">8-12 Hours</button>
+                                <button class="option-btn">12+ Hours</button>
+                                <button class="option-btn">Short</button>
+                                <button class="option-btn">Medium</button>
+                                <button class="option-btn">Long</button>
+                                <button class="option-btn">All-Day</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 9: Spray Time -->
+                    <div class="barcode-card">
+                        <img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=500" alt="Spray Time">
+                        <div class="barcode-card-content">
+                            <h4>Spray Time</h4>
+                            <div class="barcode-options">
+                                <button class="option-btn">Morning</button>
+                                <button class="option-btn">Afternoon</button>
+                                <button class="option-btn">Evening</button>
+                                <button class="option-btn">Night</button>
+                                <button class="option-btn">Dawn</button>
+                                <button class="option-btn">Dusk</button>
+                                <button class="option-btn">Midnight</button>
+                                <button class="option-btn">Anytime</button>
+                                <button class="option-btn">Pre-Event</button>
+                                <button class="option-btn">Post-Shower</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 10: Presentation -->
+                    <div class="barcode-card">
+                        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=500" alt="Presentation">
+                        <div class="barcode-card-content">
+                            <h4>Presentation</h4>
+                            <div class="barcode-options">
+                                <button class="option-btn">Minimalist</button>
+                                <button class="option-btn">Luxurious</button>
+                                <button class="option-btn">Artistic</button>
+                                <button class="option-btn">Classic</button>
+                                <button class="option-btn">Modern</button>
+                                <button class="option-btn">Vintage</button>
+                                <button class="option-btn">Elegant</button>
+                                <button class="option-btn">Bold</button>
+                                <button class="option-btn">Sleek</button>
+                                <button class="option-btn">Ornate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next-btn" id="nextBtn">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </section>
+
+    <!-- Gender Category Section -->
+    <section class="section gender-section" id="genderCategory">
+        <div class="container">
             <div class="row g-4">
-                <div class="col-6 col-md-3">
-                    <p class="fw-semibold mb-3">Customer</p>
-                    <ul class="list-unstyled small text-secondary">
-                        <li>Shipping</li>
-                        <li>Returns</li>
-                        <li>FAQs</li>
-                    </ul>
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="gender-card">
+                        <img src="Images/new_i/category-men-BFZwknFn.jpg" alt="For Him">
+                        <div class="gender-overlay">
+                            <h2>For Him</h2>
+                            <button class="btn btn-light">Shop Men's Collection</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6 col-md-3">
-                    <p class="fw-semibold mb-3">Company</p>
-                    <ul class="list-unstyled small text-secondary">
-                        <li>About</li>
-                        <li>Terms</li>
-                        <li>Privacy</li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-3">
-                    <p class="fw-semibold mb-3">Shopping</p>
-                    <ul class="list-unstyled small text-secondary">
-                        <li>Brands</li>
-                        <li>Best Sellers</li>
-                        <li>Discover</li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-3">
-                    <p class="fw-semibold mb-3">Social</p>
-                    <ul class="list-unstyled small text-secondary">
-                        <li>Instagram</li>
-                        <li>Pinterest</li>
-                        <li>YouTube</li>
-                    </ul>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="gender-card">
+                        <img src="Images/new_i/category-women-sZ85u1hs.jpg" alt="For Her">
+                        <div class="gender-overlay">
+                            <h2>For Her</h2>
+                            <button class="btn btn-light">Shop Women's Collection</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </section>
 
-    </div> <!-- container-fluid -->
-    <!-- Bootstrap JS (optional for toggles etc) -->
+    <!-- Best Sellers Section -->
+    <section class="section bestsellers-section" id="bestSellers">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Best Sellers</h2>
+            </div>
+
+            <div class="row g-4 mt-4">
+                <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400" alt="Bleu de Chanel">
+                            <div class="product-badge">BESTSELLER</div>
+                            <div class="product-barcode">
+
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h5>Bleu de Chanel</h5>
+                            <p class="brand">Chanel</p>
+                            <div class="product-price">
+                                <span class="current-price">$165</span>
+                                <span class="original-price">$195</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-sm btn-outline-dark add-to-cart">Add to Cart</button>
+                                <button class="btn btn-sm btn-dark buy-now">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=400" alt="Baccarat Rouge 540">
+                            <div class="product-badge">BESTSELLER</div>
+                            <div class="product-barcode">
+
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h5>Baccarat Rouge 540</h5>
+                            <p class="brand">MFK</p>
+                            <div class="product-price">
+                                <span class="current-price">$325</span>
+                                <span class="original-price">$365</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-sm btn-outline-dark add-to-cart">Add to Cart</button>
+                                <button class="btn btn-sm btn-dark buy-now">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400" alt="Creed Aventus">
+                            <div class="product-badge">BESTSELLER</div>
+                            <div class="product-barcode">
+
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h5>Creed Aventus</h5>
+                            <p class="brand">Creed</p>
+                            <div class="product-price">
+                                <span class="current-price">$445</span>
+                                <span class="original-price">$495</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-sm btn-outline-dark add-to-cart">Add to Cart</button>
+                                <button class="btn btn-sm btn-dark buy-now">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="250">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=400" alt="Libre">
+                            <div class="product-badge">BESTSELLER</div>
+                            <div class="product-barcode">
+
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h5>Libre</h5>
+                            <p class="brand">YSL</p>
+                            <div class="product-price">
+                                <span class="current-price">$135</span>
+                                <span class="original-price">$160</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-sm btn-outline-dark add-to-cart">Add to Cart</button>
+                                <button class="btn btn-sm btn-dark buy-now">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://flowerorganics.in/cdn/shop/files/pink_soul-2.jpg?v=1756466550&width=400" alt="YSL Y">
+                            <div class="product-badge">BESTSELLER</div>
+                            <div class="product-barcode">
+
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h5>YSL Y</h5>
+                            <p class="brand">YSL</p>
+                            <div class="product-price">
+                                <span class="current-price">$115</span>
+                                <span class="original-price">$145</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-sm btn-outline-dark add-to-cart">Add to Cart</button>
+                                <button class="btn btn-sm btn-dark buy-now">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="350">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400" alt="Delina">
+                            <div class="product-badge">BESTSELLER</div>
+                            <div class="product-barcode">
+
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h5>Delina</h5>
+                            <p class="brand">Parfums de Marly</p>
+                            <div class="product-price">
+                                <span class="current-price">$325</span>
+                                <span class="original-price">$375</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-sm btn-outline-dark add-to-cart">Add to Cart</button>
+                                <button class="btn btn-sm btn-dark buy-now">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- Art of Fragrance Banner -->
+    <section class="art-banner-section" data-aos="zoom-in">
+        <div class="art-banner-overlay"></div>
+        <div class="container">
+            <div class="art-banner-content">
+                <h2>The Art of Fragrance</h2>
+                <p>Fragrance is more than scent — it is identity. Discover fragrances crafted to evoke mood, memory, and individuality.</p>
+                <button class="btn btn-light btn-lg">Explore the Collection</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discover Collections Section -->
+    <section class="section collections-section" id="collections">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Discover Collections</h2>
+            </div>
+
+            <div class="row g-4 mt-4">
+                <!-- First row - 5 items -->
+                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="100">
+                    <div class="collection-card">
+                        <img src="https://india.zendiamond.com/cdn/shop/files/Picture_M_1.jpg?v=1757069930&width=400" alt="Premium">
+                        <h5>Premium</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="150">
+                    <div class="collection-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiczkPhAvm7LGrgKIuQZ5L43TuNSlM7_9-vg&s" alt="Luxury">
+                        <h5>Luxury</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="200">
+                    <div class="collection-card">
+                        <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=400" alt="Designer">
+                        <h5>Designer</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="250">
+                    <div class="collection-card">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400" alt="Niche">
+                        <h5>Niche</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="300">
+                    <div class="collection-card">
+                        <img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=400" alt="Celebrity">
+                        <h5>Celebrity</h5>
+                    </div>
+                </div>
+
+                <!-- Second row - remaining 5 items -->
+                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="350">
+                    <div class="collection-card">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400" alt="Natural">
+                        <h5>Natural</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="100">
+                    <div class="collection-card">
+                        <img src="https://thevaginestory.com/cdn/shop/files/Capricorn_Product.jpg?v=1762456142&width=400" alt="Indie">
+                        <h5>Indie</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="150">
+                    <div class="collection-card">
+                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400" alt="Specialty">
+                        <h5>Specialty</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="200">
+                    <div class="collection-card">
+                        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400" alt="Mass Market">
+                        <h5>Mass Market</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="250">
+                    <div class="collection-card">
+                        <img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400" alt="Economical">
+                        <h5>Economical</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Brands Section -->
+    <section class="section brands-section" id="premiumBrands">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Premium Brands</h2>
+            </div>
+
+            <div class="row g-4 mt-4">
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="brand-card">
+                        <img src="https://swissyarn.com/wp-content/uploads/2023/04/Chanel-Bleu-De-Parfum-PH-EDP-100ml-4.jpg" alt="Chanel">
+                        <h5>Chanel</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="150">
+                    <div class="brand-card">
+                        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSTmEx214rZ-LLiebCIAluTX5j7vyFoa0ZyAey-pXCVoFrPwZ8mB4PR-FD_wHa6IWSQhUxk7PtPNEtiuMdjf6Dg8FhKgFME8_tqNofZJUY&usqp=CAc" alt="Dior">
+                        <h5>Dior</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="brand-card">
+                        <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=400" alt="Tom Ford">
+                        <h5>Tom Ford</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="250">
+                    <div class="brand-card">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400" alt="Creed">
+                        <h5>Creed</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="brand-card">
+                        <img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=400" alt="MFK">
+                        <h5>Maison Francis Kurkdjian</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="350">
+                    <div class="brand-card">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400" alt="Parfums de Marly">
+                        <h5>Parfums de Marly</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5" data-aos="fade-up">
+                <button class="btn btn-outline-dark btn-lg">Show More Brands</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editor's Picks Section -->
+    <section class="section editors-picks-section" id="editorsPicks">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Editor's Picks</h2>
+            </div>
+
+            <div class="row g-4 mt-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="editors-card">
+                        <img src="https://www.naseemperfume.in/cdn/shop/files/Date-Night-For-Men_1.webp?v=1753259997&width=600" alt="Date Night Fragrances">
+                        <div class="editors-overlay">
+                            <h4>Date Night Fragrances</h4>
+                            <button class="btn btn-light btn-sm">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+                    <div class="editors-card">
+                        <img src="https://scentoria.co.in/cdn/shop/files/office_for_men.webp?v=1722241075&width=720" alt="Office Essentials">
+                        <div class="editors-overlay">
+                            <h4>Office Essentials</h4>
+                            <button class="btn btn-light btn-sm">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="editors-card">
+                        <img src="https://imageio.forbes.com/specials-images/imageserve/6475fab675e12ddbe7996725/0x0.jpg?format=jpg&crop=3333,3333,x0,y511,safe&height=900&width=1600&fit=bounds" alt="Summer Favorites">
+                        <div class="editors-overlay">
+                            <h4>Summer Favorites</h4>
+                            <button class="btn btn-light btn-sm">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="250">
+                    <div class="editors-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxyn1pGFGzeYtr_IvhOscLAnRI5GGzcxYAmA&s" alt="Signature Scents">
+                        <div class="editors-overlay">
+                            <h4>Signature Scents</h4>
+                            <button class="btn btn-light btn-sm">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-section text-center mt-5" data-aos="fade-up">
+                <blockquote class="testimonial">
+                    <i class="bi bi-quote"></i>
+                    <p>"I found my signature scent through the AI Finder."</p>
+                    <footer>— Sarah M., Verified Customer</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio Section -->
+    <section class="section studio-section" id="studio">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">From the AmeriFrag Studio</h2>
+                <p class="section-subtitle">Explore the art and science behind fragrance creation</p>
+            </div>
+
+            <div class="row g-4 mt-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="studio-card">
+                        <div class="studio-media">
+                            <img src="Images/new_i/pexels-valeriya-965990.jpg" alt="Studio 1" class="studio-image">
+                            <video class="studio-video" muted loop>
+                                <source src="Images/new_i/10537264-uhd_2160_4096_25fps.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-icon">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                        <div class="studio-content">
+                            <h4>How to Find Your Signature Scent</h4>
+                            <p>A guide to discovering fragrances that align with your personality and lifestyle.</p>
+                            <a href="#" class="studio-link">Read in Studio <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="studio-card">
+                        <div class="studio-media">
+                            <img src="Images/new_i/pexels-pixabay-264819.jpg" alt="Studio 2" class="studio-image">
+                            <video class="studio-video" muted loop>
+                                <source src="Images/new_i/4154241-uhd_4096_2160_25fps.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-icon">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                        <div class="studio-content">
+                            <h4>Understanding Fragrance Notes</h4>
+                            <p>Learn how top, heart, and base notes shape the experience of a fragrance.</p>
+                            <a href="#" class="studio-link">Read in Studio <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="studio-card">
+                        <div class="studio-media">
+                            <img src="Images/new_i/pexels-didsss-1666405.jpg" alt="Studio 3" class="studio-image">
+                            <video class="studio-video" muted loop>
+                                <source src="Images/new_i/7815751-hd_1920_1080_25fps.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-icon">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                        </div>
+                        <div class="studio-content">
+                            <h4>Best Fragrances for Every Occasion</h4>
+                            <p>Explore scents suited for work, evenings, travel, and special moments.</p>
+                            <a href="#" class="studio-link">Read in Studio <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" data-aos="fade-up">
+        <div class="container">
+            <div class="newsletter-content text-center">
+                <h2>Get 10% Off Your First Order</h2>
+                <p>Sign up for fragrance launches and exclusive offers.</p>
+                <button class="btn btn-primary btn-lg" id="newsletterBtn">
+                    Subscribe to Newsletter
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">About AmeriFrag</h5>
+                    <p class="footer-text">We are dedicated to helping you discover your perfect fragrance through AI-powered recommendations and expert curation.</p>
+                    <div class="footer-location">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>New York, NY 10001</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Customer</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Shopping</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Brands</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Discover</a></li>
+                        <li><a href="#">Gift Sets</a></li>
+                        <li><a href="#">Clearance</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">AmeriFrag Studio</h5>
+                    <p class="footer-text">Learn about fragrance creation, history, and the art of perfumery.</p>
+                    <a href="#" class="btn btn-outline-light btn-sm mt-2">Visit Studio</a>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-pinterest"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="sponsors">
+                        <span>Trusted Partners:</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Visa_2014_logo_detail.svg/200px-Visa_2014_logo_detail.svg.png" alt="Visa" height="20">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png" alt="Mastercard" height="20">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/200px-PayPal.svg.png" alt="PayPal" height="20">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom text-center mt-4">
+                <p>&copy; 2026 American Fragrances. All rights reserved. Crafted with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="Js/homescript.js"></script>
 </body>
 </html>

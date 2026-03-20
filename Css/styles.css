@@ -1,4 +1,4 @@
-/* ===== ROOT VARIABLES ===== */
+﻿/* ===== ROOT VARIABLES ===== */
 :root {
     --primary-color: #70b4bd;
     --secondary-color: #EBEBEB;
@@ -496,7 +496,515 @@ body {
     margin: 0 auto;
 }
 
-/* ===== AI MATCHES SECTION ===== */
+/* ===== 1 AI MATCHES SECTION ===== */
+
+/* premium section with brand colors */
+.ai-premium-section {
+    background: linear-gradient(135deg, #ffffff 0%, #EBEBEB 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+    /* decorative abstract waves using brand color */
+    .ai-premium-section::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 80%;
+        height: 140%;
+        background: radial-gradient(circle, rgba(112, 180, 189, 0.03) 0%, rgba(112, 180, 189, 0.01) 100%);
+        transform: rotate(15deg);
+        pointer-events: none;
+        border-radius: 50%;
+    }
+
+    .ai-premium-section::after {
+        content: '✨';
+        font-size: 180px;
+        position: absolute;
+        bottom: -40px;
+        left: -30px;
+        opacity: 0.04;
+        pointer-events: none;
+        font-family: monospace;
+    }
+
+/* custom pill containers with brand colors */
+.vibe-pill {
+    background: #ffffff;
+    border: 2px solid #EBEBEB;
+    border-radius: 100px;
+    padding: 0.85rem 1.8rem;
+    transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    cursor: pointer;
+    min-width: 120px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+    .vibe-pill::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(112, 180, 189, 0.1), transparent);
+        transition: left 0.5s;
+    }
+
+    .vibe-pill:hover::before {
+        left: 100%;
+    }
+
+    .vibe-pill.active {
+        background: #70b4bd;
+        border-color: #70b4bd;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 24px -12px rgba(112, 180, 189, 0.4);
+    }
+
+        .vibe-pill.active .pill-label,
+        .vibe-pill.active .pill-value {
+            color: #ffffff !important;
+        }
+
+    .vibe-pill:hover:not(.active) {
+        border-color: #70b4bd;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+.pill-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #70b4bd;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.pill-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000000;
+    transition: color 0.2s;
+}
+
+/* AI visualization area with brand accent */
+.ai-viz-container {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-radius: 80px;
+    padding: 1.2rem 2rem;
+    border: 1px solid rgba(112, 180, 189, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+}
+
+.ai-bars-animated {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 70px;
+}
+
+.dynamic-bar {
+    width: 6px;
+    background: linear-gradient(180deg, #70b4bd, #4a8c96);
+    border-radius: 8px;
+    transition: height 0.5s cubic-bezier(0.34, 1.2, 0.64, 1);
+    box-shadow: 0 2px 8px rgba(112, 180, 189, 0.3);
+}
+
+.ai-brain-icon {
+    background: linear-gradient(135deg, #70b4bd, #5da0aa);
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px -8px rgba(112, 180, 189, 0.5);
+    transition: all 0.3s;
+}
+
+    .ai-brain-icon i {
+        color: white;
+        font-size: 1.6rem;
+    }
+
+/* premium perfume cards with brand colors */
+.perfume-card-premium {
+    background: #ffffff;
+    border-radius: 28px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    box-shadow: 0 12px 28px -12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #EBEBEB;
+}
+
+    .perfume-card-premium:hover {
+        transform: translateY(-12px) scale(1.02);
+        box-shadow: 0 28px 40px -18px rgba(112, 180, 189, 0.25);
+        border-color: #70b4bd;
+    }
+
+.perfume-img-wrapper {
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: all 0.6s;
+}
+
+.perfume-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(112, 180, 189, 0.2));
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.perfume-card-premium:hover .perfume-overlay {
+    opacity: 0.7;
+}
+
+.perfume-details {
+    padding: 1.5rem 1.2rem 1.5rem;
+    text-align: center;
+    background: #ffffff;
+}
+
+.perfume-name {
+    font-weight: 800;
+    font-size: 1.25rem;
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+    margin-bottom: 0.4rem;
+}
+
+.perfume-brand {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #70b4bd;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.match-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #70b4bd;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(112, 180, 189, 0.5);
+}
+
+/* CTA premium button */
+.cta-premium {
+    background: #000000;
+    border: 2px solid #000000;
+    padding: 1rem 2.8rem;
+    border-radius: 60px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: all 0.4s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+}
+
+    .cta-premium:hover {
+        background: #70b4bd;
+        border-color: #70b4bd;
+        transform: scale(1.03);
+        box-shadow: 0 15px 35px rgba(112, 180, 189, 0.4);
+        color: #000000;
+    }
+
+/* loading animation */
+.loading-dots span {
+    animation: pulse 1.2s infinite;
+    display: inline-block;
+}
+
+    .loading-dots span:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .loading-dots span:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-2px);
+    }
+}
+
+/* badges and accents */
+.brand-badge {
+    background: rgba(112, 180, 189, 0.12);
+    color: #70b4bd;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 1px solid rgba(112, 180, 189, 0.2);
+}
+
+.section-caption {
+    color: #70b4bd;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.7rem;
+}
+
+/* occasion pills specific */
+.occasion-pill {
+    background: #ffffff;
+    border: 2px solid #EBEBEB;
+}
+
+/* rating stars */
+.scent-rating {
+    color: #70b4bd;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .vibe-pill {
+        padding: 0.6rem 1.2rem;
+        min-width: 95px;
+    }
+
+    .pill-value {
+        font-size: 0.8rem;
+    }
+
+    .perfume-img-wrapper {
+        height: 200px;
+    }
+
+    .ai-viz-container {
+        padding: 1rem 1.2rem;
+    }
+
+    .cta-premium {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== 2 AI MATCHES SECTION ===== */
+
+.bg-soft-gray {
+    background-color: var(--soft-gray-bg);
+}
+
+.text-muted-custom {
+    color: var(--muted-text);
+}
+
+.btn-dark-custom {
+    background-color: var(--deep-black);
+    border: 1px solid var(--deep-black);
+    color: white;
+    padding: 0.9rem 2.4rem;
+    border-radius: 60px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    letter-spacing: -0.2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+    .btn-dark-custom:hover {
+        background-color: #2a2a2a;
+        border-color: #2a2a2a;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 20px -10px rgba(0,0,0,0.2);
+        color: white;
+    }
+
+/* AI Preview Card styles */
+.ai-preview-card {
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0,0,0,0.03);
+    background: var(--pure-white);
+}
+
+    .ai-preview-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--hover-lift);
+    }
+
+/* Tag styling */
+.ai-tag {
+    display: inline-block;
+    background: rgba(112, 180, 189, 0.15);
+    color: #1e5f68;
+    padding: 0.45rem 1.2rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    backdrop-filter: blur(2px);
+    transition: all 0.2s;
+    letter-spacing: -0.2px;
+}
+
+    .ai-tag:hover {
+        background: rgba(112, 180, 189, 0.3);
+        transform: scale(1.02);
+    }
+
+/* product placeholder image with real fragrance visuals */
+.fragrance-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+    .fragrance-img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 15px 25px -8px rgba(0,0,0,0.15);
+    }
+
+/* animated underline or decorative */
+.tracking-wide {
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+/* right side cards */
+.side-card {
+    transition: all 0.3s ease;
+    background: var(--pure-white);
+    border: 1px solid #eef2f3;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.3s;
+}
+
+    .side-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 30px -12px rgba(0, 0, 0, 0.12);
+        border-color: rgba(112, 180, 189, 0.4);
+    }
+
+/* custom image for fragrance placeholders using actual perfume imagery */
+.img-delina {
+    background-image: url('https://placehold.co/400x400/EBEBEB/70b4bd?text=Delina');
+    /* we replace with beautiful unsplash-like but we use inline style later for realism? better to create css bg with real-like images via unsplash or cdn */
+}
+
+/* but we will set via style attribute dynamic for demo, yet for real elegance I use high-quality placeholder images that feel premium */
+/* I choose curated unsplash style but since unsplash might not show exact perfumes, but for demonstration beautiful perfume bottle representation */
+/* Upgrade: I'll embed font awesome or just using modern glassmorphism with background images via free CDN product shots? safer use solid with gradient + icon but client wants beautiful images — I’ll use attractive AI-like generated perfume bottle images from reliable CDN (via placeholder images with style) */
+/* better: use free stock from picsum but add realistic perfume vibe using Font Awesome + gradient? But visual matters: I’ll use external free perfume mockup style by leveraging images.unsplash.com with relevant keywords */
+.luxury-bottle {
+    background-size: cover;
+    background-position: center;
+    border-radius: 24px;
+    transition: all 0.2s;
+}
+
+/* responsiveness: ensure cards align */
+@media (max-width: 991px) {
+    .ai-preview-card .row > div {
+        margin-bottom: 1rem;
+    }
+
+    .side-card {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .ai-tag {
+        font-size: 0.75rem;
+        padding: 0.3rem 1rem;
+    }
+
+    .btn-dark-custom {
+        padding: 0.75rem 1.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* gradient shimmer animation for loading effect, but optional: added fade-in */
+@keyframes softFadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-card {
+    animation: softFadeUp 0.6s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+/* interactive selection state - small indication */
+.mood-selector {
+    transition: all 0.2s;
+}
+
+/* small AI glow effect */
+.ai-badge {
+    background: linear-gradient(120deg, #70b4bd10, #70b4bd30);
+}
+
+hr.gradient-hr {
+    height: 2px;
+    background: linear-gradient(90deg, #70b4bd, #d4d9dd, #70b4bd);
+    width: 80px;
+    margin: 0.75rem auto;
+    opacity: 0.6;
+}
+
+
+
+
+/* ===== 3 AI MATCHES SECTION ===== */
 .ai-matches-section {
     background: var(--light-gray);
 }
@@ -596,6 +1104,202 @@ body {
     color: var(--white-color);
 }
 
+/* ===== FRAGRANES DECODE SECTION ===== */
+.fragrance-barcode-section {
+    background: linear-gradient(135deg, #ffffff 0%, #fefcf7 50%, #faf9f5 100%);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.scent-wave-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(112,180,189,0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.scent-wave-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35%;
+    height: 60%;
+    background: radial-gradient(ellipse at 20% 80%, rgba(112,180,189,0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.question-card {
+    background: var(--pure-white);
+    border-radius: 28px;
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    border: 1px solid rgba(112,180,189,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    overflow: hidden;
+    height: 100%;
+}
+
+    .question-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+        border-color: rgba(112,180,189,0.4);
+    }
+
+.answer-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.question-card:hover .answer-image {
+    transform: scale(1.03);
+}
+
+.barcode-bar {
+    width: 5px;
+    background-color: var(--pure-black);
+    transition: height 0.25s ease-out, background 0.2s;
+    border-radius: 2px;
+}
+
+.barcode-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.9rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0.5rem 0.2rem 1rem;
+    scrollbar-width: thin;
+}
+
+.barcode-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 68px;
+}
+
+.bar-container {
+    display: flex;
+    align-items: flex-end;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.barcode-label-sm {
+    font-size: 9px;
+    font-weight: 500;
+    color: #5a5a5a;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    background: rgba(112,180,189,0.1);
+    padding: 3px 6px;
+    border-radius: 20px;
+}
+
+.btn-ameri {
+    background: var(--pure-black);
+    color: white;
+    border-radius: 60px;
+    padding: 14px 38px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: none;
+    letter-spacing: 0.3px;
+}
+
+    .btn-ameri:hover {
+        background: #2c2c2c;
+        transform: scale(1.02);
+        box-shadow: 0 10px 20px -5px rgba(0,0,0,0.2);
+    }
+
+.badge-aqua {
+    background-color: var(--aqua-teal);
+    color: #1e3a3f;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 40px;
+    font-size: 0.75rem;
+}
+
+.img-round-custom {
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.video-wrapper {
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px -12px rgba(0,0,0,0.15);
+}
+
+    .video-wrapper video {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+@media (max-width: 768px) {
+    .barcode-wrapper {
+        gap: 0.6rem;
+    }
+
+    .barcode-item {
+        min-width: 55px;
+    }
+
+    .bar-container {
+        height: 80px;
+    }
+
+    .barcode-bar {
+        width: 4px;
+    }
+
+    .question-card {
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .barcode-item {
+        min-width: 48px;
+    }
+
+    .barcode-label-sm {
+        font-size: 7px;
+        white-space: nowrap;
+    }
+}
+
+.gradient-heading {
+    background: linear-gradient(120deg, #000000 20%, #70b4bd 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 800;
+}
+
+.hero-banner-img {
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
 /* ===== SHOP BY MOOD SECTION ===== */
 .mood-card {
     position: relative;
@@ -640,7 +1344,7 @@ body {
     margin: 0;
 }
 
-/* main container � mimics the original grid with enhanced styling */
+/* main container – mimics the original grid with enhanced styling */
 .steps-grid {
     max-width: 1280px;
     width: 100%;
@@ -654,7 +1358,7 @@ body {
     text-align: center;
     padding: 2.5rem 1.5rem; /* p-6 equivalent (1.5rem) plus extra vertical */
     background-color: #ffffff;
-    border: 1px solid #eaeae5; /* border-border � soft neutral */
+    border: 1px solid #eaeae5; /* border-border – soft neutral */
     border-radius: 1.25rem; /* rounded-sm but slightly more modern (20px) */
     box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
@@ -672,7 +1376,7 @@ body {
     font-weight: 700;
     font-size: 3rem; /* text-3xl = 1.875rem? but we want presence */
     line-height: 1.1;
-    color: #a67a5b; /* primary warm clay � soft & distinctive */
+    color: #a67a5b; /* primary warm clay – soft & distinctive */
     letter-spacing: -0.02em;
     display: inline-block;
     background: linear-gradient(145deg, #b48c6f 0%, #9b6f50 100%);
@@ -695,7 +1399,7 @@ body {
 .step-title {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 1.375rem; /* between lg and xl � balanced */
+    font-size: 1.375rem; /* between lg and xl – balanced */
     color: #2e2e2b; /* foreground dark with softness */
     margin: 0.75rem 0 0.5rem 0; /* mt-2 (0.5rem) mb-2 (0.5rem) extended */
     line-height: 1.3;

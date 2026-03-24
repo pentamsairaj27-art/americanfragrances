@@ -621,7 +621,7 @@ body {
 .ai-bars-animated {
     display: flex;
     align-items: flex-end;
-    gap: 6px;
+    gap: 12px;
     height: 70px;
 }
 

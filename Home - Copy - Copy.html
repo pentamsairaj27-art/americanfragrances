@@ -450,23 +450,23 @@
                         </div>
                         <div class="d-flex flex-wrap justify-content-center gap-3 gap-lg-4 mb-4" id="moodContainer">
                             <div class="vibe-pill" data-mood="Elegant">
-                                <div class="pill-label">Mood</div>
+                                <div class="pill-label">Style</div>
                                 <div class="pill-value">Elegant</div>
                             </div>
                             <div class="vibe-pill" data-mood="Bold">
-                                <div class="pill-label">Occasion</div>
-                                <div class="pill-value">Evening</div>
+                                <div class="pill-label">Note</div>
+                                <div class="pill-value">Floral</div>
                             </div>
                             <div class="vibe-pill" data-mood="Romantic">
-                                <div class="pill-label">Season</div>
-                                <div class="pill-value">Winter</div>
+                                <div class="pill-label">Mood</div>
+                                <div class="pill-value">Romantic</div>
                             </div>
                             <div class="vibe-pill" data-mood="Fresh">
-                                <div class="pill-label">Style</div>
-                                <div class="pill-value">Sophisticated</div>
+                                <div class="pill-label">Occasion</div>
+                                <div class="pill-value">Party</div>
                             </div>
                             <div class="vibe-pill d-flex see-more-pill" id="seeMoreTrigger" data-mood="see-more">
-                                
+
                                 <div class="pill-value">
                                     <span class="plus-icon">+</span> See More
                                 </div>
@@ -534,25 +534,25 @@
 
     <!----TYPE 2: This section highlights how the AI matches fragrances based on user preferences. Each card represents a different mood, style, and season combination, with AI-recommended fragrances displayed below. The design is clean and modern, with badges to highlight the mood, style, and season for each match. The section also includes a headline that emphasizes the AI's ability to understand the user's scent preferences and reveal fragrances that fit their vibe._--->
 
-    <section class="bg-soft-gray py-5 py-md-5" style="padding: 4rem 0;">
+    <!--<section class="bg-soft-gray py-5 py-md-5" style="padding: 4rem 0;">
         <div class="container px-4 px-lg-5">
             <div class="text-center mb-5 animate-card">
                 <h2 class="section-title">See How AI <span style="color: #70b4bd;">Matches Fragrances</span></h2>
                 <p class="text-muted-custom section-subtitle">Tell us how you feel — our AI instantly reveals fragrances that match your vibe.</p>
                 <hr class="gradient-hr">
-            </div>
+            </div>-->
 
             <!-- main interactive area: dynamic AI demo (real-time based on mood selection) -->
-            <div class="row g-4 align-items-stretch mb-4">
+            <!--<div class="row g-4 align-items-stretch mb-4">-->
                 <!-- left big card: dynamic preview -->
-                <div class="col-lg-8">
+                <!--<div class="col-lg-8">
                     <div class="ai-preview-card p-4 p-md-5 h-100 bg-white border rounded-4" style="transition: all 0.3s;">
                         <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
                             <p class="text-uppercase small fw-semibold text-muted-custom mb-0"><i class="bi bi-magic me-1"></i> AI GENERATED MATCH</p>
                             <span class="badge" style="background:#70b4bd20; color:#1e5f68; font-size:0.7rem; border-radius:30px;"><i class="bi bi-cpu"></i> real-time neural scent</span>
-                        </div>
+                        </div>-->
                         <!-- dynamic mood tags based on selection -->
-                        <div id="dynamicTags" class="d-flex flex-wrap justify-content-center gap-3 mb-4 mt-2">
+                        <!--<div id="dynamicTags" class="d-flex flex-wrap justify-content-center gap-3 mb-4 mt-2">
                             <span class="ai-tag" id="moodTagDisplay">Elegant Evening</span>
                             <span class="ai-tag" id="vibeTagDisplay">Sophisticated</span>
                             <span class="ai-tag" id="seasonTagDisplay">Winter</span>
@@ -561,17 +561,17 @@
                             <span class="bg-light px-3 py-1 rounded-pill" style="font-size: 0.7rem;">YOU SELECT</span>
                             <i class="bi bi-arrow-right-short fs-4"></i>
                             <span class="bg-light px-3 py-1 rounded-pill" style="font-size: 0.7rem; background:#70b4bd10 !important;">AI MATCHES</span>
-                        </div>
+                        </div>-->
                         <!-- dynamic fragrance results (AI suggestions) -->
-                        <div class="row g-4 text-center" id="aiResultContainer">
+                        <!--<div class="row g-4 text-center" id="aiResultContainer">-->
                             <!-- filled dynamically via JS -->
-                        </div>
+                        <!--</div>
 
                     </div>
-                </div>
+                </div>-->
 
                 <!-- right side: mood picker cards + interactive selection -->
-                <div class="col-lg-4 d-flex flex-column gap-4">
+                <!--<div class="col-lg-4 d-flex flex-column gap-4">
                     <div class="bg-white border rounded-4 p-4 side-card mood-selector" data-mood="fresh" data-vibe="Clean & Aquatic" data-season="Spring">
                         <div class="d-flex align-items-center gap-2 mb-2">
                             <i class="bi bi-brightness-alt-high fs-3" style="color:#70b4bd;"></i>
@@ -589,7 +589,7 @@
                         <p class="mb-1 fw-medium">🔥 Oud & Leather · Smoky Ambery</p>
                         <p class="mb-1">Saffron, Patchouli, Incense</p>
                         <p class="mb-0 small text-muted-custom">"Unapologetic confidence, night allure"</p>
-                    </div>
+                    </div>-->
                     <!--<div class="bg-white border rounded-4 p-4 side-card mood-selector" data-mood="romantic" data-vibe="Floral & Powdery" data-season="Summer">
                         <div class="d-flex align-items-center gap-2 mb-2">
                             <i class="bi bi-flower2 fs-3" style="color:#d97a9e;"></i>
@@ -599,8 +599,8 @@
                         <p class="mb-1">Delina, Tuberose, Vanilla Orchid</p>
                         <p class="mb-0 small text-muted-custom">"Timeless romance, soft magnetism"</p>
                     </div>-->
-                </div>
-            </div>
+                <!--</div>
+            </div>-->
 
             <!-- secondary quick preview (optional extra) + CTA button -->
             <!--<div class="row mt-3 g-4">
@@ -614,29 +614,29 @@
                     </div>
                 </div>
             </div>-->
-        </div>
+        <!--</div>-->
         <!-- CTA SECTION -->
-        <div class="text-center pt-4" data-aos="zoom-in" data-aos-delay="400">
+        <!--<div class="text-center pt-4" data-aos="zoom-in" data-aos-delay="400">
             <button class="cta-premium btn" id="discoverCta">
                 <i class="fas fa-magic me-2"></i> Tell Us How You Feel
-            </button>
+            </button>-->
             <!--<p class="small mt-3" style="color: #70b4bd;">
                 <i class="fas fa-chart-line me-1"></i> 5,200+ scent profiles analyzed · AI precision matching
             </p>-->
-        </div>
-    </section>
+        <!--</div>
+    </section>-->
 
     <!----TYPE 3 FIRST ONE-->
-    <section class="section ai-matches-section" id="aiMatches">
+    <!--<section class="section ai-matches-section" id="aiMatches">
         <div class="container">
             <div class="section-header text-center" data-aos="fade-up">
                 <h2 class="section-title">See How AI Matches Fragrances</h2>
                 <p class="section-subtitle">Your preferences become a fragrance profile. Our AI reveals scents that fit your mood, style, and moment.</p>
             </div>
 
-            <div class="row g-4 mt-4">
+            <div class="row g-4 mt-4">-->
                 <!-- AI Match Card 1 -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <!--<div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="ai-match-card">
                         <div class="ai-match-header">
                             <span class="badge badge-mood">Elegant Evening</span>
@@ -668,10 +668,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
                 <!-- AI Match Card 2 -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <!--<div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="ai-match-card">
                         <div class="ai-match-header">
                             <span class="badge badge-mood">Fresh & Clean</span>
@@ -703,10 +703,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
                 <!-- AI Match Card 3 -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <!--<div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="ai-match-card">
                         <div class="ai-match-header">
                             <span class="badge badge-mood">Bold</span>
@@ -741,67 +741,130 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <!-- Shop by Mood Section -->
-    <section class="section shop-mood-section" id="shopMood">
+    <!-- INTERACTIVE SHOP BY MOOD SECTION -->
+    <section class="section" id="shopMood">
         <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Shop by Mood</h2>
+                <p class="section-subtitle">Discover scents that match your emotion — hover, click, and explore</p>
             </div>
 
-            <div class="row g-4 mt-4">
-                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="mood-card">
-                        <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=400" alt="Fresh & Clean">
-                        <div class="mood-overlay">
-                            <h5>Fresh & Clean</h5>
+            <div class="mood-grid" id="moodGridContainer">
+                <!-- Mood 1 - Fresh & Clean -->
+                <div class="mood-card ripple-effect" data-mood="fresh" data-aos="zoom-in" data-aos-delay="50">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=600&auto=format" alt="Fresh & Clean">
+                        <div class="mood-info">
+                            <div class="mood-title"><i class="fas fa-leaf"></i> Fresh & Clean</div>
+                            <div class="mood-tagline"><i class="fas fa-water"></i> crisp · aquatic · uplifting</div>
+                            <button class="mood-btn explore-btn" data-mood-key="fresh"><i class="fas fa-magnifying-glass"></i> explore mood</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="150">
-                    <div class="mood-card">
-                        <img src="https://india.zendiamond.com/cdn/shop/files/Picture_W_7.jpg?v=1757069926&width=600" alt="Warm & Sensual">
-                        <div class="mood-overlay">
-                            <h5>Warm & Sensual</h5>
+                <!-- Mood 2 - Warm & Sensual -->
+                <div class="mood-card ripple-effect" data-mood="warm" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&auto=format" alt="Warm & Sensual">
+                        <div class="mood-info">
+                            <div class="mood-title"><i class="fas fa-fire"></i> Warm & Sensual</div>
+                            <div class="mood-tagline"><i class="fas fa-spa"></i> amber · vanilla · cashmere</div>
+                            <button class="mood-btn explore-btn" data-mood-key="warm"><i class="fas fa-magnifying-glass"></i> explore mood</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="mood-card">
-                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400" alt="Elegant & Sophisticated">
-                        <div class="mood-overlay">
-                            <h5>Elegant & Sophisticated</h5>
+                <!-- Mood 3 - Elegant & Sophisticated -->
+                <div class="mood-card ripple-effect" data-mood="elegant" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&auto=format" alt="Elegant & Sophisticated">
+                        <div class="mood-info">
+                            <div class="mood-title"><i class="fas fa-gem"></i> Elegant & Sophisticated</div>
+                            <div class="mood-tagline"><i class="fas fa-feather"></i> iris · white floral · silk</div>
+                            <button class="mood-btn explore-btn" data-mood-key="elegant"><i class="fas fa-magnifying-glass"></i> explore mood</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="250">
-                    <div class="mood-card">
-                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400" alt="Bold & Intense">
-                        <div class="mood-overlay">
-                            <h5>Bold & Intense</h5>
+                <!-- Mood 4 - Bold & Intense -->
+                <div class="mood-card ripple-effect" data-mood="bold" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&auto=format" alt="Bold & Intense">
+                        <div class="mood-info">
+                            <div class="mood-title"><i class="fas fa-skull"></i> Bold & Intense</div>
+                            <div class="mood-tagline"><i class="fas fa-fire-flame-curved"></i> leather · tobacco · dark woods</div>
+                            <button class="mood-btn explore-btn" data-mood-key="bold"><i class="fas fa-magnifying-glass"></i> explore mood</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="mood-card">
-                        <img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400" alt="Soft & Romantic">
-                        <div class="mood-overlay">
-                            <h5>Soft & Romantic</h5>
+                <!-- Mood 5 - Soft & Romantic -->
+                <div class="mood-card ripple-effect" data-mood="romantic" data-aos="zoom-in" data-aos-delay="250">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&auto=format" alt="Soft & Romantic">
+                        <div class="mood-info">
+                            <div class="mood-title"><i class="fas fa-heart"></i> Soft & Romantic</div>
+                            <div class="mood-tagline"><i class="fas fa-flower"></i> rose · peony · velvet musk</div>
+                            <button class="mood-btn explore-btn" data-mood-key="romantic"><i class="fas fa-magnifying-glass"></i> explore mood</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="350">
-                    <div class="mood-card">
-                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400" alt="Dark & Mysterious">
-                        <div class="mood-overlay">
-                            <h5>Dark & Mysterious</h5>
+                <!-- Mood 6 - Dark & Mysterious -->
+                <div class="mood-card ripple-effect" data-mood="dark" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1512777576244-b846ac3d816f?w=600&auto=format" alt="Dark & Mysterious">
+                        <div class="mood-info">
+                            <div class="mood-title"><i class="fas fa-moon"></i> Dark & Mysterious</div>
+                            <div class="mood-tagline"><i class="fas fa-dragon"></i> oud · incense · smoky vetiver</div>
+                            <button class="mood-btn explore-btn" data-mood-key="dark"><i class="fas fa-magnifying-glass"></i> explore mood</button>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- DYNAMIC INTERACTIVE CONTENT PANEL -->
+            <div class="interactive-preview" id="dynamicPreview" data-aos="fade-up" data-aos-delay="200">
+                <div class="preview-header">
+                    <i class="fas fa-hand-peace preview-icon" id="previewMainIcon"></i>
+                    <h3 class="preview-title" id="previewMoodTitle">choose any mood</h3>
+                </div>
+                <div id="previewDescription" class="preview-desc">
+                    Click <strong>“explore mood”</strong> on any card or hover to preview — discover fragrance stories, signature notes, and curated selections.
+                </div>
+                <div id="scentNotesContainer" class="scent-notes">
+                    <span class="note-pill"><i class="fas fa-circle"></i> interactive experience</span>
+                    <span class="note-pill"><i class="fas fa-circle"></i> immersive notes</span>
+                </div>
+                <button id="dynamicShopBtn" class="action-link"><i class="fas fa-shopping-bag"></i> shop this mood →</button>
             </div>
         </div>
     </section>
+
+    <!-- Steps Section with your color scheme -->
+    <!--<section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Your journey to the perfect scent in three simple steps</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Discover Your Mood</h3>
+                    <p class="step-description">Explore our mood collections — from fresh & clean to dark & mysterious. Find what resonates with your emotion.</p>
+                </div>
+                <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Experience Samples</h3>
+                    <p class="step-description">Order curated discovery sets or travel-size vials. Feel the fragrance story before you commit.</p>
+                </div>
+                <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Embrace Your Signature</h3>
+                    <p class="step-description">Receive your full-size bottle, refillable & sustainably crafted. Let your signature scent evolve with you.</p>
+                </div>
+            </div>
+        </div>
+    </section>-->
 
     <!-- AmeriFrag Barcode Decode Section -->
 
@@ -820,47 +883,47 @@
                     Each fragrance is translated into a visual barcode based on its mood, style, intensity, and more based on dynamic global trends.
                 </p>
                 <!--<div class="mt-3 d-flex justify-content-center gap-2 flex-wrap">
-            <span class="px-3 py-1 bg-light rounded-pill small"><i class="fas fa-perfume me-1"></i> 10 signature notes</span>
-            <span class="px-3 py-1 bg-light rounded-pill small"><i class="fas fa-chart-line me-1"></i> AI-powered barcode</span>
-        </div>-->
+                    <span class="px-3 py-1 bg-light rounded-pill small"><i class="fas fa-perfume me-1"></i> 10 signature notes</span>
+                    <span class="px-3 py-1 bg-light rounded-pill small"><i class="fas fa-chart-line me-1"></i> AI-powered barcode</span>
+                </div>-->
             </div>
 
             <!-- HERO SECTION WITH VIDEO + IMAGE (Google-friendly links) -->
             <!--<div class="row mb-5 align-items-center g-4" data-aos="fade-up" data-aos-delay="150">
-        <div class="col-lg-6">
-            <div class="video-wrapper">
-                <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=800&auto=format">
-                    <source src="Images/new_i/4154241-uhd_4096_2160_25fps.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="p-3 p-lg-4">
-                <h3 class="fw-semibold mb-3" style="color: #2c5f66;">The Art of Scent Personalization</h3>
-                <p class="text-muted">At American Fragrances, we believe every nose tells a story. Based on your lifestyle, preferred notes, and olfactory personality — we generate a <strong>visual fragrance barcode</strong> that unlocks your perfect match.</p>
-                <div class="d-flex gap-3 mt-3">
-                    <div><i class="fas fa-check-circle" style="color: #70b4bd;"></i> <span class="small">10 unique dimensions</span></div>
-                    <div><i class="fas fa-check-circle" style="color: #70b4bd;"></i> <span class="small">Real-time trend mapping</span></div>
+                <div class="col-lg-6">
+                    <div class="video-wrapper">
+                        <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=800&auto=format">
+                            <source src="Images/new_i/4154241-uhd_4096_2160_25fps.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>-->
+                <div class="col-lg-6">
+                    <div class="p-3 p-lg-4">
+                        <h3 class="fw-semibold mb-3" style="color: #2c5f66;">The Art of Scent Personalization</h3>
+                        <p class="text-muted">At American Fragrances, we believe every nose tells a story. Based on your lifestyle, preferred notes, and olfactory personality — we generate a <strong>visual fragrance barcode</strong> that unlocks your perfect match.</p>
+                        <div class="d-flex gap-3 mt-3">
+                            <div><i class="fas fa-check-circle" style="color: #70b4bd;"></i> <span class="small">10 unique dimensions</span></div>
+                            <div><i class="fas fa-check-circle" style="color: #70b4bd;"></i> <span class="small">Real-time trend mapping</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
             <!-- PRODUCT SHOWCASE CARD with real perfume image from Unsplash -->
             <div class="row justify-content-center mb-3" data-aos="fade-up" data-aos-delay="100">
                 <div class="col-lg-8">
                     <div class="productcards text-center">
                         <div class="product-image-wrappers">
-                            <img src="Images/new_i/perfume-bottle-on-black-silk-fabric-background-free-vector.jpg"
+                            <img src="Images/new_i/ChatGPT Image Mar 24, 2026, 10_16_19 PM.png"
                                  alt="Delina - Parfums de Marly"
                                  class="product-images img-fluid">
                         </div>
                         <div class="">
                             <h2 class="fw-bold mb-1" style="font-size: 1.8rem;">Delina</h2>
-                            <p class="text-muted mb-3" style="font-size: 0.9rem;">Parfums de Marly</p>
-                            <p class="text-secondary mx-auto" style="max-width: 500px; font-size: 0.9rem;">
+                            <p class="text-muted mb-3" style="font-size: 0.9rem;font-weight:600;">Parfums de Marly</p>
+                            <!--<p class="text-secondary mx-auto" style="max-width: 500px; font-size: 0.9rem;">
                                 A visual code that defines how this fragrance smells and performs.
-                            </p>
+                            </p>-->
                         </div>
                     </div>
                 </div>
@@ -868,34 +931,37 @@
 
             <!-- BARCODE SECTION -->
             <div class="my-4" data-aos="fade-up" data-aos-delay="250">
-              
+                <p class="text-center mt-3 small fw-light text-dark" style="
+    font-weight: 600!important;><i class="fas fa-chart-simple me-1"></i> AmeriFrag Barcode</p>
                 <div class="row justify-content-center mb-3" data-aos="fade-up" data-aos-delay="175">
-                    <div class="col-9">
-                       
+                    <div class="col-10">
+
                         <div class="progress-custom d-flex flex-wrap">
-                            <div class="progress-segment bg-ten" style="flex: 1; background-color: #FF6B6B;">Personality</div>
-                            <div class="progress-segment bg-fourty" style="flex: 1; background-color: #96CEB4;">Zodiac</div>
-                            <div class="progress-segment bg-thirty" style="flex: 1; background-color: #45B7D1;">Strength</div>
-                            <div class="progress-segment bg-fifty" style="flex: 1; background-color: #FFEAA7;">Passion</div>
-                            <div class="progress-segment bg-twenty" style="flex: 1; background-color: #4ECDC4;">Entertainment</div>
-                            <div class="progress-segment bg-ninety" style="flex: 1; background-color: #E77F67;">Style</div>
-                            <div class="progress-segment bg-sixty" style="flex: 1; background-color: #DDA0DD;">Color</div>
-                            <div class="progress-segment bg-seventy" style="flex: 1; background-color: #98D8C8;">Smell</div>
-                            <div class="progress-segment bg-eighty" style="flex: 1; background-color: #F7D794;">Mood</div>
-                            <div class="progress-segment bg-hundered" style="flex: 1; background-color: #786FA6;">Season</div>
+                            <div class="progress-segment bg-ten" style="flex: 1; background-color: #FF6B6B;">Style</div>
+                            <div class="progress-segment bg-fourty" style="flex: 1; background-color: #96CEB4;">Note</div>
+                            <div class="progress-segment bg-thirty" style="flex: 1; background-color: #45B7D1;">Mood</div>
+                            <div class="progress-segment bg-fifty" style="flex: 1; background-color: #FFEAA7;">Season</div>
+                            <div class="progress-segment bg-twenty" style="flex: 1; background-color: #4ECDC4;">Occasion</div>
+                            <div class="progress-segment bg-ninety" style="flex: 1; background-color: #E77F67;">
+                                Age Group
+                            </div>
+                            <div class="progress-segment bg-sixty" style="flex: 1; background-color: #DDA0DD;"> Smell Intensity</div>
+                            <div class="progress-segment bg-seventy" style="flex: 1; background-color: #98D8C8;">Longevity</div>
+                            <div class="progress-segment bg-eighty" style="flex: 1; background-color: #F7D794;">Spray Time</div>
+                            <div class="progress-segment bg-hundered" style="flex: 1; background-color: #786FA6;">Presentation</div>
                         </div>
-                     
+
                     </div>
                 </div>
-                <p class="text-center mt-3 small fw-light text-secondary"><i class="fas fa-chart-simple me-1"></i> AmeriFrag Barcode</p>
+
             </div>
 
             <!-- 10 QUESTION & ANSWER GRID: each with high-quality unsplash images related to answer -->
             <div class="mt-5 pt-3" data-aos="fade-up" data-aos-delay="300">
                 <!--<div class="text-center mb-5">
-            <h3 class="fw-bold">Your <span style="color: #70b4bd;">Olfactory Fingerprint</span></h3>
-            <p class="text-muted">Based on registration & purchase preferences — each answer visualized with unique imagery</p>
-        </div>-->
+                    <h3 class="fw-bold">Your <span style="color: #70b4bd;">Olfactory Fingerprint</span></h3>
+                    <p class="text-muted">Based on registration & purchase preferences — each answer visualized with unique imagery</p>
+                </div>-->
 
                 <div class="row container justify-content-center g-4">
                     <!-- Style - Sophisticated -->
@@ -1003,40 +1069,40 @@
 
             <!-- VIDEO BANNER SECTION (Lifestyle & Perfume) -->
             <!--<div class="row my-5 g-4 align-items-center mt-5 p-4 rounded-4" style="background: linear-gradient(120deg, #F9F7F2 0%, #ffffff 100%); border-left: 6px solid #70b4bd;" data-aos="fade-up">
-        <div class="col-md-7">
-            <h4 class="fw-bold"><i class="fas fa-video me-2" style="color:#70b4bd"></i> Experience The Fragrance Journey</h4>
-            <p class="mb-3 text-secondary">Watch how our barcode technology translates your personality into a unique scent signature. Inspired by global trends and crafted for American Fragrances connoisseurs.</p>
-            <div class="d-flex gap-2">
-                <span class="badge bg-dark text-white px-3 py-2"><i class="fas fa-chart-line me-1"></i> 15k+ Profiles</span>
-                <span class="badge bg-light text-dark px-3 py-2"><i class="fas fa-globe me-1"></i> Global Trends</span>
-            </div>
-        </div>
-        <div class="col-md-5">
-            <div class="video-wrapper rounded-4" style="box-shadow: 0 12px 28px rgba(0,0,0,0.1);">
-                <video muted loop playsinline autoplay poster="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=600&auto=format">
-                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-    </div>-->
+                <div class="col-md-7">
+                    <h4 class="fw-bold"><i class="fas fa-video me-2" style="color:#70b4bd"></i> Experience The Fragrance Journey</h4>
+                    <p class="mb-3 text-secondary">Watch how our barcode technology translates your personality into a unique scent signature. Inspired by global trends and crafted for American Fragrances connoisseurs.</p>
+                    <div class="d-flex gap-2">
+                        <span class="badge bg-dark text-white px-3 py-2"><i class="fas fa-chart-line me-1"></i> 15k+ Profiles</span>
+                        <span class="badge bg-light text-dark px-3 py-2"><i class="fas fa-globe me-1"></i> Global Trends</span>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="video-wrapper rounded-4" style="box-shadow: 0 12px 28px rgba(0,0,0,0.1);">
+                        <video muted loop playsinline autoplay poster="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=600&auto=format">
+                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>-->
             <!-- ADDITIONAL BEAUTY BANNER: Stock photo banner -->
             <!--<div class="row my-4 align-items-center g-0 rounded-4 overflow-hidden shadow-sm" data-aos="fade-up">
-        <div class="col-md-6 p-0">
-            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=800&auto=format" alt="Luxury perfume collection" class="img-fluid w-100" style="height: 260px; object-fit: cover;">
-        </div>
-        <div class="col-md-6 p-4 p-md-5" style="background: #EBEBEB;">
-            <h3 class="fw-bold" style="color: #1a3b40;">Limited Edition Barcode Collection</h3>
-            <p class="text-dark-emphasis">Each bottle tells a story — scan the barcode to reveal mood, intensity, and longevity. Join the smart fragrance revolution.</p>
-            <button class="btn btn-dark rounded-pill px-4 py-2 mt-2" onclick="alert('Discover exclusive scents →')"><i class="fas fa-arrow-right me-2"></i>Explore Collection</button>
-        </div>
-    </div>-->
+                <div class="col-md-6 p-0">
+                    <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=800&auto=format" alt="Luxury perfume collection" class="img-fluid w-100" style="height: 260px; object-fit: cover;">
+                </div>
+                <div class="col-md-6 p-4 p-md-5" style="background: #EBEBEB;">
+                    <h3 class="fw-bold" style="color: #1a3b40;">Limited Edition Barcode Collection</h3>
+                    <p class="text-dark-emphasis">Each bottle tells a story — scan the barcode to reveal mood, intensity, and longevity. Join the smart fragrance revolution.</p>
+                    <button class="btn btn-dark rounded-pill px-4 py-2 mt-2" onclick="alert('Discover exclusive scents →')"><i class="fas fa-arrow-right me-2"></i>Explore Collection</button>
+                </div>
+            </div>-->
             <!-- CTA BUTTON -->
             <!--<div class="text-center mt-5 pt-4" data-aos="fade-up" data-aos-delay="400">
-        <button class="btn-ameri" onclick="alert('Discover your personalized fragrance barcode → Take the quiz')">
-            <i class="fas fa-magic me-2"></i> Explore Fragrances The Smart Way
-        </button>
-        <p class="small text-muted mt-3">Unlock your personal scent DNA · Get matched with your perfect fragrance</p>
-    </div>-->
+                <button class="btn-ameri" onclick="alert('Discover your personalized fragrance barcode → Take the quiz')">
+                    <i class="fas fa-magic me-2"></i> Explore Fragrances The Smart Way
+                </button>
+                <p class="small text-muted mt-3">Unlock your personal scent DNA · Get matched with your perfect fragrance</p>
+            </div>-->
         </div>
     </section>
 
@@ -1049,7 +1115,11 @@
                         <img src="Images/new_i/category-men-BFZwknFn.jpg" alt="For Him">
                         <div class="gender-overlay">
                             <h2>For Him</h2>
-                            <button class="btn btn-light">Shop Men's Collection</button>
+                            <div class="text-center aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400">
+                                <button class="cta-premium2 btn" id="discoverCta">
+                                    <i class="fas fa-magic me-2"></i> Shop Men's Collection
+                                </button>
+</div>
                         </div>
                     </div>
                 </div>
@@ -1058,7 +1128,11 @@
                         <img src="Images/new_i/category-women-sZ85u1hs.jpg" alt="For Her">
                         <div class="gender-overlay">
                             <h2>For Her</h2>
-                            <button class="btn btn-light">Shop Women's Collection</button>
+                            <div class="text-center aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400">
+                                <button class="cta-premium2 btn" id="discoverCta">
+                                    <i class="fas fa-magic me-2"></i> Shop Women's Collection
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1322,7 +1396,7 @@
                 <h2 class="section-title">Best Sellers</h2>
             </div>
 
-            <div class="row g-4 mt-4">
+            <div class="row g-4">
                 <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="product-card">
                         <div class="product-image">
@@ -1419,53 +1493,12 @@
                     </div>
                 </div>
 
-                <!--<div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://flowerorganics.in/cdn/shop/files/pink_soul-2.jpg?v=1756466550&width=400" alt="YSL Y">
-                            <div class="product-badge">BESTSELLER</div>
-                            <div class="product-barcode">
 
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h5>YSL Y</h5>
-                            <p class="brand">YSL</p>
-                            <div class="product-price">
-                                <span class="current-price">$115</span>
-                                <span class="original-price">$145</span>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-sm btn-outline-dark add-to-cart">Add to Cart</button>
-                                <button class="btn btn-sm btn-dark buy-now">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="350">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400" alt="Delina">
-                            <div class="product-badge">BESTSELLER</div>
-                            <div class="product-barcode">
-
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h5>Delina</h5>
-                            <p class="brand">Parfums de Marly</p>
-                            <div class="product-price">
-                                <span class="current-price">$325</span>
-                                <span class="original-price">$375</span>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-sm btn-outline-dark add-to-cart">Add to Cart</button>
-                                <button class="btn btn-sm btn-dark buy-now">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
+            </div>
+            <div class="text-center mt-3 pt-4 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400">
+                <button class="cta-premium btn" id="discoverCta">
+                    <i class="fas fa-magic me-2"></i> Shop Men's Collection
+                </button>
             </div>
         </div>
     </section>
@@ -1477,7 +1510,7 @@
             <div class="art-banner-content">
                 <h2>The Art of Fragrance</h2>
                 <p>Fragrance is more than scent — it is identity. Discover fragrances crafted to evoke mood, memory, and individuality.</p>
-                <button class="btn btn-light btn-lg">Explore the Collection</button>
+               
             </div>
         </div>
     </section>
@@ -1485,183 +1518,359 @@
     <!-- Discover Collections Section -->
     <section class="section collections-section" id="collections">
         <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <h2 class="section-title">Discover Collections</h2>
+            <div class="section-header text-center m-0" data-aos="fade-up">
+                <h2 class="section-title">Curated Collections</h2>
             </div>
 
-            <div class="row container justify-content-center g-4 mt-4">
-                <!-- First row - 5 items -->
-                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="100">
-                    <div class="collection-card">
-                        <img src="https://india.zendiamond.com/cdn/shop/files/Picture_M_1.jpg?v=1757069930&width=400" alt="Premium">
-                        <h5>Premium</h5>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="150">
-                    <div class="collection-card">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiczkPhAvm7LGrgKIuQZ5L43TuNSlM7_9-vg&s" alt="Luxury">
-                        <h5>Luxury</h5>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="200">
-                    <div class="collection-card">
-                        <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=400" alt="Designer">
-                        <h5>Designer</h5>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="250">
-                    <div class="collection-card">
-                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400" alt="Niche">
-                        <h5>Niche</h5>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="300">
-                    <div class="collection-card">
-                        <img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=400" alt="Celebrity">
-                        <h5>Celebrity</h5>
-                    </div>
-                </div>
+            <div class="discover-section">
+                <div class="p-3">
 
-                <!-- Second row - remaining 5 items -->
-                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="350">
-                    <div class="collection-card">
-                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400" alt="Natural">
-                        <h5>Natural</h5>
+
+                    <!-- First Row - Premium Categories -->
+                    <div class="category-grid category-grid-primary mb-4">
+                        <!-- Premium Card -->
+                        <div class="category-card premium-card" data-category="premium">
+                            <div class="card-inner">
+                                <div class="card-medias">
+                                    <img src="Images/popular/permimum.png" alt="Premium Perfume Collection" loading="lazy">
+
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Premium</h3>
+                                    <p class="card-desc">Exceptional quality & craftsmanship</p>
+                                    <a href="#" class="card-link">Explore <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Luxury Card -->
+                        <div class="category-card luxury-card" data-category="luxury">
+                            <div class="card-inner">
+                                <div class="card-medias">
+                                    <img src="Images/popular/Luxury.png" alt="Luxury Perfume Collection" loading="lazy">
+
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Luxury</h3>
+                                    <p class="card-desc">Opulent scents for discerning tastes</p>
+                                    <a href="#" class="card-link">Explore <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Designer Card -->
+                        <div class="category-card designer-card" data-category="designer">
+                            <div class="card-inner">
+                                <div class="card-medias">
+                                    <img src="Images/popular/Designer.png" alt="Designer Perfume Collection" loading="lazy">
+
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Designer</h3>
+                                    <p class="card-desc">Iconic fragrances from top fashion houses</p>
+                                    <a href="#" class="card-link">Explore <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Niche Card -->
+                        <div class="category-card niche-card" data-category="niche">
+                            <div class="card-inner">
+                                <div class="card-medias">
+                                    <img src="Images/popular/Niche.png" alt="Niche Perfume Collection" loading="lazy">
+
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Niche</h3>
+                                    <p class="card-desc">Artisanal & exclusive creations</p>
+                                    <a href="#" class="card-link">Explore <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Celebrity Card -->
+                        <div class="category-card celebrity-card" data-category="celebrity">
+                            <div class="card-inner">
+                                <div class="card-medias">
+                                    <img src="Images/popular/Celebrity.png" alt="Celebrity Perfume Collection" loading="lazy">
+
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Celebrity</h3>
+                                    <p class="card-desc">Fragrances inspired by icons</p>
+                                    <a href="#" class="card-link">Explore <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="100">
-                    <div class="collection-card">
-                        <img src="https://thevaginestory.com/cdn/shop/files/Capricorn_Product.jpg?v=1762456142&width=400" alt="Indie">
-                        <h5>Indie</h5>
+
+                    <!-- Second Row - Specialty Categories -->
+                    <div class="category-grid category-grid-secondary">
+                        <!-- Natural Card -->
+                        <div class="category-card natural-card" data-category="natural">
+                            <div class="card-inner">
+                                <div class="card-medias">
+                                    <img src="Images/popular/permimum.png" alt="Natural Perfume Collection" loading="lazy">
+
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Natural</h3>
+                                    <p class="card-desc">Pure ingredients & eco-friendly</p>
+                                    <a href="#" class="card-link">Explore <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Indie Card -->
+                        <div class="category-card indie-card" data-category="indie">
+                            <div class="card-inner">
+                                <div class="card-medias">
+                                    <img src="Images/popular/Luxury.png" alt="Indie Perfume Collection" loading="lazy">
+
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Indie</h3>
+                                    <p class="card-desc">Independent & unconventional</p>
+                                    <a href="#" class="card-link">Explore <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Specialty Card -->
+                        <div class="category-card specialty-card" data-category="specialty">
+                            <div class="card-inner">
+                                <div class="card-medias">
+                                    <img src="Images/popular/Designer.png" alt="Specialty Perfume Collection" loading="lazy">
+
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Specialty</h3>
+                                    <p class="card-desc">Unique & specialized fragrances</p>
+                                    <a href="#" class="card-link">Explore <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mass Market Card -->
+                        <div class="category-card mass-market-card" data-category="mass-market">
+                            <div class="card-inner">
+                                <div class="card-medias">
+                                    <img src="Images/popular/Niche.png" alt="Mass Market Perfume Collection" loading="lazy">
+
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Mass Market</h3>
+                                    <p class="card-desc">Popular & accessible favorites</p>
+                                    <a href="#" class="card-link">Explore <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Economical Card -->
+                        <div class="category-card economical-card" data-category="economical">
+                            <div class="card-inner">
+                                <div class="card-medias">
+                                    <img src="Images/popular/Celebrity.png" alt="Economical Perfume Collection" loading="lazy">
+
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Economical</h3>
+                                    <p class="card-desc">Great value everyday scents</p>
+                                    <a href="#" class="card-link">Explore <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
                 </div>
-                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="150">
-                    <div class="collection-card">
-                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400" alt="Specialty">
-                        <h5>Specialty</h5>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="200">
-                    <div class="collection-card">
-                        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400" alt="Mass Market">
-                        <h5>Mass Market</h5>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-15" data-aos="flip-left" data-aos-delay="250">
-                    <div class="collection-card">
-                        <img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400" alt="Economical">
-                        <h5>Economical</h5>
-                    </div>
-                </div>
+            </div>
+            <div class="text-center mb-3 pt-4 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400">
+                <button class="cta-premium btn" id="discoverCta">
+                    View All Categories
+                </button>
             </div>
         </div>
     </section>
 
     <!-- Premium Brands Section -->
-    <section class="section brands-section" id="premiumBrands">
-        <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <h2 class="section-title">Premium Brands</h2>
+    <section class="section brands-section" id="premiumBrands" style="background: linear-gradient(135deg, #ffffff 0%, #fefcf7 50%, #faf9f5 100%)!important;">
+        <div class="fp-container">
+            <div class="section-header text-center m-0" data-aos="fade-up">
+                <h2 class="section-title m-0">Premium Brands</h2>
             </div>
-
-            <div class="row g-4 mt-4">
-                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
-                    <div class="brand-card">
-                        <img src="https://swissyarn.com/wp-content/uploads/2023/04/Chanel-Bleu-De-Parfum-PH-EDP-100ml-4.jpg" alt="Chanel">
-                        <h5>Chanel</h5>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="150">
-                    <div class="brand-card">
-                        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSTmEx214rZ-LLiebCIAluTX5j7vyFoa0ZyAey-pXCVoFrPwZ8mB4PR-FD_wHa6IWSQhUxk7PtPNEtiuMdjf6Dg8FhKgFME8_tqNofZJUY&usqp=CAc" alt="Dior">
-                        <h5>Dior</h5>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
-                    <div class="brand-card">
-                        <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=400" alt="Tom Ford">
-                        <h5>Tom Ford</h5>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="250">
-                    <div class="brand-card">
-                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400" alt="Creed">
-                        <h5>Creed</h5>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="300">
-                    <div class="brand-card">
-                        <img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=400" alt="MFK">
-                        <h5>Maison Francis Kurkdjian</h5>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="350">
-                    <div class="brand-card">
-                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400" alt="Parfums de Marly">
-                        <h5>Parfums de Marly</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-5" data-aos="fade-up">
-                <button class="btn btn-outline-dark btn-lg">Show More Brands</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Editor's Picks Section -->
-    <section class="section editors-picks-section" id="editorsPicks">
-        <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <h2 class="section-title">Editor's Picks</h2>
-            </div>
-
             <div class="row g-4 mt-4">
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="editors-card">
-                        <img src="https://www.naseemperfume.in/cdn/shop/files/Date-Night-For-Men_1.webp?v=1753259997&width=600" alt="Date Night Fragrances">
+                        <img src="https://swissyarn.com/wp-content/uploads/2023/04/Chanel-Bleu-De-Parfum-PH-EDP-100ml-4.jpg" alt="Date Night Fragrances">
                         <div class="editors-overlay">
-                            <h4>Date Night Fragrances</h4>
+                            <h4>Chanel</h4>
                             <button class="btn btn-light btn-sm">Explore</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
                     <div class="editors-card">
-                        <img src="https://scentoria.co.in/cdn/shop/files/office_for_men.webp?v=1722241075&width=720" alt="Office Essentials">
+                        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSTmEx214rZ-LLiebCIAluTX5j7vyFoa0ZyAey-pXCVoFrPwZ8mB4PR-FD_wHa6IWSQhUxk7PtPNEtiuMdjf6Dg8FhKgFME8_tqNofZJUY&usqp=CAc" alt="Office Essentials">
                         <div class="editors-overlay">
-                            <h4>Office Essentials</h4>
+                            <h4>Dior</h4>
                             <button class="btn btn-light btn-sm">Explore</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
                     <div class="editors-card">
-                        <img src="https://imageio.forbes.com/specials-images/imageserve/6475fab675e12ddbe7996725/0x0.jpg?format=jpg&crop=3333,3333,x0,y511,safe&height=900&width=1600&fit=bounds" alt="Summer Favorites">
+                        <img src="https://bluemercury.com/cdn/shop/files/variant_images-size-17oz-888066023948-2.jpg?v=1758063929&width=1500" alt="Summer Favorites">
                         <div class="editors-overlay">
-                            <h4>Summer Favorites</h4>
+                            <h4>Tom Ford</h4>
                             <button class="btn btn-light btn-sm">Explore</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="250">
                     <div class="editors-card">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxyn1pGFGzeYtr_IvhOscLAnRI5GGzcxYAmA&s" alt="Signature Scents">
+                        <img src="https://www.creedfragrances.co.uk/cdn/shop/files/CREED_CLASSICS_AVENTUS_4x5_c93e20c5-5f0c-40da-b5c2-dac8d78b1437.jpg?v=1747044339&width=750" alt="Signature Scents">
                         <div class="editors-overlay">
-                            <h4>Signature Scents</h4>
+                            <h4>Creed</h4>
                             <button class="btn btn-light btn-sm">Explore</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="testimonial-section text-center mt-5" data-aos="fade-up">
-                <blockquote class="testimonial">
-                    <i class="bi bi-quote"></i>
-                    <p>"I found my signature scent through the AI Finder."</p>
-                    <footer>— Sarah M., Verified Customer</footer>
-                </blockquote>
+            <div class="text-center mb-3 pt-4 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400">
+                <button class="cta-premium btn" id="discoverCta">
+                    Show More Brands
+                </button>
             </div>
+           
+        </div>
+    </section>
+
+    <!-- Editor's Picks Section -->
+    <section class="fp-editors-section" id="editorsPicks">
+        <div class="fp-container">
+            <div class="fp-section-header text-center" data-aos="fade-up">
+                <h2 class="fp-section-title">Editor's Picks</h2>
+                  </div>
+
+            <div class="fp-row mt-2">
+                <!-- Card 1: Date Night Fragrances (unique classnames) -->
+                <div class="fp-col-6 fp-col-md-4 fp-col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="fp-brand-card" tabindex="0" role="button" aria-label="Explore Date Night Fragrances collection">
+                        <div class="fp-card-media">
+                            <img class="fp-card-img" src="https://swissyarn.com/wp-content/uploads/2023/04/Chanel-Bleu-De-Parfum-PH-EDP-100ml-4.jpg" alt="Chanel Bleu de Parfum - Elegant date night fragrance">
+                            <div class="fp-media-overlay">
+                                <span class="fp-overlay-badge"><i class="bi bi-star-fill"></i> Editor’s love</span>
+                            </div>
+                        </div>
+                        <div class="fp-card-content">
+                            <h5 class="fp-card-title">Date Night Fragrances</h5>
+                            <div class="fp-card-sub">
+                                <i class="bi bi-droplet-half"></i> <span>Warm & sensual</span>
+                                <span class="fp-hint-badge"><i class="bi bi-hand-index-thumb"></i> Explore</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Office Essentials -->
+                <div class="fp-col-6 fp-col-md-4 fp-col-lg-2" data-aos="fade-up" data-aos-delay="150">
+                    <div class="fp-brand-card" tabindex="0" role="button" aria-label="Office Essentials - professional fragrances">
+                        <div class="fp-card-media">
+                            <img class="fp-card-img" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSTmEx214rZ-LLiebCIAluTX5j7vyFoa0ZyAey-pXCVoFrPwZ8mB4PR-FD_wHa6IWSQhUxk7PtPNEtiuMdjf6Dg8FhKgFME8_tqNofZJUY&usqp=CAc" alt="Dior Sauvage - sophisticated office scent">
+                            <div class="fp-media-overlay">
+                                <span class="fp-overlay-badge"><i class="bi bi-briefcase-fill"></i> Professional pick</span>
+                            </div>
+                        </div>
+                        <div class="fp-card-content">
+                            <h5 class="fp-card-title">Office Essentials</h5>
+                            <div class="fp-card-sub">
+                                <i class="bi bi-bag-check"></i> <span>Fresh & confident</span>
+                                <span class="fp-hint-badge"><i class="bi bi-arrow-right-circle"></i> Details</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Summer Favorites -->
+                <div class="fp-col-6 fp-col-md-4 fp-col-lg-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="fp-brand-card" tabindex="0" role="button" aria-label="Summer Favorites - bright and airy collection">
+                        <div class="fp-card-media">
+                            <img class="fp-card-img" src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=400&auto=format" alt="Tom Ford fragrance - vibrant summer scent">
+                            <div class="fp-media-overlay">
+                                <span class="fp-overlay-badge"><i class="bi bi-sun-fill"></i> Solar vibe</span>
+                            </div>
+                        </div>
+                        <div class="fp-card-content">
+                            <h5 class="fp-card-title">Summer Favorites</h5>
+                            <div class="fp-card-sub">
+                                <i class="bi bi-flower2"></i> <span>Citrus & marine</span>
+                                <span class="fp-hint-badge"><i class="bi bi-eye"></i> View</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Signature Scents -->
+                <div class="fp-col-6 fp-col-md-4 fp-col-lg-2" data-aos="fade-up" data-aos-delay="250">
+                    <div class="fp-brand-card" tabindex="0" role="button" aria-label="Signature Scents - timeless and iconic perfumes">
+                        <div class="fp-card-media">
+                            <img class="fp-card-img" src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&auto=format" alt="Creed Aventus - iconic signature fragrance">
+                            <div class="fp-media-overlay">
+                                <span class="fp-overlay-badge"><i class="bi bi-gem"></i> Timeless icon</span>
+                            </div>
+                        </div>
+                        <div class="fp-card-content">
+                            <h5 class="fp-card-title">Signature Scents</h5>
+                            <div class="fp-card-sub">
+                                <i class="bi bi-stars"></i> <span>Bold & distinctive</span>
+                                <span class="fp-hint-badge"><i class="bi bi-info-circle"></i> Learn</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Fresh & Clean (extra to complete editorial row) -->
+                <!--<div class="fp-col-6 fp-col-md-4 fp-col-lg-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="fp-brand-card" tabindex="0" role="button" aria-label="Fresh & Clean fragrances collection">
+                        <div class="fp-card-media">
+                            <img class="fp-card-img" src="https://images.unsplash.com/photo-1594035910387-fea4773a594b?w=400&auto=format" alt="Light aquatic fragrance bottle">
+                            <div class="fp-media-overlay">
+                                <span class="fp-overlay-badge"><i class="bi bi-water"></i> Crisp air</span>
+                            </div>
+                        </div>
+                        <div class="fp-card-content">
+                            <h5 class="fp-card-title">Fresh & Clean</h5>
+                            <div class="fp-card-sub">
+                                <i class="bi bi-wind"></i> <span>Effortless everyday</span>
+                                <span class="fp-hint-badge"><i class="bi bi-chevron-right"></i> Discover</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+
+                <!-- Card 6: Luxury Oud Collection -->
+                <div class="fp-col-6 fp-col-md-4 fp-col-lg-2" data-aos="fade-up" data-aos-delay="350">
+                    <div class="fp-brand-card" tabindex="0" role="button" aria-label="Luxury Oud Collection - deep resinous scents">
+                        <div class="fp-card-media">
+                            <img class="fp-card-img" src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&auto=format" alt="Oud perfume with golden accents">
+                            <div class="fp-media-overlay">
+                                <span class="fp-overlay-badge"><i class="bi bi-crown-fill"></i> Artisan edit</span>
+                            </div>
+                        </div>
+                        <div class="fp-card-content">
+                            <h5 class="fp-card-title">Luxury Oud</h5>
+                            <div class="fp-card-sub">
+                                <i class="bi bi-fire"></i> <span>Deep & mysterious</span>
+                                <span class="fp-hint-badge"><i class="bi bi-star"></i> Explore</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          
         </div>
     </section>
 
@@ -1735,7 +1944,7 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section class="newsletter-section" data-aos="fade-up">
+    <section class="newsletter-section container mx-5" data-aos="fade-up">
         <div class="container">
             <div class="newsletter-content text-center">
                 <h2>Get 10% Off Your First Order</h2>
@@ -1751,45 +1960,39 @@
     <footer class="footer">
         <div class="container">
             <div class="row g-4">
+               
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="footer-title">About AmeriFrag</h5>
-                    <p class="footer-text">We are dedicated to helping you discover your perfect fragrance through AI-powered recommendations and expert curation.</p>
-                    <div class="footer-location">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <span>New York, NY 10001</span>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="footer-title">Customer</h5>
+                    <h5 class="footer-title">Customer services</h5>
                     <ul class="footer-links">
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">FAQ’s</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Disclosure Policy</a></li>
+                        <li><a href="#">Accessibility Policy</a></li>
+                        <li><a href="#">Contact Us & Help</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Offers and Partnerships</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Wholesale Discounts</a></li>
+                        <li><a href="#">Corporate Giftsets</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
+                        <li><a href="#">Sell on Amerifrag</a></li>
+                        <li><a href="#">Drop Shipping</a></li>
+                        <li><a href="#">Reward Points</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="footer-title">Company</h5>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">CONNECT WITH US</h5>
                     <ul class="footer-links">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Press</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="footer-title">Shopping</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Brands</a></li>
-                        <li><a href="#">Best Sellers</a></li>
-                        <li><a href="#">Discover</a></li>
-                        <li><a href="#">Gift Sets</a></li>
-                        <li><a href="#">Clearance</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">FaceBook</a></li>
+                        <li><a href="#">X</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">WhatsApp</a></li>
                     </ul>
                 </div>
 
@@ -1905,29 +2108,29 @@
             let perfumes = perfumeLibrary[mood] || perfumeLibrary.Elegant;
             if (!grid) return;
             grid.innerHTML = perfumes.map(p => `
-                          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="perfume-card-premium h-100">
-                              <div class="perfume-img-wrapper" style="background-image: url('${p.image}'); background-size: cover; background-position: center;">
-                                <div class="perfume-overlay"></div>
-                                <div class="match-badge">
-                                  <i class="fas fa-star-of-life me-1" style="color: #70b4bd;"></i> ${p.match}
-                                </div>
-                              </div>
-                              <div class="perfume-details">
-                                <div class="perfume-name">${p.name}</div>
-                                <div class="perfume-brand">${p.brand}</div>
-                                <div class="scent-rating mt-2">
-                                  <i class="fas fa-star" style="color: #70b4bd;"></i> ${p.rating} · <span class="small text-muted">${p.notes}</span>
-                                </div>
-                                <div class="mt-2">
-                                  <span class="badge bg-light text-dark rounded-pill px-3 py-1" style="border: 1px solid #EBEBEB;">
-                                    <i class="fas fa-microphone-alt me-1" style="color: #70b4bd;"></i> AI Recommended
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        `).join('');
+                                  <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="perfume-card-premium h-100">
+                                      <div class="perfume-img-wrapper" style="background-image: url('${p.image}'); background-size: cover; background-position: center;">
+                                        <div class="perfume-overlay"></div>
+                                        <div class="match-badge">
+                                          <i class="fas fa-star-of-life me-1" style="color: #70b4bd;"></i> ${p.match}
+                                        </div>
+                                      </div>
+                                      <div class="perfume-details">
+                                        <div class="perfume-name">${p.name}</div>
+                                        <div class="perfume-brand">${p.brand}</div>
+                                        <div class="scent-rating mt-2">
+                                          <i class="fas fa-star" style="color: #70b4bd;"></i> ${p.rating} · <span class="small text-muted">${p.notes}</span>
+                                        </div>
+                                        <div class="mt-2">
+                                          <span class="badge bg-light text-dark rounded-pill px-3 py-1" style="border: 1px solid #EBEBEB;">
+                                            <i class="fas fa-microphone-alt me-1" style="color: #70b4bd;"></i> AI Recommended
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                `).join('');
         }
 
         function updateActivePills(selectedMood, selectedOccasion) {
@@ -2003,6 +2206,132 @@
         init();
     </script>
     <script>
+        AOS.init({ duration: 700, once: true, easing: 'ease-out-cubic' });
+
+        // Mood dataset with rich content
+        const moodLibrary = {
+            fresh: {
+                title: "Fresh & Clean",
+                icon: "fa-leaf",
+                longDesc: "Awaken your senses with aquatic breezes, crisp green tea, and sparkling citrus. Inspired by morning dew and endless horizons. This mood embodies purity, clarity, and effortless elegance.",
+                notes: ["Bergamot", "White Tea", "Sea Salt", "Musk", "Jasmine"],
+                ctaLink: "#shop-fresh"
+            },
+            warm: {
+                title: "Warm & Sensual",
+                icon: "fa-fire",
+                longDesc: "Wrap yourself in golden amber, vanilla orchid, and exotic tonka bean. A magnetic scent that radiates comfort, intimacy, and irresistible depth — perfect for cozy evenings.",
+                notes: ["Vanilla Absolute", "Amber", "Sandalwood", "Tonka Bean", "Cinnamon"],
+                ctaLink: "#shop-warm"
+            },
+            elegant: {
+                title: "Elegant & Sophisticated",
+                icon: "fa-gem",
+                longDesc: "Timeless refinement meets modern grace. Iris butter, powdery violet, and luminous white flowers create an air of quiet confidence and pure sophistication.",
+                notes: ["Orris", "Jasmine Sambac", "White Musk", "Suede", "Bergamot"],
+                ctaLink: "#shop-elegant"
+            },
+            bold: {
+                title: "Bold & Intense",
+                icon: "fa-skull",
+                longDesc: "Unapologetic and daring — leather, smoky cade wood, and dark spices collide. For those who command attention and leave a trail of fearless energy.",
+                notes: ["Leather", "Black Pepper", "Tobacco Leaf", "Cedarwood", "Patchouli"],
+                ctaLink: "#shop-bold"
+            },
+            romantic: {
+                title: "Soft & Romantic",
+                icon: "fa-heart",
+                longDesc: "Delicate petals and velvety whispers. Turkish rose, peony, and sheer musk create a dreamy, ethereal aura — love bottled in its purest form.",
+                notes: ["Rose Centifolia", "Peony", "Freesia", "Powdery Musk", "Almond Blossom"],
+                ctaLink: "#shop-romantic"
+            },
+            dark: {
+                title: "Dark & Mysterious",
+                icon: "fa-moon",
+                longDesc: "Step into the unknown with smoky oud, sacred incense, and enigmatic resins. A nocturnal fragrance that lingers like a secret whispered at midnight.",
+                notes: ["Oud", "Incense", "Saffron", "Vetiver", "Cypriol"],
+                ctaLink: "#shop-dark"
+            }
+        };
+
+        // DOM elements
+        const previewTitle = document.getElementById('previewMoodTitle');
+        const previewDesc = document.getElementById('previewDescription');
+        const scentContainer = document.getElementById('scentNotesContainer');
+        const previewIcon = document.getElementById('previewMainIcon');
+        const dynamicShopBtn = document.getElementById('dynamicShopBtn');
+
+        // Function to update interactive panel
+        function updatePreviewPanel(moodKey) {
+            const mood = moodLibrary[moodKey];
+            if (!mood) return;
+
+            previewTitle.innerText = mood.title;
+            previewDesc.innerText = mood.longDesc;
+            previewIcon.className = `fas ${mood.icon} preview-icon`;
+            scentContainer.innerHTML = mood.notes.map(note => `<span class="note-pill"><i class="fas fa-circle"></i>${note}</span>`).join('');
+            dynamicShopBtn.setAttribute('data-current-mood', moodKey);
+        }
+
+        // Add hover and click interactions to all mood cards
+        const allCards = document.querySelectorAll('.mood-card');
+        allCards.forEach(card => {
+            const btn = card.querySelector('.explore-btn');
+            const moodAttr = btn?.getAttribute('data-mood-key');
+            if (moodAttr) {
+                // Hover on card triggers preview
+                card.addEventListener('mouseenter', () => {
+                    updatePreviewPanel(moodAttr);
+                });
+
+                // Click on button triggers interactive feedback
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    // Visual feedback on panel
+                    const panel = document.getElementById('dynamicPreview');
+                    panel.style.transition = '0.1s';
+                    panel.style.transform = 'scale(0.99)';
+                    setTimeout(() => { panel.style.transform = 'scale(1)'; }, 120);
+                    updatePreviewPanel(moodAttr);
+
+                    // Button feedback animation
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '<i class="fas fa-check"></i> mood loaded';
+                    setTimeout(() => { btn.innerHTML = originalText; }, 800);
+                });
+            }
+        });
+
+        // Set default preview
+        updatePreviewPanel('fresh');
+
+        // Shop button interaction
+        dynamicShopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const currentMoodKey = dynamicShopBtn.getAttribute('data-current-mood');
+            if (currentMoodKey && moodLibrary[currentMoodKey]) {
+                const moodName = moodLibrary[currentMoodKey].title;
+                // Toast notification
+                const toastMsg = document.createElement('div');
+                toastMsg.innerText = `✨ exploring "${moodName}" collection — find your perfect scent ✨`;
+                toastMsg.style.position = 'fixed';
+                toastMsg.style.bottom = '20px';
+                toastMsg.style.left = '50%';
+                toastMsg.style.transform = 'translateX(-50%)';
+                toastMsg.style.backgroundColor = '#a67a5b';
+                toastMsg.style.color = '#ffffff';
+                toastMsg.style.padding = '12px 24px';
+                toastMsg.style.borderRadius = '60px';
+                toastMsg.style.fontWeight = '500';
+                toastMsg.style.zIndex = '9999';
+                toastMsg.style.fontFamily = 'Inter, sans-serif';
+                toastMsg.style.boxShadow = '0 8px 18px rgba(0,0,0,0.2)';
+                document.body.appendChild(toastMsg);
+                setTimeout(() => { toastMsg.style.opacity = '0'; setTimeout(() => toastMsg.remove(), 500); }, 2000);
+            }
+        });
+    </script>
+    <script>
         // ---------------------------
         // FRAGRANCE DATABASE (AI suggestion mapping based on mood/vibe)
         // ---------------------------
@@ -2068,12 +2397,12 @@
                 imgDiv.style.transition = 'all 0.3s';
                 // inner content: elegant perfume icon + shimmer
                 imgDiv.innerHTML = `
-                        <div class="text-center" style="transform: translateY(-5px);">
-                          <i class="bi bi-gem fs-1" style="color: ${item.textColor === '#fff' ? '#f4cdb0' : '#70b4bd'}; opacity:0.9;"></i>
-                          <div class="mt-2 fw-bold" style="font-size: 1.2rem; color: ${item.textColor || '#2c2c2c'};">${item.icon || '💧'}</div>
-                          <div class="small fw-semibold mt-1" style="color: ${item.textColor || '#3c5e66'};">${item.imgLabel}</div>
-                        </div>
-                      `;
+                                <div class="text-center" style="transform: translateY(-5px);">
+                                  <i class="bi bi-gem fs-1" style="color: ${item.textColor === '#fff' ? '#f4cdb0' : '#70b4bd'}; opacity:0.9;"></i>
+                                  <div class="mt-2 fw-bold" style="font-size: 1.2rem; color: ${item.textColor || '#2c2c2c'};">${item.icon || '💧'}</div>
+                                  <div class="small fw-semibold mt-1" style="color: ${item.textColor || '#3c5e66'};">${item.imgLabel}</div>
+                                </div>
+                              `;
                 // optional hover text
 
                 const titleP = document.createElement('p');
@@ -2234,6 +2563,36 @@
                 this.style.backgroundColor = '#000000';
             });
         });
-    </script>
+    </script><script>
+    // Initialize AOS with unique namespace no conflict
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 20,
+        easing: 'ease-out-cubic'
+    });
+
+    // Keyboard enhancement for all unique brand cards
+    const uniqueCards = document.querySelectorAll('.fp-brand-card');
+    uniqueCards.forEach(card => {
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                // subtle micro feedback
+                card.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    card.style.transform = '';
+                }, 150);
+                // optional: interactive console (non-intrusive)
+                const titleElem = card.querySelector('.fp-card-title');
+                if (titleElem) {
+                    console.log(`✨ Engaged with: ${titleElem.innerText}`);
+                }
+            }
+        });
+        // ensure proper role for accessibility
+        if (!card.getAttribute('role')) card.setAttribute('role', 'button');
+    });
+</script>
 </body>
 </html>

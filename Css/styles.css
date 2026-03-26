@@ -474,7 +474,7 @@ body {
 
 /* ===== COMMON SECTION STYLES ===== */
 .section {
-    padding: 40px 0;
+    padding: 30px 0;
     position: relative;
 }
 
@@ -492,7 +492,7 @@ body {
 .section-subtitle {
     font-size: 1.1rem;
     color: var(--medium-gray);
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -806,7 +806,7 @@ body {
     color: #70b4bd;
     font-weight: 700;
     letter-spacing: 2px;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 /* occasion pills specific */
@@ -855,7 +855,154 @@ body {
     background-color: #fafaf8;
     transition: all 0.2s ease;
 }
+/* MAIN CONTAINER — intentionally reduced max-width for slimmer look */
+.slim-widget {
+    max-width: 600px; /* significantly narrower than before */
+    width: 100%;
+    margin: 0 auto;
+}
 
+/* even tighter section caption */
+.section-caption-slim {
+    font-size: 0.62rem; /* extra small but legible */
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #8f8f86;
+    background: rgba(255, 255, 245, 0.75);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.2rem 0.75rem;
+    border-radius: 60px;
+    backdrop-filter: blur(2px);
+    white-space: nowrap;
+}
+
+    .section-caption-slim i {
+        font-size: 0.6rem;
+    }
+
+/* MAIN CARD — ultra compact padding, narrow-friendly */
+.ultra-compact-card {
+    background-color: #ffffff;
+    border-radius: 22px !important;
+    border: 1px solid #efefec;
+    box-shadow: 0 10px 22px rgba(17, 17, 17, 0.04);
+    padding: 1rem 1rem 1rem 1rem;
+    transition: all 0.2s ease;
+}
+
+/* 2-column grid but with smaller gap, adapts to super narrow */
+.micro-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+}
+
+/* preference card — more compact horizontally, still two per row */
+.pref-card-micro {
+    background-color: #fafaf8;
+    border-radius: 16px;
+    border: 1px solid #efefec;
+    padding: 1rem 1rem;
+    transition: all 0.15s ease;
+    width: calc(49% - 0.3rem); /* two columns accounting for gap */
+    flex: 0 0 auto;
+}
+
+/* On extremely narrow screens (< 360px) switch to single column to avoid squish */
+@media (max-width: 360px) {
+    .pref-card-micro {
+        width: 100%;
+    }
+
+    .micro-grid {
+        gap: 0.55rem;
+    }
+
+    .slim-widget {
+        max-width: 300px;
+    }
+}
+
+/* label row: ultra tiny but crisp */
+.pref-label-micro {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #8a8a84;
+    font-size: 10px; /* even smaller label */
+    margin-bottom: 0.3rem;
+}
+
+    .pref-label-micro i {
+        font-size: 7px;
+        color: #b1b1a4;
+    }
+
+/* preference value — reduced from 0.9rem to 0.8rem for tightness */
+.pref-value-micro {
+    font-size: 1rem;
+    font-weight: 540;
+    color: #171717;
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+    word-break: break-word;
+}
+
+/* "+ 6 more preferences..." section: slimmer, less margin */
+.extra-preferences {
+    margin-top: 0.7rem;
+    margin-bottom: 0.1rem;
+    text-align: center;
+    font-size: 12px; /* reduced font size */
+    color: #9b9b90;
+    font-weight: 460;
+    letter-spacing: 0.15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+}
+
+    .extra-preferences i {
+        font-size: 8px;
+        opacity: 0.7;
+    }
+
+/* hover micro effect */
+.pref-card-micro:hover {
+    background-color: #ffffff;
+    border-color: #e2e2d9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+/* optional extra-tight spacing for header */
+.slim-widget .text-center {
+    margin-bottom: 0.45rem !important;
+}
+
+/* make sure everything aligns perfectly and no overflow */
+.ultra-compact-card {
+    overflow-x: hidden;
+}
+
+/* if needed, force consistent text truncation? not required */
+.pref-value-micro {
+    white-space: normal;
+}
+
+/* tiny decorative adjustment for icon alignment */
+.fa-hand-peace {
+    font-size: 0.7rem;
+}
 /* ===== 2 AI MATCHES SECTION ===== */
 
 .bg-soft-gray {
@@ -1365,7 +1512,7 @@ hr.gradient-hr {
     flex: 1;
     text-align: center;
     padding: 12px 4px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     color: #ffffff;
     transition: all 0.3s ease;
@@ -1599,7 +1746,7 @@ hr.gradient-hr {
     transition: transform 0.1s;
 }
 
-/* Dynamic content panel with your color scheme */
+/* Dynamic content panel with smooth height transitions */
 .interactive-preview {
     background: #ffffff;
     border-radius: 2rem;
@@ -1607,7 +1754,51 @@ hr.gradient-hr {
     padding: 1.8rem 2rem;
     box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.08);
     border: 1px solid #eaeae5;
-    transition: all 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+    /* Smooth height transition during content updates */
+    .interactive-preview.updating {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Inner content containers with smooth transitions */
+    .interactive-preview .preview-header,
+    .interactive-preview .preview-desc,
+    .interactive-preview .scent-notes,
+    .interactive-preview .action-link {
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    /* Fade effect during content update */
+    .interactive-preview.updating .preview-header,
+    .interactive-preview.updating .preview-desc,
+    .interactive-preview.updating .scent-notes,
+    .interactive-preview.updating .action-link {
+        opacity: 0.7;
+        transform: translateY(-2px);
+    }
+
+    /* Content fade-in after update */
+    .interactive-preview.initialized .preview-header,
+    .interactive-preview.initialized .preview-desc,
+    .interactive-preview.initialized .scent-notes,
+    .interactive-preview.initialized .action-link {
+        animation: contentFadeIn 0.3s ease forwards;
+    }
+
+@keyframes contentFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .preview-header {
@@ -1616,6 +1807,7 @@ hr.gradient-hr {
     gap: 1rem;
     flex-wrap: wrap;
     margin-bottom: 1rem;
+    transition: all 0.3s ease;
 }
 
 .preview-icon {
@@ -1624,20 +1816,23 @@ hr.gradient-hr {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    transition: transform 0.3s ease;
 }
 
 .preview-title {
-   /* font-family: 'Playfair Display', serif;*/
     font-size: 1.9rem;
     font-weight: 700;
     color: #2e2e2b;
+    transition: color 0.3s ease;
 }
 
 .preview-desc {
     color: #6b6b66;
+    min-height: 50px;
     line-height: 1.5;
     margin: 0.75rem 0 1rem;
     font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
 .scent-notes {
@@ -1645,6 +1840,7 @@ hr.gradient-hr {
     flex-wrap: wrap;
     gap: 0.7rem;
     margin: 1.2rem 0;
+    transition: all 0.3s ease;
 }
 
 .note-pill {
@@ -1654,14 +1850,27 @@ hr.gradient-hr {
     font-size: 0.8rem;
     font-weight: 500;
     color: #000000;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
     border: 1px solid #eaeae5;
+    animation: pillFadeIn 0.2s ease forwards;
 }
 
-    .note-pill i {
-        color: #b48c6f;
-        margin-right: 4px;
+@keyframes pillFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
     }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.note-pill i {
+    color: #b48c6f;
+    margin-right: 4px;
+}
 
 .action-link {
     display: inline-flex;
@@ -1674,14 +1883,14 @@ hr.gradient-hr {
     font-weight: 600;
     text-decoration: none;
     font-size: 0.9rem;
-    transition: all 0.25s;
+    transition: all 0.25s ease;
     border: none;
     cursor: pointer;
     margin-top: 0.5rem;
 }
 
     .action-link i {
-        transition: transform 0.2s;
+        transition: transform 0.2s ease;
     }
 
     .action-link:hover {
@@ -1693,6 +1902,56 @@ hr.gradient-hr {
         .action-link:hover i {
             transform: translateX(5px);
         }
+
+/* Optional: Add a subtle background transition effect */
+.interactive-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(180, 140, 111, 0.02) 0%, rgba(155, 111, 80, 0.02) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: 2rem;
+}
+
+.interactive-preview.updating::before {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .interactive-preview {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .preview-title {
+        font-size: 1.5rem;
+    }
+
+    .preview-desc {
+        font-size: 0.9rem;
+    }
+
+    .note-pill {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.8rem;
+    }
+
+    .action-link {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Smooth height transition for all dynamic content changes */
+.interactive-preview * {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
 
 /* steps section with your colors */
 .steps-grid {
@@ -1977,7 +2236,7 @@ hr.gradient-hr {
 }
 
     .gender-overlay h2 {
-        font-size: 3rem;
+        font-size: 1.8rem;
         font-weight: 700;
         margin-bottom: 1.5rem;
     }
@@ -2094,7 +2353,7 @@ hr.gradient-hr {
     justify-content: center;
     text-align: center;
     color: var(--white-color);
-    margin: 0px 0;
+    margin: 30px 0;
 }
 
 .art-banner-overlay {
@@ -2711,7 +2970,7 @@ hr.gradient-hr {
 }
 
 .fp-card-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
     margin: 0 0 0.4rem 0;
     color: var(--fp-dark-text);
@@ -2727,7 +2986,7 @@ hr.gradient-hr {
     font-size: 0.8rem;
     color: #6c6c7a;
     font-weight: 500;
-    display: flex;
+    display:grid;
     align-items: center;
     justify-content: center;
     gap: 6px;
@@ -3024,6 +3283,7 @@ hr.gradient-hr {
 .newsletter-section {
     background: #EBEBEB;
     padding: 80px 0;
+    margin: 30px 0;
     color: #000000;
 }
 

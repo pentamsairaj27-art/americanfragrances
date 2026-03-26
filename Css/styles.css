@@ -1357,24 +1357,11 @@ hr.gradient-hr {
     flex-wrap: wrap;
     border-radius: 0;
     background-color: #f0f0f0;
-    overflow: hidden;
-}
-.amerifragtooltip {
-    display: none;
-    position: absolute;
-    top: 100% !important;
-    left: 0;
-    z-index: 1 !important;
-    background-color: #000;
-    padding: 5px;
-    border: 1px solid #ccc;
+    overflow: visible; /* Changed from hidden to visible */
 }
 
-
-.progress-segment:hover > .amerifragtooltip {
-    display: block !important;
-}
 .progress-segment {
+    position: relative;
     flex: 1;
     text-align: center;
     padding: 12px 4px;
@@ -1384,9 +1371,41 @@ hr.gradient-hr {
     transition: all 0.3s ease;
     cursor: pointer;
     white-space: nowrap;
+    overflow: visible; /* Allow tooltip to be visible */
 }
 
-    
+.amerifragtooltip {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%; /* Center the tooltip */
+    transform: translateX(-50%); /* Center alignment */
+    z-index: 9999; /* Higher z-index to appear above everything */
+    background-color: #000;
+    color: #fff;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    pointer-events: none; /* Prevents tooltip from interfering with hover */
+}
+
+.progress-segment:hover > .amerifragtooltip {
+    display: block;
+}
+
+/* Optional: Add a small arrow to tooltip */
+.amerifragtooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #000 transparent;
+}
 
 /* progress bar */
 /*.progress {

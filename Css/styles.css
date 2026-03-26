@@ -846,6 +846,15 @@ body {
         font-size: 0.9rem;
     }
 }
+.card-shadow-subtle {
+    box-shadow: 0 20px 50px rgba(17, 17, 17, 0.05);
+}
+.preference-card {
+    border-radius: 20px;
+    border: 1px solid #efefec;
+    background-color: #fafaf8;
+    transition: all 0.2s ease;
+}
 
 /* ===== 2 AI MATCHES SECTION ===== */
 
@@ -1335,7 +1344,6 @@ hr.gradient-hr {
     .product-image-wrappers {
     
       border-radius: 28px;
-      padding: 2rem;
     }
 
     .product-images {
@@ -1351,11 +1359,25 @@ hr.gradient-hr {
     background-color: #f0f0f0;
     overflow: hidden;
 }
+.amerifragtooltip {
+    display: none;
+    position: absolute;
+    top: 100% !important;
+    left: 0;
+    z-index: 1 !important;
+    background-color: #000;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
 
+
+.progress-segment:hover > .amerifragtooltip {
+    display: block !important;
+}
 .progress-segment {
     flex: 1;
     text-align: center;
-    padding: 6px 4px;
+    padding: 12px 4px;
     font-size: 12px;
     font-weight: 600;
     color: #ffffff;
@@ -1364,10 +1386,7 @@ hr.gradient-hr {
     white-space: nowrap;
 }
 
-    .progress-segment:hover {
-        filter: brightness(0.95);
-        transform: scale(1.02);
-    }
+    
 
 /* progress bar */
 /*.progress {
@@ -2851,7 +2870,7 @@ hr.gradient-hr {
     justify-content: flex-end;
     align-items: center;
     padding: 2rem;
-    opacity: 0;
+    opacity: 100;
     transition: var(--transition);
 }
 
@@ -2984,7 +3003,7 @@ hr.gradient-hr {
 
 /* ===== NEWSLETTER SECTION ===== */
 .newsletter-section {
-    background: linear-gradient(135deg, #8a8a8a87 0%, #7271712e 100%);
+    background: #EBEBEB;
     padding: 80px 0;
     color: #000000;
 }

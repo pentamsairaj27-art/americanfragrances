@@ -1347,7 +1347,7 @@ hr.gradient-hr {
     }
 
     .product-images {
-      max-height: 340px;
+      max-height: 230px;
       width: auto;
       object-fit: contain;
     }

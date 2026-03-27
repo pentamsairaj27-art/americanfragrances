@@ -728,8 +728,8 @@ body {
 
 /* CTA premium button */
 .cta-premium {
-    background: #000000;
-    border: 2px solid #000000;
+    background: #70b4bd;
+    border: 2px solid #70b4bd;
     padding: 1rem 2.8rem;
     border-radius: 60px;
     font-weight: 700;
@@ -739,8 +739,8 @@ body {
     color: #ffffff;
 }
 .cta-premium2 {
-    background: #ffffff;
-    border: 2px solid #ffffff;
+    background: #70b4bd;
+    border: 2px solid #70b4bd;
     padding: 1rem 2.8rem;
     border-radius: 60px;
     font-weight: 700;
@@ -751,17 +751,17 @@ body {
 }
 
     .cta-premium:hover {
-        background: #70b4bd;
-        border-color: #70b4bd;
+        background: #000000;
+        border-color: #000000;
         transform: scale(1.03);
         box-shadow: 0 15px 35px rgba(112, 180, 189, 0.4);
-        color: #000000;
+        color: #ffffff;
     } .cta-premium2:hover {
-        background: #70b4bd;
-        border-color: #70b4bd;
+        background: #000000;
+        border-color: #000000;
         transform: scale(1.03);
         box-shadow: 0 15px 35px rgba(112, 180, 189, 0.4);
-        color: #000000;
+        color: #ffffff;
     }
 
 /* loading animation */
@@ -1894,7 +1894,7 @@ hr.gradient-hr {
     }
 
     .action-link:hover {
-        background: #9b6f50;
+        background: #000000;
         transform: translateY(-2px);
         box-shadow: 0 8px 20px rgba(155, 111, 80, 0.3);
     }
@@ -2236,7 +2236,7 @@ hr.gradient-hr {
 }
 
     .gender-overlay h2 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         font-weight: 700;
         margin-bottom: 1.5rem;
     }
@@ -2353,7 +2353,7 @@ hr.gradient-hr {
     justify-content: center;
     text-align: center;
     color: var(--white-color);
-    margin: 30px 0;
+    margin: 0px 0;
 }
 
 .art-banner-overlay {
@@ -3283,7 +3283,6 @@ hr.gradient-hr {
 .newsletter-section {
     background: #EBEBEB;
     padding: 80px 0;
-    margin: 30px 0;
     color: #000000;
 }
 
@@ -3596,11 +3595,11 @@ hr.gradient-hr {
 }
 
 .btn-dark {
-    background: var(--dark-color);
-    border-color: var(--dark-color);
+    background: #70b4bd;
+    border-color: #70b4bd;
 }
 
     .btn-dark:hover {
-        background: var(--primary-color);
-        border-color: var(--primary-color);
+        background: #000000;
+        border-color: #000000;
     }

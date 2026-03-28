@@ -1225,7 +1225,9 @@ hr.gradient-hr {
     font-size: 0.75rem;
     font-weight: 500;
 }
-
+.subtext {
+    color: #6b6b6b;
+}
 .badge-mood {
     background: var(--primary-color);
     color: var(--white-color);
@@ -1483,10 +1485,13 @@ hr.gradient-hr {
     object-fit: cover;
 }
 /* Product showcase */
-    .productcards {
-      border-radius: 32px;
-      overflow: hidden;
-    }
+.productcards {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    border-radius: 32px;
+    overflow: hidden;
+}
 
     .product-image-wrappers {
     

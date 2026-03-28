@@ -1499,7 +1499,7 @@ hr.gradient-hr {
     }
 
     .product-images {
-      max-height: 230px;
+      max-height: 300px;
       width: auto;
       object-fit: contain;
     }

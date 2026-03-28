@@ -1067,7 +1067,7 @@
                             <div class="mood-title">Fresh & Clean</div>
                             <div class="mood-tagline">crisp · aquatic · uplifting</div>
                             <!--<button class="mood-btn explore-btn" data-mood-key="fresh"><i class="fas fa-magnifying-glass"></i> explore mood</button>-->
-                            <a href="#" class="studio-link" data-mood-key="fresh">Explore <i class="bi bi-arrow-right"></i></a>
+                            <a href="#" class="studio-link explorebtn" data-mood-key="fresh">Explore <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1079,7 +1079,7 @@
                             <div class="mood-title"> Warm & Sensual</div>
                             <div class="mood-tagline">amber · vanilla · cashmere</div>
                             <!--<button class="mood-btn " ><i class="fas fa-magnifying-glass"></i> explore mood</button>-->
-                            <a href="#" class="studio-link" data-mood-key="warm">Explore <i class="bi bi-arrow-right"></i></a>
+                            <a href="#" class="studio-link explorebtn" data-mood-key="warm">Explore <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1091,7 +1091,7 @@
                             <div class="mood-title">Elegant & Sophisticated</div>
                             <div class="mood-tagline">iris · white floral · silk</div>
                             <!--<button class="mood-btn explore-btn" data-mood-key="elegant"><i class="fas fa-magnifying-glass"></i> explore mood</button>-->
-                            <a href="#" class="studio-link" data-mood-key="elegant">Explore <i class="bi bi-arrow-right"></i></a>
+                            <a href="#" class="studio-link explorebtn" data-mood-key="elegant">Explore <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1103,7 +1103,7 @@
                             <div class="mood-title">Bold & Intense</div>
                             <div class="mood-tagline">leather · tobacco · dark woods</div>
                             <!--<button class="mood-btn explore-btn" data-mood-key="bold"><i class="fas fa-magnifying-glass"></i> explore mood</button>-->
-                            <a href="#" class="studio-link" data-mood-key="bold">Explore <i class="bi bi-arrow-right"></i></a>
+                            <a href="#" class="studio-link explorebtn" data-mood-key="bold">Explore <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1115,7 +1115,7 @@
                             <div class="mood-title">Soft & Romantic</div>
                             <div class="mood-tagline">rose · peony · velvet musk</div>
                             <!--<button class="mood-btn explore-btn" data-mood-key="romantic"><i class="fas fa-magnifying-glass"></i> explore mood</button>-->
-                            <a href="#" class="studio-link" data-mood-key="romantic">Explore <i class="bi bi-arrow-right"></i></a>
+                            <a href="#" class="studio-link explorebtn" data-mood-key="romantic">Explore <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1991,7 +1991,7 @@
         // Add hover and click interactions to all mood cards
         const allCards = document.querySelectorAll('.mood-card');
         allCards.forEach(card => {
-            const btn = card.querySelector('.explore-btn');
+            const btn = card.querySelector('.explorebtn');
             const moodAttr = btn?.getAttribute('data-mood-key');
             if (moodAttr) {
                 // Hover on card triggers preview

@@ -805,8 +805,8 @@ body {
 .section-caption {
     color: #70b4bd;
     font-weight: 700;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-size: 1rem;
 }
 
 /* occasion pills specific */
@@ -2230,7 +2230,7 @@ hr.gradient-hr {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
     padding: 3rem;
     color: var(--white-color);
 }
@@ -2238,7 +2238,7 @@ hr.gradient-hr {
     .gender-overlay h2 {
         font-size: 1.5rem;
         font-weight: 700;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
 
 .gender-card:hover img {
@@ -2354,6 +2354,7 @@ hr.gradient-hr {
     text-align: center;
     color: var(--white-color);
     margin: 0px 0;
+    padding: 30px 0;
 }
 
 .art-banner-overlay {
@@ -3121,75 +3122,187 @@ hr.gradient-hr {
     margin-top: 0.5rem;
 }
 /* ===== EDITOR'S PICKS ===== */
-.editors-card {
+/* Brand Cards */
+.brand-card {
     position: relative;
     overflow: hidden;
-    border-radius: 15px;
-    height: 400px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: white;
+    aspect-ratio: 1 / 1;
     cursor: pointer;
 }
 
-    .editors-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
+    .brand-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     }
 
-.editors-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 2rem;
-    opacity: 100;
-    transition: var(--transition);
+.brand-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-.editors-card:hover .editors-overlay {
-    opacity: 1;
-}
-
-.editors-card:hover img {
+.brand-card:hover .brand-image {
     transform: scale(1.1);
 }
 
-.editors-overlay h4 {
-    color: var(--white-color);
-    margin-bottom: 1rem;
+/* Brand Overlay */
+.brand-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 20px 10px 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.brand-card:hover .brand-overlay {
+    transform: translateY(0);
+}
+
+.brand-name {
+    display: block;
+    font-size: 1rem;
     font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.testimonial {
-    padding: 3rem;
-    background: var(--light-gray);
-    border-radius: 15px;
-    border-left: 5px solid var(--primary-color);
+/* Explore Button */
+.explore-btn {
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    color: white;
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-    .testimonial i {
-        font-size: 3rem;
-        color: var(--primary-color);
-        margin-bottom: 1rem;
+    .explore-btn:hover {
+        background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     }
 
-    .testimonial p {
-        font-size: 1.5rem;
-        font-style: italic;
-        color: var(--dark-color);
-        margin-bottom: 1rem;
+    .explore-btn i {
+        transition: transform 0.3s ease;
     }
 
-    .testimonial footer {
+    .explore-btn:hover i {
+        transform: translateX(5px);
+    }
+
+/* Animation Effects */
+.brand-card {
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+    .brand-card:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .brand-card:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .brand-card:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    .brand-card:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+
+    .brand-card:nth-child(5) {
+        animation-delay: 0.5s;
+    }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
         font-size: 1rem;
-        color: var(--medium-gray);
     }
+
+    .brand-overlay {
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+        padding: 15px 5px 5px;
+    }
+
+    .brand-name {
+        font-size: 0.9rem;
+    }
+
+    .explore-btn {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .brands-showcase {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .premium-brands-section {
+        padding: 20px 15px;
+    }
+}
+
+/* Additional Polish */
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 15px 35px;
+}
+
+/* Loading Animation for Images */
+.brand-image {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
 
 /* ===== STUDIO SECTION ===== */
 .studio-card {
@@ -3271,11 +3384,22 @@ hr.gradient-hr {
 .studio-link {
     color: var(--primary-color);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     transition: var(--transition);
 }
 
     .studio-link:hover {
+        color: var(--accent-color);
+    }
+    .studio-link2 {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 20px;
+    transition: var(--transition);
+}
+
+    .studio-link2:hover {
         color: var(--accent-color);
     }
 

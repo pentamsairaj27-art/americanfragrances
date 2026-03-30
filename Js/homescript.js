@@ -60,10 +60,24 @@ document.addEventListener('keydown', (e) => {
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 const closeMenu = document.getElementById('closeMenu');
+const mobileNavToggles = document.querySelectorAll('.mobile-nav-toggle');
+
+function resetMobileSubmenus() {
+    document.querySelectorAll('.mobile-nav-item.open').forEach(item => {
+        item.classList.remove('open');
+        const toggle = item.querySelector('.mobile-nav-toggle');
+        if (toggle) {
+            toggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+}
 
 function toggleMobileMenu() {
     mobileMenu.classList.toggle('active');
     document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    if (!mobileMenu.classList.contains('active')) {
+        resetMobileSubmenus();
+    }
 }
 
 if (menuToggle) {
@@ -74,11 +88,37 @@ if (closeMenu) {
     closeMenu.addEventListener('click', toggleMobileMenu);
 }
 
+mobileNavToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const parent = toggle.closest('.mobile-nav-item');
+        const isOpen = parent?.classList.contains('open');
+
+        document.querySelectorAll('.mobile-nav-item.open').forEach(item => {
+            if (item !== parent) {
+                item.classList.remove('open');
+                const itemToggle = item.querySelector('.mobile-nav-toggle');
+                if (itemToggle) {
+                    itemToggle.setAttribute('aria-expanded', 'false');
+                }
+            }
+        });
+
+        parent?.classList.toggle('open', !isOpen);
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+});
+
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
     if (mobileMenu.classList.contains('active') &&
         !mobileMenu.contains(e.target) &&
         !menuToggle.contains(e.target)) {
+        toggleMobileMenu();
+    }
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 992 && mobileMenu.classList.contains('active')) {
         toggleMobileMenu();
     }
 });

@@ -258,11 +258,11 @@ img {
 /* Search Bar */
 .search-bar {
     position: absolute;
-    top: 100%;
+    top: 5%;
     left: 0;
     right: 0;
     background: var(--white-color);
-    padding: 1.5rem 0;
+    padding: 0rem 0;
     box-shadow: var(--shadow-lg);
     transform: translateY(-100%);
     opacity: 0;
@@ -285,7 +285,7 @@ img {
 
     .search-input-wrapper i {
         position: absolute;
-        left: 20px;
+        left: 30px;
         top: 50%;
         transform: translateY(-50%);
         color: var(--medium-gray);
@@ -2188,7 +2188,7 @@ hr.gradient-hr {
 
 .barcode-carousel {
     display: flex;
-    gap: 2rem;
+   
     overflow-x: hidden;
     scroll-behavior: smooth;
     padding: 1rem 0;
@@ -3841,7 +3841,7 @@ hr.gradient-hr {
 .art-banner-content h2 {
     font-size: var(--section-title-size);
     line-height: 1.15;
-    margin-bottom: 0.85rem;
+    margin-bottom: 1.9rem;
 }
 
 .section-subtitle,

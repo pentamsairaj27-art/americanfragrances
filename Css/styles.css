@@ -895,7 +895,7 @@ img {
     color: #70b4bd;
     font-weight: 700;
     letter-spacing: 1px;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 /* occasion pills specific */
@@ -945,7 +945,7 @@ img {
     transition: all 0.2s ease;
 }
 /* MAIN CONTAINER — intentionally reduced max-width for slimmer look */
-.slim-widget {
+.ultra-compact-card {
     max-width: 600px; /* significantly narrower than before */
     width: 100%;
     margin: 0 auto;
@@ -3909,7 +3909,7 @@ hr.gradient-hr {
     min-height: 54px;
 }
 
-.slim-widget {
+.ultra-compact-card {
     max-width: 640px;
 }
 

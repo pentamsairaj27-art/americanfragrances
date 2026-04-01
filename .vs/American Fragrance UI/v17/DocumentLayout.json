@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\learn-react\\American Fragrance UI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\learn-react\\American Fragrance UI\\Home - Copy - Copy.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Home - Copy - Copy.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\learn-react\\American Fragrance UI\\Css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -56,8 +65,30 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "styles.css",
+              "DocumentMoniker": "D:\\learn-react\\American Fragrance UI\\Css\\styles.css",
+              "RelativeDocumentMoniker": "Css\\styles.css",
+              "ToolTip": "D:\\learn-react\\American Fragrance UI\\Css\\styles.css",
+              "RelativeToolTip": "Css\\styles.css",
+              "ViewState": "AgIAAEULAAAAAAAAAAAnwGwLAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-28T18:36:17.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home - Copy - Copy.html",
+              "DocumentMoniker": "D:\\learn-react\\American Fragrance UI\\Home - Copy - Copy.html",
+              "RelativeDocumentMoniker": "Home - Copy - Copy.html",
+              "ToolTip": "D:\\learn-react\\American Fragrance UI\\Home - Copy - Copy.html",
+              "RelativeToolTip": "Home - Copy - Copy.html",
+              "ViewState": "AgIAAO0GAAAAAAAAAAAAAKsFAAB3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-03-28T17:28:02.709Z",
+              "EditorCaption": ""
             }
           ]
         },

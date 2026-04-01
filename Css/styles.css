@@ -50,13 +50,7 @@ img {
     max-width: 100%;
     display: block;
 }
-.top-bar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1100;  
-}
+
     .top-bar p {
     color: #dde0e3;
     font-size: 12px;
@@ -84,8 +78,13 @@ img {
         padding: 0.5rem 0;
         box-shadow: var(--shadow-lg);
     }
-
-.navbar-brand .brand-text {
+.fixed-top.scrolled {
+    position: fixed;
+    top: 0% !important;
+    right: 0;
+    left: 0;
+}
+    .navbar-brand .brand-text {
     font-weight: 700;
     font-size: 1.25rem;
     letter-spacing: 2px;
@@ -2698,7 +2697,7 @@ hr.gradient-hr {
    
     overflow-x: hidden;
     scroll-behavior: smooth;
-    padding: 1rem 0;
+    padding: 1.8rem 0;
 }
 
 .barcode-card {
@@ -2829,9 +2828,9 @@ hr.gradient-hr {
     bottom: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
+    /* flex-direction: column-reverse; */
+    justify-content: space-between;
+    align-items: flex-end;
     padding: 3rem;
     color: var(--white-color);
 }
@@ -3151,7 +3150,7 @@ hr.gradient-hr {
 /* ===== CARD CONTENT ===== */
 .card-content {
     padding: 18px 15px 20px;
-    text-align: center;
+    text-align: left;
     background: white;
     position: relative;
 }
@@ -3577,12 +3576,12 @@ hr.gradient-hr {
 }
 
 .fp-card-sub {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #6c6c7a;
     font-weight: 500;
     display:grid;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     gap: 6px;
     margin-top: 4px;
     flex-wrap: wrap;
@@ -4356,7 +4355,7 @@ hr.gradient-hr {
 .art-banner-content p {
     font-size: var(--section-subtitle-size);
     line-height: 1.7;
-    color: var(--medium-gray);
+    color: #ffffff;
     margin: 0 auto;
 }
 
@@ -4456,6 +4455,7 @@ hr.gradient-hr {
 .newsletter-content {
     display: flex;
     flex-direction: column;
+    text-align: left;
     gap: 0.85rem;
 }
 

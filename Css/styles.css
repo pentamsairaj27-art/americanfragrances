@@ -839,19 +839,20 @@ img {
     color: #000000;
 }
 
-    .cta-premium:hover {
-        background: #000000;
-        border-color: #000000;
-        transform: scale(1.03);
-        box-shadow: 0 15px 35px rgba(112, 180, 189, 0.4);
-        color: #ffffff;
-    } .cta-premium2:hover {
-        background: #000000;
-        border-color: #000000;
-        transform: scale(1.03);
-        box-shadow: 0 15px 35px rgba(112, 180, 189, 0.4);
-        color: #ffffff;
-    }
+.cta-premium:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(112, 180, 189, 0.4);
+    color: #ffffff;
+}
+.cta-premium2:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(112, 180, 189, 0.4);
+    color: #ffffff;
+}
 
 /* loading animation */
 .loading-dots span {
@@ -1700,6 +1701,512 @@ hr.gradient-hr {
         width: 17%;
     }
 }
+
+
+
+
+
+/* ===== NEW AI SECTION START ===== */
+
+/* ----- UNIQUE NAMESPACE: amerifrag-ai-panel ----- */
+.amerifrag-ai-panel {
+    --af-primary: #203236;
+    --af-accent: #5d9da6;
+    --af-mint-bg: #f6f8f8;
+    --af-card-bg: #fcfdfd;
+    --af-border: #e1ebed;
+    --af-soft-text: #60757a;
+    --af-dark-text: #213438;
+    font-family: 'Inter', sans-serif;
+}
+
+/* custom animations keyframes */
+@keyframes af-float-slow {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes af-pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(93, 157, 166, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px rgba(93, 157, 166, 0);
+    }
+}
+
+@keyframes af-barcode-wave {
+    0% {
+        opacity: 0.7;
+        transform: scaleY(0.98);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes af-tag-entrance {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes af-bottle-glow {
+    0% {
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
+    }
+
+    100% {
+        filter: drop-shadow(0 8px 20px rgba(93,157,166,0.25));
+    }
+}
+
+.af-section-wrapper {
+    background-color: var(--af-mint-bg);
+    padding: 5rem 1.5rem;
+    position: relative;
+    overflow-x: clip;
+}
+
+.af-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* gradient background decorative element */
+.af-aura-bg {
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 60%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(93,157,166,0.08) 0%, rgba(246,248,248,0) 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.af-title {
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--af-primary);
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .af-title {
+        font-size: 3.2rem;
+    }
+}
+
+.af-subhead {
+    color: #5f7277;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 560px;
+}
+
+/* step cards with unique class */
+.af-step-card {
+    background: var(--af-card-bg);
+    border: 1px solid var(--af-border);
+    border-radius: 2rem;
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(0px);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+    .af-step-card:hover {
+        transform: translateY(-10px);
+        border-color: #cbdde1;
+        box-shadow: 0 25px 45px -12px rgba(32, 50, 54, 0.15);
+    }
+
+    .af-step-card::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 30% 20%, rgba(93,157,166,0.03), transparent 70%);
+        pointer-events: none;
+    }
+
+.af-step-number {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    color: #7a959a;
+    transition: all 0.2s;
+}
+
+.af-ai-badge {
+    background: white;
+    border: 1px solid #d2e3e6;
+    border-radius: 999px;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #5d9da6;
+    transition: all 0.3s ease;
+    animation: af-pulse-glow 2s infinite;
+}
+
+.af-step-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--af-dark-text);
+}
+
+@media (min-width: 768px) {
+    .af-step-title {
+        font-size: 1.75rem;
+    }
+}
+
+.af-step-desc {
+    font-size: 0.98rem;
+    line-height: 1.5rem;
+    color: var(--af-soft-text);
+}
+
+/* Visual containers */
+.af-visual-zone {
+    margin-top: 1.5rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 230px;
+    position: relative;
+}
+
+/* ----- STEP 1 FLOATING TAGS + ANIMATION ----- */
+.af-step1-stage {
+    position: relative;
+    height: 260px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.af-tag {
+    z-index: 99999;
+    position: absolute;
+    background: white;
+    border: 1px solid #c7d9dc;
+    border-radius: 999px;
+    padding: 0.4rem 1.1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #3f6066;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+    white-space: nowrap;
+    backdrop-filter: blur(2px);
+    transition: all 0.2s;
+    animation: af-tag-entrance 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+    opacity: 0;
+    transform-origin: center;
+}
+
+    .af-tag:hover {
+        transform: scale(1.03);
+        border-color: #5d9da6;
+        box-shadow: 0 8px 18px rgba(93,157,166,0.12);
+    }
+
+.af-tag-1 {
+    top: 12px;
+    left: 8px;
+    animation-delay: 0.1s;
+}
+
+.af-tag-2 {
+    top: 31px;
+    right: 25px;
+    animation-delay: 0.2s;
+}
+
+.af-tag-3 {
+    bottom: 18px;
+    left: 16px;
+    animation-delay: 0.3s;
+}
+
+.af-tag-4 {
+    bottom: 28px;
+    right: 6px;
+    animation-delay: 0.4s;
+}
+
+.af-core-block {
+    width: 175px;
+    height: 175px;
+    background: #f8fbfb;
+    border: 1px solid #d7e4e6;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 18px 35px rgba(93, 157, 166, 0.08);
+    transition: all 0.3s;
+    animation: af-float-slow 4s ease-in-out infinite;
+}
+
+.af-stripe-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.af-stripe {
+    height: 9px;
+    background: linear-gradient(90deg, #5d9da6, #7fb7bf);
+    border-radius: 20px;
+    transition: width 0.3s;
+}
+
+.af-stripe-1 {
+    width: 80px;
+}
+
+.af-stripe-2 {
+    width: 80px;
+    opacity: 0.7;
+}
+
+.af-stripe-3 {
+    width: 80px;
+    opacity: 0.85;
+}
+
+/* ----- STEP 2 BARCODE ANIMATED BARS ----- */
+.af-barcode-stage {
+    position: relative;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.af-barcode-card {
+    background: white;
+    border-radius: 2rem;
+    border: 1px solid #d8e6e8;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 25px 45px rgba(93, 157, 166, 0.12);
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s;
+}
+
+    .af-barcode-card:hover {
+        transform: scale(1.01);
+        box-shadow: 0 28px 55px rgba(93, 157, 166, 0.2);
+    }
+
+.af-bars-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    justify-content: center;
+}
+
+.af-bar {
+    width: 10px;
+    border-radius: 20px;
+    transition: all 0.25s ease;
+    animation: af-barcode-wave 0.6s ease-out forwards;
+    transform-origin: bottom;
+}
+
+    .af-bar:hover {
+        transform: scaleX(1.2);
+        filter: brightness(1.05);
+    }
+
+/* step 3 perfumes animation */
+.af-perfume-row {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.af-perfume-item {
+    background: white;
+    border: 1px solid #dbe7e9;
+    border-radius: 1.75rem;
+    padding: 0.85rem 0.6rem;
+    width: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    transition: all 0.35s cubic-bezier(0.2, 0.8, 0.4, 1);
+    cursor: default;
+}
+
+    .af-perfume-item:hover {
+        transform: translateY(-8px);
+        border-color: #bcd0d4;
+        box-shadow: 0 20px 30px -12px rgba(93,157,166,0.2);
+    }
+
+.af-perfume-bottle {
+    width: 52px;
+    height: 84px;
+    background: linear-gradient(145deg, #f9fbfb, #eef5f6);
+    border-radius: 1.2rem 1.2rem 0.6rem 0.6rem;
+    border: 1px solid #d8e6e8;
+    margin-bottom: 0.8rem;
+    position: relative;
+    transition: all 0.3s;
+}
+
+    .af-perfume-bottle::after {
+        content: "";
+        position: absolute;
+        top: -7px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 7px;
+        background: #cfdfe2;
+        border-radius: 6px 6px 0 0;
+    }
+
+.af-perfume-item:hover .af-perfume-bottle {
+    background: linear-gradient(145deg, #ffffff, #eef1f2);
+    animation: af-bottle-glow 0.4s forwards;
+}
+
+.af-brand {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #69878d;
+}
+
+.af-scent-name {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #2f4044;
+    margin-top: 0.2rem;
+}
+
+.af-lifted {
+    transform: translateY(-8px);
+}
+
+    .af-lifted:hover {
+        transform: translateY(-14px);
+    }
+
+/* CTA Button with ripple + animation */
+.af-cta-btn {
+    background: var(--af-primary);
+    border-radius: 999px;
+    padding: 0.85rem 2.2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: white;
+    transition: all 0.3s;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+    .af-cta-btn:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.5s;
+        z-index: -1;
+    }
+
+    .af-cta-btn:hover:before {
+        left: 100%;
+    }
+
+    .af-cta-btn:hover {
+        background: #2a4045;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 22px -10px #20323660;
+    }
+
+.af-footer-note {
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
+    color: #667c81;
+}
+
+/* connector line animation */
+.af-connector-line {
+    position: absolute;
+    left: 16.5%;
+    right: 16.5%;
+    top: 7.2rem;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #bed5d9, #9bc1c7, #bed5d9, transparent);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+@media (max-width: 991px) {
+    .af-connector-line {
+        display: none;
+    }
+}
+
+/* responsive fine-tuning */
+@media (max-width: 768px) {
+    .af-perfume-item {
+        width: 95px;
+        padding: 0.6rem 0.3rem;
+    }
+
+    .af-tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.8rem;
+    }
+}
+
+/* ===== NEW AI SECTION END ===== */
+
+
 
 /* ===== SHOP BY MOOD SECTION ===== */
 /* ===== INTERACTIVE MOOD GALLERY ===== */

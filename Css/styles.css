@@ -531,21 +531,21 @@ img {
 
 .perfume-1 {
     top: 0;
-    left: 0;
+    left: 80px;
     z-index: 3;
     animation: float 3s ease-in-out infinite;
 }
 
 .perfume-2 {
     top: 50px;
-    left: 120px;
+    left: 220px;
     z-index: 2;
     animation: float 4s ease-in-out infinite;
 }
 
 .perfume-3 {
     top: 100px;
-    left: 240px;
+    left: 320px;
     z-index: 1;
     animation: float 5s ease-in-out infinite;
 }
@@ -1386,7 +1386,7 @@ hr.gradient-hr {
 
 /* ===== FRAGRANES DECODE SECTION ===== */
 .fragrance-barcode-section {
-    background: linear-gradient(135deg, #ffffff 0%, #fefcf7 50%, #faf9f5 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #ffffff 100%);
     position: relative;
     overflow-x: hidden;
 }
@@ -1775,7 +1775,7 @@ hr.gradient-hr {
 }
 
 .af-section-wrapper {
-    background-color: var(--af-mint-bg);
+    background-color: #ffffff;
     padding: 5rem 1.5rem;
     position: relative;
     overflow-x: clip;
@@ -1820,314 +1820,369 @@ hr.gradient-hr {
     max-width: 560px;
 }
 
-/* step cards with unique class */
-.af-step-card {
+/* SQUARE CARDS — fixed aspect ratio 1:1, compact & modern */
+.af-square-card {
     background: var(--af-card-bg);
     border: 1px solid var(--af-border);
-    border-radius: 2rem;
-    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    border-radius: 1.5rem;
+    transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
     height: 100%;
     display: flex;
     flex-direction: column;
-    backdrop-filter: blur(0px);
     position: relative;
-    z-index: 2;
     overflow: hidden;
+    aspect-ratio: 1 / 1;
+    padding: 1.25rem;
 }
 
-    .af-step-card:hover {
-        transform: translateY(-10px);
-        border-color: #cbdde1;
-        box-shadow: 0 25px 45px -12px rgba(32, 50, 54, 0.15);
+/* on desktop slightly larger square, but still compact */
+@media (min-width: 992px) {
+    .af-square-card {
+        padding: 1.5rem;
     }
+}
 
-    .af-step-card::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(circle at 30% 20%, rgba(93,157,166,0.03), transparent 70%);
-        pointer-events: none;
-    }
+.af-square-card:hover {
+    transform: translateY(-5px);
+    border-color: #cbdde1;
+    box-shadow: 0 18px 30px -12px rgba(32, 50, 54, 0.12);
+}
 
-.af-step-number {
-    font-size: 1rem;
+/* inner content flex to use space efficiently */
+.af-card-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.af-step-number-compact {
+    font-size: 0.7rem;
     font-weight: 600;
-    letter-spacing: 0.24em;
+    letter-spacing: 0.2em;
     color: #7a959a;
-    transition: all 0.2s;
+    background: rgba(93,157,166,0.08);
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 30px;
+    width: fit-content;
 }
 
-.af-ai-badge {
+.af-ai-badge-compact {
     background: white;
     border: 1px solid #d2e3e6;
     border-radius: 999px;
-    padding: 0.3rem 0.9rem;
-    font-size: 0.6rem;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.55rem;
     font-weight: 700;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: #5d9da6;
-    transition: all 0.3s ease;
-    animation: af-pulse-glow 2s infinite;
+    transition: all 0.2s;
+    white-space: nowrap;
 }
 
-.af-step-title {
-    font-size: 1.5rem;
+.af-step-title-compact {
+    font-size: 1.2rem;
     font-weight: 800;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     color: var(--af-dark-text);
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
 }
 
 @media (min-width: 768px) {
-    .af-step-title {
-        font-size: 1.75rem;
+    .af-step-title-compact {
+        font-size: 1.3rem;
     }
 }
 
-.af-step-desc {
-    font-size: 0.98rem;
-    line-height: 1.5rem;
+.af-step-desc-compact {
+    font-size: 0.75rem;
+    line-height: 1.35rem;
     color: var(--af-soft-text);
+    margin-bottom: 0.5rem;
 }
 
-/* Visual containers */
-.af-visual-zone {
-    margin-top: 1.5rem;
+/* visual container compact */
+.af-visual-compact {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 230px;
+    margin-top: 0.5rem;
+    min-height: 0;
     position: relative;
 }
 
-/* ----- STEP 1 FLOATING TAGS + ANIMATION ----- */
-.af-step1-stage {
+/* ----- STEP 1 SQUARE VISUAL (compact tags) ----- */
+.af-step1-square {
     position: relative;
-    height: 260px;
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.af-tag {
-    z-index: 99999;
+.af-tag-compact {
     position: absolute;
     background: white;
     border: 1px solid #c7d9dc;
     border-radius: 999px;
-    padding: 0.4rem 1.1rem;
+    padding: 0.7rem 0.7rem;
     font-size: 0.8rem;
     font-weight: 500;
     color: #3f6066;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
     white-space: nowrap;
-    backdrop-filter: blur(2px);
     transition: all 0.2s;
-    animation: af-tag-entrance 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
-    opacity: 0;
-    transform-origin: center;
+    backdrop-filter: blur(2px);
 }
 
-    .af-tag:hover {
+    .af-tag-compact:hover {
         transform: scale(1.03);
         border-color: #5d9da6;
-        box-shadow: 0 8px 18px rgba(93,157,166,0.12);
     }
 
-.af-tag-1 {
-    top: 12px;
-    left: 8px;
-    animation-delay: 0.1s;
+.tag-c1 {
+    top: 9%;
+    left: 0;
 }
 
-.af-tag-2 {
-    top: 31px;
-    right: 25px;
-    animation-delay: 0.2s;
+.tag-c2 {
+    top: 26%;
+    right: 12px;
 }
 
-.af-tag-3 {
-    bottom: 18px;
-    left: 16px;
-    animation-delay: 0.3s;
+.tag-c3 {
+    bottom: 14%;
+    left: 28px;
 }
 
-.af-tag-4 {
-    bottom: 28px;
-    right: 6px;
-    animation-delay: 0.4s;
+.tag-c4 {
+    bottom: 18%;
+    right: 8px;
 }
 
-.af-core-block {
-    width: 175px;
-    height: 175px;
+@media (max-width: 450px) {
+    .af-tag-compact {
+        font-size: 0.55rem;
+        padding: 0.15rem 0.5rem;
+    }
+
+    .tag-c1, .tag-c2, .tag-c3, .tag-c4 {
+        position: relative;
+        display: inline-block;
+        margin: 0 2px;
+    }
+
+    .af-step1-square {
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .af-tag-compact {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+    }
+}
+
+.af-core-circle {
+    width: 160px;
+    height: 160px;
     background: #f8fbfb;
     border: 1px solid #d7e4e6;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 18px 35px rgba(93, 157, 166, 0.08);
+    box-shadow: 0 12px 25px rgba(93, 157, 166, 0.08);
     transition: all 0.3s;
-    animation: af-float-slow 4s ease-in-out infinite;
 }
 
-.af-stripe-group {
+.af-stripe-mini {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 5px;
 }
 
-.af-stripe {
-    height: 9px;
-    background: linear-gradient(90deg, #5d9da6, #7fb7bf);
-    border-radius: 20px;
-    transition: width 0.3s;
+    .af-stripe-mini div {
+        height: 10px;
+        background: linear-gradient(90deg, #5d9da6, #7fb7bf);
+        border-radius: 10px;
+    }
+
+.stripe-w1 {
+    width: 84px;
 }
 
-.af-stripe-1 {
-    width: 80px;
-}
-
-.af-stripe-2 {
-    width: 80px;
+.stripe-w2 {
+    width: 84px;
     opacity: 0.7;
 }
 
-.af-stripe-3 {
-    width: 80px;
+.stripe-w3 {
+    width: 84px;
     opacity: 0.85;
 }
 
-/* ----- STEP 2 BARCODE ANIMATED BARS ----- */
-.af-barcode-stage {
-    position: relative;
-    height: 280px;
+/* ----- STEP 2 BARCODE COMPACT ----- */
+.af-barcode-square {
+    width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
 }
 
-.af-barcode-card {
+.af-barcode-card-compact {
     background: white;
-    border-radius: 2rem;
+    border-radius: 1.25rem;
     border: 1px solid #d8e6e8;
-    padding: 1.5rem 1rem;
-    box-shadow: 0 25px 45px rgba(93, 157, 166, 0.12);
-    width: 300px;
+    padding: 0.7rem 0.5rem;
+    box-shadow: 0 12px 25px rgba(93, 157, 166, 0.1);
+    width: 100%;
+    max-width: 260px;
     display: flex;
     justify-content: center;
-    position: relative;
-    transition: all 0.3s;
 }
 
-    .af-barcode-card:hover {
-        transform: scale(1.01);
-        box-shadow: 0 28px 55px rgba(93, 157, 166, 0.2);
-    }
-
-.af-bars-container {
+.af-bars-compact {
     display: flex;
     align-items: flex-end;
-    gap: 6px;
+    gap: 4px;
     justify-content: center;
 }
 
-.af-bar {
-    width: 10px;
-    border-radius: 20px;
-    transition: all 0.25s ease;
-    animation: af-barcode-wave 0.6s ease-out forwards;
-    transform-origin: bottom;
+.af-bar-compact {
+    width: 7px;
+    border-radius: 12px;
+    transition: all 0.2s;
 }
 
-    .af-bar:hover {
-        transform: scaleX(1.2);
-        filter: brightness(1.05);
+    .af-bar-compact:hover {
+        transform: scaleX(1.15);
     }
 
-/* step 3 perfumes animation */
-.af-perfume-row {
+/* ----- STEP 3 PERFUME COMPACT (smaller bottles) ----- */
+.af-perfume-row-compact {
     display: flex;
     justify-content: center;
-    gap: 1.2rem;
+    gap: 0.7rem;
     flex-wrap: wrap;
     align-items: flex-end;
 }
 
-.af-perfume-item {
+.af-perfume-item-compact {
     background: white;
     border: 1px solid #dbe7e9;
-    border-radius: 1.75rem;
-    padding: 0.85rem 0.6rem;
-    width: 112px;
+    border-radius: 1.2rem;
+    padding: 0.5rem 0.3rem;
+    width: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
-    transition: all 0.35s cubic-bezier(0.2, 0.8, 0.4, 1);
+    transition: all 0.25s;
     cursor: default;
 }
 
-    .af-perfume-item:hover {
-        transform: translateY(-8px);
-        border-color: #bcd0d4;
-        box-shadow: 0 20px 30px -12px rgba(93,157,166,0.2);
+@media (min-width: 480px) {
+    .af-perfume-item-compact {
+        width: 92px;
     }
-
-.af-perfume-bottle {
-    width: 52px;
-    height: 84px;
-    background: linear-gradient(145deg, #f9fbfb, #eef5f6);
-    border-radius: 1.2rem 1.2rem 0.6rem 0.6rem;
-    border: 1px solid #d8e6e8;
-    margin-bottom: 0.8rem;
-    position: relative;
-    transition: all 0.3s;
 }
 
-    .af-perfume-bottle::after {
+.af-perfume-item-compact:hover {
+    transform: translateY(-4px);
+    border-color: #bcd0d4;
+    box-shadow: 0 8px 18px rgba(93,157,166,0.12);
+}
+
+.af-bottle-compact {
+    width: 38px;
+    height: 60px;
+    background: linear-gradient(145deg, #f9fbfb, #eef5f6);
+    border-radius: 1rem 1rem 0.5rem 0.5rem;
+    border: 1px solid #d8e6e8;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+    .af-bottle-compact::after {
         content: "";
         position: absolute;
-        top: -7px;
+        top: -5px;
         left: 50%;
         transform: translateX(-50%);
-        width: 20px;
-        height: 7px;
+        width: 16px;
+        height: 5px;
         background: #cfdfe2;
-        border-radius: 6px 6px 0 0;
+        border-radius: 4px 4px 0 0;
     }
 
-.af-perfume-item:hover .af-perfume-bottle {
-    background: linear-gradient(145deg, #ffffff, #eef1f2);
-    animation: af-bottle-glow 0.4s forwards;
-}
-
-.af-brand {
-    font-size: 0.65rem;
+.af-brand-compact {
+    padding: 4px 0 0 0;
+    font-size: 0.55rem;
     font-weight: 700;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #69878d;
 }
 
-.af-scent-name {
-    font-size: 0.7rem;
+.af-scent-compact {
+    font-size: 0.6rem;
     font-weight: 500;
     color: #2f4044;
-    margin-top: 0.2rem;
+    margin-top: 0.15rem;
+    text-align: center;
 }
 
-.af-lifted {
-    transform: translateY(-8px);
+.af-lifted-compact {
+    transform: translateY(-4px);
 }
 
-    .af-lifted:hover {
-        transform: translateY(-14px);
+/* CTA compact & modern */
+.af-cta-compact {
+    background: var(--af-primary);
+    border-radius: 999px;
+    padding: 0.6rem 1.6rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: white;
+    transition: all 0.25s;
+    border: none;
+}
+
+    .af-cta-compact:hover {
+        background: #2a4045;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(32,50,54,0.2);
     }
 
+.af-footer-compact {
+    font-size: 0.7rem;
+    color: #667c81;
+}
+
+/* no extra connector line, cleaner square layout */
+@media (max-width: 991px) {
+    .af-square-card {
+        aspect-ratio: auto;
+        min-height: 380px;
+    }
+}
+/* keep consistent square on large */
+@media (min-width: 992px) {
+    .row-cols-square .col-lg-4 {
+        display: flex;
+    }
+}
 /* CTA Button with ripple + animation */
 .af-cta-btn {
     background: var(--af-primary);
@@ -4361,7 +4416,7 @@ hr.gradient-hr {
 .section-subtitles{
     font-size: var(--section-subtitle-size);
     line-height: 1.7;
-    color: var(--medium-gray);
+    color: var(--medium-gray)!important;
     margin: 0 auto;
 }
 
@@ -4615,14 +4670,14 @@ hr.gradient-hr {
     }
 }
 .footer-menu-div a {
-    font-size: 10px;
+    font-size: 1rem;
     color: #fff;
     text-decoration: none;
     border-right: 1px solid #fff;
     padding: 0 10px;
 }
 .Careers a {
-    font-size: 10px;
+    font-size: 1rem;
     color: #fff;
     text-decoration: none;
     padding: 0 10px;
@@ -4630,6 +4685,6 @@ hr.gradient-hr {
     text-transform: uppercase;
 }
 .copyright {
-    font-size: 10px;
+    font-size: 1rem;
     color: #fff;
 }

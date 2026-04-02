@@ -1386,7 +1386,7 @@ hr.gradient-hr {
 
 /* ===== FRAGRANES DECODE SECTION ===== */
 .fragrance-barcode-section {
-    background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #ffffff 100%);
+    background: linear-gradient(135deg, #EBEBEB 0%, #EBEBEB 50%, #EBEBEB 100%);
     position: relative;
     overflow-x: hidden;
 }

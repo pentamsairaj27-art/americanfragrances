@@ -21,6 +21,7 @@ window.addEventListener('scroll', () => {
 
     lastScroll = currentScroll;
 });
+\
 
 // ===== SEARCH BAR TOGGLE =====
 const searchBtn = document.getElementById('searchBtn');

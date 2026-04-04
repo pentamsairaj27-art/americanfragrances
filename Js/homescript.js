@@ -28,13 +28,89 @@ const mobileSearch = document.getElementById('mobileSearch');
 const searchBar = document.getElementById('searchBar');
 const closeSearch = document.getElementById('closeSearch');
 
+// Create overlay element for dull background effect
+let overlay = null;
+
+function createOverlay() {
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.id = 'searchOverlay';
+        overlay.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(3px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            cursor: pointer;
+        `;
+        // Close search bar when clicking on overlay
+        overlay.addEventListener('click', () => {
+            closeSearchBar();
+        });
+        document.body.appendChild(overlay);
+    }
+    return overlay;
+}
+
+function openSearchBar() {
+    const overlayEl = createOverlay();
+    searchBar.classList.add('active');
+
+    // Ensure search bar has higher z-index than overlay
+    searchBar.style.zIndex = '1000';
+
+    // Show overlay with fade in
+    overlayEl.style.visibility = 'visible';
+    setTimeout(() => {
+        overlayEl.style.opacity = '1';
+    }, 10);
+
+    // Add class to body to prevent scrolling
+    document.body.style.overflow = 'hidden';
+
+    // Focus on input
+    setTimeout(() => {
+        const input = searchBar.querySelector('input');
+        if (input) input.focus();
+    }, 100);
+}
+
+function closeSearchBar() {
+    const overlayEl = createOverlay();
+    searchBar.classList.remove('active');
+
+    // Fade out overlay
+    overlayEl.style.opacity = '0';
+    setTimeout(() => {
+        overlayEl.style.visibility = 'hidden';
+    }, 300);
+
+    // Re-enable body scrolling
+    document.body.style.overflow = '';
+
+    // Reset search bar z-index
+    setTimeout(() => {
+        if (!searchBar.classList.contains('active')) {
+            searchBar.style.zIndex = '';
+        }
+    }, 300);
+}
+
 function toggleSearchBar() {
-    searchBar.classList.toggle('active');
     if (searchBar.classList.contains('active')) {
-        searchBar.querySelector('input').focus();
+        closeSearchBar();
+    } else {
+        openSearchBar();
     }
 }
 
+// Event Listeners
 if (searchBtn) {
     searchBtn.addEventListener('click', toggleSearchBar);
 }
@@ -44,15 +120,20 @@ if (mobileSearch) {
 }
 
 if (closeSearch) {
-    closeSearch.addEventListener('click', () => {
-        searchBar.classList.remove('active');
-    });
+    closeSearch.addEventListener('click', closeSearchBar);
 }
 
 // Close search bar on escape key
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && searchBar.classList.contains('active')) {
-        searchBar.classList.remove('active');
+    if (e.key === 'Escape' && searchBar && searchBar.classList.contains('active')) {
+        closeSearchBar();
+    }
+});
+
+// Optional: Clean up overlay when page unloads (good practice)
+window.addEventListener('beforeunload', () => {
+    if (overlay && overlay.remove) {
+        overlay.remove();
     }
 });
 

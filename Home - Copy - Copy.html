@@ -19,6 +19,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="Css/styles.css" rel="stylesheet" />
+    <style>
+        #barcodeCarousel {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            transition: transform 0.4s ease;
+        }
+            #barcodeCarousel::-webkit-scrollbar {
+                display: none;
+            }
+    </style>
 </head>
 <body>
     <div id="dvtopnav"><section class="top-bar d-md-block d-none" style="background-color:black !important;"><div class="container-fluid"><div class="row text-center py-2"><div class="col-lg-4 col-sm-6 d-flex justify-content-center"><div class="shipping_top"><div class="d-flex"><img src="images/topbar/carbon_delivery-truck.png" width="24px" height="24px"><div class="text-start"><p>FREE SHIPPING ON $75 MIN ORDER</p></div></div></div></div><div class="col-lg-4 col-sm-6 d-flex justify-content-center"><div class="shipping_top"><div class="d-flex align-items-center"><i class="fa-solid fa-money-bill-wave"></i><div class="text-start"><p>EARN REWARD POINTS ON EACH PURCHASE</p></div></div></div></div><div class="col-lg-4 col-sm-12 d-flex justify-content-center"><div class="shipping_top"><div class="d-flex align-items-center"><i class="fa-solid fa-users"></i><div class="text-start"><p>JOIN OUR SUBSCRIPTION CLUB FOR SPECIALS</p></div></div></div></div></div></div></section></div>
@@ -498,7 +508,7 @@
             <div class="container">
                 <!-- header content with data-aos -->
                 <div class="text-center mx-auto" style="max-width: 880px;" data-aos="fade-up" data-aos-duration="700">
-                     <h1 class="display-4 section-title mb-3">
+                    <h1 class="display-4 section-title mb-3">
                         How <span style="color: #70b4bd;">AI</span> Finds Your Perfect Fragrance
                     </h1>
                     <p class="section-subtitles mx-auto">
@@ -508,31 +518,30 @@
 
                 <!-- desktop connector line (elegant) -->
                 <!-- bootstrap row with steps -->
-                <div class="row g-5 mt-lg-1">
+                <!-- three column grid with compact gutter and square cards -->
+                <div class="row g-3 mt-3 row-cols-1 row-cols-md-2 row-cols-lg-3">
 
-                    <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="80" data-aos-duration="550">
+                    <!-- STEP 01 - square card -->
+                    <div class="col d-flex" data-aos="fade-up" data-aos-delay="80" data-aos-duration="500">
                         <div class="af-square-card w-100">
-                            <div class="af-card-inner">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <span class="af-step-number-compact"> 01</span>
-                                    <span></span>
-                                </div>
-                                <div>
-                                    <h3 class="af-step-title-compact">Tell Us About You</h3>
-                                    <p class="af-step-desc-compact">Choose your personality, style, and scent preferences.</p>
-                                </div>
-                                <div class="af-visual-compact">
-                                    <div class="af-step1-square">
-                                        <div class="af-tag-compact tag-c1"><i class="fas fa-eye me-1"></i> Visionary</div>
-                                        <div class="af-tag-compact tag-c2"><i class="fas fa-leaf me-1"></i> Floral</div>
-                                        <div class="af-tag-compact tag-c3"><i class="fas fa-gem me-1"></i> Chic</div>
-                                        <div class="af-tag-compact tag-c4"><i class="fas fa-crown me-1"></i> Confident</div>
-                                        <div class="af-core-circle">
-                                            <div class="af-stripe-mini">
-                                                <div class="stripe-w1"></div>
-                                                <div class="stripe-w2"></div>
-                                                <div class="stripe-w3"></div>
-                                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="af-step-number-compact">01</span>
+                                <span></span>
+                            </div>
+                            <h3 class="af-title-step-compact">Tell Us About You</h3>
+                            <p class="af-desc-step-compact">Choose your personality, style, and scent preferences.</p>
+                            <!-- micro visual with zero extra spacing -->
+                            <div class="af-visual-micro">
+                                <div class="af-step1-compact">
+                                    <div class="af-tag-micro af-tag-pos1"><i class="fas fa-star-of-life me-1" style="font-size: 0.5rem;"></i> Visionary</div>
+                                    <div class="af-tag-micro af-tag-pos2"><i class="fas fa-leaf me-1"></i> Floral</div>
+                                    <div class="af-tag-micro af-tag-pos3"><i class="fas fa-hat-cowboy me-1"></i> Chic</div>
+                                    <div class="af-tag-micro af-tag-pos4"><i class="fas fa-crown me-1"></i> Confident</div>
+                                    <div class="af-core-micro">
+                                        <div class="af-stripe-micro">
+                                            <div class="stripe-w1"></div>
+                                            <div class="stripe-w2"></div>
+                                            <div class="stripe-w3"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -540,35 +549,31 @@
                         </div>
                     </div>
 
-                    <!-- STEP 2 - SQUARE CARD (Barcode) -->
-                    <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="160" data-aos-duration="550">
+                    <!-- STEP 02 - barcode square card -->
+                    <div class="col d-flex" data-aos="fade-up" data-aos-delay="160" data-aos-duration="500">
                         <div class="af-square-card w-100">
-                            <div class="af-card-inner">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <span class="af-step-number-compact">02</span>
-                                    <span></span>
-                                </div>
-                                <div>
-                                    <h3 class="af-step-title-compact">Your AmeriFrag Barcode</h3>
-                                    <p class="af-step-desc-compact">Our AI builds a scent profile unique to you.</p>
-                                </div>
-                                <div class="af-visual-compact">
-                                    <div class="af-barcode-square">
-                                        <div class="af-barcode-card-compact">
-                                            <div class="af-bars-compact">
-                                                <div class="af-bar-compact" style="height: 55px; background: linear-gradient(to top, #e96464, #bb0000);"></div>
-                                                <div class="af-bar-compact" style="height: 78px; background: linear-gradient(to top, #3e67d6, #24408c); "></div>
-                                                <div class="af-bar-compact" style="height: 45px; background: linear-gradient(to top, #eac439, #ffc800);"></div>
-                                                <div class="af-bar-compact" style="height: 96px; background: linear-gradient(to top, #d64c83, #ff0066);"></div>
-                                                <div class="af-bar-compact" style="height: 68px; background: linear-gradient(to top, #8ab532, #4b5d26);"></div>
-                                                <div class="af-bar-compact" style="height: 86px; background: linear-gradient(to top, #25b1b1, #006666);"></div>
-                                                <div class="af-bar-compact" style="height: 42px; background: linear-gradient(to top, #857171, #000000);"></div>
-                                                <div class="af-bar-compact" style="height: 104px; background: linear-gradient(to top, #d87b38, #8B4513); "></div>
-                                                <div class="af-bar-compact" style="height: 60px; background: linear-gradient(to top, #d9836e, #ff3300); "></div>
-                                                <div class="af-bar-compact" style="height: 80px; background: linear-gradient(to top, #c758c7, #703470); "></div>
-                                                <!--<div class="af-bar-compact" style="height: 52px; background: linear-gradient(to top, #F8C291, #935116);"></div>
-                                                <div class="af-bar-compact" style="height: 92px; background: linear-gradient(to top, #4BCFFA, #1B4F72);"></div>-->
-                                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="af-step-number-compact"> 02</span>
+                                <span></span>
+                            </div>
+                            <h3 class="af-title-step-compact">Your AmeriFrag Barcode</h3>
+                            <p class="af-desc-step-compact">Our AI builds a scent profile unique to you.</p>
+                            <div class="af-visual-micro">
+                                <div class="af-barcode-compact">
+                                    <div class="af-card-barcode-micro">
+                                        <div class="af-bars-micro">
+                                            <div class="af-bar-micro" style="height: 52px; background: linear-gradient(to top, #e96464, #bb0000);"></div>
+                                            <div class="af-bar-micro" style="height: 70px; background: linear-gradient(to top, #3e67d6, #24408c);"></div>
+                                            <div class="af-bar-micro" style="height: 42px; background: linear-gradient(to top, #eac439, #ffc800);"></div>
+                                            <div class="af-bar-micro" style="height: 88px; background: linear-gradient(to top, #d64c83, #ff0066);"></div>
+                                            <div class="af-bar-micro" style="height: 62px; background: linear-gradient(to top, #8ab532, #4b5d26);"></div>
+                                            <div class="af-bar-micro" style="height: 78px; background: linear-gradient(to top, #25b1b1, #006666);"></div>
+                                            <div class="af-bar-micro" style="height: 38px; background: linear-gradient(to top, #857171, #000000);"></div>
+                                            <div class="af-bar-micro" style="height: 96px; background: linear-gradient(to top, #d87b38, #8B4513);"></div>
+                                            <div class="af-bar-micro" style="height: 55px; background: linear-gradient(to top, #d9836e, #ff3300);"></div>
+                                            <div class="af-bar-micro" style="height: 74px; background: linear-gradient(to top, #c758c7, #703470);"></div>
+                                            <!--<div class="af-bar-micro" style="height: 46px; background: linear-gradient(to top, #F8C291, #935116);"></div>
+                                            <div class="af-bar-micro" style="height: 84px; background: linear-gradient(to top, #4BCFFA, #1B4F72);"></div>-->
                                         </div>
                                     </div>
                                 </div>
@@ -576,35 +581,31 @@
                         </div>
                     </div>
 
-                    <!-- STEP 3 - SQUARE CARD with AI badge -->
-                    <div class="col-lg-4 col-md-12 d-flex" data-aos="fade-up" data-aos-delay="240" data-aos-duration="550">
+                    <!-- STEP 03 - with badge, square card -->
+                    <div class="col d-flex" data-aos="fade-up" data-aos-delay="240" data-aos-duration="500">
                         <div class="af-square-card w-100">
-                            <div class="af-card-inner">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <span class="af-step-number-compact">03</span>
-                                    <span class="af-ai-badge-compact"><i class="fas fa-microchip me-1"></i> AI RECOMMENDED</span>
-                                </div>
-                                <div>
-                                    <h3 class="af-step-title-compact">Discover Your Matches</h3>
-                                    <p class="af-step-desc-compact">A selection tailored to how you feel and what you love.</p>
-                                </div>
-                                <div class="af-visual-compact">
-                                    <div class="af-perfume-row-compact">
-                                        <div class="af-perfume-item-compact">
-                                            <img src="/Images/new_i/ChatGPT_Image_Mar_24__2026__10_16_19_PM.png" alt="Alternate Text" />
-                                            <div class="af-brand-compact">MAISON AF</div>
-                                            <div class="af-scent-compact">Velvet Bloom</div>
-                                        </div>
-                                        <div class="af-perfume-item-compact">
-                                            <img src="/Images/new_i/ChatGPT_Image_Mar_24__2026__10_16_19_PM.png" alt="Alternate Text" />
-                                            <div class="af-brand-compact">ATELIER AF</div>
-                                            <div class="af-scent-compact">Noir Solstice</div>
-                                        </div>
-                                        <div class="af-perfume-item-compact">
-                                            <img src="/Images/new_i/ChatGPT_Image_Mar_24__2026__10_16_19_PM.png" alt="Alternate Text" />
-                                            <div class="af-brand-compact">STUDIO AF</div>
-                                            <div class="af-scent-compact">Soft Ember</div>
-                                        </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="af-step-number-compact"> 03</span>
+                                <span class="af-badge-compact"><i class="fas fa-microchip me-1"></i> AI RECOMMENDED</span>
+                            </div>
+                            <h3 class="af-title-step-compact">Discover Your Matches</h3>
+                            <p class="af-desc-step-compact">A selection tailored to how you feel and what you love.</p>
+                            <div class="af-visual-micro">
+                                <div class="af-perfume-row-micro">
+                                    <div class="af-perfume-micro">
+                                        <img src="/Images/new_i/ChatGPT_Image_Mar_24__2026__10_16_19_PM.png" alt="Alternate Text" />
+                                        <div class="af-brand-micro">MAISON AF</div>
+                                        <div class="af-name-micro">Velvet Bloom</div>
+                                    </div>
+                                    <div class="af-perfume-micro af-lifted-micro">
+                                        <img src="/Images/new_i/ChatGPT_Image_Mar_24__2026__10_16_19_PM.png" alt="Alternate Text" />
+                                        <div class="af-brand-micro">ATELIER AF</div>
+                                        <div class="af-name-micro">Noir Solstice</div>
+                                    </div>
+                                    <div class="af-perfume-micro">
+                                        <img src="/Images/new_i/ChatGPT_Image_Mar_24__2026__10_16_19_PM.png" alt="Alternate Text" />
+                                        <div class="af-brand-micro">STUDIO AF</div>
+                                        <div class="af-name-micro">Soft Ember</div>
                                     </div>
                                 </div>
                             </div>
@@ -633,7 +634,7 @@
 
     <!------------------NEW AI SECTION END------------------------------------->
     <!-- Best Sellers Section -->
-    <section class="section bestsellers-section pt-2 pb-3" id="bestSellers">
+    <section class="section bestsellers-section pt-2" id="bestSellers">
         <div class="container">
             <div class="section-header text-center" data-aos="fade-up">
                 <h2 class="section-title">Fragrances Everyone's Loving Right Now</h2>
@@ -737,7 +738,7 @@
 
 
             </div>
-            <div class="text-center mt-5"><a href="#" class="studio-link2 text-center" style="font-size:1.5rem">Explore More <i class="bi bi-arrow-right"></i></a></div>
+            <div class="text-center mt-5 pb-2"><a href="#" class="studio-link2 text-center" style="font-size:1.5rem">Explore More <i class="bi bi-arrow-right"></i></a></div>
 
         </div>
     </section>
@@ -1059,8 +1060,8 @@
 
 
     <!-- Discover Collections Section -->
-    <section class="section collections-section pt-4" id="collections">
-        <div class="container py-0 pt-2">
+    <section class="section collections-section" id="collections">
+        <div class="container py-0 pt-4 mt-2">
             <div class="section-header text-center m-0" data-aos="fade-up">
                 <h2 class="section-title">Curated Collections</h2>
             </div>
@@ -1236,7 +1237,7 @@
 
     <!-- Shop by Mood Section -->
     <!-- INTERACTIVE SHOP BY MOOD SECTION -->
-    <section class="section pt-3" id="shopMood">
+    <section class="section pt-4 mt-1" id="shopMood">
         <div class="container">
             <div class="section-header mb-5" data-aos="fade-up">
                 <h2 class="section-title mb-3">Shop by Mood</h2>
@@ -1332,7 +1333,7 @@
 
     <!-- Steps Section with your color scheme -->
     <!-- Gender Category Section -->
-    <section class="section gender-section py-1" id="genderCategory">
+    <section class="section gender-section py-4 my-2" id="genderCategory">
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-4" data-aos="fade-right">
@@ -1515,11 +1516,8 @@
 
 
 
-
-
-
     <!-- Editor's Picks Section -->
-    <section class="fp-editors-section pt-0 pb-4" id="editorsPicks">
+    <section class="fp-editors-section pt-1 pb-4" id="editorsPicks">
         <div class="fp-container pb-0">
             <div class="fp-section-header text-center mb-3" data-aos="fade-up">
                 <h2 class="fp-section-title">Editor's Picks</h2>
@@ -1661,7 +1659,7 @@
 
     <!-- Studio Section -->
     <section class="section studio-section pt-4" id="studio">
-        <div class="container py-0">
+        <div class="container py-3">
             <div class="section-header text-center" data-aos="fade-up">
                 <h2 class="section-title mb-3">From the AmeriFrag Studio</h2>
                 <p class="section-subtitles">Explore the art and science behind fragrance creation</p>
@@ -1794,257 +1792,361 @@
 
         </div>
     </footer>
-    <div class="border-top pt-3 pb-2 container footerdv" style="border-color:#70b4bd!important; background-color:#000000;"><div class="d-inline d-md-flex d-lg-flex align-items-center justify-content-between"><div class="text-center text-md-start d-flex"><div class="row"><div class="col-sm-12 col-md-12 p-0"><div class="d-flex"><div class="footer-menu-div"><a href="DISCLAIMERS.html">DISCLAIMERS</a></div><div class="footer-menu-div"><a href="termsandconditions.html">TERMS AND CONDITIONS</a></div><div class="footer-menu-div"><a href="privacypolicy.html">PRIVACY POLICY</a></div><div class="footer-menu-div"><a href="COOKIES.html">COOKIES</a></div><div class="Careers"><a href="about.html">ABOUT US</a></div></div></div></div></div><div class="mb-md-0 row"><div class="col-md-6" id="playstore"><a target="_blank" href="https://play.google.com/store/apps"><img src="../assets/images/vecteezy_google-play-store-download-button-in-white-colors-download_12871364.png" class="img-fluid" width="200"></a></div><div class="col-md-6" id="appstore"><a target="_blank" href="https://www.apple.com/in/app-store/"><img src="../assets/images/vecteezy_app-store-download-button-in-white-colors-download-on-the_12871374.png" class="img-fluid" width="200"></a></div></div><div class="text-center text-md-end"><p class="mb-0 copyright">50+ Years of Trusted Fragrance Expertise</p></div></div></div>
+    <div class="border-top pt-3 pb-2  footerdv" style="border-color:#70b4bd!important; background-color:#000000;"><div class="d-inline d-md-flex d-lg-flex container align-items-center justify-content-between"><div class="text-center text-md-start d-flex"><div class="row"><div class="col-sm-12 col-md-12 p-0"><div class="d-flex"><div class="footer-menu-div"><a href="DISCLAIMERS.html">DISCLAIMERS</a></div><div class="footer-menu-div"><a href="termsandconditions.html">TERMS AND CONDITIONS</a></div><div class="footer-menu-div"><a href="privacypolicy.html">PRIVACY POLICY</a></div><div class="footer-menu-div"><a href="COOKIES.html">COOKIES</a></div><div class="Careers"><a href="about.html">ABOUT US</a></div></div></div></div></div><div class="mb-md-0 row"><div class="col-md-6" id="playstore"><a target="_blank" href="https://play.google.com/store/apps"><img src="../assets/images/vecteezy_google-play-store-download-button-in-white-colors-download_12871364.png" class="img-fluid" width="200"></a></div><div class="col-md-6" id="appstore"><a target="_blank" href="https://www.apple.com/in/app-store/"><img src="../assets/images/vecteezy_app-store-download-button-in-white-colors-download-on-the_12871374.png" class="img-fluid" width="200"></a></div></div><div class="text-center text-md-end"><p class="mb-0 copyright">50+ Years of Trusted Fragrance Expertise</p></div></div></div>
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="Js/homescript.js"></script>
     <script>
-        AOS.init({ once: true, offset: 30, duration: 700 });
+        AOS.init({ once: true, offset: 10, duration: 500, easing: 'ease-out' });
 
-        // Premium fragrance database with high-quality images and match percentages
-        const perfumeLibrary = {
-            Elegant: [
-                { name: "Delina", brand: "Parfums de Marly", image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&auto=format", match: "97% Match", rating: "★★★★★", notes: "Rose · Lychee · Vanilla" },
-                { name: "Baccarat Rouge 540", brand: "Maison Francis Kurkdjian", image: "https://india.zendiamond.com/cdn/shop/files/Picture_W_7.jpg?v=1757069926&width=600", match: "95% Match", rating: "★★★★★", notes: "Jasmine · Saffron · Amber" },
-                { name: "Libre", brand: "Yves Saint Laurent", image: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&auto=format", match: "93% Match", rating: "★★★★☆", notes: "Lavender · Orange Blossom · Musk" }
-            ],
-            Bold: [
-                { name: "Tobacco Vanille", brand: "Tom Ford", image: "https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/tom-ford-beauty/CIKRZUT8BV8-3/0/tMb7cm-djw-1.jpg", match: "98% Match", rating: "★★★★★", notes: "Tobacco · Vanilla · Cacao" },
-                { name: "Black Orchid", brand: "Tom Ford", image: "https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/000000000494586847/BNb74tZ9s-000000000494586847_1.jpeg", match: "96% Match", rating: "★★★★★", notes: "Black Truffle · Orchid · Patchouli" },
-                { name: "Sauvage Elixir", brand: "Dior", image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&auto=format", match: "94% Match", rating: "★★★★☆", notes: "Spices · Lavender · Amber" }
-            ],
-            Romantic: [
-                { name: "Miss Dior", brand: "Dior", image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRduIXdKPOiNxRrLO32nxzKuhscIgUEjhYTZra-mOmzwxnOw6tQYg_FqVS0KbWHJ1ykPZrvRqjmqjLAuq1nDREDWA8g3yaQ385bBLshPPQ1kusv4jfyP-cSlgxGApr7_-2oQbrf7yg&usqp=CAc", match: "96% Match", rating: "★★★★★", notes: "Rose · Peony · Musk" },
-                { name: "La Vie Est Belle", brand: "Lancôme", image: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&auto=format", match: "94% Match", rating: "★★★★★", notes: "Iris · Patchouli · Gourmand" },
-                { name: "Flowerbomb", brand: "Viktor&Rolf", image: "https://fimgs.net/mdimg/perfume-thumbs/375x500.1460.jpg", match: "92% Match", rating: "★★★★☆", notes: "Jasmine · Rose · Patchouli" }
-            ],
-            Fresh: [
-                { name: "Light Blue", brand: "Dolce&Gabbana", image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&auto=format", match: "95% Match", rating: "★★★★★", notes: "Sicilian Lemon · Apple · Cedar" },
-                { name: "Acqua di Gioia", brand: "Giorgio Armani", image: "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=600&auto=format", match: "93% Match", rating: "★★★★☆", notes: "Mint · Lemon · Jasmine" },
-                { name: "Wood Sage & Sea Salt", brand: "Jo Malone", image: "https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/000000000494238481/R6UFO1Wfw7-000000000494238481_1.jpg", match: "91% Match", rating: "★★★★☆", notes: "Sea Salt · Sage · Ambrette" }
-            ],
-            Mysterious: [
-                { name: "Oud Ispahan", brand: "Dior", image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&auto=format", match: "97% Match", rating: "★★★★★", notes: "Oud · Rose · Patchouli" },
-                { name: "Encre Noire", brand: "Lalique", image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&auto=format", match: "94% Match", rating: "★★★★☆", notes: "Cypress · Vetiver · Musk" },
-                { name: "Black Afgano", brand: "Nasomatto", image: "https://images.unsplash.com/photo-1618593968921-bd94a9d91c80?w=600&auto=format", match: "92% Match", rating: "★★★★☆", notes: "Hashish · Coffee · Incense" }
-            ]
-        };
-
-        let currentMood = "Elegant";
-        let currentOccasion = "Evening";
-        let barInterval;
-
-        function animateAIBars() {
-            const bars = document.querySelectorAll('.dynamic-bar');
-            if (!bars.length) return;
-            const variations = [22, 48, 32, 58, 28, 44, 38, 52, 34, 48];
-            bars.forEach((bar, idx) => {
-                let newH = variations[(idx + Math.floor(Date.now() / 300)) % variations.length] + Math.floor(Math.random() * 10);
-                newH = Math.min(68, Math.max(20, newH));
-                bar.style.height = newH + 'px';
+        // Interactive: barcode hover scaling already in css, extra playful pulse
+        const bars = document.querySelectorAll('.af-bar-micro');
+        const barcodeCardElem = document.querySelector('.af-card-barcode-micro');
+        if (barcodeCardElem) {
+            barcodeCardElem.addEventListener('mouseenter', () => {
+                bars.forEach(bar => { bar.style.transform = 'scaleX(1.1)'; bar.style.transition = '0.15s'; });
+            });
+            barcodeCardElem.addEventListener('mouseleave', () => {
+                bars.forEach(bar => { bar.style.transform = 'scaleX(1)'; });
             });
         }
 
-        function startBarAnimation() {
-            if (barInterval) clearInterval(barInterval);
-            animateAIBars();
-            barInterval = setInterval(() => animateAIBars(), 700);
-        }
+        // Tag hover polish
+        const allTags = document.querySelectorAll('.af-tag-micro');
+        allTags.forEach(t => {
+            t.addEventListener('mouseenter', function () { this.style.backgroundColor = '#ffffff'; this.style.boxShadow = '0 6px 12px rgba(93,157,166,0.1)'; });
+            t.addEventListener('mouseleave', function () { this.style.backgroundColor = 'white'; this.style.boxShadow = 'none'; });
+        });
 
-        function stopBarAnimation() {
-            if (barInterval) clearInterval(barInterval);
-            const finalHeights = [42, 56, 48, 64, 40, 52];
-            document.querySelectorAll('.dynamic-bar').forEach((bar, i) => {
-                if (bar) bar.style.height = finalHeights[i] + 'px';
+        // Perfume micro click feedback
+        const perfumeItems = document.querySelectorAll('.af-perfume-micro');
+        perfumeItems.forEach(p => {
+            p.addEventListener('click', (e) => {
+                e.stopPropagation();
+                p.style.transform = 'scale(0.96)';
+                setTimeout(() => { p.style.transform = ''; }, 120);
+            });
+        });
+
+        // CTA alert (non-intrusive)
+        const ctaCompact = document.getElementById('compactScentBtn');
+        if (ctaCompact) {
+            ctaCompact.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('✨ Your AI-powered scent journey begins — profile creation ready.');
             });
         }
 
-        function updateAIText(mood, occasion) {
-            const statusSpan = document.getElementById('aiStatusText');
-            if (statusSpan) {
-                statusSpan.innerHTML = `AI decoding ${mood} · ${occasion} harmony`;
-            }
+        // Micro badge gentle pulse to draw eye
+        const badgeElem = document.querySelector('.af-badge-compact');
+        if (badgeElem) {
+            setInterval(() => {
+                badgeElem.style.transform = 'scale(1.02)';
+                setTimeout(() => { if (badgeElem) badgeElem.style.transform = 'scale(1)'; }, 400);
+            }, 3200);
         }
-
-        function renderPerfumes(mood) {
-            const grid = document.getElementById('perfumeGrid');
-            let perfumes = perfumeLibrary[mood] || perfumeLibrary.Elegant;
-            if (!grid) return;
-            grid.innerHTML = perfumes.map(p => `
-                                                                                              <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                                                                                                <div class="perfume-card-premium h-100">
-                                                                                                  <div class="perfume-img-wrapper" style="background-image: url('${p.image}'); background-size: cover; background-position: center;">
-                                                                                                    <div class="perfume-overlay"></div>
-                                                                                                    <div class="match-badge">
-                                                                                                      <i class="fas fa-star-of-life me-1" style="color: #70b4bd;"></i> ${p.match}
-                                                                                                    </div>
-                                                                                                  </div>
-                                                                                                  <div class="perfume-details">
-                                                                                                    <div class="perfume-name">${p.name}</div>
-                                                                                                    <div class="perfume-brand">${p.brand}</div>
-                                                                                                    <div class="scent-rating mt-2">
-                                                                                                      <i class="fas fa-star" style="color: #70b4bd;"></i> ${p.rating} · <span class="small text-muted">${p.notes}</span>
-                                                                                                    </div>
-                                                                                                    <div class="mt-2">
-                                                                                                      <span class="badge bg-light text-dark rounded-pill px-3 py-1" style="border: 1px solid #EBEBEB;">
-                                                                                                        <i class="fas fa-microphone-alt me-1" style="color: #70b4bd;"></i> AI Recommended
-                                                                                                      </span>
-                                                                                                    </div>
-                                                                                                  </div>
-                                                                                                </div>
-                                                                                              </div>
-                                                                                            `).join('');
-        }
-
-        function updateActivePills(selectedMood, selectedOccasion) {
-            document.querySelectorAll('.vibe-pill[data-mood]').forEach(pill => {
-                if (pill.getAttribute('data-mood') === selectedMood) {
-                    pill.classList.add('active');
-                } else {
-                    pill.classList.remove('active');
-                }
-            });
-            document.querySelectorAll('.vibe-pill[data-occasion]').forEach(pill => {
-                if (pill.getAttribute('data-occasion') === selectedOccasion) {
-                    pill.classList.add('active');
-                } else {
-                    pill.classList.remove('active');
-                }
-            });
-        }
-
-        function triggerAIMatch(newMood, newOccasion) {
-            startBarAnimation();
-            const statusSpan = document.getElementById('aiStatusText');
-            if (statusSpan) statusSpan.innerHTML = `AI analyzing ${newMood} + ${newOccasion} profile`;
-            const grid = document.getElementById('perfumeGrid');
-            if (grid) grid.style.opacity = '0.4';
-            setTimeout(() => {
-                renderPerfumes(newMood);
-                updateAIText(newMood, newOccasion);
-                if (grid) grid.style.opacity = '1';
-                stopBarAnimation();
-                const aiViz = document.querySelector('.ai-viz-container');
-                if (aiViz) {
-                    aiViz.style.transform = 'scale(1.02)';
-                    setTimeout(() => { if (aiViz) aiViz.style.transform = ''; }, 300);
-                }
-            }, 650);
-        }
-
-        function bindEvents() {
-            document.querySelectorAll('.vibe-pill[data-mood]').forEach(pill => {
-                pill.addEventListener('click', () => {
-                    const moodVal = pill.getAttribute('data-mood');
-                    if (moodVal) {
-                        currentMood = moodVal;
-                        updateActivePills(currentMood, currentOccasion);
-                        triggerAIMatch(currentMood, currentOccasion);
-                    }
-                });
-            });
-            document.querySelectorAll('.vibe-pill[data-occasion]').forEach(pill => {
-                pill.addEventListener('click', () => {
-                    const occVal = pill.getAttribute('data-occasion');
-                    if (occVal) {
-                        currentOccasion = occVal;
-                        updateActivePills(currentMood, currentOccasion);
-                        triggerAIMatch(currentMood, currentOccasion);
-                    }
-                });
-            });
-        }
-
-        function init() {
-            bindEvents();
-            updateActivePills('Elegant', 'Evening');
-            renderPerfumes('Elegant');
-            startBarAnimation();
-            setTimeout(() => stopBarAnimation(), 1800);
-            document.getElementById('discoverCta')?.addEventListener('click', () => {
-                alert("✨ Welcome to American Fragrances! Our AI concierge remembers your preferences. Explore our curated collection of luxury scents.");
-            });
-        }
-
-        init();
+        console.log('AmeriFrag Compact: square cards, reduced spacing, one-screen fit');
     </script>
     <script>
-        // Initialize AOS for scroll-based reveals
-        AOS.init({
-            once: true,
-            offset: 20,
-            duration: 700,
-            easing: 'ease-out-cubic',
-        });
+        // ================= UPDATED CAROUSEL LOOP CODE =================
+        // This version works with your existing HTML structure and preserves UI alignment
 
-        // Additional micro-interactions: barcode breathing effect on hover
-        const barcodeCard = document.querySelector('.af-barcode-card');
-        if (barcodeCard) {
-            barcodeCard.addEventListener('mouseenter', () => {
-                const bars = document.querySelectorAll('.af-bar');
-                bars.forEach((bar, idx) => {
-                    bar.style.transform = 'scaleX(1.05)';
-                    bar.style.transition = 'transform 0.2s';
+        (function () {
+            // Wait for DOM to be fully loaded
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initCarousel);
+            } else {
+                initCarousel();
+            }
+
+            function initCarousel() {
+                // Get carousel elements using your actual IDs
+                const track = document.getElementById('barcodeCarousel');
+                const nextBtn = document.getElementById('nextBtn');
+                const prevBtn = document.getElementById('prevBtn');
+                const wrapper = document.querySelector('.barcode-carousel-wrapper');
+
+                // If carousel elements don't exist, exit
+                if (!track || !nextBtn || !prevBtn) {
+                    console.warn('Carousel elements not found');
+                    return;
+                }
+
+                // Store original CSS to preserve layout
+                const originalTrackStyle = {
+                    display: track.style.display,
+                    flexWrap: track.style.flexWrap,
+                    overflow: track.style.overflow
+                };
+
+                // Ensure track has correct styles for horizontal scrolling
+                track.style.display = 'flex';
+                track.style.flexWrap = 'nowrap';
+                track.style.overflow = 'visible';
+                track.style.transition = 'transform 0.4s ease-in-out';
+
+                // Get all carousel items (direct children)
+                let items = Array.from(track.children);
+
+                if (items.length === 0) return;
+
+                // Get width of a single item including margins
+                function getItemWidth() {
+                    const firstItem = items[0];
+                    if (!firstItem) return 300;
+                    const style = window.getComputedStyle(firstItem);
+                    const marginLeft = parseFloat(style.marginLeft) || 0;
+                    const marginRight = parseFloat(style.marginRight) || 0;
+                    return firstItem.offsetWidth + marginLeft + marginRight;
+                }
+
+                let itemWidth = getItemWidth();
+                let totalItems = items.length;
+
+                // Clone items for infinite loop
+                // Create clones of first few and last few items
+                const clonesStart = [];
+                const clonesEnd = [];
+
+                // Clone 2 items from start and end for smoother infinite loop
+                for (let i = 0; i < 2 && i < totalItems; i++) {
+                    const clone = items[i].cloneNode(true);
+                    clone.classList.add('carousel-clone');
+                    clonesEnd.push(clone);
+                }
+
+                for (let i = totalItems - 2; i < totalItems && i >= 0; i++) {
+                    if (i >= 0) {
+                        const clone = items[i].cloneNode(true);
+                        clone.classList.add('carousel-clone');
+                        clonesStart.push(clone);
+                    }
+                }
+
+                // Add clones to track
+                clonesStart.reverse().forEach(clone => {
+                    track.insertBefore(clone, track.firstChild);
+                });
+
+                clonesEnd.forEach(clone => {
+                    track.appendChild(clone);
+                });
+
+                // Update items array with clones
+                items = Array.from(track.children);
+
+                // Current index starts at position of first original item
+                let currentIndex = clonesStart.length;
+                let isTransitioning = false;
+                let autoTimer = null;
+
+                // Function to update carousel position
+                function updatePosition(animate = true, callback = null) {
+                    if (isTransitioning && animate) return;
+
+                    itemWidth = getItemWidth();
+                    const newPosition = -currentIndex * itemWidth;
+
+                    if (animate) {
+                        isTransitioning = true;
+                        track.style.transition = 'transform 0.4s ease-in-out';
+                        track.style.transform = `translateX(${newPosition}px)`;
+
+                        const onTransitionEnd = () => {
+                            track.removeEventListener('transitionend', onTransitionEnd);
+                            isTransitioning = false;
+
+                            // Check if we need to reset position for infinite loop
+                            if (currentIndex >= items.length - clonesEnd.length) {
+                                // Jump back to start of original items
+                                currentIndex = clonesStart.length;
+                                track.style.transition = 'none';
+                                track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+                                // Force reflow
+                                void track.offsetHeight;
+                            } else if (currentIndex < clonesStart.length) {
+                                // Jump to end of original items
+                                currentIndex = items.length - clonesEnd.length - 1;
+                                track.style.transition = 'none';
+                                track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+                                void track.offsetHeight;
+                            }
+
+                            if (callback) callback();
+                        };
+
+                        track.addEventListener('transitionend', onTransitionEnd, { once: true });
+                    } else {
+                        track.style.transition = 'none';
+                        track.style.transform = `translateX(${newPosition}px)`;
+                        void track.offsetHeight;
+                        if (callback) callback();
+                    }
+                }
+
+                // Next slide function
+                function nextSlide() {
+                    if (isTransitioning) return;
+                    currentIndex++;
+                    updatePosition(true);
+                    resetAutoTimer();
+                }
+
+                // Previous slide function
+                function prevSlide() {
+                    if (isTransitioning) return;
+                    currentIndex--;
+                    updatePosition(true);
+                    resetAutoTimer();
+                }
+
+                // Auto slide
+                function startAutoSlide() {
+                    if (autoTimer) clearInterval(autoTimer);
+                    autoTimer = setInterval(() => {
+                        if (!isTransitioning) {
+                            nextSlide();
+                        }
+                    }, 4000);
+                }
+
+                function stopAutoSlide() {
+                    if (autoTimer) {
+                        clearInterval(autoTimer);
+                        autoTimer = null;
+                    }
+                }
+
+                function resetAutoTimer() {
+                    stopAutoSlide();
+                    startAutoSlide();
+                }
+
+                // Set initial position
+                function setInitialPosition() {
+                    currentIndex = clonesStart.length;
+                    updatePosition(false);
+                }
+
+                // Handle window resize
+                let resizeTimeout;
+                function handleResize() {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(() => {
+                        if (!isTransitioning) {
+                            itemWidth = getItemWidth();
+                            updatePosition(false);
+                        }
+                    }, 150);
+                }
+
+                // Event listeners
+                nextBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    nextSlide();
+                });
+
+                prevBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    prevSlide();
+                });
+
+                // Pause on hover
+                track.addEventListener('mouseenter', () => {
+                    stopAutoSlide();
+                });
+
+                track.addEventListener('mouseleave', () => {
+                    startAutoSlide();
+                });
+
+                window.addEventListener('resize', handleResize);
+
+                // Initialize
+                setInitialPosition();
+                startAutoSlide();
+
+                console.log('Infinite carousel initialized');
+            }
+        })();
+
+        // ================= PRESERVE YOUR ORIGINAL AOS AND OTHER SCRIPTS =================
+        // Your existing AOS and other scripts remain unchanged
+        // Make sure AOS is initialized if the library is loaded
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                once: true,
+                offset: 20,
+                duration: 700,
+                easing: 'ease-out-cubic',
+            });
+        }
+
+        // Your existing micro-interactions
+        document.addEventListener('DOMContentLoaded', function () {
+            // Barcode breathing effect
+            const barcodeCard = document.querySelector('.af-barcode-card');
+            if (barcodeCard) {
+                barcodeCard.addEventListener('mouseenter', () => {
+                    const bars = document.querySelectorAll('.af-bar');
+                    bars.forEach((bar) => {
+                        bar.style.transform = 'scaleX(1.05)';
+                        bar.style.transition = 'transform 0.2s';
+                    });
+                });
+                barcodeCard.addEventListener('mouseleave', () => {
+                    const bars = document.querySelectorAll('.af-bar');
+                    bars.forEach(bar => {
+                        bar.style.transform = 'scaleX(1)';
+                    });
+                });
+            }
+
+            // Interactive tag spark
+            const tags = document.querySelectorAll('.af-tag');
+            tags.forEach(tag => {
+                tag.addEventListener('mouseenter', function () {
+                    this.style.transform = 'scale(1.06) translateY(-2px)';
+                    this.style.borderColor = '#5d9da6';
+                    this.style.backgroundColor = '#ffffff';
+                });
+                tag.addEventListener('mouseleave', function () {
+                    this.style.transform = 'scale(1) translateY(0)';
+                    this.style.borderColor = '#c7d9dc';
                 });
             });
-            barcodeCard.addEventListener('mouseleave', () => {
-                const bars = document.querySelectorAll('.af-bar');
-                bars.forEach(bar => {
-                    bar.style.transform = 'scaleX(1)';
+
+            // Perfume click effect
+            const perfumes = document.querySelectorAll('.af-perfume-item');
+            perfumes.forEach(p => {
+                p.addEventListener('click', () => {
+                    p.style.transition = '0.1s';
+                    p.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        p.style.transform = '';
+                    }, 120);
                 });
             });
-        }
 
-        // Interactive tag spark on step1
-        const tags = document.querySelectorAll('.af-tag');
-        tags.forEach(tag => {
-            tag.addEventListener('mouseenter', function (e) {
-                this.style.transform = 'scale(1.06) translateY(-2px)';
-                this.style.borderColor = '#5d9da6';
-                this.style.backgroundColor = '#ffffff';
-            });
-            tag.addEventListener('mouseleave', function () {
-                this.style.transform = 'scale(1) translateY(0)';
-                this.style.borderColor = '#c7d9dc';
-            });
+            // CTA button
+            const ctaBtn = document.getElementById('afScentProfileTrigger');
+            if (ctaBtn) {
+                ctaBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    alert('✨ Start your scent journey! Your custom profile will unlock AI-powered fragrance matches.');
+                });
+            }
+
+            // AI badge pulse
+            const aiBadge = document.querySelector('.af-ai-badge');
+            if (aiBadge) {
+                setInterval(() => {
+                    aiBadge.style.transform = 'scale(1.02)';
+                    setTimeout(() => { if (aiBadge) aiBadge.style.transform = 'scale(1)'; }, 400);
+                }, 3500);
+            }
         });
-
-        // Perfume items interactive lift sound (just visual)
-        const perfumes = document.querySelectorAll('.af-perfume-item');
-        perfumes.forEach(p => {
-            p.addEventListener('click', () => {
-                // subtle fake "selection" micro feedback (no content change)
-                p.style.transition = '0.1s';
-                p.style.transform = 'scale(0.98)';
-                setTimeout(() => {
-                    p.style.transform = '';
-                }, 120);
-            });
-        });
-
-        // CTA button alert with elegant user feedback
-        const ctaBtn = document.getElementById('afScentProfileTrigger');
-        if (ctaBtn) {
-            ctaBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                // Simulate immersive journey - perfect for ecommerce
-                alert('✨ Start your scent journey! Your custom profile will unlock AI-powered fragrance matches.');
-                // In real integration, you'd redirect to onboarding flow
-            });
-        }
-
-        // Additional subtle pulse animation for AI badge to draw attention
-        const aiBadge = document.querySelector('.af-ai-badge');
-        if (aiBadge) {
-            setInterval(() => {
-                aiBadge.style.transform = 'scale(1.02)';
-                setTimeout(() => { if (aiBadge) aiBadge.style.transform = 'scale(1)'; }, 400);
-            }, 3500);
-        }
-
-        // floating core block infinite smooth (already in css)
-        console.log('AmeriFrag AI Section — interactive & ecommerce ready');
     </script>
     <script>
         AOS.init({ duration: 700, once: true, easing: 'ease-out-cubic' });

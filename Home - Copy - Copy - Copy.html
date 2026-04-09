@@ -18,487 +18,92 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="Css/styles.css" rel="stylesheet" />
+    <link href="Css/styles - Copy.css" rel="stylesheet" />
     <style>
         #barcodeCarousel {
             display: flex !important;
             flex-wrap: nowrap !important;
             transition: transform 0.4s ease;
         }
+
             #barcodeCarousel::-webkit-scrollbar {
                 display: none;
             }
     </style>
 </head>
 <body>
-    <div id="dvtopnav"><section class="top-bar d-md-block d-none" style="background-color:black !important;"><div class="container-fluid"><div class="row text-center py-2"><div class="col-lg-4 col-sm-6 d-flex justify-content-center"><div class="shipping_top"><div class="d-flex"><img src="images/topbar/carbon_delivery-truck.png" width="24px" height="24px"><div class="text-start"><p>FREE SHIPPING ON $75 MIN ORDER</p></div></div></div></div><div class="col-lg-4 col-sm-6 d-flex justify-content-center"><div class="shipping_top"><div class="d-flex align-items-center"><i class="fa-solid fa-money-bill-wave"></i><div class="text-start"><p>EARN REWARD POINTS ON EACH PURCHASE</p></div></div></div></div><div class="col-lg-4 col-sm-12 d-flex justify-content-center"><div class="shipping_top"><div class="d-flex align-items-center"><i class="fa-solid fa-users"></i><div class="text-start"><p>JOIN OUR SUBSCRIPTION CLUB FOR SPECIALS</p></div></div></div></div></div></div></section></div>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <div class="container-fluid px-lg-5">
-            <a class="navbar-brand" href="#" data-aos="fade-right">
-                <span class="brand-text"> <img src="images/logo.png" class="perfume-nav-logo-mobile pb-2" alt="AmeriFrag"></span>
-            </a>
+    <div class="page">
+        <div class="top-strip">
+            <div>FREE SHIPPING ON $75 MIN ORDER</div>
+            <div>50 Years of Perfumes Legacy</div>
+            <div>100% Original Products</div>
+        </div>
 
-            <!-- Mobile Icons -->
-            <div class="mobile-icons d-lg-none">
-                <button class="icon-btn" id="mobileSearch">
-                    <i class="bi bi-search"></i>
-                </button>
-                <button class="icon-btn position-relative" id="mobileWishlist">
-                    <i class="bi bi-heart"></i>
-                    <span class="badge-count">3</span>
-                </button>
-                <button class="icon-btn position-relative" id="mobileCart">
-                    <i class="bi bi-bag"></i>
-                    <span class="badge-count">2</span>
-                </button>
-                <button class="navbar-toggler" type="button" id="menuToggle">
-                    <span class="toggler-icon"></span>
-                    <span class="toggler-icon"></span>
-                    <span class="toggler-icon"></span>
-                </button>
+        <nav class="nav">
+            <div class="brand"><span class="brand-mark"></span><span>American Fragrances</span></div>
+            <div class="nav-links">
+                <span>Men</span>
+                <span>Women</span>
+                <span>Brands</span>
+                <span>Explore</span>
+                <span>AI Finder</span>
+                <span>Studio</span>
             </div>
+            <div class="icons">
+                <div class="search-btn"><div class="search-icon"></div></div>
+                <div class="icon-chip">♡</div>
+                <div class="icon-chip">👜</div>
+                <div class="login-btn">Login</div>
+            </div>
+        </nav>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <!-- Men Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Men
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-droplet me-2"></i>Fragrances</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-palette me-2"></i>Make Up</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-moisture me-2"></i>Skin Care</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-scissors me-2"></i>Hair Care</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-water me-2"></i>Bath & Body</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-flower1 me-2"></i>Aroma</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-gift me-2"></i>Gift Sets</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-boxes me-2"></i>Bundle Sets</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-bag-check me-2"></i>Accessories</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-tag me-2"></i>Clearance</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Women Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Women
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-droplet me-2"></i>Fragrances</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-palette me-2"></i>Make Up</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-moisture me-2"></i>Skin Care</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-scissors me-2"></i>Hair Care</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-water me-2"></i>Bath & Body</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-flower1 me-2"></i>Aroma</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-gift me-2"></i>Gift Sets</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-boxes me-2"></i>Bundle Sets</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-bag-check me-2"></i>Accessories</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-tag me-2"></i>Clearance</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Brands Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Brands
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Chanel</a></li>
-                            <li><a class="dropdown-item" href="#">Christian Dior</a></li>
-                            <li><a class="dropdown-item" href="#">Tom Ford</a></li>
-                            <li><a class="dropdown-item" href="#">Creed</a></li>
-                            <li><a class="dropdown-item" href="#">Gucci</a></li>
-                            <li><a class="dropdown-item" href="#">Hermes</a></li>
-                            <li><a class="dropdown-item" href="#">Maison Francis Kurkdjian</a></li>
-                            <li><a class="dropdown-item" href="#">Yves Saint Laurent</a></li>
-                            <li><a class="dropdown-item" href="#">Roja Parfums</a></li>
-                            <li><a class="dropdown-item" href="#">Louis Vuitton</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item view-all" href="brands.html"><strong>More Brands +</strong></a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Discover Mega Menu -->
-                    <li class="nav-item dropdown mega-dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Explore
-                        </a>
-                        <div class="dropdown-menu mega-menu">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h6 class="mega-title">Curate</h6>
-                                        <ul class="mega-links">
-                                            <li><a href="#">Premium</a></li>
-                                            <li><a href="#">Luxury</a></li>
-                                            <li><a href="#">Designer</a></li>
-                                            <li><a href="#">Niche</a></li>
-                                            <li><a href="#">Celebrity</a></li>
-                                            <li><a href="#">Natural</a></li>
-                                            <li><a href="#">Indie</a></li>
-                                            <li><a href="#">Specialty</a></li>
-                                            <li><a href="#">Mass Market</a></li>
-                                            <li><a href="#">Economical</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h6 class="mega-title">Discover</h6>
-                                        <ul class="mega-links">
-                                            <li><a href="#">New Arrivals</a></li>
-                                            <li><a href="#">Best Sellers</a></li>
-                                            <li><a href="#">Top Rated</a></li>
-                                            <li><a href="#">AmeriFrag's Choice</a></li>
-                                            <li><a href="#">Bundle Sets</a></li>
-                                            <li><a href="#">Gift Sets</a></li>
-                                            <li><a href="#">Clearance</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- AI Finder Mega Menu -->
-                    <li class="nav-item dropdown mega-dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            AI Finder
-                        </a>
-                        <div class="dropdown-menu mega-menu ai-mega-menu">
-                            <div class="container">
-                                <div class="row g-3">
-                                    <div class="col-6 col-md-4 col-lg-2">
-                                        <h6 class="mega-title">Style</h6>
-                                        <ul class="mega-links">
-                                            <li><a href="#">Casual</a></li>
-                                            <li><a href="#">Formal</a></li>
-                                            <li><a href="#">Sporty</a></li>
-                                            <li><a href="#">Elegant</a></li>
-                                            <li><a href="#">Bohemian</a></li>
-                                            <li><a href="#">Classic</a></li>
-                                            <li><a href="#">Modern</a></li>
-                                            <li><a href="#">Vintage</a></li>
-                                            <li><a href="#">Minimalist</a></li>
-                                            <li><a href="#">Bold</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-2">
-                                        <h6 class="mega-title">Note</h6>
-                                        <ul class="mega-links">
-                                            <li><a href="#">Floral</a></li>
-                                            <li><a href="#">Woody</a></li>
-                                            <li><a href="#">Citrus</a></li>
-                                            <li><a href="#">Oriental</a></li>
-                                            <li><a href="#">Fresh</a></li>
-                                            <li><a href="#">Spicy</a></li>
-                                            <li><a href="#">Aquatic</a></li>
-                                            <li><a href="#">Fruity</a></li>
-                                            <li><a href="#">Gourmand</a></li>
-                                            <li><a href="#">Green</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-2">
-                                        <h6 class="mega-title">Mood</h6>
-                                        <ul class="mega-links">
-                                            <li><a href="#">Romantic</a></li>
-                                            <li><a href="#">Confident</a></li>
-                                            <li><a href="#">Relaxed</a></li>
-                                            <li><a href="#">Energetic</a></li>
-                                            <li><a href="#">Mysterious</a></li>
-                                            <li><a href="#">Playful</a></li>
-                                            <li><a href="#">Sophisticated</a></li>
-                                            <li><a href="#">Adventurous</a></li>
-                                            <li><a href="#">Calm</a></li>
-                                            <li><a href="#">Powerful</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-2">
-                                        <h6 class="mega-title">Season</h6>
-                                        <ul class="mega-links">
-                                            <li><a href="#">Spring</a></li>
-                                            <li><a href="#">Summer</a></li>
-                                            <li><a href="#">Autumn</a></li>
-                                            <li><a href="#">Winter</a></li>
-                                            <li><a href="#">All-Season</a></li>
-                                            <li><a href="#">Warm Weather</a></li>
-                                            <li><a href="#">Cold Weather</a></li>
-                                            <li><a href="#">Rainy</a></li>
-                                            <li><a href="#">Tropical</a></li>
-                                            <li><a href="#">Humid</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-2">
-                                        <h6 class="mega-title">Occasion</h6>
-                                        <ul class="mega-links">
-                                            <li><a href="#">Office</a></li>
-                                            <li><a href="#">Date Night</a></li>
-                                            <li><a href="#">Wedding</a></li>
-                                            <li><a href="#">Party</a></li>
-                                            <li><a href="#">Casual</a></li>
-                                            <li><a href="#">Gym</a></li>
-                                            <li><a href="#">Travel</a></li>
-                                            <li><a href="#">Beach</a></li>
-                                            <li><a href="#">Formal Event</a></li>
-                                            <li><a href="#">Everyday</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-2">
-                                        <h6 class="mega-title">Age Group</h6>
-                                        <ul class="mega-links">
-                                            <li><a href="#">Teen</a></li>
-                                            <li><a href="#">Young Adult</a></li>
-                                            <li><a href="#">25-35</a></li>
-                                            <li><a href="#">35-45</a></li>
-                                            <li><a href="#">45-55</a></li>
-                                            <li><a href="#">55+</a></li>
-                                            <li><a href="#">Mature</a></li>
-                                            <li><a href="#">Youthful</a></li>
-                                            <li><a href="#">Timeless</a></li>
-                                            <li><a href="#">Ageless</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-2">
-                                        <h6 class="mega-title">Smell Intensity</h6>
-                                        <ul class="mega-links">
-                                            <li><a href="#">Subtle</a></li>
-                                            <li><a href="#">Light</a></li>
-                                            <li><a href="#">Moderate</a></li>
-                                            <li><a href="#">Strong</a></li>
-                                            <li><a href="#">Intense</a></li>
-                                            <li><a href="#">Powerful</a></li>
-                                            <li><a href="#">Soft</a></li>
-                                            <li><a href="#">Medium</a></li>
-                                            <li><a href="#">Bold</a></li>
-                                            <li><a href="#">Overwhelming</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-2">
-                                        <h6 class="mega-title">Longevity</h6>
-                                        <ul class="mega-links">
-                                            <li><a href="#">1-2 Hours</a></li>
-                                            <li><a href="#">2-4 Hours</a></li>
-                                            <li><a href="#">4-6 Hours</a></li>
-                                            <li><a href="#">6-8 Hours</a></li>
-                                            <li><a href="#">8-12 Hours</a></li>
-                                            <li><a href="#">12+ Hours</a></li>
-                                            <li><a href="#">Short</a></li>
-                                            <li><a href="#">Medium</a></li>
-                                            <li><a href="#">Long</a></li>
-                                            <li><a href="#">All-Day</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-2">
-                                        <h6 class="mega-title">Spray Time</h6>
-                                        <ul class="mega-links">
-                                            <li><a href="#">Morning</a></li>
-                                            <li><a href="#">Afternoon</a></li>
-                                            <li><a href="#">Evening</a></li>
-                                            <li><a href="#">Night</a></li>
-                                            <li><a href="#">Dawn</a></li>
-                                            <li><a href="#">Dusk</a></li>
-                                            <li><a href="#">Midnight</a></li>
-                                            <li><a href="#">Anytime</a></li>
-                                            <li><a href="#">Pre-Event</a></li>
-                                            <li><a href="#">Post-Shower</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-2">
-                                        <h6 class="mega-title">Presentation</h6>
-                                        <ul class="mega-links">
-                                            <li><a href="#">Minimalist</a></li>
-                                            <li><a href="#">Luxurious</a></li>
-                                            <li><a href="#">Artistic</a></li>
-                                            <li><a href="#">Classic</a></li>
-                                            <li><a href="#">Modern</a></li>
-                                            <li><a href="#">Vintage</a></li>
-                                            <li><a href="#">Elegant</a></li>
-                                            <li><a href="#">Bold</a></li>
-                                            <li><a href="#">Sleek</a></li>
-                                            <li><a href="#">Ornate</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-
-                <!-- Desktop Icons -->
-                <div class="nav-icons d-none d-lg-flex">
-                    <button class="icon-btn" id="searchBtn">
-                        <i class="bi bi-search"></i>
-                    </button>
-                    <button class="icon-btn position-relative">
-                        <i class="bi bi-heart"></i>
-                        <span class="badge-count">3</span>
-                    </button>
-                    <button class="icon-btn position-relative">
-                        <i class="bi bi-bag"></i>
-                        <span class="badge-count">2</span>
-                    </button>
-                    <button class="icon-btn">
-                        <i class="bi bi-person"></i>
-                    </button>
+        <section class="hero">
+            <div class="left">
+                <div class="eyebrow">The Real Problem With Perfume Online</div>
+                <h1>You can't smell<br>a <span class="gold">screen.</span><br>We solved that.</h1>
+                <p class="sub">10,000+ fragrances decoded by AI — matched to your taste, mood, skin, and context. Not what sells. What actually works for you.</p>
+                <div class="cta-wrap">
+                    <a class="cta" href="#"><span>Discover My Perfume</span></a>
+                    <div class="micro">Takes 30 seconds • No guesswork</div>
                 </div>
             </div>
-        </div>
 
-        <!-- Search Bar -->
-        <div class="search-bar" id="searchBar">
-            <div class="container">
-                <div class="search-input-wrapper">
-                    <i class="bi bi-search"></i>
-                    <input type="text" placeholder="Search fragrances, brands, categories...">
-                    <button class="close-search" id="closeSearch">
-                        <i class="bi bi-x-lg"></i>
-                    </button>
+            <div class="right">
+                <div style="font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#5f9fa6;margin-bottom:10px;opacity:.8;text-align:center;">No fake Discounts & Sales Ads anymore</div>
+                <div class="right-copy">Just the right fragrance.<br>At the <span class="accent">right price</span>.</div>
+                <div class="col-lg-12" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="hero-images">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=500" alt="Perfume 1" class="hero-perfume perfume-1">
+                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500" alt="Perfume 2" class="hero-perfume perfume-2">
+                        <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=500" alt="Perfume 3" class="hero-perfume perfume-3">
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <!-- Mobile Menu Sidebar -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-header">
-            <span class="brand-text">MENU</span>
-            <button class="close-menu" id="closeMenu">
-                <i class="bi bi-x-lg"></i>
-            </button>
-        </div>
-        <div class="mobile-menu-content">
-            <ul class="mobile-nav-list">
-                <li class="mobile-nav-item">
-                    <button class="mobile-nav-link mobile-nav-toggle" type="button" data-mobile-target="mobileMenMenu" aria-expanded="false">
-                        <span>Men</span>
-                        <i class="bi bi-chevron-down"></i>
-                    </button>
-                    <ul class="mobile-submenu" id="mobileMenMenu">
-                        <li><a href="#">Fragrances</a></li>
-                        <li><a href="#">Make Up</a></li>
-                        <li><a href="#">Skin Care</a></li>
-                        <li><a href="#">Hair Care</a></li>
-                        <li><a href="#">Bath & Body</a></li>
-                        <li><a href="#">Aroma</a></li>
-                        <li><a href="#">Gift Sets</a></li>
-                        <li><a href="#">Bundle Sets</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Clearance</a></li>
-                    </ul>
-                </li>
-                <li class="mobile-nav-item">
-                    <button class="mobile-nav-link mobile-nav-toggle" type="button" data-mobile-target="mobileWomenMenu" aria-expanded="false">
-                        <span>Women</span>
-                        <i class="bi bi-chevron-down"></i>
-                    </button>
-                    <ul class="mobile-submenu" id="mobileWomenMenu">
-                        <li><a href="#">Fragrances</a></li>
-                        <li><a href="#">Make Up</a></li>
-                        <li><a href="#">Skin Care</a></li>
-                        <li><a href="#">Hair Care</a></li>
-                        <li><a href="#">Bath & Body</a></li>
-                        <li><a href="#">Aroma</a></li>
-                        <li><a href="#">Gift Sets</a></li>
-                        <li><a href="#">Bundle Sets</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Clearance</a></li>
-                    </ul>
-                </li>
-                <li class="mobile-nav-item">
-                    <button class="mobile-nav-link mobile-nav-toggle" type="button" data-mobile-target="mobileBrandsMenu" aria-expanded="false">
-                        <span>Brands</span>
-                        <i class="bi bi-chevron-down"></i>
-                    </button>
-                    <ul class="mobile-submenu" id="mobileBrandsMenu">
-                        <li><a href="#">Chanel</a></li>
-                        <li><a href="#">Christian Dior</a></li>
-                        <li><a href="#">Tom Ford</a></li>
-                        <li><a href="#">Creed</a></li>
-                        <li><a href="#">Gucci</a></li>
-                        <li><a href="#">Hermes</a></li>
-                        <li><a href="#">Maison Francis Kurkdjian</a></li>
-                        <li><a href="#">Yves Saint Laurent</a></li>
-                        <li><a href="#">Roja Parfums</a></li>
-                        <li><a href="brands.html">More Brands +</a></li>
-                    </ul>
-                </li>
-                <li class="mobile-nav-item">
-                    <button class="mobile-nav-link mobile-nav-toggle" type="button" data-mobile-target="mobileExploreMenu" aria-expanded="false">
-                        <span>Explore</span>
-                        <i class="bi bi-chevron-down"></i>
-                    </button>
-                    <ul class="mobile-submenu" id="mobileExploreMenu">
-                        <li><a href="#">Premium</a></li>
-                        <li><a href="#">Luxury</a></li>
-                        <li><a href="#">Designer</a></li>
-                        <li><a href="#">Niche</a></li>
-                        <li><a href="#">Celebrity</a></li>
-                        <li><a href="#">Natural</a></li>
-                        <li><a href="#">Indie</a></li>
-                        <li><a href="#">Specialty</a></li>
-                        <li><a href="#">Mass Market</a></li>
-                        <li><a href="#">Economical</a></li>
-                        <li><a href="#">New Arrivals</a></li>
-                        <li><a href="#">Best Sellers</a></li>
-                        <li><a href="#">Top Rated</a></li>
-                        <li><a href="#">AmeriFrag's Choice</a></li>
-                        <li><a href="#">Bundle Sets</a></li>
-                        <li><a href="#">Gift Sets</a></li>
-                        <li><a href="#">Clearance</a></li>
-                    </ul>
-                </li>
-                <li class="mobile-nav-item">
-                    <button class="mobile-nav-link mobile-nav-toggle" type="button" data-mobile-target="mobileAiMenu" aria-expanded="false">
-                        <span>AI Finder</span>
-                        <i class="bi bi-chevron-down"></i>
-                    </button>
-                    <ul class="mobile-submenu" id="mobileAiMenu">
-                        <li><a href="#">Style</a></li>
-                        <li><a href="#">Note</a></li>
-                        <li><a href="#">Mood</a></li>
-                        <li><a href="#">Season</a></li>
-                        <li><a href="#">Occasion</a></li>
-                        <li><a href="#">Age Group</a></li>
-                        <li><a href="#">Smell Intensity</a></li>
-                        <li><a href="#">Longevity</a></li>
-                        <li><a href="#">Spray Time</a></li>
-                        <li><a href="#">Presentation</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="mobile-menu-footer">
-                <a href="#" class="btn btn-dark w-100 mb-2">Login / Register</a>
-            </div>
-        </div>
+        <section class="bottom">
+            <article class="point">
+                <div class="meta">01 / Core Problem</div>
+                <h3>Endless options. Zero clarity.</h3>
+                <p>You’re thrown into thousands of perfumes, flooded with ads and hype. Without real understanding, most choices are blind—and often wrong.</p>
+            </article>
+            <article class="point">
+                <div class="meta">02 / System Failure</div>
+                <h3>Reviews are engineered illusions</h3>
+                <p>Fake ratings, paid placements, and biased opinions distort reality. What you see is influence—not truth.</p>
+            </article>
+            <article class="point">
+                <div class="meta">03 / Market Illusion</div>
+                <h3>Popularity is not compatibility</h3>
+                <p>Bestsellers reflect mass appeal, not personal fit. What sells the most is rarely what suits you best.</p>
+            </article>
+            <article class="point">
+                <div class="meta">04 / Our Solution</div>
+                <h3>Precision replaces guesswork</h3>
+                <p>Our AI filters massive catalogs into a sharp, personalized shortlist—based on your mood, taste, skin behavior, context, and intent.</p>
+            </article>
+        </section>
     </div>
-
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 container d-grid justify-content-start" data-aos="fade-right" data-aos-duration="1000">
-                        <h1 class="hero-title">Find the Fragrance That Actually Fits You</h1>
-                        <p class="hero-subtitle">From over 10,000 scents, AmeriFrag’s AI decodes your personality, preferences, and evolving taste to match you with fragrances that feel right, not random.</p>
-                        <div class="d-flex justify-content-lg-start">
-                            <button class="btn btn-primary btn-lg hero-btn">
-                                Get My Fragrance Matches
-                                <i class="bi bi-arrow-right ms-2"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
-                        <div class="hero-images">
-                            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=500" alt="Perfume 1" class="hero-perfume perfume-1">
-                            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=500" alt="Perfume 2" class="hero-perfume perfume-2">
-                            <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=500" alt="Perfume 3" class="hero-perfume perfume-3">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!------------------NEW AI SECTION START------------------------------------->
 

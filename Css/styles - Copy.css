@@ -71,7 +71,7 @@ img {
 
 /* TOPBAR */
 .topbar {
-    background: var(--teal);
+    background: #70b4bd;
     padding: 9px 0;
     display: flex;
     align-items: center;
@@ -187,7 +187,7 @@ img {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: var(--teal);
+    background: #70b4bd;
     color: #fff;
     font-size: 8.5px;
     font-weight: 700;
@@ -270,7 +270,7 @@ img {
     }
 
         .nav-mob a:hover {
-            color: var(--teal)
+            color: #70b4bd
         }
 
 .mob-close {
@@ -342,6 +342,7 @@ img {
 }
 
 .hero-badge {
+    width:fit-content;
     display: inline-flex;
     align-items: center;
     gap: 9px;
@@ -362,7 +363,7 @@ img {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: var(--teal);
+    background: #70b4bd;
     color: #fff;
     display: flex;
     align-items: center;
@@ -384,14 +385,14 @@ img {
 
 .hero-teal {
     display: block;
-    color: var(--teal);
+    color: #70b4bd;
     font-size: clamp(56px,7.5vw,100px)
 }
 
 .hero-rule {
     width: 52px;
     height: 4px;
-    background: linear-gradient(90deg,var(--teal),var(--teal-dk));
+    background: linear-gradient(90deg,#70b4bd,var(--teal-dk));
     border-radius: 2px;
     margin: 20px 0 22px
 }
@@ -422,7 +423,7 @@ img {
     letter-spacing: .14em;
     text-transform: uppercase;
     color: #fff;
-    background: var(--teal);
+    background: #70b4bd;
     border: none;
     border-radius: 100px;
     padding: 15px 36px;
@@ -551,7 +552,7 @@ img {
 }
 
     .hstat-n span {
-        color: var(--teal);
+        color: #70b4bd;
         font-size: 20px
     }
 
@@ -647,7 +648,7 @@ img {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--teal);
+    background: #70b4bd;
     animation: blink 1.8s infinite;
     flex-shrink: 0
 }
@@ -683,7 +684,7 @@ img {
 }
 
     .hfc-v span {
-        color: var(--teal);
+        color: #70b4bd;
         font-size: 16px
     }
 
@@ -718,7 +719,7 @@ img {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: var(--teal);
+    background: #70b4bd;
     color: #fff;
     display: flex;
     align-items: center;
@@ -963,15 +964,15 @@ img {
 }
 
     .acp:hover {
-        border-color: var(--teal);
-        color: var(--teal);
+        border-color: #70b4bd;
+        color: #70b4bd;
         background: rgba(61,189,212,.06)
     }
 
     .acp.on {
-        background: var(--teal);
+        background: #70b4bd;
         color: #fff;
-        border-color: var(--teal);
+        border-color: #70b4bd;
         box-shadow: 0 2px 10px rgba(61,189,212,.3)
     }
 
@@ -995,9 +996,9 @@ img {
 }
 
     .acn:hover {
-        background: var(--teal);
+        background: #70b4bd;
         color: #fff;
-        border-color: var(--teal)
+        border-color: #70b4bd
     }
 
 .acn-prev {
@@ -1082,7 +1083,7 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: var(--teal);
+    background: #70b4bd;
     color: #fff;
     display: flex;
     align-items: center;
@@ -1096,7 +1097,7 @@ body {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--teal);
+    background: #70b4bd;
     animation: blink 1.8s ease-in-out infinite
 }
 
@@ -1167,14 +1168,14 @@ body {
 
     .s1-h em {
         font-style: normal;
-        color: var(--teal)
+        color: #70b4bd
     }
 
 .s1-rule {
     width: 76px;
     height: 4px;
     border-radius: 2px;
-    background: linear-gradient(90deg,var(--teal),var(--teal-dk));
+    background: linear-gradient(90deg,#70b4bd,var(--teal-dk));
     margin: 28px 0 30px
 }
 
@@ -1221,7 +1222,7 @@ body {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg,var(--teal),var(--teal-dk));
+    background: linear-gradient(90deg,#70b4bd,var(--teal-dk));
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.5s cubic-bezier(.23,1,.32,1);
@@ -1301,7 +1302,7 @@ body {
         display: block;
         width: 16px;
         height: 1.5px;
-        background: var(--teal);
+        background: #70b4bd;
         opacity: 0.5
     }
 
@@ -1342,7 +1343,7 @@ body {
     }
 
     .card.hl .card-tag {
-        color: var(--teal);
+        color: #70b4bd;
         letter-spacing: 0.32em
     }
     /* extra teal aura top right */
@@ -1365,7 +1366,7 @@ body {
         left: 0;
         right: 0;
         height: 2px;
-        background: linear-gradient(90deg,transparent,var(--teal),transparent);
+        background: linear-gradient(90deg,transparent,#70b4bd,transparent);
         opacity: 0.7
     }
 
@@ -1425,7 +1426,7 @@ body {
 
     .s2-h em {
         font-style: normal;
-        color: var(--teal)
+        color: #70b4bd
     }
 
 .s2-sub {
@@ -1463,7 +1464,7 @@ body {
 
 .step-bar {
     height: 4px;
-    background: linear-gradient(90deg,var(--teal),var(--teal-dk));
+    background: linear-gradient(90deg,#70b4bd,var(--teal-dk));
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.5s cubic-bezier(.23,1,.32,1)
@@ -1508,7 +1509,7 @@ body {
     font-weight: 600;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: #70b4bd;
     background: rgba(255,255,255,0.92);
     border: 1px solid var(--teal-rule);
     border-radius: 100px;
@@ -1583,14 +1584,14 @@ body {
 }
 
     .tag.on {
-        background: var(--teal);
+        background: #70b4bd;
         color: #fff;
-        border-color: var(--teal)
+        border-color: #70b4bd
     }
 
     .tag:not(.on):hover {
-        border-color: var(--teal);
-        color: var(--teal)
+        border-color: #70b4bd;
+        color: #70b4bd
     }
 
 /* dna bars */
@@ -1626,7 +1627,7 @@ body {
 .df {
     height: 100%;
     border-radius: 3px;
-    background: linear-gradient(90deg,var(--teal),var(--teal-dk))
+    background: linear-gradient(90deg,#70b4bd,var(--teal-dk))
 }
 
 .dv {
@@ -1704,7 +1705,7 @@ body {
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.1em;
-    color: var(--teal);
+    color: #70b4bd;
     text-transform: uppercase
 }
 
@@ -1754,7 +1755,7 @@ body {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: var(--teal);
+    background: #70b4bd;
     opacity: 0.65
 }
 
@@ -1771,7 +1772,7 @@ body {
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: #fff;
-    background: var(--teal);
+    background: #70b4bd;
     border: none;
     border-radius: 100px;
     padding: 18px 48px;
@@ -1863,7 +1864,7 @@ body {
 }
 
 .tl {
-    color: var(--teal);
+    color: #70b4bd;
     font-weight: 500;
     text-decoration: none
 }
@@ -1922,7 +1923,7 @@ body {
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.18em;
-    color: var(--teal);
+    color: #70b4bd;
     background: rgba(61,189,212,0.1);
     border: 1px solid var(--teal-rule);
     border-radius: 4px;
@@ -1941,7 +1942,7 @@ body {
 .sq-ans {
     font-size: 11.5px;
     font-weight: 600;
-    color: var(--teal);
+    color: #70b4bd;
     background: rgba(61,189,212,0.08);
     border: 1px solid var(--teal-rule);
     border-radius: 100px;
@@ -2046,7 +2047,7 @@ body {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: var(--teal);
+    background: #70b4bd;
     animation: blink 1.8s infinite
 }
 
@@ -2079,7 +2080,7 @@ body {
 
     .sec-h em {
         font-style: normal;
-        color: var(--teal)
+        color: #70b4bd
     }
 
     .sec-h.lt {
@@ -2114,7 +2115,7 @@ body {
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: #70b4bd;
     text-decoration: none;
     transition: gap 0.2s
 }
@@ -2202,7 +2203,7 @@ body {
 
     .hpc-clean-main em {
         font-style: italic;
-        color: var(--teal)
+        color: #70b4bd
     }
 
 .hpc-clean-live {
@@ -2222,7 +2223,7 @@ body {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: var(--teal);
+    background: #70b4bd;
     animation: blink 1.8s infinite;
     box-shadow: 0 0 6px rgba(61,189,212,0.7);
     flex-shrink: 0
@@ -2320,7 +2321,7 @@ body {
 }
 
     .ai-stat-n span {
-        color: var(--teal);
+        color: #70b4bd;
         font-size: 18px
     }
 
@@ -2373,7 +2374,7 @@ body {
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: #70b4bd;
     border-top: 1px solid rgba(255,255,255,0.07);
     padding-top: 9px
 }
@@ -2382,7 +2383,7 @@ body {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: var(--teal);
+    background: #70b4bd;
     animation: blink 1.8s infinite;
     flex-shrink: 0
 }
@@ -2451,9 +2452,9 @@ body {
 }
 
     .psc-wish:hover {
-        background: var(--teal);
+        background: #70b4bd;
         color: #fff;
-        border-color: var(--teal)
+        border-color: #70b4bd
     }
 
 .psc-body {
@@ -2518,7 +2519,7 @@ body {
 .psc-best {
     font-size: 8.5px;
     font-weight: 700;
-    color: var(--teal);
+    color: #70b4bd;
     background: rgba(61,189,212,0.1);
     border: 1px solid rgba(61,189,212,0.25);
     border-radius: 3px;
@@ -2548,8 +2549,8 @@ body {
 }
 
     .psc-cart:hover {
-        border-color: var(--teal);
-        color: var(--teal)
+        border-color: #70b4bd;
+        color: #70b4bd
     }
 
 .psc-buy {
@@ -2560,7 +2561,7 @@ body {
     text-transform: uppercase;
     padding: 8px 4px;
     border-radius: 6px;
-    background: var(--teal);
+    background: #70b4bd;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -2580,7 +2581,7 @@ body {
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: #fff;
-    background: var(--teal);
+    background: #70b4bd;
     border-radius: 100px;
     padding: 14px 36px;
     transition: all .26s;
@@ -2675,12 +2676,13 @@ body {
 
 /* Price card */
 .hf-price-card {
+    width:fit-content;
     display: flex;
     align-items: center;
     gap: 16px;
     background: rgba(255,255,255,0.7);
     border: 1px solid rgba(61,189,212,0.2);
-    border-left: 3px solid var(--teal);
+    border-left: 3px solid #70b4bd;
     border-radius: 8px;
     padding: 12px 16px;
     margin-top: 8px;
@@ -2702,7 +2704,7 @@ body {
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.14em;
-    color: var(--teal);
+    color: #70b4bd;
     white-space: nowrap;
     text-decoration: none
 }
@@ -2801,7 +2803,7 @@ body {
 
     .s2-h em {
         font-style: normal;
-        color: var(--teal)
+        color: #70b4bd
     }
 
 .s2-sub {
@@ -2839,7 +2841,7 @@ body {
 
 .step-bar {
     height: 4px;
-    background: linear-gradient(90deg,var(--teal),var(--teal-dk));
+    background: linear-gradient(90deg,#70b4bd,var(--teal-dk));
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.5s cubic-bezier(.23,1,.32,1)
@@ -2884,7 +2886,7 @@ body {
     font-weight: 600;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: #70b4bd;
     background: rgba(255,255,255,0.92);
     border: 1px solid var(--teal-rule);
     border-radius: 100px;
@@ -2959,14 +2961,14 @@ body {
 }
 
     .tag.on {
-        background: var(--teal);
+        background: #70b4bd;
         color: #fff;
-        border-color: var(--teal)
+        border-color: #70b4bd
     }
 
     .tag:not(.on):hover {
-        border-color: var(--teal);
-        color: var(--teal)
+        border-color: #70b4bd;
+        color: #70b4bd
     }
 
 /* dna bars */
@@ -3002,7 +3004,7 @@ body {
 .df {
     height: 100%;
     border-radius: 3px;
-    background: linear-gradient(90deg,var(--teal),var(--teal-dk))
+    background: linear-gradient(90deg,#70b4bd,var(--teal-dk))
 }
 
 .dv {
@@ -3080,7 +3082,7 @@ body {
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.1em;
-    color: var(--teal);
+    color: #70b4bd;
     text-transform: uppercase
 }
 
@@ -3130,7 +3132,7 @@ body {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: var(--teal);
+    background: #70b4bd;
     opacity: 0.65
 }
 
@@ -3147,7 +3149,7 @@ body {
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: #fff;
-    background: var(--teal);
+    background: #70b4bd;
     border: none;
     border-radius: 100px;
     padding: 18px 48px;
@@ -3239,7 +3241,7 @@ body {
 }
 
 .tl {
-    color: var(--teal);
+    color: #70b4bd;
     font-weight: 500;
     text-decoration: none
 }
@@ -3298,7 +3300,7 @@ body {
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.18em;
-    color: var(--teal);
+    color: #70b4bd;
     background: rgba(61,189,212,0.1);
     border: 1px solid var(--teal-rule);
     border-radius: 4px;
@@ -3317,7 +3319,7 @@ body {
 .sq-ans {
     font-size: 11.5px;
     font-weight: 600;
-    color: var(--teal);
+    color: #70b4bd;
     background: rgba(61,189,212,0.08);
     border: 1px solid var(--teal-rule);
     border-radius: 100px;
@@ -3422,7 +3424,7 @@ body {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: var(--teal);
+    background: #70b4bd;
     animation: blink 1.8s infinite
 }
 
@@ -3455,7 +3457,7 @@ body {
 
     .sec-h em {
         font-style: normal;
-        color: var(--teal)
+        color: #70b4bd
     }
 
     .sec-h.lt {
@@ -3490,7 +3492,7 @@ body {
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: #70b4bd;
     text-decoration: none;
     transition: gap 0.2s
 }
@@ -3558,7 +3560,7 @@ body {
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--w);
-    background: var(--teal);
+    background: #70b4bd;
     border-radius: 4px;
     padding: 4px 10px
 }
@@ -3581,8 +3583,8 @@ body {
 }
 
     .prod-wish:hover {
-        background: var(--teal);
-        border-color: var(--teal)
+        background: #70b4bd;
+        border-color: #70b4bd
     }
 
 .prod-info {
@@ -3653,8 +3655,8 @@ body {
 }
 
     .btn-cart:hover {
-        border-color: var(--teal);
-        color: var(--teal)
+        border-color: #70b4bd;
+        color: #70b4bd
     }
 
 .btn-buy {
@@ -3664,7 +3666,7 @@ body {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #fff;
-    background: var(--teal);
+    background: #70b4bd;
     border: none;
     border-radius: 8px;
     padding: 10px;
@@ -3744,14 +3746,14 @@ body {
 
     .s1-h em {
         font-style: normal;
-        color: var(--teal)
+        color: #70b4bd
     }
 
 .s1-rule {
     width: 76px;
     height: 4px;
     border-radius: 2px;
-    background: linear-gradient(90deg,var(--teal),var(--teal-dk));
+    background: linear-gradient(90deg,#70b4bd,var(--teal-dk));
     margin: 28px 0 30px
 }
 
@@ -3798,7 +3800,7 @@ body {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg,var(--teal),var(--teal-dk));
+    background: linear-gradient(90deg,#70b4bd,var(--teal-dk));
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.5s cubic-bezier(.23,1,.32,1);
@@ -3878,7 +3880,7 @@ body {
         display: block;
         width: 16px;
         height: 1.5px;
-        background: var(--teal);
+        background: #70b4bd;
         opacity: 0.5
     }
 
@@ -3919,7 +3921,7 @@ body {
     }
 
     .card.hl .card-tag {
-        color: var(--teal);
+        color: #70b4bd;
         letter-spacing: 0.32em
     }
     /* extra teal aura top right */
@@ -3942,7 +3944,7 @@ body {
         left: 0;
         right: 0;
         height: 2px;
-        background: linear-gradient(90deg,transparent,var(--teal),transparent);
+        background: linear-gradient(90deg,transparent,#70b4bd,transparent);
         opacity: 0.7
     }
 
@@ -4007,7 +4009,7 @@ body {
 
     .s2-h em {
         font-style: normal;
-        color: var(--teal)
+        color: #70b4bd
     }
 
 .s2-sub {
@@ -4045,7 +4047,7 @@ body {
 
 .step-bar {
     height: 4px;
-    background: linear-gradient(90deg,var(--teal),var(--teal-dk));
+    background: linear-gradient(90deg,#70b4bd,var(--teal-dk));
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.5s cubic-bezier(.23,1,.32,1)
@@ -4090,7 +4092,7 @@ body {
     font-weight: 600;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: #70b4bd;
     background: rgba(255,255,255,0.92);
     border: 1px solid var(--teal-rule);
     border-radius: 100px;
@@ -4165,14 +4167,14 @@ body {
 }
 
     .tag.on {
-        background: var(--teal);
+        background: #70b4bd;
         color: #fff;
-        border-color: var(--teal)
+        border-color: #70b4bd
     }
 
     .tag:not(.on):hover {
-        border-color: var(--teal);
-        color: var(--teal)
+        border-color: #70b4bd;
+        color: #70b4bd
     }
 
 /* dna bars */
@@ -4208,7 +4210,7 @@ body {
 .df {
     height: 100%;
     border-radius: 3px;
-    background: linear-gradient(90deg,var(--teal),var(--teal-dk))
+    background: linear-gradient(90deg,#70b4bd,var(--teal-dk))
 }
 
 .dv {
@@ -4286,7 +4288,7 @@ body {
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.1em;
-    color: var(--teal);
+    color: #70b4bd;
     text-transform: uppercase
 }
 
@@ -4336,7 +4338,7 @@ body {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: var(--teal);
+    background: #70b4bd;
     opacity: 0.65
 }
 
@@ -4353,7 +4355,7 @@ body {
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: #fff;
-    background: var(--teal);
+    background: #70b4bd;
     border: none;
     border-radius: 100px;
     padding: 18px 48px;
@@ -4445,7 +4447,7 @@ body {
 }
 
 .tl {
-    color: var(--teal);
+    color: #70b4bd;
     font-weight: 500;
     text-decoration: none
 }
@@ -4504,7 +4506,7 @@ body {
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.18em;
-    color: var(--teal);
+    color: #70b4bd;
     background: rgba(61,189,212,0.1);
     border: 1px solid var(--teal-rule);
     border-radius: 4px;
@@ -4523,7 +4525,7 @@ body {
 .sq-ans {
     font-size: 11.5px;
     font-weight: 600;
-    color: var(--teal);
+    color: #70b4bd;
     background: rgba(61,189,212,0.08);
     border: 1px solid var(--teal-rule);
     border-radius: 100px;
@@ -4628,7 +4630,7 @@ body {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: var(--teal);
+    background: #70b4bd;
     animation: blink 1.8s infinite
 }
 
@@ -4661,7 +4663,7 @@ body {
 
     .sec-h em {
         font-style: normal;
-        color: var(--teal)
+        color: #70b4bd
     }
 
     .sec-h.lt {
@@ -4696,7 +4698,7 @@ body {
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: #70b4bd;
     text-decoration: none;
     transition: gap 0.2s
 }
@@ -4957,7 +4959,7 @@ body {
     font-weight: 600;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: #70b4bd;
     margin-bottom: 16px;
     display: flex;
     align-items: center;
@@ -4969,7 +4971,7 @@ body {
         display: block;
         width: 24px;
         height: 1.5px;
-        background: var(--teal);
+        background: #70b4bd;
         opacity: 0.6
     }
 
@@ -4986,7 +4988,7 @@ body {
 
     .ps-h em {
         font-style: normal;
-        color: var(--teal)
+        color: #70b4bd
     }
 
 .ps-sub {
@@ -5004,7 +5006,7 @@ body {
     font-style: italic;
     color: rgba(255,255,255,0.82);
     line-height: 1.6;
-    border-left: 3px solid var(--teal);
+    border-left: 3px solid #70b4bd;
     padding-left: 18px
 }
 
@@ -5045,7 +5047,7 @@ body {
 
 .ps-pillar-icon {
     font-size: 20px;
-    color: var(--teal);
+    color: #70b4bd;
     flex-shrink: 0;
     margin-top: 1px;
     opacity: 0.8
@@ -5085,7 +5087,7 @@ body {
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: #70b4bd;
     white-space: nowrap;
     flex-shrink: 0
 }
@@ -5094,7 +5096,7 @@ body {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: var(--teal);
+    background: #70b4bd;
     animation: blink 1.8s infinite;
     flex-shrink: 0
 }
@@ -5290,7 +5292,7 @@ body {
     font-weight: 600;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: #70b4bd;
     margin-bottom: 8px
 }
 
@@ -5322,8 +5324,8 @@ body {
 }
 
 .gender-card:hover .gender-cta {
-    background: var(--teal);
-    border-color: var(--teal)
+    background: #70b4bd;
+    border-color: #70b4bd
 }
 
 
@@ -5397,7 +5399,7 @@ body {
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: #70b4bd;
     margin-bottom: 6px
 }
 
@@ -5454,7 +5456,7 @@ body {
 
     .cta-banner-h em {
         font-style: normal;
-        color: var(--teal)
+        color: #70b4bd
     }
 
 .cta-banner-sub {
@@ -5483,7 +5485,7 @@ body {
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: #fff;
-    background: var(--teal);
+    background: #70b4bd;
     border: none;
     border-radius: 100px;
     padding: 16px 40px;
@@ -5549,7 +5551,7 @@ footer {
 }
 
     .footer-brand-h span {
-        color: var(--teal)
+        color: #70b4bd
     }
 
 .footer-brand-tagline {
@@ -5590,8 +5592,8 @@ footer {
 }
 
     .footer-social-btn:hover {
-        border-color: var(--teal);
-        color: var(--teal)
+        border-color: #70b4bd;
+        color: #70b4bd
     }
 
 .footer-col-h {
@@ -5621,7 +5623,7 @@ footer {
     }
 
         .footer-links a:hover {
-            color: var(--teal)
+            color: #70b4bd
         }
 
 .footer-bottom {
@@ -5742,7 +5744,7 @@ footer {
 }
 
 .cpp-icon {
-    color: var(--teal);
+    color: #70b4bd;
     font-size: 14px
 }
 
@@ -5767,7 +5769,7 @@ footer {
     font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: #70b4bd;
     margin-bottom: 6px
 }
 

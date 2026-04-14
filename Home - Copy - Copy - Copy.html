@@ -13,7 +13,7 @@
     <!-- Poppins Font (Perfect for luxury perfume site) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"><!--For water wheel carousel-->
     <!-- AOS Animation Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
@@ -21,18 +21,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  
-        <link href="Css/styles - Copy.css" rel="stylesheet" / >
-        <style >
+
+    <link href="Css/styles - Copy.css" rel="stylesheet" />
+    <style>
         #barcodeCarousel {
             display: flex !important;
             flex-wrap: nowrap !important;
             transition: transform 0.4s ease;
         }
 
-        #barcodeCarousel::-webkit-scrollbar {
-            display: none;
-        }
+            #barcodeCarousel::-webkit-scrollbar {
+                display: none;
+            }
     </style>
 </head>
 <body>
@@ -54,22 +54,15 @@
 
     <!-- ══ NAV ══ -->
     <nav class="nav" id="mainNav">
-        <a href="#" class="nav-logo">
-            <svg width="26" height="32" viewBox="0 0 26 32" fill="none">
-                <rect x="8" y="0" width="10" height="5" rx="2" fill="#3dbdd4" />
-                <rect x="10" y="4" width="6" height="4" fill="#3dbdd4" />
-                <rect x="3" y="7" width="20" height="23" rx="5" fill="rgba(61,189,212,0.14)" stroke="#3dbdd4" stroke-width="1.5" />
-                <rect x="6" y="10" width="14" height="16" rx="3" fill="rgba(61,189,212,0.22)" />
-                <path d="M9 18 Q13 14 17 18 Q13 22 9 18Z" fill="#3dbdd4" />
-            </svg>
-            AmeriFrag
+        <a class="navbar-brand" href="#" data-aos="fade-right">
+            <span class="brand-text"> <img src="images/logo.png" class="perfume-nav-logo-mobile pb-2" alt="AmeriFrag"></span>
         </a>
-        <ul class="nav-links">
-            <li><a href="#" style="color:var(--teal)">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Collections</a></li>
-            <li><a href="#">AI Match</a></li>
-            <li><a href="#">About</a></li>
+        <ul class="nav-links m-0">
+            <li><a href="#" style="color:var(--teal)">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Brands</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">AI Finder</a></li>
         </ul>
         <div class="nav-right">
             <div class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.35-4.35" /></svg></div>
@@ -83,11 +76,11 @@
         </div>
         <div class="nav-mob" id="navMob">
             <button onclick="closeMob()" class="mob-close">✕</button>
-            <a href="#" onclick="closeMob()">Home</a>
-            <a href="#" onclick="closeMob()">Shop</a>
-            <a href="#" onclick="closeMob()">Collections</a>
-            <a href="#" onclick="closeMob()">AI Match</a>
-            <a href="#" onclick="closeMob()">About</a>
+            <a href="#" onclick="closeMob()">Women</a>
+            <a href="#" onclick="closeMob()">Men</a>
+            <a href="#" onclick="closeMob()">Brands</a>
+            <a href="#" onclick="closeMob()">Explore</a>
+            <a href="#" onclick="closeMob()"> AI Finder</a>
             <a href="#" onclick="closeMob()" style="color:var(--teal)">Login</a>
         </div>
     </nav>

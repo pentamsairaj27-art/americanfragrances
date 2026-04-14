@@ -1122,7 +1122,7 @@ body {
     overflow: hidden
 }
 
-    .s1::before {
+   /* .s1::before {
         content: "";
         position: absolute;
         top: -200px;
@@ -1132,7 +1132,7 @@ body {
         background: radial-gradient(ellipse,rgba(255,255,255,0.88) 0%,transparent 60%);
         pointer-events: none;
         z-index: 0
-    }
+    }*/
 
     .s1::after {
         content: "";
@@ -3699,7 +3699,7 @@ body {
     overflow: hidden
 }
 
-    .s1::before {
+    /*.s1::before {
         content: "";
         position: absolute;
         top: -200px;
@@ -3709,7 +3709,7 @@ body {
         background: radial-gradient(ellipse,rgba(255,255,255,0.88) 0%,transparent 60%);
         pointer-events: none;
         z-index: 0
-    }
+    }*/
 
     .s1::after {
         content: "";

@@ -1272,7 +1272,7 @@ body {
 .card-img-ov {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg,rgba(10,15,24,0) 15%,rgba(10,15,24,1) 100%)
+   /* background: linear-gradient(180deg,rgba(10,15,24,0) 15%,rgba(10,15,24,1) 100%)*/
 }
 
 /* body text */
@@ -1498,7 +1498,7 @@ body {
 .step-img-ov {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg,transparent 28%,rgba(255,255,255,0.96) 100%)
+   /* background: linear-gradient(180deg,transparent 28%,rgba(255,255,255,0.96) 100%)*/
 }
 
 .step-pill {
@@ -2875,7 +2875,7 @@ body {
 .step-img-ov {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg,transparent 28%,rgba(255,255,255,0.96) 100%)
+   /* background: linear-gradient(180deg,transparent 28%,rgba(255,255,255,0.96) 100*/%)
 }
 
 .step-pill {
@@ -3850,7 +3850,7 @@ body {
 .card-img-ov {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg,rgba(10,15,24,0) 15%,rgba(10,15,24,1) 100%)
+    /*background: linear-gradient(180deg,rgba(10,15,24,0) 15%,rgba(10,15,24,1) 100%)*/
 }
 
 /* body text */
@@ -4081,7 +4081,7 @@ body {
 .step-img-ov {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg,transparent 28%,rgba(255,255,255,0.96) 100%)
+   /* background: linear-gradient(180deg,transparent 28%,rgba(255,255,255,0.96) 100%)*/
 }
 
 .step-pill {

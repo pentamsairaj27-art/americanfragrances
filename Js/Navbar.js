@@ -149,11 +149,12 @@
     }
 
     function buildSimplePanel(title, description, items, type) {
+        //<div class="menu-panel-header">
+        //    <p>${title}</p>
+        //    <h4>${description}</h4>
+        //</div>
         return `
-            <div class="menu-panel-header">
-                <p>${title}</p>
-                <h4>${description}</h4>
-            </div>
+            
             <div class="menu-option-stack">
                 ${items.map((item, index) => `
                     <a class="menu-option-card" href="${menuLinks(item, type)}">

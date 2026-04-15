@@ -73,7 +73,14 @@
                             "</span>)</span></div></div></div></div>";
                         $("#bestSeller").append(newrowContent);
 
-                        if (value.subcategoryname == "FRAGRANCES" || value.subcategoryname == "TESTERS") {
+                        const hasBarcodeAnalytics =
+                            value.BarcodeAnalytics &&
+                            Array.isArray(value.BarcodeAnalytics.Data) &&
+                            Array.isArray(value.BarcodeAnalytics.Labels) &&
+                            value.BarcodeAnalytics.Data.length >= 10 &&
+                            value.BarcodeAnalytics.Labels.length >= 10;
+
+                        if ((value.subcategoryname == "FRAGRANCES" || value.subcategoryname == "TESTERS") && hasBarcodeAnalytics) {
                             var newrow = `
                 <div class="progress-bar bg-ten" role="progressbar" style="width:${value.BarcodeAnalytics.Data[0]}%">
                     ${value.BarcodeAnalytics.Data[0]}% <div class='amerifragtooltip'>Style: ${value.BarcodeAnalytics.Labels[0]}</div>
@@ -158,5 +165,5 @@
 
 
   
-})();
+});
 

@@ -42,48 +42,176 @@
         <div class="tsep"></div>
         <span class="ti" style="color:#fff;display:flex;align-items:center;gap:7px">
             <span style="opacity:0.7">⬡</span>
-            No fake discounts. No coupons. AI finds your best price — always.
+            15 YEARS OF PERFUMES LEGACY.
             <span style="opacity:0.7">⬡</span>
         </span>
         <div class="tsep"></div>
         <span class="ti" style="display:flex;align-items:center;gap:7px;color:#fff">
             <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><circle cx="5.5" cy="5.5" r="5" stroke="rgba(255,255,255,0.7)" stroke-width="1" /><text x="5.5" y="8.2" text-anchor="middle" font-size="6" font-weight="700" fill="rgba(255,255,255,0.85)" font-family="serif">P</text></svg>
-            Patent Pending &nbsp;·&nbsp; AmeriFrag Barcode™ Technology
+            100% ORGINAL PRODUCTS
         </span>
     </div>
 
     <!-- ══ NAV ══ -->
-    <nav class="nav" id="mainNav">
-        <a class="navbar-brand" href="#" data-aos="fade-right">
-            <span class="brand-text"> <img src="images/logo.png" class="perfume-nav-logo-mobile pb-2" alt="AmeriFrag"></span>
-        </a>
-        <ul class="nav-links m-0">
-            <li><a href="#" style="color:var(--teal)">Women</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Brands</a></li>
-            <li><a href="#">Explore</a></li>
-            <li><a href="#">AI Finder</a></li>
-        </ul>
-        <div class="nav-right">
-            <div class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.35-4.35" /></svg></div>
-            <div class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" /></svg></div>
-            <div class="nav-icon" style="position:relative">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" /><line x1="3" y1="6" x2="21" y2="6" /><path d="M16 10a4 4 0 01-8 0" /></svg>
-                <div class="cart-badge">2</div>
+    <nav class="nav luxury-nav" id="mainNav">
+        <div class="nav-shell">
+            <button class="nav-hamburger" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <a class="nav-brand" href="Home.html" data-aos="fade-right">
+                <img src="images/logo.png" class="perfume-nav-logo-mobile pb-2" alt="AmeriFrag">
+            </a>
+
+            <ul class="nav-links m-0" id="desktopNav">
+                <li class="nav-item has-panel" data-panel-target="womenPanel">
+                    <button class="nav-link-button" type="button">Women</button>
+                    <div class="nav-panel nav-panel-list" id="womenPanel"></div>
+                </li>
+                <li class="nav-item has-panel" data-panel-target="menPanel">
+                    <button class="nav-link-button" type="button">Men</button>
+                    <div class="nav-panel nav-panel-list" id="menPanel"></div>
+                </li>
+                <li class="nav-item has-panel" data-panel-target="brandsPanel">
+                    <button class="nav-link-button" type="button">Brands</button>
+                    <div class="nav-panel nav-panel-list" id="brandsPanel"></div>
+                </li>
+                <li class="nav-item has-panel" data-panel-target="explorePanel">
+                    <button class="nav-link-button" type="button">Explore</button>
+                    <div class="nav-panel nav-panel-mega" id="explorePanel"></div>
+                </li>
+                <li class="nav-item has-panel nav-item-ai" data-panel-target="aiMatchesPanel">
+                    <button class="nav-link-button nav-link-highlight" type="button">AI Matches</button>
+                    <div class="nav-panel nav-panel-ai" id="aiMatchesPanel"></div>
+                </li>
+            </ul>
+
+            <div class="nav-right">
+                <button class="nav-action search-trigger desktop-only" id="searchBtn" type="button" aria-label="Open search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <a class="nav-action desktop-only" href="wishlist.html" aria-label="Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="nav-badge">3</span>
+                </a>
+                <a class="nav-action desktop-only" href="cart.html" aria-label="Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="nav-badge">2</span>
+                </a>
+                <a class="nav-action desktop-only" href="Myprofile.html" aria-label="Profile">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+                <a href="home.html?login=1" class="nav-login desktop-only">Login</a>
             </div>
-            <a href="#" class="nav-login">Login</a>
-            <button class="nav-ham" id="navHam" aria-label="Menu"><span></span><span></span><span></span></button>
-        </div>
-        <div class="nav-mob" id="navMob">
-            <button onclick="closeMob()" class="mob-close">✕</button>
-            <a href="#" onclick="closeMob()">Women</a>
-            <a href="#" onclick="closeMob()">Men</a>
-            <a href="#" onclick="closeMob()">Brands</a>
-            <a href="#" onclick="closeMob()">Explore</a>
-            <a href="#" onclick="closeMob()"> AI Finder</a>
-            <a href="#" onclick="closeMob()" style="color:var(--teal)">Login</a>
         </div>
     </nav>
+
+    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-top">
+            <div>
+                <p class="mobile-menu-label">AmeriFrag Menu</p>
+                <h3>Discover faster</h3>
+            </div>
+            <button class="mobile-close" id="closeMenu" type="button" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="mobile-menu-search">
+            <button class="mobile-search-trigger" id="mobileSearch" type="button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Search perfumes, brands, notes...</span>
+            </button>
+        </div>
+
+        <div class="mobile-menu-content">
+            <div class="mobile-nav-item">
+                <button class="mobile-nav-toggle" type="button" aria-expanded="false">
+                    <span>Women</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="mobile-submenu" id="mobileWomenMenu"></div>
+            </div>
+            <div class="mobile-nav-item">
+                <button class="mobile-nav-toggle" type="button" aria-expanded="false">
+                    <span>Men</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="mobile-submenu" id="mobileMenMenu"></div>
+            </div>
+            <div class="mobile-nav-item">
+                <button class="mobile-nav-toggle" type="button" aria-expanded="false">
+                    <span>Brands</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="mobile-submenu" id="mobileBrandsMenu"></div>
+            </div>
+            <div class="mobile-nav-item">
+                <button class="mobile-nav-toggle" type="button" aria-expanded="false">
+                    <span>Explore</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="mobile-submenu mobile-submenu-grid" id="mobileExploreMenu"></div>
+            </div>
+            <div class="mobile-nav-item">
+                <button class="mobile-nav-toggle" type="button" aria-expanded="false">
+                    <span>AI Matches</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="mobile-submenu mobile-submenu-ai" id="mobileAiMatchesMenu"></div>
+            </div>
+
+            <div class="mobile-quick-links">
+                <a href="Home.html"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                <a href="show-all.html?keyword=newarrivals"><i class="fa-solid fa-sparkles"></i><span>New In</span></a>
+                <a href="show-all.html?keyword=bestsellers"><i class="fa-solid fa-fire"></i><span>Bestsellers</span></a>
+                <a href="home.html?login=1"><i class="fa-solid fa-right-to-bracket"></i><span>Login</span></a>
+            </div>
+        </div>
+    </aside>
+    <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+
+    <div class="nav-search-overlay" id="searchBar" aria-hidden="true">
+        <div class="nav-search-card">
+            <button class="nav-search-close" id="closeSearch" type="button" aria-label="Close search">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <p class="nav-search-label">Search with style</p>
+            <h3>Find your next signature scent</h3>
+            <div class="nav-search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search by perfume, brand, note or mood">
+            </div>
+            <div class="nav-search-tags">
+                <a href="show-all.html?label=Fresh&labelHeading=MOOD">Fresh</a>
+                <a href="show-all.html?label=Floral&labelHeading=NOTE">Floral</a>
+                <a href="show-all.html?keyword=Luxury">Luxury</a>
+                <a href="show-all.html?keyword=Designer">Designer</a>
+                <a href="show-all.html?choice=featureProducts">AmeriFrag Choice</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-bottom-bar">
+        <button class="mobile-bottom-link" id="mobileSearchBottom" type="button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search</span>
+        </button>
+        <a class="mobile-bottom-link" href="wishlist.html">
+            <i class="fa-regular fa-heart"></i>
+            <span>Wishlist</span>
+        </a>
+        <a class="mobile-bottom-link" href="cart.html">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Cart</span>
+        </a>
+        <a class="mobile-bottom-link" href="Myprofile.html">
+            <i class="fa-regular fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </div>
 
     <!---------------------------------------Hero Section Starts------------------------------------->
     <!-- ══ HERO ══ -->
@@ -660,7 +788,7 @@
     <!-- ════════════════════════════════════════════════════
      S4 — EVERY FRAGRANCE DECODED + ATTRIBUTE CAROUSEL
      ════════════════════════════════════════════════════ -->
-    <section style="background:var(--bg-lt);padding:92px 0 0">
+    <section style="background:var(--bg-lt);padding:92px 0 0" class="decode_barcode">
         <div class="wrap">
 
             <!-- ── SECTION HEADER ── -->

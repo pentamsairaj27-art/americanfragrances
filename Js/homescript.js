@@ -11,6 +11,8 @@ const navbar = document.getElementById('mainNav');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
+    if (!navbar) return;
+
     const currentScroll = window.pageYOffset;
 
     if (currentScroll > 100) {
@@ -25,8 +27,10 @@ window.addEventListener('scroll', () => {
 // ===== SEARCH BAR TOGGLE =====
 const searchBtn = document.getElementById('searchBtn');
 const mobileSearch = document.getElementById('mobileSearch');
+const mobileSearchBottom = document.getElementById('mobileSearchBottom');
 const searchBar = document.getElementById('searchBar');
 const closeSearch = document.getElementById('closeSearch');
+const searchCard = searchBar ? searchBar.querySelector('.nav-search-card') : null;
 
 // Create overlay element for dull background effect
 let overlay = null;
@@ -59,8 +63,16 @@ function createOverlay() {
 }
 
 function openSearchBar() {
+    if (!searchBar) return;
+
+    if (mobileMenu && mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        mobileMenuBackdrop?.classList.remove('active');
+    }
+
     const overlayEl = createOverlay();
     searchBar.classList.add('active');
+    searchBar.setAttribute('aria-hidden', 'false');
 
     // Ensure search bar has higher z-index than overlay
     searchBar.style.zIndex = '1000';
@@ -82,8 +94,11 @@ function openSearchBar() {
 }
 
 function closeSearchBar() {
+    if (!searchBar) return;
+
     const overlayEl = createOverlay();
     searchBar.classList.remove('active');
+    searchBar.setAttribute('aria-hidden', 'true');
 
     // Fade out overlay
     overlayEl.style.opacity = '0';
@@ -119,6 +134,10 @@ if (mobileSearch) {
     mobileSearch.addEventListener('click', toggleSearchBar);
 }
 
+if (mobileSearchBottom) {
+    mobileSearchBottom.addEventListener('click', toggleSearchBar);
+}
+
 if (closeSearch) {
     closeSearch.addEventListener('click', closeSearchBar);
 }
@@ -130,6 +149,14 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+if (searchBar) {
+    searchBar.addEventListener('click', (e) => {
+        if (!searchCard || !searchCard.contains(e.target)) {
+            closeSearchBar();
+        }
+    });
+}
+
 // Optional: Clean up overlay when page unloads (good practice)
 window.addEventListener('beforeunload', () => {
     if (overlay && overlay.remove) {
@@ -140,6 +167,7 @@ window.addEventListener('beforeunload', () => {
 // ===== MOBILE MENU TOGGLE =====
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
+const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
 const closeMenu = document.getElementById('closeMenu');
 const mobileNavToggles = document.querySelectorAll('.mobile-nav-toggle');
 
@@ -154,7 +182,12 @@ function resetMobileSubmenus() {
 }
 
 function toggleMobileMenu() {
+    if (!mobileMenu) return;
+
     mobileMenu.classList.toggle('active');
+    mobileMenuBackdrop?.classList.toggle('active', mobileMenu.classList.contains('active'));
+    menuToggle?.setAttribute('aria-expanded', String(mobileMenu.classList.contains('active')));
+    mobileMenu.setAttribute('aria-hidden', String(!mobileMenu.classList.contains('active')));
     document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
     if (!mobileMenu.classList.contains('active')) {
         resetMobileSubmenus();
@@ -167,6 +200,10 @@ if (menuToggle) {
 
 if (closeMenu) {
     closeMenu.addEventListener('click', toggleMobileMenu);
+}
+
+if (mobileMenuBackdrop) {
+    mobileMenuBackdrop.addEventListener('click', toggleMobileMenu);
 }
 
 mobileNavToggles.forEach(toggle => {
@@ -191,6 +228,8 @@ mobileNavToggles.forEach(toggle => {
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
+    if (!mobileMenu || !menuToggle) return;
+
     if (mobileMenu.classList.contains('active') &&
         !mobileMenu.contains(e.target) &&
         !menuToggle.contains(e.target)) {
@@ -199,6 +238,8 @@ document.addEventListener('click', (e) => {
 });
 
 window.addEventListener('resize', () => {
+    if (!mobileMenu) return;
+
     if (window.innerWidth >= 992 && mobileMenu.classList.contains('active')) {
         toggleMobileMenu();
     }
